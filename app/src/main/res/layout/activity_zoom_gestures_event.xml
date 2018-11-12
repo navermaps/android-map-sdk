@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/label_consume_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/label_consume_event"
+        app:layout_constraintBottom_toTopOf="@+id/map_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckedTextView
+        android:id="@+id/toggle_consume_double_tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="false"
+        android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+        android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:text="@string/double_tap"
+        app:layout_constraintStart_toEndOf="@+id/label_consume_event"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckedTextView
+        android:id="@+id/toggle_consume_two_finger_tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:checked="false"
+        android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+        android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:text="@string/two_finger_tap"
+        app:layout_constraintStart_toEndOf="@+id/toggle_consume_double_tap"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/map_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_consume_two_finger_tap" />
+
+</android.support.constraint.ConstraintLayout>

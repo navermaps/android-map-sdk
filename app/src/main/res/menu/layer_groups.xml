@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/building"
+        android:checkable="true"
+        android:title="@string/building" />
+    <item
+        android:id="@+id/traffic"
+        android:checkable="true"
+        android:title="@string/traffic" />
+    <item
+        android:id="@+id/transit"
+        android:checkable="true"
+        android:title="@string/transit" />
+    <item
+        android:id="@+id/bicycle"
+        android:checkable="true"
+        android:title="@string/bicycle" />
+    <item
+        android:id="@+id/cadastral"
+        android:checkable="true"
+        android:title="@string/cadastral" />
+    <item
+        android:id="@+id/mountain"
+        android:checkable="true"
+        android:title="@string/mountain" />
+</menu>

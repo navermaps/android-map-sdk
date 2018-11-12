@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexWrap="wrap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckedTextView
+            android:id="@+id/toggle_compass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/compass" />
+
+        <CheckedTextView
+            android:id="@+id/toggle_scale_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/scale_bar" />
+
+        <CheckedTextView
+            android:id="@+id/toggle_zoom_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/zoom_control" />
+
+        <CheckedTextView
+            android:id="@+id/toggle_indoor_level_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/indoor_level_picker" />
+
+        <CheckedTextView
+            android:id="@+id/toggle_location_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/location_button" />
+
+        <CheckedTextView
+            android:id="@+id/toggle_logo_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/logo_click" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <FrameLayout
+        android:id="@+id/map_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/options" />
+
+</android.support.constraint.ConstraintLayout>

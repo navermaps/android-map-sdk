@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="label_map_lightness,label_building_height,label_symbol_scale,label_symbol_perspective_ratio" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="value_map_lightness,value_building_height,value_symbol_scale,value_symbol_perspective_ratio" />
+
+    <TextView
+        android:id="@+id/label_map_lightness"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_map_lightness"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_map_lightness"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:max="200"
+        android:progress="100"
+        app:layout_constraintEnd_toStartOf="@+id/barrier_value"
+        app:layout_constraintStart_toEndOf="@+id/barrier_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/value_map_lightness"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/default_map_lightness"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_building_height"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_building_height"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_map_lightness" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_building_height"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:max="100"
+        android:progress="100"
+        app:layout_constraintEnd_toStartOf="@+id/barrier_value"
+        app:layout_constraintStart_toEndOf="@+id/barrier_label"
+        app:layout_constraintTop_toBottomOf="@+id/seek_bar_map_lightness" />
+
+    <TextView
+        android:id="@+id/value_building_height"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/default_building_height"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/value_map_lightness" />
+
+    <TextView
+        android:id="@+id/label_symbol_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_symbol_scale"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_building_height" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_symbol_scale"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:max="200"
+        android:progress="100"
+        app:layout_constraintEnd_toStartOf="@+id/barrier_value"
+        app:layout_constraintStart_toEndOf="@+id/barrier_label"
+        app:layout_constraintTop_toBottomOf="@+id/seek_bar_building_height" />
+
+    <TextView
+        android:id="@+id/value_symbol_scale"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/default_symbol_scale"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/value_building_height" />
+
+    <TextView
+        android:id="@+id/label_symbol_perspective_ratio"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_symbol_perspective_ratio"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_symbol_scale" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_symbol_perspective_ratio"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:max="100"
+        android:progress="100"
+        app:layout_constraintEnd_toStartOf="@+id/barrier_value"
+        app:layout_constraintStart_toEndOf="@+id/barrier_label"
+        app:layout_constraintTop_toBottomOf="@+id/seek_bar_symbol_scale" />
+
+    <TextView
+        android:id="@+id/value_symbol_perspective_ratio"
+        android:layout_width="40dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/default_symbol_perspective_ratio"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/value_symbol_scale" />
+
+    <FrameLayout
+        android:id="@+id/map_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_symbol_perspective_ratio" />
+
+</android.support.constraint.ConstraintLayout>
