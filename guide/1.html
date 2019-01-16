@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -236,16 +240,48 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="4.html">
+        <li class="chapter " data-level="2.4" >
             
-                <a href="4.html">
+                <span>
             
                     
                     상호작용
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="4-1.html">
+            
+                <a href="4-1.html">
+            
+                    
+                    사용자 인터페이스
+            
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="4-2.html">
+            
+                <a href="4-2.html">
+            
+                    
+                    위치
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -368,7 +404,7 @@
     
         <li class="chapter " data-level="3.1" >
             
-                <a target="_blank" href="ref://reference">
+                <a target="_blank" href="ref://reference/">
             
                     
                     API 레퍼런스
@@ -385,6 +421,19 @@
             
                     
                     데모 프로젝트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://github.com/navermaps/android-map-sdk/wiki/Changelog">
+            
+                    
+                    Changelog
             
                 </a>
             
@@ -511,7 +560,7 @@
 <p>&#xB2E4;&#xC74C;&#xC740; &#xB124;&#xC774;&#xBC84; &#xC9C0;&#xB3C4; SDK&#xC5D0; &#xB300;&#xD55C; &#xC758;&#xC874;&#xC131;&#xC744; &#xC120;&#xC5B8;&#xD55C; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
 <pre><code class="lang-Gradle"><span class="hljs-keyword">dependencies</span> {
     <span class="hljs-comment">// &#xB124;&#xC774;&#xBC84; &#xC9C0;&#xB3C4; SDK</span>
-    implementation <span class="hljs-string">&apos;com.naver.maps:map-sdk:3.0.0&apos;</span>
+    implementation <span class="hljs-string">&apos;com.naver.maps:map-sdk:3.1.0&apos;</span>
 }
 </code></pre>
 <h2 id="&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;-id-&#xC9C0;&#xC815;">&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID &#xC9C0;&#xC815;</h2>
@@ -528,9 +577,17 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">manifest</span>&gt;</span>
 </code></pre>
 <h3 id="api&#xB97C;-&#xD638;&#xCD9C;&#xD574;-&#xC9C0;&#xC815;">API&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xC9C0;&#xC815;</h3>
-<p><code>AndroidManifest.xml</code>&#xC744; &#xC218;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xACE0; API&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <a href="https://developer.android.com/reference/android/app/Application" target="_blank"><code>Application</code></a>&#xC758; <a href="https://developer.android.com/reference/android/app/Application#onCreate%28%29" target="_blank"><code>onCreate()</code></a> &#xB0B4;&#xC5D0;&#xC11C; <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.html#getInstance-android.content.Context-" target="_blank"><code>NaverMapSdk.setClient()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC5BB;&#xC5B4;&#xC640;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><code>AndroidManifest.xml</code>&#xC744; &#xC218;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xACE0; API&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <a href="https://developer.android.com/reference/android/app/Application" target="_blank"><code>Application</code></a>&#xC758; <a href="https://developer.android.com/reference/android/app/Application#onCreate%28%29" target="_blank"><code>onCreate()</code></a> &#xB0B4;&#xC5D0;&#xC11C; <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.html#setClient-com.naver.maps.map.NaverMapSdk.Client-" target="_blank"><code>NaverMapSdk.setClient()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD574; <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.NaverCloudPlatformClient.html" target="_blank"><code>NaverCloudPlatformClient</code></a>&#xB97C; &#xC9C0;&#xC815;&#xD569;&#xB2C8;&#xB2E4;. <code>NaverMapSdk</code>&#xB294; &#xC2F1;&#xAE00;&#xD1A4; &#xD074;&#xB798;&#xC2A4;&#xC774;&#xBBC0;&#xB85C; <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.html#getInstance-android.content.Context-" target="_blank"><code>getInstance()</code></a>&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC5BB;&#xC5B4;&#xC640;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; API&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourApplication</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span> </span>{
+<p><div id="131717e6357b2f6fdcec8b77096b3d8a" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-3376902be2499380bf6013f3d981543b" class="gbcg-selector gbcg-active" data-tab="Java-0-3376902be2499380bf6013f3d981543b" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-088291d2d243b46a4a26eb601a40273d" class="gbcg-selector" data-tab="Kotlin-1-088291d2d243b46a4a26eb601a40273d" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-3376902be2499380bf6013f3d981543b" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourApplication</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span> </span>{
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-keyword">super</span>.onCreate();
@@ -539,6 +596,38 @@
     }
 }
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-3376902be2499380bf6013f3d981543b" id="java">Java</h3>
+        <div id="Java-0-3376902be2499380bf6013f3d981543b" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourApplication</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onCreate();
+        NaverMapSdk.getInstance(<span class="hljs-keyword">this</span>).setClient(
+           <span class="hljs-keyword">new</span> NaverMapSdk.NaverCloudPlatformClient(<span class="hljs-string">&quot;YOUR_CLIENT_ID_HERE&quot;</span>));
+    }
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-088291d2d243b46a4a26eb601a40273d" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-088291d2d243b46a4a26eb601a40273d" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourApplication</span> : <span class="hljs-type">Application</span></span>() {
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">()</span> {</span>
+        super.onCreate()
+        NaverMapSdk.getInstance(this).client = NaverMapSdk.NaverCloudPlatformClient(<span class="hljs-string">&quot;YOUR_CLIENT_ID_HERE&quot;</span>)
+    }
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="&#xC9C0;&#xB3C4;-&#xD45C;&#xC2DC;">&#xC9C0;&#xB3C4; &#xD45C;&#xC2DC;</h2>
 <p>&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xACE0; <code>MapFragment</code>&#xB97C; &#xC571;&#xC758; &#xB808;&#xC774;&#xC544;&#xC6C3;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xC9C0;&#xB3C4;&#xAC00; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; <code>&lt;fragment&gt;</code> &#xC694;&#xC18C;&#xB85C; XML &#xB808;&#xC774;&#xC544;&#xC6C3;&#xC5D0; <code>MapFragment</code>&#xB97C; &#xCD94;&#xAC00;&#xD574; &#xC9C0;&#xB3C4;&#xB97C; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
@@ -548,7 +637,8 @@
     <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.naver.maps.map.MapFragment&quot;</span> /&gt;</span>
 </code></pre>
 <h2 id="&#xC778;&#xC99D;-&#xC2E4;&#xD328;-&#xCC98;&#xB9AC;">&#xC778;&#xC99D; &#xC2E4;&#xD328; &#xCC98;&#xB9AC;</h2>
-<p>&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xB97C; &#xC798;&#xBABB; &#xC9C0;&#xC815;&#xD588;&#xAC70;&#xB098; &#xC0AC;&#xC6A9;&#xB7C9;&#xC774; &#xCFFC;&#xD130;&#xB97C; &#xCD08;&#xACFC;&#xD55C; &#xACBD;&#xC6B0; &#xC9C0;&#xB3C4;&#xAC00; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB098;&#xC9C0; &#xC54A;&#xC73C;&#xBA70;, Logcat&#xACFC; &#xD1A0;&#xC2A4;&#xD2B8;&#xB85C; &#xC778;&#xC99D; &#xC624;&#xB958; &#xBA54;&#xC2DC;&#xC9C0;&#xAC00; &#xCD9C;&#xB825;&#xB429;&#xB2C8;&#xB2E4;. <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.html#setOnAuthFailedListener-com.naver.maps.map.NaverMapSdk.OnAuthFailedListener-" target="_blank"><code>NaverMapSdk.onAuthFailedListener</code></a> &#xC18D;&#xC131;&#xC5D0;  <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.OnAuthFailedListener.html" target="_blank"><code>OnAuthFailedListener</code></a>&#xB97C; &#xB4F1;&#xB85D;&#xD558;&#xBA74; &#xC778;&#xC99D; &#xC2E4;&#xD328; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB9AC;&#xC2A4;&#xB108;&#xB97C; &#xB4F1;&#xB85D;&#xD558;&#xBA74; &#xC778;&#xC99D; &#xC2E4;&#xD328;&#xC2DC; &#xD1A0;&#xC2A4;&#xD2B8;&#xAC00; &#xB178;&#xCD9C;&#xB418;&#xB294; &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.OnAuthFailedListener.html#onAuthFailed-com.naver.maps.map.NaverMapSdk.AuthFailedException-" target="_blank"><code>onAuthFailed()</code></a> &#xCF5C;&#xBC31; &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xB97C; &#xC798;&#xBABB; &#xC9C0;&#xC815;&#xD588;&#xAC70;&#xB098; &#xC0AC;&#xC6A9;&#xB7C9;&#xC774; &#xCFFC;&#xD130;&#xB97C; &#xCD08;&#xACFC;&#xD55C; &#xACBD;&#xC6B0; &#xC9C0;&#xB3C4;&#xAC00; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB098;&#xC9C0; &#xC54A;&#xC73C;&#xBA70;, Logcat&#xACFC; &#xD1A0;&#xC2A4;&#xD2B8;&#xB85C; &#xC778;&#xC99D; &#xC624;&#xB958; &#xBA54;&#xC2DC;&#xC9C0;&#xAC00; &#xCD9C;&#xB825;&#xB429;&#xB2C8;&#xB2E4;. <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.html#setOnAuthFailedListener-com.naver.maps.map.NaverMapSdk.OnAuthFailedListener-" target="_blank"><code>NaverMapSdk.onAuthFailedListener</code></a> &#xC18D;&#xC131;&#xC5D0; <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.OnAuthFailedListener.html" target="_blank"><code>OnAuthFailedListener</code></a>&#xB97C; &#xB4F1;&#xB85D;&#xD558;&#xBA74; &#xC778;&#xC99D; &#xC2E4;&#xD328; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB9AC;&#xC2A4;&#xB108;&#xB97C; &#xB4F1;&#xB85D;&#xD558;&#xBA74; &#xC778;&#xC99D; &#xC2E4;&#xD328;&#xC2DC; <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.OnAuthFailedListener.html#onAuthFailed-com.naver.maps.map.NaverMapSdk.AuthFailedException-" target="_blank"><code>onAuthFailed()</code></a> &#xCF5C;&#xBC31; &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xACE0; &#xD1A0;&#xC2A4;&#xD2B8;&#xB294; &#xB178;&#xCD9C;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC778;&#xC99D; &#xC2E4;&#xD328; &#xC774;&#xBCA4;&#xD2B8;&#xB294; &#xBA85;&#xBC31;&#xD558;&#xAC8C; &#xC778;&#xC99D;&#xC5D0; &#xC2E4;&#xD328;&#xD588;&#xC74C;&#xC774; &#xD655;&#xC778;&#xB41C; &#xACBD;&#xC6B0;&#xC5D0;&#xB9CC; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xC778;&#xD130;&#xB137; &#xC5F0;&#xACB0;&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD560; &#xACBD;&#xC6B0; &#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xCE90;&#xC2DC;&#xB41C; &#xB370;&#xC774;&#xD130;&#xB85C; &#xC9C0;&#xB3C4;&#xB97C; &#xB85C;&#xB529;&#xD55C; &#xD6C4; &#xC778;&#xD130;&#xB137; &#xC5F0;&#xACB0;&#xC774; &#xC7AC;&#xAC1C;&#xB418;&#xBA74; &#xB2E4;&#xC2DC; &#xC778;&#xC99D;&#xC744; &#xC2DC;&#xB3C4;&#xD558;&#xACE0;, &#xC774; &#xB54C; &#xC778;&#xC99D;&#xC5D0; &#xC2E4;&#xD328;&#xD558;&#xBA74; &#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p><code>onAuthFailed()</code>&#xC5D0;&#xB294; &#xC778;&#xC99D; &#xC2E4;&#xD328;&#xC758; &#xC6D0;&#xC778;&#xC744; &#xB098;&#xD0C0;&#xB0B4;&#xB294; <code>exception</code> &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xAC00; &#xC804;&#xB2EC;&#xB429;&#xB2C8;&#xB2E4;. <code>exception</code>&#xC758; &#xD0C0;&#xC785;&#xACFC; <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.AuthFailedException.html#getErrorCode--" target="_blank"><code>errorCode</code></a> &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xC6D0;&#xC778;&#xC744; &#xD30C;&#xC545;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC8FC;&#xB85C; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xC5D0;&#xB7EC; &#xCF54;&#xB4DC;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <table>
 <thead>
@@ -573,11 +663,6 @@
 <td>800</td>
 <td><a href="ref://../reference/com/naver/maps/map/NaverMapSdk.ClientUnspecifiedException.html" target="_blank"><code>ClientUnspecifiedException</code></a></td>
 <td>&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</td>
-</tr>
-<tr>
-<td>900</td>
-<td><a href="ref://../reference/com/naver/maps/map/NaverMapSdk.AuthFailedException.html" target="_blank"><code>AuthFailedException</code></a></td>
-<td>&#xB0B4;&#xBD80; &#xC624;&#xB958;</td>
 </tr>
 </tbody>
 </table>
@@ -621,7 +706,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"시작하기","level":"2.1","depth":1,"next":{"title":"지도와 좌표","level":"2.2","depth":1,"ref":"","articles":[{"title":"지도 객체","level":"2.2.1","depth":2,"path":"guide/2-1.md","ref":"guide/2-1.md","articles":[]},{"title":"좌표 객체","level":"2.2.2","depth":2,"path":"guide/2-2.md","ref":"guide/2-2.md","articles":[]},{"title":"지도 옵션","level":"2.2.3","depth":2,"path":"guide/2-3.md","ref":"guide/2-3.md","articles":[]}]},"previous":{"title":"소개","level":"1.2","depth":1,"path":"guide/0.md","ref":"guide/0.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/1.md","mtime":"2018-11-12T09:12:53.518Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-12T09:13:00.717Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"시작하기","level":"2.1","depth":1,"next":{"title":"지도와 좌표","level":"2.2","depth":1,"ref":"","articles":[{"title":"지도 객체","level":"2.2.1","depth":2,"path":"guide/2-1.md","ref":"guide/2-1.md","articles":[]},{"title":"좌표 객체","level":"2.2.2","depth":2,"path":"guide/2-2.md","ref":"guide/2-2.md","articles":[]},{"title":"지도 옵션","level":"2.2.3","depth":2,"path":"guide/2-3.md","ref":"guide/2-3.md","articles":[]}]},"previous":{"title":"소개","level":"1.2","depth":1,"path":"guide/0.md","ref":"guide/0.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/1.md","mtime":"2019-01-16T03:36:24.141Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-16T03:36:36.642Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -632,6 +717,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-otherlink/js/otherlink.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codegroup/code.group.js"></script>
         
     
         

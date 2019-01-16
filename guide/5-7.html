@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -236,16 +240,48 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="4.html">
+        <li class="chapter " data-level="2.4" >
             
-                <a href="4.html">
+                <span>
             
                     
                     상호작용
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="4-1.html">
+            
+                <a href="4-1.html">
+            
+                    
+                    사용자 인터페이스
+            
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="4-2.html">
+            
+                <a href="4-2.html">
+            
+                    
+                    위치
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -368,7 +404,7 @@
     
         <li class="chapter " data-level="3.1" >
             
-                <a target="_blank" href="ref://reference">
+                <a target="_blank" href="ref://reference/">
             
                     
                     API 레퍼런스
@@ -385,6 +421,19 @@
             
                     
                     데모 프로젝트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://github.com/navermaps/android-map-sdk/wiki/Changelog">
+            
+                    
+                    Changelog
             
                 </a>
             
@@ -490,7 +539,15 @@
 <h3 id="&#xCD94;&#xAC00;-&#xBC0F;-&#xC0AD;&#xC81C;">&#xCD94;&#xAC00; &#xBC0F; &#xC0AD;&#xC81C;</h3>
 <p>&#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB294; &#xC77C;&#xBC18;&#xC801;&#xC778; &#xC790;&#xBC14; &#xAC1D;&#xCCB4;&#xCC98;&#xB7FC; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; <a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setCoords-java.util.List-" target="_blank"><code>coords</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC88C;&#xD45C;&#xC5F4;&#xC744; &#xC9C0;&#xC815;&#xD55C; &#xD6C4; <a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setMap-com.naver.maps.map.NaverMap-" target="_blank"><code>map</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;. &#xB2E8;, <code>map</code>&#xC744; &#xC9C0;&#xC815;&#xD558;&#xAE30; &#xC804;&#xC5D0;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; <code>coords</code>&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD558;&#xBA70;, &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774; &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">PathOverlay path = <span class="hljs-keyword">new</span> PathOverlay();
+<p><div id="0f5b712353f643b7212b68147df72c2f" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-3abad952d1f6c2a7c46db052365634a5" class="gbcg-selector gbcg-active" data-tab="Java-0-3abad952d1f6c2a7c46db052365634a5" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-ffacac77808f27ace458cde55875f6d4" class="gbcg-selector" data-tab="Kotlin-1-ffacac77808f27ace458cde55875f6d4" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-3abad952d1f6c2a7c46db052365634a5" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">PathOverlay path = <span class="hljs-keyword">new</span> PathOverlay();
 path.setCoords(Arrays.asList(
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
@@ -499,72 +556,410 @@ path.setCoords(Arrays.asList(
 ));
 path.setMap(naverMap);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-3abad952d1f6c2a7c46db052365634a5" id="java">Java</h3>
+        <div id="Java-0-3abad952d1f6c2a7c46db052365634a5" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">PathOverlay path = <span class="hljs-keyword">new</span> PathOverlay();
+path.setCoords(Arrays.asList(
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+));
+path.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-ffacac77808f27ace458cde55875f6d4" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-ffacac77808f27ace458cde55875f6d4" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> path</span> = PathOverlay()
+path.coords = listOf(
+        LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+        LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+        LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+        LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+)
+path.map = naverMap
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-7-path.png" alt="&#xC9C0;&#xB3C4;&#xC5D0; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xCD94;&#xAC00;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 <p><code>map</code>&#xC5D0; <code>null</code>&#xC744; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xC9C0;&#xB3C4;&#xC5D0;&#xC11C; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xC0AC;&#xB77C;&#xC9D1;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">path.setMap(<span class="hljs-keyword">null</span>);
+<p><div id="dec33e606b33be3464a5f400ee994bcf" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-e0a2ddf17c97e35bda72ef3e487cdca2" class="gbcg-selector gbcg-active" data-tab="Java-0-e0a2ddf17c97e35bda72ef3e487cdca2" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-6b7f7b5caba4480643ba687f0ed367ca" class="gbcg-selector" data-tab="Kotlin-1-6b7f7b5caba4480643ba687f0ed367ca" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-e0a2ddf17c97e35bda72ef3e487cdca2" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">path.setMap(<span class="hljs-keyword">null</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-e0a2ddf17c97e35bda72ef3e487cdca2" id="java">Java</h3>
+        <div id="Java-0-e0a2ddf17c97e35bda72ef3e487cdca2" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">path.setMap(<span class="hljs-keyword">null</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-6b7f7b5caba4480643ba687f0ed367ca" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-6b7f7b5caba4480643ba687f0ed367ca" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">path.map = <span class="hljs-literal">null</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xC88C;&#xD45C;&#xC5F4;">&#xC88C;&#xD45C;&#xC5F4;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setCoords-java.util.List-" target="_blank"><code>coords</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC88C;&#xD45C;&#xC5F4;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC88C;&#xD45C;&#xC5F4;&#xC740; &#xD544;&#xC218;&#xC801;&#xC778; &#xC18D;&#xC131;&#xC73C;&#xB85C;, &#xC88C;&#xD45C;&#xC5F4;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;. &#xB610;&#xD55C; &#xC88C;&#xD45C;&#xC5F4;&#xC758; &#xD06C;&#xAE30;&#xAC00; <code>2</code> &#xBBF8;&#xB9CC;&#xC774;&#xAC70;&#xB098; <code>null</code>&#xC778; &#xC6D0;&#xC18C;&#xAC00; &#xC788;&#xC744; &#xACBD;&#xC6B0;&#xC5D0;&#xB3C4; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC88C;&#xD45C;&#xC5F4;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">path.setCoords(Arrays.asList(
+<p><div id="942c651b9ea9b1bb78635215c334b826" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-cac009e93746646d783d67d9dcbb3a83" class="gbcg-selector gbcg-active" data-tab="Java-0-cac009e93746646d783d67d9dcbb3a83" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-5c43a57119eab5c07f5317670e70d137" class="gbcg-selector" data-tab="Kotlin-1-5c43a57119eab5c07f5317670e70d137" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-cac009e93746646d783d67d9dcbb3a83" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">path.setCoords(Arrays.asList(
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
 ));
 </code></pre>
-<p><code>coords</code> &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xC5BB;&#xC5B4;&#xC628; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xBCC0;&#xACBD; &#xC0AC;&#xD56D;&#xC774; &#xBC18;&#xC601;&#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBC18;&#xC601;&#xD558;&#xB824;&#xBA74; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4;&#xB97C; &#xB2E4;&#xC2DC; <code>coords</code> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-cac009e93746646d783d67d9dcbb3a83" id="java">Java</h3>
+        <div id="Java-0-cac009e93746646d783d67d9dcbb3a83" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">path.setCoords(Arrays.asList(
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+));
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-5c43a57119eab5c07f5317670e70d137" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-5c43a57119eab5c07f5317670e70d137" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">path.coords = listOf(
+        LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+        LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+        LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+        LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p><code>coords</code> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xC815;&#xD55C; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4; &#xB610;&#xB294; <code>coords</code> &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xC5BB;&#xC5B4;&#xC628; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xBCC0;&#xACBD; &#xC0AC;&#xD56D;&#xC774; &#xBC18;&#xC601;&#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBC18;&#xC601;&#xD558;&#xB824;&#xBA74; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4;&#xB97C; &#xB2E4;&#xC2DC; <code>coords</code> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC88C;&#xD45C;&#xC5F4; &#xC911; &#xC77C;&#xBD80;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">List&lt;LatLng&gt; coords = path.getCoords();
+<p><div id="3a87db38397de4bada1d35e3124b8b3c" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-c7bfad1c6d08a506bc710d2332388e1f" class="gbcg-selector gbcg-active" data-tab="Java-0-c7bfad1c6d08a506bc710d2332388e1f" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-dd0d0a71a8d8f205d14b2299cadfb6ae" class="gbcg-selector" data-tab="Kotlin-1-dd0d0a71a8d8f205d14b2299cadfb6ae" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-c7bfad1c6d08a506bc710d2332388e1f" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">List&lt;LatLng&gt; coords = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+Collections.addAll(coords,
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+);
+path.setCoords(coords);
+
 coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// &#xC544;&#xC9C1; &#xBC18;&#xC601;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</span>
 path.setCoords(coords); <span class="hljs-comment">// &#xBC18;&#xC601;&#xB428;</span>
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-c7bfad1c6d08a506bc710d2332388e1f" id="java">Java</h3>
+        <div id="Java-0-c7bfad1c6d08a506bc710d2332388e1f" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">List&lt;LatLng&gt; coords = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+Collections.addAll(coords,
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+);
+path.setCoords(coords);
+
+coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// &#xC544;&#xC9C1; &#xBC18;&#xC601;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</span>
+path.setCoords(coords); <span class="hljs-comment">// &#xBC18;&#xC601;&#xB428;</span>
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-dd0d0a71a8d8f205d14b2299cadfb6ae" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-dd0d0a71a8d8f205d14b2299cadfb6ae" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> coords</span> = mutableListOf(
+        LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+        LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+        LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+        LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+)
+path.coords = coords
+
+coords[<span class="hljs-number">0</span>] = LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>) <span class="hljs-comment">// &#xC544;&#xC9C1; &#xBC18;&#xC601;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</span>
+path.coords = coords <span class="hljs-comment">// &#xBC18;&#xC601;&#xB428;</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xB450;&#xAED8;">&#xB450;&#xAED8;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setWidth-int-" target="_blank"><code>width</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xB450;&#xAED8;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xB450;&#xAED8;&#xB97C; 30&#xD53D;&#xC140;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">path.setWidth(<span class="hljs-number">30</span>);
+<p><div id="ce2d78afcfd66b2c866788b4c1e7312a" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-56e8b5c361a4b389b112f2c34f8e79c8" class="gbcg-selector gbcg-active" data-tab="Java-0-56e8b5c361a4b389b112f2c34f8e79c8" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-a1a40222d10d5e86020dad7bc28dacb5" class="gbcg-selector" data-tab="Kotlin-1-a1a40222d10d5e86020dad7bc28dacb5" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-56e8b5c361a4b389b112f2c34f8e79c8" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">path.setWidth(<span class="hljs-number">30</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-56e8b5c361a4b389b112f2c34f8e79c8" id="java">Java</h3>
+        <div id="Java-0-56e8b5c361a4b389b112f2c34f8e79c8" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">path.setWidth(<span class="hljs-number">30</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-a1a40222d10d5e86020dad7bc28dacb5" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-a1a40222d10d5e86020dad7bc28dacb5" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">path.width = <span class="hljs-number">30</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-7-path-width.png" alt="&#xB450;&#xAED8;&#xB97C; &#xC9C0;&#xC815;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 <h3 id="&#xD14C;&#xB450;&#xB9AC;-&#xB450;&#xAED8;">&#xD14C;&#xB450;&#xB9AC; &#xB450;&#xAED8;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setOutlineWidth-int-" target="_blank"><code>outlineWidth</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xD14C;&#xB450;&#xB9AC;&#xC758; &#xB450;&#xAED8;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <code>0</code>&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xD14C;&#xB450;&#xB9AC;&#xAC00; &#xADF8;&#xB824;&#xC9C0;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xD14C;&#xB450;&#xB9AC; &#xB450;&#xAED8;&#xB97C; 5&#xD53D;&#xC140;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">path.setOutlineWidth(<span class="hljs-number">5</span>);
+<p><div id="99a150b6d37e0c785c754a29eeeb9515" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-aa03555f56cf5ca57af1fae01d5f1ad8" class="gbcg-selector gbcg-active" data-tab="Java-0-aa03555f56cf5ca57af1fae01d5f1ad8" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-04b300ae21dc3e15df94035daca42857" class="gbcg-selector" data-tab="Kotlin-1-04b300ae21dc3e15df94035daca42857" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-aa03555f56cf5ca57af1fae01d5f1ad8" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">path.setOutlineWidth(<span class="hljs-number">5</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-aa03555f56cf5ca57af1fae01d5f1ad8" id="java">Java</h3>
+        <div id="Java-0-aa03555f56cf5ca57af1fae01d5f1ad8" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">path.setOutlineWidth(<span class="hljs-number">5</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-04b300ae21dc3e15df94035daca42857" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-04b300ae21dc3e15df94035daca42857" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">path.outlineWidth = <span class="hljs-number">5</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xD328;&#xD134;">&#xD328;&#xD134;</h3>
 <p>&#xD328;&#xD134;&#xC740; &#xACBD;&#xB85C;&#xC120;&#xC5D0; &#xC77C;&#xC815; &#xAC04;&#xACA9;&#xC73C;&#xB85C; &#xB418;&#xD480;&#xC774;&#xB418;&#xC5B4; &#xB098;&#xD0C0;&#xB098;&#xB294; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC758;&#xBBF8;&#xD569;&#xB2C8;&#xB2E4;. &#xACBD;&#xB85C;&#xC758; &#xC9C4;&#xD589; &#xBC29;&#xD5A5; &#xB4F1;&#xC744; &#xD45C;&#xD604;&#xD558;&#xB294; &#xC6A9;&#xB3C4;&#xB85C; &#xC720;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setPatternImage-com.naver.maps.map.overlay.OverlayImage-" target="_blank"><code>patternImage</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xD328;&#xD134; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <code>null</code>&#xC77C; &#xACBD;&#xC6B0; &#xD328;&#xD134;&#xC774; &#xADF8;&#xB824;&#xC9C0;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD328;&#xD134; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB824;&#xBA74; &#xBA3C;&#xC800; <a href="ref://../reference/com/naver/maps/map/overlay/OverlayImage.html" target="_blank"><code>OverlayImage</code></a> &#xAC1D;&#xCCB4;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. <code>OverlayImage</code>&#xB294; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xBE44;&#xD2B8;&#xB9F5; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xB85C;, &#xD329;&#xD1A0;&#xB9AC; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xB9AC;&#xC18C;&#xC2A4;, &#xC5D0;&#xC14B;, &#xBE44;&#xD2B8;&#xB9F5;, &#xBDF0; &#xB4F1;&#xC73C;&#xB85C;&#xBD80;&#xD130; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD328;&#xD134;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xC774;&#xBBF8;&#xC9C0;&#xB294; &#xC0AC;&#xC6A9;&#xC790; &#xB2E8;&#xB9D0;&#xC758; DPI(Dots Per Inch)&#xBCC4;&#xB85C; &#xB300;&#xC751;&#xD574;&#xC57C; &#xD558;&#xBBC0;&#xB85C; <a href="https://developer.android.com/guide/topics/resources/drawable-resource" target="_blank">&#xB4DC;&#xB85C;&#xC5B4;&#xBE14; &#xB9AC;&#xC18C;&#xC2A4;</a>&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xB9CC;&#xB4DC;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setPatternInterval-int-" target="_blank"><code>patternInterval</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xD328;&#xD134; &#xC774;&#xBBF8;&#xC9C0; &#xAC04; &#xAC04;&#xACA9;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <code>0</code>&#xC77C; &#xACBD;&#xC6B0; &#xD328;&#xD134;&#xC774; &#xADF8;&#xB824;&#xC9C0;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC5D0; &#xD328;&#xD134; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xACE0;, &#xADF8; &#xAC04;&#xACA9;&#xC744; 10&#xD53D;&#xC140;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">path.setPatternImage(OverlayImage.fromResource(R.drawable.path_pattern));
+<p><div id="9526451f9ed2cfc05847ca7c4aae2c82" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-0a1a631e311fee3c00d167eb1ea478dd" class="gbcg-selector gbcg-active" data-tab="Java-0-0a1a631e311fee3c00d167eb1ea478dd" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-788ebb94a9d248bdf412ad2a020ffd01" class="gbcg-selector" data-tab="Kotlin-1-788ebb94a9d248bdf412ad2a020ffd01" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-0a1a631e311fee3c00d167eb1ea478dd" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">path.setPatternImage(OverlayImage.fromResource(R.drawable.path_pattern));
 path.setPatternInterval(<span class="hljs-number">10</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-0a1a631e311fee3c00d167eb1ea478dd" id="java">Java</h3>
+        <div id="Java-0-0a1a631e311fee3c00d167eb1ea478dd" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">path.setPatternImage(OverlayImage.fromResource(R.drawable.path_pattern));
+path.setPatternInterval(<span class="hljs-number">10</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-788ebb94a9d248bdf412ad2a020ffd01" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-788ebb94a9d248bdf412ad2a020ffd01" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">path.patternImage = OverlayImage.fromResource(R.drawable.path_pattern)
+path.patternInterval = <span class="hljs-number">10</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-7-path-pattern.png" alt="&#xD328;&#xD134;&#xC744; &#xC9C0;&#xC815;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 <h3 id="&#xC9C4;&#xCC99;&#xB960;">&#xC9C4;&#xCC99;&#xB960;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setProgress-double-" target="_blank"><code>progress</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC9C4;&#xCC99;&#xB960;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xAC12;&#xC758; &#xBC94;&#xC704;&#xB294; <code>0</code>~<code>1</code>&#xC774;&#xBA70;, <code>0</code>&#xC77C; &#xACBD;&#xC6B0; &#xCD9C;&#xBC1C; &#xC9C0;&#xC810;, <code>1</code>&#xC77C; &#xACBD;&#xC6B0; &#xB3C4;&#xCC29; &#xC9C0;&#xC810;&#xC5D0; &#xB3C4;&#xB2EC;&#xD588;&#xC74C;&#xC744; &#xC758;&#xBBF8;&#xD569;&#xB2C8;&#xB2E4;. &#xC9C0;&#xB098;&#xC628; &#xAD6C;&#xAC04;&#xACFC; &#xC9C0;&#xB098;&#xAC08; &#xAD6C;&#xAC04;&#xC5D0; &#xB300;&#xD55C; &#xC0C9;&#xC0C1;&#xC744; &#xB2EC;&#xB9AC; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xC9C4;&#xCC99;&#xB960;&#xC5D0; &#xB530;&#xB77C; &#xC88C;&#xD45C;&#xC5F4;&#xC744; &#xBCC0;&#xACBD;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC9C4;&#xCC99;&#xB960;&#xC744; 50%&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">path.setProgress(<span class="hljs-number">0.5</span>);
+<p><div id="d44b264b5d727befba8a2303b0bea96f" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-d8cfa4cacfb07a1cd80c66599bfd0607" class="gbcg-selector gbcg-active" data-tab="Java-0-d8cfa4cacfb07a1cd80c66599bfd0607" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-0c8d813767965fba2971e61d480a1cca" class="gbcg-selector" data-tab="Kotlin-1-0c8d813767965fba2971e61d480a1cca" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-d8cfa4cacfb07a1cd80c66599bfd0607" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">path.setProgress(<span class="hljs-number">0.5</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-d8cfa4cacfb07a1cd80c66599bfd0607" id="java">Java</h3>
+        <div id="Java-0-d8cfa4cacfb07a1cd80c66599bfd0607" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">path.setProgress(<span class="hljs-number">0.5</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-0c8d813767965fba2971e61d480a1cca" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-0c8d813767965fba2971e61d480a1cca" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">path.progress = <span class="hljs-number">0.5</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xC0C9;&#xC0C1;">&#xC0C9;&#xC0C1;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setColor-int-" target="_blank"><code>color</code></a>&#xC640; <a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setPassedColor-int-" target="_blank"><code>passedColor</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xAC01;&#xAC01; &#xC9C0;&#xB098;&#xAC08;, &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xC0C9;&#xC0C1;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC9C0;&#xB098;&#xAC08; &#xACBD;&#xB85C;&#xC120; &#xC0C9;&#xC0C1;&#xC744; &#xB179;&#xC0C9;&#xC73C;&#xB85C;, &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120; &#xC0C9;&#xC0C1;&#xC744; &#xD68C;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">path.setColor(Color.GREEN);
+<p><div id="ab67e486f991d29fe2bd845c2f1d4ed3" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-9e87aab3cb8df233f1f9b93832619561" class="gbcg-selector gbcg-active" data-tab="Java-0-9e87aab3cb8df233f1f9b93832619561" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-46b24db3f6bbe6c6c95655ae7549e770" class="gbcg-selector" data-tab="Kotlin-1-46b24db3f6bbe6c6c95655ae7549e770" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-9e87aab3cb8df233f1f9b93832619561" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">path.setColor(Color.GREEN);
 path.setPassedColor(Color.GRAY);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-9e87aab3cb8df233f1f9b93832619561" id="java">Java</h3>
+        <div id="Java-0-9e87aab3cb8df233f1f9b93832619561" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">path.setColor(Color.GREEN);
+path.setPassedColor(Color.GRAY);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-46b24db3f6bbe6c6c95655ae7549e770" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-46b24db3f6bbe6c6c95655ae7549e770" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">path.color = Color.GREEN
+path.passedColor = Color.GRAY
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-7-path-color.png" alt="&#xACBD;&#xB85C;&#xC120;&#xC758; &#xC0C9;&#xC0C1;&#xC744; &#xC9C0;&#xC815;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 <h3 id="&#xD14C;&#xB450;&#xB9AC;-&#xC0C9;&#xC0C1;">&#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setOutlineColor-int-" target="_blank"><code>outlineColor</code></a>&#xC640; <a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html#setPassedOutlineColor-int-" target="_blank"><code>passedOutlineColor</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xAC01;&#xAC01; &#xC9C0;&#xB098;&#xAC08;, &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC9C0;&#xB098;&#xAC08; &#xACBD;&#xB85C;&#xC120; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xD770;&#xC0C9;&#xC73C;&#xB85C;, &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xB179;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">path.setOutlineColor(Color.WHITE);
+<p><div id="7cf6b067a2c22083dd8d1a3ad2f21e38" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-9a545d03abe80409364931b0d7cbcc99" class="gbcg-selector gbcg-active" data-tab="Java-0-9a545d03abe80409364931b0d7cbcc99" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-74ebd0db8b8e0da2b46bcae6deee0df2" class="gbcg-selector" data-tab="Kotlin-1-74ebd0db8b8e0da2b46bcae6deee0df2" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-9a545d03abe80409364931b0d7cbcc99" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">path.setOutlineColor(Color.WHITE);
 path.setPassedOutlineColor(Color.GREEN);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-9a545d03abe80409364931b0d7cbcc99" id="java">Java</h3>
+        <div id="Java-0-9a545d03abe80409364931b0d7cbcc99" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">path.setOutlineColor(Color.WHITE);
+path.setPassedOutlineColor(Color.GREEN);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-74ebd0db8b8e0da2b46bcae6deee0df2" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-74ebd0db8b8e0da2b46bcae6deee0df2" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">path.outlineColor = Color.WHITE
+path.passedOutlineColor = Color.GREEN
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-7-path-linecolor.png" alt="&#xACBD;&#xB85C;&#xC120;&#xC758; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xC9C0;&#xC815;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 <h2 id="&#xBA40;&#xD2F0;&#xD30C;&#xD2B8;-&#xACBD;&#xB85C;&#xC120;-&#xC624;&#xBC84;&#xB808;&#xC774;">&#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;</h2>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/MultipartPathOverlay.html" target="_blank"><code>MultipartPathOverlay</code></a>&#xB294; &#xACBD;&#xB85C;&#xC120;&#xC744; &#xC5EC;&#xB7EC; &#xD30C;&#xD2B8;&#xB85C; &#xB098;&#xB204;&#xC5B4; &#xAC01;&#xAE30; &#xB2E4;&#xB978; &#xC0C9;&#xC0C1;&#xC744; &#xBD80;&#xC5EC;&#xD560; &#xC218; &#xC788;&#xB294; &#xD2B9;&#xC218;&#xD55C; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC785;&#xB2C8;&#xB2E4;. &#xB2E4;&#xC591;&#xD55C; &#xC0C9;&#xC0C1;&#xC73C;&#xB85C; &#xAD6C;&#xC131;&#xB41C; &#xACBD;&#xB85C;&#xC120;&#xC744; &#xB098;&#xD0C0;&#xB0B4;&#xACE0;&#xC790; &#xD560; &#xACBD;&#xC6B0; &#xC5EC;&#xB7EC; &#xAC1C;&#xC758; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xBCF4;&#xB2E4; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC27D;&#xACE0; &#xD6A8;&#xC728;&#xC801;&#xC785;&#xB2C8;&#xB2E4;.</p>
 <h3 id="&#xCD94;&#xAC00;-&#xBC0F;-&#xC0AD;&#xC81C;">&#xCD94;&#xAC00; &#xBC0F; &#xC0AD;&#xC81C;</h3>
 <p>&#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB294; &#xC77C;&#xBC18;&#xC801;&#xC778; &#xC790;&#xBC14; &#xAC1D;&#xCCB4;&#xCC98;&#xB7FC; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; <a href="ref://../reference/com/naver/maps/map/overlay/MultipartPathOverlay.html#setCoordParts-java.util.List-" target="_blank"><code>coordParts</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC88C;&#xD45C;&#xC5F4; &#xD30C;&#xD2B8;&#xC758; &#xBAA9;&#xB85D;&#xC744;, <a href="ref://../reference/com/naver/maps/map/overlay/MultipartPathOverlay.html#setColorParts-java.util.List-" target="_blank"><code>colorParts</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC0C9;&#xC0C1; &#xD30C;&#xD2B8;&#xC758; &#xBAA9;&#xB85D;&#xC744; &#xC9C0;&#xC815;&#xD55C; &#xD6C4; <a href="ref://../reference/com/naver/maps/map/overlay/MultipartPathOverlay.html#setMap-com.naver.maps.map.NaverMap-" target="_blank"><code>map</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;. &#xB2E8;, <code>map</code>&#xC744; &#xC9C0;&#xC815;&#xD558;&#xAE30; &#xC804;&#xC5D0;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; <code>coordParts</code>&#xC640; <code>colorParts</code>&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD558;&#xBA70;, &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xAC70;&#xB098; &#xB450; &#xD30C;&#xD2B8;&#xC758; &#xD06C;&#xAE30;&#xAC00; &#xB2E4;&#xB97C; &#xACBD;&#xC6B0; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774; &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">MultipartPathOverlay multipartPath = <span class="hljs-keyword">new</span> MultipartPathOverlay();
+<p><div id="98c4785439e3fec0dcef1cc84e8560dc" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-0e69c7192c21b58a70d707d0656c9f14" class="gbcg-selector gbcg-active" data-tab="Java-0-0e69c7192c21b58a70d707d0656c9f14" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-556d75b927ae9787a5f1c3e619cac3af" class="gbcg-selector" data-tab="Kotlin-1-556d75b927ae9787a5f1c3e619cac3af" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-0e69c7192c21b58a70d707d0656c9f14" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">MultipartPathOverlay multipartPath = <span class="hljs-keyword">new</span> MultipartPathOverlay();
+
 multipartPath.setCoordParts(Arrays.asList(
     Arrays.asList(
         <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5744287</span>, <span class="hljs-number">126.982625</span>),
@@ -585,14 +980,110 @@ multipartPath.setColorParts(Arrays.asList(
 
 multipartPath.setMap(naverMap);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-0e69c7192c21b58a70d707d0656c9f14" id="java">Java</h3>
+        <div id="Java-0-0e69c7192c21b58a70d707d0656c9f14" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">MultipartPathOverlay multipartPath = <span class="hljs-keyword">new</span> MultipartPathOverlay();
+
+multipartPath.setCoordParts(Arrays.asList(
+    Arrays.asList(
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5744287</span>, <span class="hljs-number">126.982625</span>),
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>)
+    ),
+    Arrays.asList(
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+    )
+));
+
+multipartPath.setColorParts(Arrays.asList(
+    <span class="hljs-keyword">new</span> MultipartPathOverlay.ColorPart(Color.RED, Color.WHITE, Color.GRAY, Color.LTGRAY),
+    <span class="hljs-keyword">new</span> MultipartPathOverlay.ColorPart(Color.GREEN, Color.WHITE, Color.DKGRAY, Color.LTGRAY)
+));
+
+multipartPath.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-556d75b927ae9787a5f1c3e619cac3af" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-556d75b927ae9787a5f1c3e619cac3af" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> multipartPath</span> = MultipartPathOverlay()
+
+multipartPath.coordParts = listOf(
+        listOf(
+                LatLng(<span class="hljs-number">37.5744287</span>, <span class="hljs-number">126.982625</span>),
+                LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+                LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>)
+        ),
+        listOf(
+                LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+                LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+                LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+        )
+)
+
+multipartPath.colorParts = listOf(
+        MultipartPathOverlay.ColorPart(Color.RED, Color.WHITE, Color.GRAY, Color.LTGRAY),
+        MultipartPathOverlay.ColorPart(Color.GREEN, Color.WHITE, Color.DKGRAY, Color.LTGRAY)
+)
+
+multipartPath.map = naverMap
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-7-multipart.png" alt="&#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120;&#xC744; &#xCD94;&#xAC00;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">multipartPath.setMap(<span class="hljs-keyword">null</span>);
+<p><div id="61df618047b467883c7d129e01177986" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-41b3ceae463d88fff46f985bc45c9718" class="gbcg-selector gbcg-active" data-tab="Java-0-41b3ceae463d88fff46f985bc45c9718" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-73bf95df1282bced4caf884925c13217" class="gbcg-selector" data-tab="Kotlin-1-73bf95df1282bced4caf884925c13217" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-41b3ceae463d88fff46f985bc45c9718" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">multipartPath.setMap(<span class="hljs-keyword">null</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-41b3ceae463d88fff46f985bc45c9718" id="java">Java</h3>
+        <div id="Java-0-41b3ceae463d88fff46f985bc45c9718" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">multipartPath.setMap(<span class="hljs-keyword">null</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-73bf95df1282bced4caf884925c13217" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-73bf95df1282bced4caf884925c13217" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">multipartPath.map = <span class="hljs-literal">null</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xC88C;&#xD45C;&#xC5F4;-&#xD30C;&#xD2B8;">&#xC88C;&#xD45C;&#xC5F4; &#xD30C;&#xD2B8;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/MultipartPathOverlay.html#setCoordParts-java.util.List-" target="_blank"><code>coordParts</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC88C;&#xD45C;&#xC5F4; &#xD30C;&#xD2B8;&#xC758; &#xBAA9;&#xB85D;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC88C;&#xD45C;&#xC5F4; &#xD30C;&#xD2B8;&#xC758; &#xBAA9;&#xB85D;&#xC740; &#xD544;&#xC218;&#xC801;&#xC778; &#xC18D;&#xC131;&#xC73C;&#xB85C;, &#xC88C;&#xD45C;&#xC5F4; &#xD30C;&#xD2B8;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;. &#xC88C;&#xD45C;&#xC5F4; &#xD30C;&#xD2B8;&#xC758; &#xBAA9;&#xB85D;&#xC740; &#xC88C;&#xD45C;&#xC5F4;&#xC5D0; &#xB300;&#xD55C; &#xB9AC;&#xC2A4;&#xD2B8;, &#xC989; &#xC88C;&#xD45C;&#xC5D0; &#xB300;&#xD55C; 2&#xCC28;&#xC6D0; &#xB9AC;&#xC2A4;&#xD2B8;&#xB85C; &#xD45C;&#xD604;&#xB429;&#xB2C8;&#xB2E4;. &#xBAA9;&#xB85D;&#xC5D0;&#xB294; &#xCD5C;&#xC18C;&#xD55C; &#xD558;&#xB098;&#xC758; &#xD30C;&#xD2B8;&#xAC00; &#xC874;&#xC7AC;&#xD574;&#xC57C; &#xD558;&#xBA70; &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;. &#xB610;&#xD55C; &#xAC01; &#xC88C;&#xD45C;&#xC5F4; &#xD30C;&#xD2B8;&#xC758; &#xD06C;&#xAE30;&#xAC00; <code>2</code> &#xBBF8;&#xB9CC;&#xC774;&#xAC70;&#xB098; <code>null</code>&#xC778; &#xC6D0;&#xC18C;&#xAC00; &#xC788;&#xC744; &#xACBD;&#xC6B0;&#xC5D0;&#xB3C4; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC5D0; &#xB450; &#xAC1C;&#xC758; &#xC88C;&#xD45C;&#xC5F4; &#xD30C;&#xD2B8;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">multipartPath.setCoordParts(Arrays.asList(
+<p><div id="1967c9c17d70e583bca5bdc9b4d7d360" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-66edc442b0a10681f358ee45fe30b10b" class="gbcg-selector gbcg-active" data-tab="Java-0-66edc442b0a10681f358ee45fe30b10b" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-086a15889c0dffcd31285df68015febd" class="gbcg-selector" data-tab="Kotlin-1-086a15889c0dffcd31285df68015febd" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-66edc442b0a10681f358ee45fe30b10b" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">multipartPath.setCoordParts(Arrays.asList(
     Arrays.asList(
         <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5744287</span>, <span class="hljs-number">126.982625</span>),
         <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
@@ -605,29 +1096,220 @@ multipartPath.setMap(naverMap);
     )
 ));
 </code></pre>
-<p><code>coordParts</code> &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xC5BB;&#xC5B4;&#xC628; &#xAC1D;&#xCCB4;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xBCC0;&#xACBD; &#xC0AC;&#xD56D;&#xC774; &#xBC18;&#xC601;&#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBC18;&#xC601;&#xD558;&#xB824;&#xBA74; &#xAC1D;&#xCCB4;&#xB97C; &#xB2E4;&#xC2DC; <code>coords</code> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>&#xB2E4;&#xC74C;&#xC740; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC88C;&#xD45C;&#xC5F4; &#xC911; &#xC77C;&#xBD80;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">List&lt;List&lt;LatLng&gt;&gt; coordParts = multipartPath.getCoordParts();
-coordParts.get(<span class="hljs-number">0</span>).set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// &#xC544;&#xC9C1; &#xBC18;&#xC601;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</span>
-multipartPath.setCoords(coordParts); <span class="hljs-comment">// &#xBC18;&#xC601;&#xB428;</span>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-66edc442b0a10681f358ee45fe30b10b" id="java">Java</h3>
+        <div id="Java-0-66edc442b0a10681f358ee45fe30b10b" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">multipartPath.setCoordParts(Arrays.asList(
+    Arrays.asList(
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5744287</span>, <span class="hljs-number">126.982625</span>),
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>)
+    ),
+    Arrays.asList(
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+        <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+    )
+));
 </code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-086a15889c0dffcd31285df68015febd" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-086a15889c0dffcd31285df68015febd" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">multipartPath.coordParts = listOf(
+        listOf(
+                LatLng(<span class="hljs-number">37.5744287</span>, <span class="hljs-number">126.982625</span>),
+                LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+                LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>)
+        ),
+        listOf(
+                LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+                LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+                LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+        )
+)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p><code>coordParts</code> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xC815;&#xD55C; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4; &#xB610;&#xB294; <code>coordParts</code> &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xC5BB;&#xC5B4;&#xC628; &#xAC1D;&#xCCB4;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xBCC0;&#xACBD; &#xC0AC;&#xD56D;&#xC774; &#xBC18;&#xC601;&#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBC18;&#xC601;&#xD558;&#xB824;&#xBA74; &#xAC1D;&#xCCB4;&#xB97C; &#xB2E4;&#xC2DC; <code>coordParts</code> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC88C;&#xD45C;&#xC5F4; &#xC911; &#xC77C;&#xBD80;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="fe7cf33b0fcd5bae8503523fb006be2d" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-85506d21a56e82ca44425a110104bdcb" class="gbcg-selector gbcg-active" data-tab="Java-0-85506d21a56e82ca44425a110104bdcb" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-dcc65cdfaffecbe47da047f3243ce705" class="gbcg-selector" data-tab="Kotlin-1-dcc65cdfaffecbe47da047f3243ce705" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-85506d21a56e82ca44425a110104bdcb" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">List&lt;LatLng&gt; coordPart1 = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+Collections.addAll(coordPart1,
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5744287</span>, <span class="hljs-number">126.982625</span>),
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>)
+);
+
+List&lt;LatLng&gt; coordPart2 = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+Collections.addAll(coordPart2,
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+);
+
+List&lt;List&lt;LatLng&gt;&gt; coordParts = Arrays.asList(coordPart1, coordPart2);
+multipartPath.setCoordParts(coordParts);
+
+coordParts.get(<span class="hljs-number">0</span>).set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// &#xC544;&#xC9C1; &#xBC18;&#xC601;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</span>
+multipartPath.setCoordParts(coordParts); <span class="hljs-comment">// &#xBC18;&#xC601;&#xB428;</span>
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-85506d21a56e82ca44425a110104bdcb" id="java">Java</h3>
+        <div id="Java-0-85506d21a56e82ca44425a110104bdcb" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">List&lt;LatLng&gt; coordPart1 = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+Collections.addAll(coordPart1,
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5744287</span>, <span class="hljs-number">126.982625</span>),
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>)
+);
+
+List&lt;LatLng&gt; coordPart2 = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+Collections.addAll(coordPart2,
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+);
+
+List&lt;List&lt;LatLng&gt;&gt; coordParts = Arrays.asList(coordPart1, coordPart2);
+multipartPath.setCoordParts(coordParts);
+
+coordParts.get(<span class="hljs-number">0</span>).set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// &#xC544;&#xC9C1; &#xBC18;&#xC601;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</span>
+multipartPath.setCoordParts(coordParts); <span class="hljs-comment">// &#xBC18;&#xC601;&#xB428;</span>
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-dcc65cdfaffecbe47da047f3243ce705" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-dcc65cdfaffecbe47da047f3243ce705" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> coordParts</span> = mutableListOf(
+        mutableListOf(
+                LatLng(<span class="hljs-number">37.5744287</span>, <span class="hljs-number">126.982625</span>),
+                LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+                LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>)
+        ),
+        mutableListOf(
+                LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+                LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+                LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+        )
+)
+multipartPath.coordParts = coordParts
+
+coordParts[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>) <span class="hljs-comment">// &#xC544;&#xC9C1; &#xBC18;&#xC601;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</span>
+multipartPath.coordParts = coordParts <span class="hljs-comment">// &#xBC18;&#xC601;&#xB428;</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xC0C9;&#xC0C1;-&#xD30C;&#xD2B8;">&#xC0C9;&#xC0C1; &#xD30C;&#xD2B8;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/MultipartPathOverlay.html#setColorParts-java.util.List-" target="_blank"><code>colorParts</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC0C9;&#xC0C1; &#xD30C;&#xD2B8;&#xC758; &#xBAA9;&#xB85D;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC0C9;&#xC0C1; &#xD30C;&#xD2B8;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB824;&#xBA74; &#xBA3C;&#xC800; <a href="ref://../reference/com/naver/maps/map/overlay/MultipartPathOverlay.ColorPart.html" target="_blank"><code>MultipartPathOverlay.ColorPart</code></a> &#xAC1D;&#xCCB4;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. <code>ColorPart</code>&#xB294; &#xD558;&#xB098;&#xC758; &#xC88C;&#xD45C;&#xC5F4; &#xD30C;&#xD2B8;&#xC5D0; &#xC5B4;&#xB5A4; &#xC0C9;&#xC0C1;&#xC744; &#xBD80;&#xC5EC;&#xD574;&#xC57C; &#xD558;&#xB294;&#xC9C0;&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xD45C;&#xD604;&#xD558;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xC785;&#xB2C8;&#xB2E4;. &#xC9C0;&#xB098;&#xAC08; &#xACBD;&#xB85C;&#xC120;&#xACFC; &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xAC01;&#xAC01; &#xC120;&#xC758; &#xC0C9;&#xC0C1;&#xACFC; &#xD14C;&#xB450;&#xB9AC;&#xC758; &#xC0C9;&#xC0C1;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; <code>MultipartPathOverlay.ColorPart</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">MultipartPathOverlay.ColorPart colorPart = <span class="hljs-keyword">new</span> MultipartPathOverlay.ColorPart(
+<p><div id="a991ab805043221521355f3c167c4525" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-7aa8b155da425669fb3a5ae8c0240f2f" class="gbcg-selector gbcg-active" data-tab="Java-0-7aa8b155da425669fb3a5ae8c0240f2f" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-06fe93069c23672ceb4951381c4b7978" class="gbcg-selector" data-tab="Kotlin-1-06fe93069c23672ceb4951381c4b7978" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-7aa8b155da425669fb3a5ae8c0240f2f" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">MultipartPathOverlay.ColorPart colorPart = <span class="hljs-keyword">new</span> MultipartPathOverlay.ColorPart(
     Color.RED,   <span class="hljs-comment">// &#xC9C0;&#xB098;&#xAC08; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xC120; &#xC0C9;&#xC0C1;&#xC744; &#xBE68;&#xAC04;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
     Color.WHITE, <span class="hljs-comment">// &#xC9C0;&#xB098;&#xAC08; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xD770;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
     Color.GRAY,  <span class="hljs-comment">// &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xC120; &#xC0C9;&#xC0C1;&#xC744; &#xD68C;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
     Color.LTGRAY <span class="hljs-comment">// &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xBC1D;&#xC740; &#xD68C;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
 );
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-7aa8b155da425669fb3a5ae8c0240f2f" id="java">Java</h3>
+        <div id="Java-0-7aa8b155da425669fb3a5ae8c0240f2f" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">MultipartPathOverlay.ColorPart colorPart = <span class="hljs-keyword">new</span> MultipartPathOverlay.ColorPart(
+    Color.RED,   <span class="hljs-comment">// &#xC9C0;&#xB098;&#xAC08; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xC120; &#xC0C9;&#xC0C1;&#xC744; &#xBE68;&#xAC04;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
+    Color.WHITE, <span class="hljs-comment">// &#xC9C0;&#xB098;&#xAC08; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xD770;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
+    Color.GRAY,  <span class="hljs-comment">// &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xC120; &#xC0C9;&#xC0C1;&#xC744; &#xD68C;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
+    Color.LTGRAY <span class="hljs-comment">// &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xBC1D;&#xC740; &#xD68C;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
+);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-06fe93069c23672ceb4951381c4b7978" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-06fe93069c23672ceb4951381c4b7978" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> colorPart</span> = MultipartPathOverlay.ColorPart(
+        Color.RED,   <span class="hljs-comment">// &#xC9C0;&#xB098;&#xAC08; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xC120; &#xC0C9;&#xC0C1;&#xC744; &#xBE68;&#xAC04;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
+        Color.WHITE, <span class="hljs-comment">// &#xC9C0;&#xB098;&#xAC08; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xD770;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
+        Color.GRAY,  <span class="hljs-comment">// &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xC120; &#xC0C9;&#xC0C1;&#xC744; &#xD68C;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
+        Color.LTGRAY <span class="hljs-comment">// &#xC9C0;&#xB098;&#xC628; &#xACBD;&#xB85C;&#xC120;&#xC758; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xBC1D;&#xC740; &#xD68C;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;</span>
+)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><code>colorParts</code> &#xC18D;&#xC131;&#xC5D0; <code>ColorPart</code>&#xC5D0; &#xB300;&#xD55C; &#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xC0C9;&#xC0C1;&#xC774; &#xBC18;&#xC601;&#xB429;&#xB2C8;&#xB2E4;. <code>colorParts</code>&#xC758; &#xAC01; &#xD30C;&#xD2B8;&#xB294; <code>coordParts</code>&#xC5D0; &#xC788;&#xB294; &#xB3D9;&#xC77C;&#xD55C; &#xC21C;&#xBC88;&#xC758; &#xD30C;&#xD2B8;&#xC5D0; &#xB300;&#xC751;&#xB429;&#xB2C8;&#xB2E4;. &#xC989;, 0&#xBC88;&#xC9F8; &#xC88C;&#xD45C;&#xC5F4; &#xD30C;&#xD2B8;&#xC5D0; &#xB300;&#xD55C; &#xC0C9;&#xC0C1;&#xC740; 0&#xBC88;&#xC9F8; &#xC0C9;&#xC0C1; &#xD30C;&#xD2B8;&#xC758; &#xAC12;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xB429;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; <code>coordParts</code>&#xB294; &#xD544;&#xC218;&#xC801;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD558;&#xBA70;, &#xADF8; &#xD06C;&#xAE30; &#xB610;&#xD55C; <code>colorParts</code>&#xC758; &#xD06C;&#xAE30;&#xC640; &#xB3D9;&#xC77C;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xC740; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;. &#xBAA9;&#xB85D;&#xC5D0; <code>null</code>&#xC778; &#xC6D0;&#xC18C;&#xAC00; &#xC788;&#xC744; &#xACBD;&#xC6B0;&#xC5D0;&#xB3C4; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC5D0; &#xB450; &#xAC1C;&#xC758; &#xC0C9;&#xC0C1; &#xD30C;&#xD2B8;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">multipartPath.setColorParts(Arrays.asList(
+<p><div id="88b81cf8e99c60144ad3f1d3f73a0afb" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-bc449e338586be24ffa3d1d0154155c8" class="gbcg-selector gbcg-active" data-tab="Java-0-bc449e338586be24ffa3d1d0154155c8" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-1a38bce257d14289bebbc6c69fe20e67" class="gbcg-selector" data-tab="Kotlin-1-1a38bce257d14289bebbc6c69fe20e67" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-bc449e338586be24ffa3d1d0154155c8" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">multipartPath.setColorParts(Arrays.asList(
     <span class="hljs-keyword">new</span> MultipartPathOverlay.ColorPart(Color.RED, Color.WHITE, Color.GRAY, Color.LTGRAY),
     <span class="hljs-keyword">new</span> MultipartPathOverlay.ColorPart(Color.GREEN, Color.WHITE, Color.DKGRAY, Color.LTGRAY)
 ));
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-bc449e338586be24ffa3d1d0154155c8" id="java">Java</h3>
+        <div id="Java-0-bc449e338586be24ffa3d1d0154155c8" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">multipartPath.setColorParts(Arrays.asList(
+    <span class="hljs-keyword">new</span> MultipartPathOverlay.ColorPart(Color.RED, Color.WHITE, Color.GRAY, Color.LTGRAY),
+    <span class="hljs-keyword">new</span> MultipartPathOverlay.ColorPart(Color.GREEN, Color.WHITE, Color.DKGRAY, Color.LTGRAY)
+));
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-1a38bce257d14289bebbc6c69fe20e67" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-1a38bce257d14289bebbc6c69fe20e67" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">multipartPath.colorParts = listOf(
+        MultipartPathOverlay.ColorPart(Color.RED, Color.WHITE, Color.GRAY, Color.LTGRAY),
+        MultipartPathOverlay.ColorPart(Color.GREEN, Color.WHITE, Color.DKGRAY, Color.LTGRAY)
+)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xACBD;&#xB85C;&#xC120;-&#xC624;&#xBC84;&#xB808;&#xC774;-&#xACF5;&#xD1B5;-&#xC18D;&#xC131;">&#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774; &#xACF5;&#xD1B5; &#xC18D;&#xC131;</h3>
 <p>&#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB294; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xC9C0;&#xC6D0;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xAE30;&#xB2A5;&#xC744; &#xC9C0;&#xC6D0;&#xD569;&#xB2C8;&#xB2E4;. &#xB450;&#xAED8;, &#xD14C;&#xB450;&#xB9AC; &#xB450;&#xAED8;, &#xD328;&#xD134;, &#xC9C4;&#xCC99;&#xB960;&#xC744; &#xACBD;&#xB85C;&#xC120; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC640; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <h2 id="&#xD654;&#xC0B4;&#xD45C;-&#xC624;&#xBC84;&#xB808;&#xC774;">&#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;</h2>
@@ -635,7 +1317,15 @@ multipartPath.setCoords(coordParts); <span class="hljs-comment">// &#xBC18;&#xC6
 <h3 id="&#xCD94;&#xAC00;-&#xBC0F;-&#xC0AD;&#xC81C;">&#xCD94;&#xAC00; &#xBC0F; &#xC0AD;&#xC81C;</h3>
 <p>&#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB294; &#xC77C;&#xBC18;&#xC801;&#xC778; &#xC790;&#xBC14; &#xAC1D;&#xCCB4;&#xCC98;&#xB7FC; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; <a href="ref://../reference/com/naver/maps/map/overlay/ArrowheadPathOverlay.html#setCoords-java.util.List-" target="_blank"><code>coords</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC88C;&#xD45C;&#xC5F4;&#xC744; &#xC9C0;&#xC815;&#xD55C; &#xD6C4; <a href="ref://../reference/com/naver/maps/map/overlay/ArrowheadPathOverlay.html#setMap-com.naver.maps.map.NaverMap-" target="_blank"><code>map</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;. &#xB2E8;, <code>map</code>&#xC744; &#xC9C0;&#xC815;&#xD558;&#xAE30; &#xC804;&#xC5D0;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; <code>coords</code>&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD558;&#xBA70;, &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774; &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">ArrowheadPathOverlay arrowheadPath = <span class="hljs-keyword">new</span> ArrowheadPathOverlay();
+<p><div id="567edce28b17696a0d764e7334c38fb6" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-00a902970f3444d9c7371fc061558a7b" class="gbcg-selector gbcg-active" data-tab="Java-0-00a902970f3444d9c7371fc061558a7b" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-3e47a018b981673179d67fcb86560a55" class="gbcg-selector" data-tab="Kotlin-1-3e47a018b981673179d67fcb86560a55" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-00a902970f3444d9c7371fc061558a7b" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">ArrowheadPathOverlay arrowheadPath = <span class="hljs-keyword">new</span> ArrowheadPathOverlay();
 arrowheadPath.setCoords(Arrays.asList(
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568003</span>, <span class="hljs-number">126.9772503</span>),
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9772503</span>),
@@ -643,50 +1333,290 @@ arrowheadPath.setCoords(Arrays.asList(
 ));
 arrowheadPath.setMap(naverMap);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-00a902970f3444d9c7371fc061558a7b" id="java">Java</h3>
+        <div id="Java-0-00a902970f3444d9c7371fc061558a7b" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">ArrowheadPathOverlay arrowheadPath = <span class="hljs-keyword">new</span> ArrowheadPathOverlay();
+arrowheadPath.setCoords(Arrays.asList(
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568003</span>, <span class="hljs-number">126.9772503</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9772503</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9793745</span>)
+));
+arrowheadPath.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-3e47a018b981673179d67fcb86560a55" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-3e47a018b981673179d67fcb86560a55" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> arrowheadPath</span> = ArrowheadPathOverlay()
+arrowheadPath.coords = listOf(
+        LatLng(<span class="hljs-number">37.568003</span>, <span class="hljs-number">126.9772503</span>),
+        LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9772503</span>),
+        LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9793745</span>)
+)
+arrowheadPath.map = naverMap
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-7-turnsignal.png" alt="&#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xCD94;&#xAC00;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 <p><code>map</code>&#xC5D0; <code>null</code>&#xC744; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xC9C0;&#xB3C4;&#xC5D0;&#xC11C; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xC0AC;&#xB77C;&#xC9D1;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">arrowheadPath.setMap(<span class="hljs-keyword">null</span>);
+<p><div id="cac000e3bdbe9aca50a979f75e8103c8" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-cffbf91faec7ed70d63c2bc208f04201" class="gbcg-selector gbcg-active" data-tab="Java-0-cffbf91faec7ed70d63c2bc208f04201" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-3f387de65c03ef12da24aa356927cace" class="gbcg-selector" data-tab="Kotlin-1-3f387de65c03ef12da24aa356927cace" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-cffbf91faec7ed70d63c2bc208f04201" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">arrowheadPath.setMap(<span class="hljs-keyword">null</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-cffbf91faec7ed70d63c2bc208f04201" id="java">Java</h3>
+        <div id="Java-0-cffbf91faec7ed70d63c2bc208f04201" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">arrowheadPath.setMap(<span class="hljs-keyword">null</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-3f387de65c03ef12da24aa356927cace" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-3f387de65c03ef12da24aa356927cace" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">arrowheadPath.map = <span class="hljs-literal">null</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xC88C;&#xD45C;&#xC5F4;">&#xC88C;&#xD45C;&#xC5F4;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/ArrowheadPathOverlay.html#setCoords-java.util.List-" target="_blank"><code>coords</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC88C;&#xD45C;&#xC5F4;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC88C;&#xD45C;&#xC5F4;&#xC740; &#xD544;&#xC218;&#xC801;&#xC778; &#xC18D;&#xC131;&#xC73C;&#xB85C;, &#xC88C;&#xD45C;&#xC5F4;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;. &#xB610;&#xD55C; &#xC88C;&#xD45C;&#xC5F4;&#xC758; &#xD06C;&#xAE30;&#xAC00; <code>2</code> &#xBBF8;&#xB9CC;&#xC774;&#xAC70;&#xB098; <code>null</code>&#xC778; &#xC6D0;&#xC18C;&#xAC00; &#xC788;&#xC744; &#xACBD;&#xC6B0;&#xC5D0;&#xB3C4; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;. &#xAC00;&#xC7A5; &#xB9C8;&#xC9C0;&#xB9C9; &#xC88C;&#xD45C;&#xC5D0;&#xB294; &#xC0BC;&#xAC01;&#xD615; &#xBAA8;&#xC591;&#xC758; &#xBA38;&#xB9AC;&#xAC00; &#xADF8;&#xB824;&#xC9D1;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC88C;&#xD45C;&#xC5F4;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">arrowheadPath.setCoords(Arrays.asList(
-    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
-    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
-    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
-    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+<p><div id="a18fb76f3c6c7b535b47d71bae2c148a" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-a46e755242c86017a88086f8d17789b9" class="gbcg-selector gbcg-active" data-tab="Java-0-a46e755242c86017a88086f8d17789b9" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-17517559d780823eaa8e80aab71b79d7" class="gbcg-selector" data-tab="Kotlin-1-17517559d780823eaa8e80aab71b79d7" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-a46e755242c86017a88086f8d17789b9" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">arrowheadPath.setCoords(Arrays.asList(
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568003</span>, <span class="hljs-number">126.9772503</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9772503</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9793745</span>)
 ));
 </code></pre>
-<p><code>coords</code> &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xC5BB;&#xC5B4;&#xC628; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xBCC0;&#xACBD; &#xC0AC;&#xD56D;&#xC774; &#xBC18;&#xC601;&#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBC18;&#xC601;&#xD558;&#xB824;&#xBA74; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4;&#xB97C; &#xB2E4;&#xC2DC; <code>coords</code> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-a46e755242c86017a88086f8d17789b9" id="java">Java</h3>
+        <div id="Java-0-a46e755242c86017a88086f8d17789b9" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">arrowheadPath.setCoords(Arrays.asList(
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568003</span>, <span class="hljs-number">126.9772503</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9772503</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9793745</span>)
+));
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-17517559d780823eaa8e80aab71b79d7" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-17517559d780823eaa8e80aab71b79d7" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">arrowheadPath.coords = listOf(
+        LatLng(<span class="hljs-number">37.568003</span>, <span class="hljs-number">126.9772503</span>),
+        LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9772503</span>),
+        LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9793745</span>)
+)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p><code>coords</code> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xC815;&#xD55C; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4; &#xB610;&#xB294; <code>coords</code> &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xC5BB;&#xC5B4;&#xC628; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xBCC0;&#xACBD; &#xC0AC;&#xD56D;&#xC774; &#xBC18;&#xC601;&#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBC18;&#xC601;&#xD558;&#xB824;&#xBA74; &#xC88C;&#xD45C;&#xC5F4; &#xAC1D;&#xCCB4;&#xB97C; &#xB2E4;&#xC2DC; <code>coords</code> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC88C;&#xD45C;&#xC5F4; &#xC911; &#xC77C;&#xBD80;&#xB97C; &#xBCC0;&#xACBD;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">List&lt;LatLng&gt; coords = arrowheadPath.getCoords();
+<p><div id="5834830a0ccbb450e710ab6e47d9e151" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-b8b9b6b050bbcf587cfa044905fcdec9" class="gbcg-selector gbcg-active" data-tab="Java-0-b8b9b6b050bbcf587cfa044905fcdec9" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-92d572222d26035cb365e16b6420d8f2" class="gbcg-selector" data-tab="Kotlin-1-92d572222d26035cb365e16b6420d8f2" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-b8b9b6b050bbcf587cfa044905fcdec9" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">List&lt;LatLng&gt; coords = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+Collections.addAll(coords,
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568003</span>, <span class="hljs-number">126.9772503</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9772503</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9793745</span>)
+);
+arrowheadPath.setCoords(coords);
+
 coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// &#xC544;&#xC9C1; &#xBC18;&#xC601;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</span>
 arrowheadPath.setCoords(coords); <span class="hljs-comment">// &#xBC18;&#xC601;&#xB428;</span>
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-b8b9b6b050bbcf587cfa044905fcdec9" id="java">Java</h3>
+        <div id="Java-0-b8b9b6b050bbcf587cfa044905fcdec9" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">List&lt;LatLng&gt; coords = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+Collections.addAll(coords,
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568003</span>, <span class="hljs-number">126.9772503</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9772503</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9793745</span>)
+);
+arrowheadPath.setCoords(coords);
+
+coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// &#xC544;&#xC9C1; &#xBC18;&#xC601;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</span>
+arrowheadPath.setCoords(coords); <span class="hljs-comment">// &#xBC18;&#xC601;&#xB428;</span>
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-92d572222d26035cb365e16b6420d8f2" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-92d572222d26035cb365e16b6420d8f2" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> coords</span> = mutableListOf(
+        LatLng(<span class="hljs-number">37.568003</span>, <span class="hljs-number">126.9772503</span>),
+        LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9772503</span>),
+        LatLng(<span class="hljs-number">37.5701573</span>, <span class="hljs-number">126.9793745</span>)
+)
+arrowheadPath.coords = coords
+
+coords[<span class="hljs-number">0</span>] = LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>) <span class="hljs-comment">// &#xC544;&#xC9C1; &#xBC18;&#xC601;&#xB418;&#xC9C0; &#xC54A;&#xC74C;</span>
+arrowheadPath.coords = coords <span class="hljs-comment">// &#xBC18;&#xC601;&#xB428;</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xB450;&#xAED8;">&#xB450;&#xAED8;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/ArrowheadPathOverlay.html#setWidth-int-" target="_blank"><code>width</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xB450;&#xAED8;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xB450;&#xAED8;&#xB97C; 20&#xD53D;&#xC140;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">arrowheadPath.setWidth(<span class="hljs-number">20</span>);
+<p><div id="bc65cc7e08788569819b765b6e08c07b" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-4e4f271fa104b7f8afe537a44af24e6f" class="gbcg-selector gbcg-active" data-tab="Java-0-4e4f271fa104b7f8afe537a44af24e6f" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-f0fa3b9c08adf7d16c9264f8bf242a3c" class="gbcg-selector" data-tab="Kotlin-1-f0fa3b9c08adf7d16c9264f8bf242a3c" data-code-lang="Kotlin">Kotlin</a>
+    <a id="select-Java-2-203bbb6cf0c4e6b3ad167147704760cd" class="gbcg-selector" data-tab="Java-2-203bbb6cf0c4e6b3ad167147704760cd" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-3-cf0005a24f6c05f5b791c2e8521745c0" class="gbcg-selector" data-tab="Kotlin-3-cf0005a24f6c05f5b791c2e8521745c0" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-4e4f271fa104b7f8afe537a44af24e6f" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">            arrowheadPath.width = <span class="hljs-number">20</span>
 </code></pre>
-<p><img src="../assets/5-7-turnsignal-width.png" alt="&#xB450;&#xAED8;&#xB97C; &#xC9C0;&#xC815;&#xD55C; &#xBAA8;&#xC2B5;"></p>
-<h3 id="&#xBA38;&#xB9AC;-&#xD06C;&#xAE30;">&#xBA38;&#xB9AC; &#xD06C;&#xAE30;</h3>
-<p><a href="ref://../reference/com/naver/maps/map/overlay/ArrowheadPathOverlay.html#setHeadSizeRatio-float-" target="_blank"><code>headSizeRatio</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xBA38;&#xB9AC; &#xD06C;&#xAE30;&#xC758; &#xBC30;&#xC728;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB450;&#xAED8;&#xC5D0; &#xBC30;&#xC728;&#xC744; &#xACF1;&#xD55C; &#xAC12;&#xC774; &#xBA38;&#xB9AC;&#xC758; &#xD06C;&#xAE30;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.</p>
-<p>&#xB2E4;&#xC74C;&#xC740; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xBA38;&#xB9AC; &#xD06C;&#xAE30;&#xB97C; &#xB450;&#xAED8;&#xC758; 4&#xBC30;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">arrowheadPath.setHeadSizeRatio(<span class="hljs-number">4</span>);
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-4e4f271fa104b7f8afe537a44af24e6f" id="java">Java</h3>
+        <div id="Java-0-4e4f271fa104b7f8afe537a44af24e6f" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">            arrowheadPath.width = <span class="hljs-number">20</span>
 </code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-f0fa3b9c08adf7d16c9264f8bf242a3c" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-f0fa3b9c08adf7d16c9264f8bf242a3c" class="gbcg-tab-item gbcb-Kotlin">
+          <p><code>Kotlin</code></p>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Java-2-203bbb6cf0c4e6b3ad167147704760cd" id="java">Java</h3>
+        <div id="Java-2-203bbb6cf0c4e6b3ad167147704760cd" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">arrowheadPath.setHeadSizeRatio(<span class="hljs-number">4</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-3-cf0005a24f6c05f5b791c2e8521745c0" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-3-cf0005a24f6c05f5b791c2e8521745c0" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">arrowheadPath.headSizeRatio = <span class="hljs-number">4</span>f
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-7-arrowheadPath-head-size.png" alt="&#xBA38;&#xB9AC; &#xD06C;&#xAE30;&#xB97C; &#xC9C0;&#xC815;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 <h3 id="&#xC0C9;&#xC0C1;">&#xC0C9;&#xC0C1;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/ArrowheadPathOverlay.html#setColor-int-" target="_blank"><code>color</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC0C9;&#xC0C1;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC0C9;&#xC0C1;&#xC744; &#xB179;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">arrowheadPath.setColor(Color.GREEN);
+<p><div id="4d112e0c7672b8bac467d88be83168be" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-0340a3bea563d214f391c8af2295b860" class="gbcg-selector gbcg-active" data-tab="Java-0-0340a3bea563d214f391c8af2295b860" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-075050efb54935e8a3159899b9ef4952" class="gbcg-selector" data-tab="Kotlin-1-075050efb54935e8a3159899b9ef4952" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-0340a3bea563d214f391c8af2295b860" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">arrowheadPath.setColor(Color.GREEN);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-0340a3bea563d214f391c8af2295b860" id="java">Java</h3>
+        <div id="Java-0-0340a3bea563d214f391c8af2295b860" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">arrowheadPath.setColor(Color.GREEN);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-075050efb54935e8a3159899b9ef4952" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-075050efb54935e8a3159899b9ef4952" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">arrowheadPath.color = Color.GREEN
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-7-turnsignal-color.png" alt="&#xC0C9;&#xC0C1;&#xC744; &#xC9C0;&#xC815;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 <h3 id="&#xD14C;&#xB450;&#xB9AC;-&#xC0C9;&#xC0C1;">&#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/ArrowheadPathOverlay.html#setOutlineColor-int-" target="_blank"><code>outlineColor</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xD14C;&#xB450;&#xB9AC;&#xC758; &#xC0C9;&#xC0C1;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xD654;&#xC0B4;&#xD45C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xB179;&#xC0C9;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">arrowheadPath.setOutlineColor(Color.GREEN);
+<p><div id="72cbeaaf0772b322773803c7982fbd74" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-f9ed240794936ad5c29a5d5ed2eb3bfe" class="gbcg-selector gbcg-active" data-tab="Java-0-f9ed240794936ad5c29a5d5ed2eb3bfe" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-b8845aeb028226c79955fa7852e287a1" class="gbcg-selector" data-tab="Kotlin-1-b8845aeb028226c79955fa7852e287a1" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-f9ed240794936ad5c29a5d5ed2eb3bfe" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">arrowheadPath.setOutlineColor(Color.GREEN);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-f9ed240794936ad5c29a5d5ed2eb3bfe" id="java">Java</h3>
+        <div id="Java-0-f9ed240794936ad5c29a5d5ed2eb3bfe" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">arrowheadPath.setOutlineColor(Color.GREEN);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-b8845aeb028226c79955fa7852e287a1" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-b8845aeb028226c79955fa7852e287a1" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">arrowheadPath.outlineColor = Color.GREEN
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-7-turnsignal-linecolor.png" alt="&#xD14C;&#xB450;&#xB9AC; &#xC0C9;&#xC0C1;&#xC744; &#xC9C0;&#xC815;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 
                                 
@@ -727,7 +1657,7 @@ arrowheadPath.setCoords(coords); <span class="hljs-comment">// &#xBC18;&#xC601;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"경로선과 화살표","level":"2.5.7","depth":2,"next":{"title":"API 레퍼런스","level":"3.1","depth":1,"url":"ref://reference","ref":"ref://reference","articles":[]},"previous":{"title":"지상 오버레이","level":"2.5.6","depth":2,"path":"guide/5-6.md","ref":"guide/5-6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/5-7.md","mtime":"2018-11-12T09:12:53.533Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-12T09:13:00.717Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"경로선과 화살표","level":"2.5.7","depth":2,"next":{"title":"API 레퍼런스","level":"3.1","depth":1,"url":"ref://reference/","ref":"ref://reference/","articles":[]},"previous":{"title":"지상 오버레이","level":"2.5.6","depth":2,"path":"guide/5-6.md","ref":"guide/5-6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/5-7.md","mtime":"2019-01-16T03:36:24.274Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-16T03:36:36.642Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -738,6 +1668,10 @@ arrowheadPath.setCoords(coords); <span class="hljs-comment">// &#xBC18;&#xC601;&
     
         
         <script src="../gitbook/gitbook-plugin-otherlink/js/otherlink.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codegroup/code.group.js"></script>
         
     
         

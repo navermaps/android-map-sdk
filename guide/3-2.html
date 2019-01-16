@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -56,8 +60,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
-    
-    <link rel="next" href="4.html" />
     
     
     <link rel="prev" href="3-1.html" />
@@ -238,16 +240,48 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="4.html">
+        <li class="chapter " data-level="2.4" >
             
-                <a href="4.html">
+                <span>
             
                     
                     상호작용
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="4-1.html">
+            
+                <a href="4-1.html">
+            
+                    
+                    사용자 인터페이스
+            
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="4-2.html">
+            
+                <a href="4-2.html">
+            
+                    
+                    위치
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -370,7 +404,7 @@
     
         <li class="chapter " data-level="3.1" >
             
-                <a target="_blank" href="ref://reference">
+                <a target="_blank" href="ref://reference/">
             
                     
                     API 레퍼런스
@@ -387,6 +421,19 @@
             
                     
                     데모 프로젝트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://github.com/navermaps/android-map-sdk/wiki/Changelog">
+            
+                    
+                    Changelog
             
                 </a>
             
@@ -498,9 +545,39 @@
 </ul>
 <p>&#xC0DD;&#xC131;&#xD55C; &#xAC1D;&#xCCB4;&#xB97C; &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB85C; &#xC0BC;&#xC544; <code>NaverMap.moveCamera()</code>&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xCE74;&#xBA54;&#xB77C;&#xAC00; &#xC6C0;&#xC9C1;&#xC785;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xB300;&#xC0C1; &#xC9C0;&#xC810;&#xC744; <code>(37.5666102, 126.9783881)</code>&#xB85C; &#xBCC0;&#xACBD;&#xD558;&#xB3C4;&#xB85D; &#xC9C0;&#xC815;&#xD558;&#xB294; <code>CameraUpdate</code> &#xAC1D;&#xCCB4;&#xB97C; &#xB9CC;&#xB4E4;&#xACE0; <code>NaverMap.moveCamera()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xCE74;&#xBA54;&#xB77C;&#xB97C; &#xC6C0;&#xC9C1;&#xC774;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>));
+<p><div id="2eded1f81e73808aac0cd91bb226ee80" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-e5cd99f4cc71443d93ad184491ce1ccd" class="gbcg-selector gbcg-active" data-tab="Java-0-e5cd99f4cc71443d93ad184491ce1ccd" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-8dcd46d0b0f0ada78a3fb44c8800704e" class="gbcg-selector" data-tab="Kotlin-1-8dcd46d0b0f0ada78a3fb44c8800704e" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-e5cd99f4cc71443d93ad184491ce1ccd" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>));
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-e5cd99f4cc71443d93ad184491ce1ccd" id="java">Java</h3>
+        <div id="Java-0-e5cd99f4cc71443d93ad184491ce1ccd" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>));
+naverMap.moveCamera(cameraUpdate);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-8dcd46d0b0f0ada78a3fb44c8800704e" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-8dcd46d0b0f0ada78a3fb44c8800704e" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+naverMap.moveCamera(cameraUpdate)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="&#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;">&#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;</h2>
 <p>&#xC0DD;&#xC131;&#xD55C; <code>CameraUpdate</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC774;&#xC6A9;&#xD574; <code>moveCamera()</code>&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xAE30; &#xC804;&#xC5D0; <a href="ref://../reference/com/naver/maps/map/CameraUpdate.html#animate-com.naver.maps.map.CameraAnimation-" target="_blank"><code>CameraUpdate.animate()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC5D0; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC744; &#xC801;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xC9C0;&#xC815;&#xB418;&#xBA74; &#xC77C;&#xC815;&#xD55C; &#xC2DC;&#xAC04; &#xB3D9;&#xC548; &#xCE74;&#xBA54;&#xB77C;&#xAC00; &#xBAA9;&#xD45C; &#xC9C0;&#xC810;&#xAE4C;&#xC9C0; &#xC11C;&#xC11C;&#xD788; &#xC6C0;&#xC9C1;&#xC785;&#xB2C8;&#xB2E4;.</p>
 <h3 id="&#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;-&#xC720;&#xD615;">&#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158; &#xC720;&#xD615;</h3>
@@ -512,25 +589,125 @@ naverMap.moveCamera(cameraUpdate);
 <li><a href="ref://../reference/com/naver/maps/map/CameraAnimation.html#Fly" target="_blank"><code>Fly</code></a>: &#xBD80;&#xB4DC;&#xB7FD;&#xAC8C; &#xCD95;&#xC18C;&#xB410;&#xB2E4;&#xAC00; &#xD655;&#xB300;&#xB418;&#xBA70; &#xC774;&#xB3D9;&#xD569;&#xB2C8;&#xB2E4;. &#xBA3C; &#xAC70;&#xB9AC;&#xB97C; &#xC774;&#xB3D9;&#xD560; &#xB54C; &#xC801;&#xD569;&#xD569;&#xB2C8;&#xB2E4;.</li>
 </ul>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC5D0; <code>Easing</code> &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC744; &#xC801;&#xC6A9;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+<p><div id="21bb88df27201b4f732f2eabbf7eb1a4" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-b1aa66b98ee72a10942ea52044a45696" class="gbcg-selector gbcg-active" data-tab="Java-0-b1aa66b98ee72a10942ea52044a45696" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-2f263199e78fb5d867fb3557a5180a0d" class="gbcg-selector" data-tab="Kotlin-1-2f263199e78fb5d867fb3557a5180a0d" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-b1aa66b98ee72a10942ea52044a45696" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
     .animate(CameraAnimation.Easing);
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-b1aa66b98ee72a10942ea52044a45696" id="java">Java</h3>
+        <div id="Java-0-b1aa66b98ee72a10942ea52044a45696" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing);
+naverMap.moveCamera(cameraUpdate);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-2f263199e78fb5d867fb3557a5180a0d" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-2f263199e78fb5d867fb3557a5180a0d" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+        .animate(CameraAnimation.Easing)
+naverMap.moveCamera(cameraUpdate)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xC9C0;&#xC18D;-&#xC2DC;&#xAC04;">&#xC9C0;&#xC18D; &#xC2DC;&#xAC04;</h3>
 <p><code>animate()</code>&#xC758; <code>duration</code> &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC758; &#xC9C0;&#xC18D; &#xC2DC;&#xAC04;&#xC744; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB2E8;, &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC758; &#xC720;&#xD615;&#xC774; <code>None</code>&#xC77C; &#xACBD;&#xC6B0; &#xC2DC;&#xAC04;&#xC740; &#xBB34;&#xC2DC;&#xB429;&#xB2C8;&#xB2E4;. &#xB610;&#xD55C; <code>duration</code>&#xC774; <code>0</code>&#xC77C; &#xACBD;&#xC6B0; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC758; &#xC720;&#xD615;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158; &#xC5C6;&#xC774; &#xC774;&#xB3D9;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC5D0; <code>Fly</code> &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC744; &#xC801;&#xC6A9;&#xD558;&#xACE0; &#xC9C0;&#xC18D; &#xC2DC;&#xAC04;&#xC744; 1&#xCD08;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+<p><div id="f8957d53a100d9aeaef2dbca8f006074" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-7a5b445b221c6b2f3baefe8651a8d2a6" class="gbcg-selector gbcg-active" data-tab="Java-0-7a5b445b221c6b2f3baefe8651a8d2a6" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-df5d5a5b4ccb7ef95618e85ea6b6ef98" class="gbcg-selector" data-tab="Kotlin-1-df5d5a5b4ccb7ef95618e85ea6b6ef98" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-7a5b445b221c6b2f3baefe8651a8d2a6" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
     .animate(CameraAnimation.Fly, <span class="hljs-number">1000</span>);
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-7a5b445b221c6b2f3baefe8651a8d2a6" id="java">Java</h3>
+        <div id="Java-0-7a5b445b221c6b2f3baefe8651a8d2a6" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Fly, <span class="hljs-number">1000</span>);
+naverMap.moveCamera(cameraUpdate);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-df5d5a5b4ccb7ef95618e85ea6b6ef98" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-df5d5a5b4ccb7ef95618e85ea6b6ef98" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+        .animate(CameraAnimation.Fly, <span class="hljs-number">1000</span>)
+naverMap.moveCamera(cameraUpdate)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p>&#xC9C0;&#xC18D; &#xC2DC;&#xAC04;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC9C0;&#xB3C4;&#xC758; &#xAE30;&#xBCF8; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158; &#xC2DC;&#xAC04;&#xC774; &#xC801;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;. &#xAE30;&#xBCF8; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158; &#xC2DC;&#xAC04;&#xC740; <code>NaverMap</code>&#xC758; <code>defaultCameraAnimationDuration</code> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xB3C4;&#xC758; &#xAE30;&#xBCF8; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158; &#xC2DC;&#xAC04;&#xC744; 500&#xBC00;&#xB9AC;&#xCD08;&#xB85C; &#xBCC0;&#xACBD;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">naverMap.setDefaultCameraAnimationDuration(<span class="hljs-number">500</span>);
+<p><div id="e393d5b2573099798fc304dfdd217d33" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-1f075afdecfa99c8bd57bbb092b01b58" class="gbcg-selector gbcg-active" data-tab="Java-0-1f075afdecfa99c8bd57bbb092b01b58" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-112e06eefc01e55d86906ce2d4642081" class="gbcg-selector" data-tab="Kotlin-1-112e06eefc01e55d86906ce2d4642081" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-1f075afdecfa99c8bd57bbb092b01b58" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">naverMap.setDefaultCameraAnimationDuration(<span class="hljs-number">500</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-1f075afdecfa99c8bd57bbb092b01b58" id="java">Java</h3>
+        <div id="Java-0-1f075afdecfa99c8bd57bbb092b01b58" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">naverMap.setDefaultCameraAnimationDuration(<span class="hljs-number">500</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-112e06eefc01e55d86906ce2d4642081" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-112e06eefc01e55d86906ce2d4642081" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">naverMap.defaultCameraAnimationDuration = <span class="hljs-number">500</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;-&#xCDE8;&#xC18C;">&#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158; &#xCDE8;&#xC18C;</h3>
 <p>&#xC9C4;&#xD589; &#xC911;&#xC778; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC740; &#xB2E4;&#xC591;&#xD55C; &#xC774;&#xC720;&#xB85C; &#xCDE8;&#xC18C;&#xB418;&#xAC70;&#xB098; &#xCDE8;&#xC18C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <code>NaverMap.moveCamera()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xC0C8;&#xB85C;&#xC6B4; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC744; &#xC2DC;&#xC791;&#xD558;&#xBA74; &#xC774;&#xC804;&#xC5D0; &#xC9C4;&#xD589; &#xC911;&#xC774;&#xB358; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC774; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xCDE8;&#xC18C;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xC18D; &#xC2DC;&#xAC04;&#xC774; 2&#xCD08;&#xC778; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC744; &#xC2DC;&#xC791;&#xD558;&#xACE0; 1&#xCD08; &#xD6C4; &#xB2E4;&#xB978; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC744; &#xC2DC;&#xC791;&#xD574; &#xAE30;&#xC874; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC744; &#xCDE8;&#xC18C;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">LatLng coord1 = <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>);
+<p><div id="29f1aac6292769a84c60eb169fe68900" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-e09114b735f12b64e66996fe1d102173" class="gbcg-selector gbcg-active" data-tab="Java-0-e09114b735f12b64e66996fe1d102173" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-a7fa4197192e131de405b4014c038025" class="gbcg-selector" data-tab="Kotlin-1-a7fa4197192e131de405b4014c038025" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-e09114b735f12b64e66996fe1d102173" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">LatLng coord1 = <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>);
 LatLng coord2 = <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57000</span>, <span class="hljs-number">126.97618</span>);
 
 <span class="hljs-comment">// 2&#xCD08;&#xAC04; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;</span>
@@ -541,9 +718,55 @@ naverMap.moveCamera(CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing
     naverMap.moveCamera(CameraUpdate.scrollTo(coord2).animate(CameraAnimation.Easing))
 }, <span class="hljs-number">1000</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-e09114b735f12b64e66996fe1d102173" id="java">Java</h3>
+        <div id="Java-0-e09114b735f12b64e66996fe1d102173" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">LatLng coord1 = <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>);
+LatLng coord2 = <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57000</span>, <span class="hljs-number">126.97618</span>);
+
+<span class="hljs-comment">// 2&#xCD08;&#xAC04; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;</span>
+naverMap.moveCamera(CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
+
+<span class="hljs-comment">// 1&#xCD08; &#xD6C4; &#xB2E4;&#xB978; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC774; &#xC2DC;&#xC791;&#xB418;&#xBA70; &#xAE30;&#xC874; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xCDE8;&#xC18C;&#xB428;</span>
+<span class="hljs-keyword">new</span> Handler().postDelayed(() -&gt; {
+    naverMap.moveCamera(CameraUpdate.scrollTo(coord2).animate(CameraAnimation.Easing))
+}, <span class="hljs-number">1000</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-a7fa4197192e131de405b4014c038025" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-a7fa4197192e131de405b4014c038025" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> coord1</span> = LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>)
+<span class="hljs-variable"><span class="hljs-keyword">val</span> coord2</span> = LatLng(<span class="hljs-number">37.57000</span>, <span class="hljs-number">126.97618</span>)
+
+<span class="hljs-comment">// 2&#xCD08;&#xAC04; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;</span>
+naverMap.moveCamera(CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>))
+
+<span class="hljs-comment">// 1&#xCD08; &#xD6C4; &#xB2E4;&#xB978; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC774; &#xC2DC;&#xC791;&#xB418;&#xBA70; &#xAE30;&#xC874; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xCDE8;&#xC18C;&#xB428;</span>
+Handler().postDelayed({
+    naverMap.moveCamera(CameraUpdate.scrollTo(coord2).animate(CameraAnimation.Easing))
+}, <span class="hljs-number">1000</span>)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><a href="ref://../reference/com/naver/maps/map/NaverMap.html#cancelTransitions--" target="_blank"><code>NaverMap.cancelTransitions()</code></a>&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xBA85;&#xC2DC;&#xC801;&#xC73C;&#xB85C; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC744; &#xCDE8;&#xC18C;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xD604;&#xC7AC; &#xC9C4;&#xD589; &#xC911;&#xC778; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xCDE8;&#xC18C;&#xB418;&#xACE0; &#xCE74;&#xBA54;&#xB77C;&#xAC00; &#xD604;&#xC7AC; &#xC704;&#xCE58;&#xC5D0; &#xBA48;&#xCDA5;&#xB2C8;&#xB2E4;. &#xC2A4;&#xD1B1; &#xC81C;&#xC2A4;&#xCC98;&#xAC00; &#xD65C;&#xC131;&#xD654;&#xB418;&#xC5B4; &#xC788;&#xB2E4;&#xBA74; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC9C0;&#xB3C4;&#xB97C; &#xD0ED;&#xD588;&#xC744; &#xB54C;&#xC5D0;&#xB3C4; &#xB3D9;&#xC77C;&#xD55C; &#xACB0;&#xACFC;&#xAC00; &#xC77C;&#xC5B4;&#xB0A9;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; <code>cancelTransitions()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC744; &#xCDE8;&#xC18C;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java"><span class="hljs-comment">// 2&#xCD08;&#xAC04; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;</span>
+<p><div id="e0f186815339bfbca2fdba01948da7c1" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-8e27b000dbea009299ac3381f3d6d536" class="gbcg-selector gbcg-active" data-tab="Java-0-8e27b000dbea009299ac3381f3d6d536" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-4f1ba3f64de08f59a843ac7c73cd0644" class="gbcg-selector" data-tab="Kotlin-1-4f1ba3f64de08f59a843ac7c73cd0644" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-8e27b000dbea009299ac3381f3d6d536" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-comment">// 2&#xCD08;&#xAC04; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;</span>
 naverMap.moveCamera(CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
 
 <span class="hljs-comment">// 1&#xCD08; &#xD6C4; cancelTransitions()&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xBA70; &#xAE30;&#xC874; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xCDE8;&#xC18C;&#xB428;</span>
@@ -551,12 +774,52 @@ naverMap.moveCamera(CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing
     naverMap.cancelTransitions();
 }, <span class="hljs-number">1000</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-8e27b000dbea009299ac3381f3d6d536" id="java">Java</h3>
+        <div id="Java-0-8e27b000dbea009299ac3381f3d6d536" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-comment">// 2&#xCD08;&#xAC04; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;</span>
+naverMap.moveCamera(CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
+
+<span class="hljs-comment">// 1&#xCD08; &#xD6C4; cancelTransitions()&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xBA70; &#xAE30;&#xC874; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xCDE8;&#xC18C;&#xB428;</span>
+<span class="hljs-keyword">new</span> Handler().postDelayed(() -&gt; {
+    naverMap.cancelTransitions();
+}, <span class="hljs-number">1000</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-4f1ba3f64de08f59a843ac7c73cd0644" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-4f1ba3f64de08f59a843ac7c73cd0644" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-comment">// 2&#xCD08;&#xAC04; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;</span>
+naverMap.moveCamera(CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>))
+
+<span class="hljs-comment">// 1&#xCD08; &#xD6C4; cancelTransitions()&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xBA70; &#xAE30;&#xC874; &#xCE74;&#xBA54;&#xB77C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xCDE8;&#xC18C;&#xB428;</span>
+Handler().postDelayed({
+    naverMap.cancelTransitions()
+}, <span class="hljs-number">1000</span>)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="&#xCF5C;&#xBC31;&#xACFC;-&#xC774;&#xBCA4;&#xD2B8;">&#xCF5C;&#xBC31;&#xACFC; &#xC774;&#xBCA4;&#xD2B8;</h2>
 <p><code>CameraUpdate</code>&#xC758; &#xCF5C;&#xBC31; &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xD55C; &#xBC88;&#xC758; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC5D0; &#xB300;&#xD55C; &#xACB0;&#xACFC; &#xCF5C;&#xBC31;&#xC744; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB610;&#xD55C; <code>NaverMap</code>&#xC5D0; &#xC774;&#xBCA4;&#xD2B8; &#xB9AC;&#xC2A4;&#xB108;&#xB97C; &#xB4F1;&#xB85D;&#xD558;&#xBA74; &#xC9C0;&#xB3C4;&#xC5D0;&#xC11C; &#xC77C;&#xC5B4;&#xB098;&#xB294; &#xBAA8;&#xB4E0; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC5D0; &#xB300;&#xD55C; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <h3 id="&#xCE74;&#xBA54;&#xB77C;-&#xC774;&#xB3D9;-&#xCF5C;&#xBC31;">&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xCF5C;&#xBC31;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/CameraUpdate.html#finishCallback-com.naver.maps.map.CameraUpdate.FinishCallback-" target="_blank"><code>finishCallback()</code></a> &#xBC0F; <a href="ref://../reference/com/naver/maps/map/CameraUpdate.html#cancelCallback-com.naver.maps.map.CameraUpdate.CancelCallback-" target="_blank"><code>cancelCallback()</code></a>&#xC73C;&#xB85C; &#xCF5C;&#xBC31; &#xAC1D;&#xCCB4;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xD574;&#xB2F9;&#xD558;&#xB294; <code>CameraUpdate</code>&#xC5D0; &#xB300;&#xD55C; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC774; &#xC644;&#xB8CC;&#xB410;&#xAC70;&#xB098; &#xC2E4;&#xD328;&#xD588;&#xC744; &#xB54C; &#xCF5C;&#xBC31;&#xC744; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC5D0; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xC9C0;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xACE0; &#xADF8; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xCDE8;&#xC18C;&#xB418;&#xC5C8;&#xC744; &#xACBD;&#xC6B0; <code>cancelCallback()</code>&#xC5D0; &#xC9C0;&#xC815;&#xB41C; &#xCF5C;&#xBC31;&#xC774; &#xD638;&#xCD9C;&#xB418;&#xACE0;, &#xADF8; &#xC678;&#xC758; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; <code>finishCallback()</code>&#xC5D0; &#xC9C0;&#xC815;&#xB41C; &#xCF5C;&#xBC31;&#xC774; &#xD638;&#xCD9C;&#xB429;&#xB2C8;&#xB2E4;. &#xC989;, &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC5D0; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xC9C0;&#xC815;&#xB418;&#xC9C0; &#xC54A;&#xC558;&#xC73C;&#xBA74; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC740; &#xD56D;&#xC0C1; &#xC131;&#xACF5;&#xC801;&#xC73C;&#xB85C; &#xC644;&#xB8CC;&#xB41C; &#xAC83;&#xC73C;&#xB85C; &#xAC04;&#xC8FC;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC644;&#xB8CC; &#xBC0F; &#xC2E4;&#xD328;&#xC2DC; &#xD1A0;&#xC2A4;&#xD2B8;&#xB97C; &#xB744;&#xC6B0;&#xB294; &#xCF5C;&#xBC31;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+<p><div id="a45023233836a9476fdb76ba3ec1673a" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-f0624d97cf09d6bdca7398a5d86f401c" class="gbcg-selector gbcg-active" data-tab="Java-0-f0624d97cf09d6bdca7398a5d86f401c" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-53ca315526209ce1f9118af15104a1d9" class="gbcg-selector" data-tab="Kotlin-1-53ca315526209ce1f9118af15104a1d9" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-f0624d97cf09d6bdca7398a5d86f401c" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
     .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
     .finishCallback(() -&gt; {
         Toast.makeText(context, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC644;&#xB8CC;&quot;</span>, Toast.LENGTH_SHORT).show();
@@ -567,6 +830,44 @@ naverMap.moveCamera(CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing
 
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-f0624d97cf09d6bdca7398a5d86f401c" id="java">Java</h3>
+        <div id="Java-0-f0624d97cf09d6bdca7398a5d86f401c" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+    .finishCallback(() -&gt; {
+        Toast.makeText(context, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC644;&#xB8CC;&quot;</span>, Toast.LENGTH_SHORT).show();
+    })
+    .cancelCallback(() -&gt; {
+        Toast.makeText(context, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC2E4;&#xD328;&quot;</span>, Toast.LENGTH_SHORT).show();
+    });
+
+naverMap.moveCamera(cameraUpdate);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-53ca315526209ce1f9118af15104a1d9" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-53ca315526209ce1f9118af15104a1d9" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+        .finishCallback {
+            Toast.makeText(context, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC644;&#xB8CC;&quot;</span>, Toast.LENGTH_SHORT).show()
+        }
+        .cancelCallback {
+            Toast.makeText(context, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC2E4;&#xD328;&quot;</span>, Toast.LENGTH_SHORT).show()
+        }
+
+naverMap.moveCamera(cameraUpdate)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xCE74;&#xBA54;&#xB77C;-&#xBCC0;&#xACBD;-&#xC774;&#xBCA4;&#xD2B8;">&#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; &#xC774;&#xBCA4;&#xD2B8;</h3>
 <p>&#xC5B4;&#xB5A4; &#xC774;&#xC720;&#xC5D0; &#xC758;&#xD574;&#xC11C;&#xAC74; &#xCE74;&#xBA54;&#xB77C;&#xAC00; &#xC6C0;&#xC9C1;&#xC774;&#xBA74; &#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;. <a href="ref://../reference/com/naver/maps/map/NaverMap.html#addOnCameraChangeListener-com.naver.maps.map.NaverMap.OnCameraChangeListener-" target="_blank"><code>NaverMap.addOnCameraChangeListener()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB85C; <a href="ref://../reference/com/naver/maps/map/NaverMap.OnCameraChangeListener.html" target="_blank"><code>OnCameraChangeListener</code></a>&#xB97C; &#xB4F1;&#xB85D;&#xD558;&#xBA74; &#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1B;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC704;&#xCE58;&#xAC00; &#xBCC0;&#xACBD;&#xB418;&#xBA74; <a href="ref://../reference/com/naver/maps/map/NaverMap.OnCameraChangeListener.html#onCameraChange-int-boolean-" target="_blank"><code>onCameraChange()</code></a> &#xCF5C;&#xBC31; &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <p><code>onCameraChange()</code>&#xC5D0;&#xB294; <code>reason</code>&#xACFC; <code>animated</code> &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xAC00; &#xC804;&#xB2EC;&#xB429;&#xB2C8;&#xB2E4;. <code>reason</code>&#xC740; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1C;&#xC0DD;&#xC2DC;&#xD0A8; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC758; &#xC6D0;&#xC778;&#xC785;&#xB2C8;&#xB2E4;. <a href="ref://../reference/com/naver/maps/map/CameraUpdate.html#reason-int-" target="_blank"><code>CameraUpdate.reason()</code></a>&#xC744; &#xD638;&#xCD9C;&#xD574; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC758; &#xC6D0;&#xC778;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBA70;, &#xC774;&#xBCA4;&#xD2B8; &#xB9AC;&#xC2A4;&#xB108; &#xB0B4;&#xC5D0;&#xC11C; &#xC774; &#xAC12;&#xC744; &#xC774;&#xC6A9;&#xD574; &#xC5B4;&#xB5A4; &#xC6D0;&#xC778;&#xC5D0; &#xC758;&#xD574; &#xBC1C;&#xC0DD;&#xD55C; &#xC774;&#xBCA4;&#xD2B8;&#xC778;&#xC9C0;&#xB97C; &#xD310;&#xB2E8;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC81C;&#xC2A4;&#xCC98;, &#xCEE8;&#xD2B8;&#xB864; &#xB4F1; &#xB124;&#xC774;&#xBC84; &#xC9C0;&#xB3C4; SDK&#xC758; &#xB0B4;&#xC7A5; &#xAE30;&#xB2A5;&#xC5D0; &#xC758;&#xD574; &#xCE74;&#xBA54;&#xB77C;&#xAC00; &#xC774;&#xB3D9;&#xD55C; &#xACBD;&#xC6B0; &#xBBF8;&#xB9AC; &#xC815;&#xC758;&#xB41C; &#xC74C;&#xC22B;&#xAC12;&#xC744; &#xAC00;&#xC9C0;&#xBA70;, &#xAC1C;&#xBC1C;&#xC790;&#xAC00; &#xC784;&#xC758;&#xC758; &#xC591;&#xC22B;&#xAC12;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBBF8;&#xB9AC; &#xC815;&#xC758;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xC6D0;&#xC778;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
@@ -578,8 +879,16 @@ naverMap.moveCamera(cameraUpdate);
 </ul>
 <p><code>animated</code>&#xB294; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1C;&#xC0DD;&#xC2DC;&#xD0A8; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC5D0; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC774; &#xC9C0;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xB294;&#xC9C0; &#xC5EC;&#xBD80;&#xB97C; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD;&#xC2DC; &#xC6D0;&#xC778;&#xC744; &#xB85C;&#xAE45;&#xD558;&#xB294; &#xC774;&#xBCA4;&#xD2B8; &#xB9AC;&#xC2A4;&#xB108;&#xB97C; &#xB4F1;&#xB85D;&#xD558;&#xACE0;, &#xC6D0;&#xC778;&#xC744; &#xC9C0;&#xC815;&#xD574; &#xCE74;&#xBA54;&#xB77C;&#xB97C; &#xC774;&#xB3D9;&#xC2DC;&#xD0A4;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">naverMap.addOnCameraChangeListener((reason, animated) -&gt; {
-    Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; - reson: %d, animated: %b&quot;</span>, reason, animated);
+<p><div id="c40301023226e807ab18d9649bf5554a" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-3c44ba23c322cc1f6da5f112c7387090" class="gbcg-selector gbcg-active" data-tab="Java-0-3c44ba23c322cc1f6da5f112c7387090" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-1dc82cba996f5afc429e226d6320faf1" class="gbcg-selector" data-tab="Kotlin-1-1dc82cba996f5afc429e226d6320faf1" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-3c44ba23c322cc1f6da5f112c7387090" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">naverMap.addOnCameraChangeListener((reason, animated) -&gt; {
+    Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; - reson: &quot;</span> + reason + <span class="hljs-string">&quot;, animated: &quot;</span> + animated);
 });
 
 CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
@@ -588,29 +897,157 @@ CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new
 
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-3c44ba23c322cc1f6da5f112c7387090" id="java">Java</h3>
+        <div id="Java-0-3c44ba23c322cc1f6da5f112c7387090" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">naverMap.addOnCameraChangeListener((reason, animated) -&gt; {
+    Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; - reson: &quot;</span> + reason + <span class="hljs-string">&quot;, animated: &quot;</span> + animated);
+});
+
+CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+    .reason(<span class="hljs-number">1000</span>);
+
+naverMap.moveCamera(cameraUpdate);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-1dc82cba996f5afc429e226d6320faf1" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-1dc82cba996f5afc429e226d6320faf1" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">naverMap.addOnCameraChangeListener { reason, animated -&gt;
+    Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; - reson: $reason, animated: $animated&quot;</span>);
+}
+
+<span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+        .reason(<span class="hljs-number">1000</span>)
+
+naverMap.moveCamera(cameraUpdate)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="&#xD53C;&#xBD07;">&#xD53C;&#xBD07;</h2>
 <p><code>CameraUpdate.pivot()</code> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xD53C;&#xBD07; &#xC9C0;&#xC810;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD53C;&#xBD07; &#xC9C0;&#xC810;&#xC740; &#xD654;&#xBA74;&#xC758; &#xC67C;&#xCABD; &#xC704;&#xB97C; <code>(0, 0)</code>, &#xC624;&#xB978;&#xCABD; &#xC544;&#xB798;&#xB97C; <code>(1, 1)</code>&#xB85C; &#xC0BC;&#xB294; &#xBE44;&#xC728;&#xAC12;&#xC73C;&#xB85C;, &#xCE74;&#xBA54;&#xB77C;&#xB97C; &#xC6C0;&#xC9C1;&#xC77C; &#xB54C; &#xAE30;&#xC900;&#xC810;&#xC774; &#xB418;&#xB294; &#xD654;&#xBA74;&#xC0C1; &#xC9C0;&#xC810;&#xC744; &#xC758;&#xBBF8;&#xD569;&#xB2C8;&#xB2E4;. &#xD53C;&#xBD07; &#xC9C0;&#xC810;&#xC774; &#xC9C0;&#xC815;&#xB418;&#xBA74; &#xC774;&#xB3D9;, &#xC90C; &#xB808;&#xBCA8; &#xBCC0;&#xACBD;, &#xD68C;&#xC804;&#xC774; &#xD654;&#xBA74; &#xC911;&#xC2EC;&#xC774; &#xC544;&#xB2CC; &#xD574;&#xB2F9; &#xC9C0;&#xC810;&#xC744; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9D1;&#xB2C8;&#xB2E4;.</p>
 <p>&#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xD53C;&#xBD07; &#xC9C0;&#xC810;&#xC744; <code>(0.5, 0.8)</code>&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xACE0; &#xCE74;&#xBA54;&#xB77C;&#xB97C; &#xC774;&#xB3D9;&#xD558;&#xBA74;, &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC774; &#xC644;&#xB8CC;&#xB41C; &#xD6C4; <code>(0.5, 0.8)</code> &#xC9C0;&#xC810;&#xC758; &#xC88C;&#xD45C;&#xAC00; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC758; &#xB300;&#xC0C1; &#xC9C0;&#xC810;&#xACFC; &#xC77C;&#xCE58;&#xD558;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;. &#xB3D9;&#xC77C;&#xD55C; &#xD53C;&#xBD07; &#xC9C0;&#xC810;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xACE0; &#xC9C0;&#xB3C4;&#xB97C; &#xD655;&#xB300;&#xD558;&#xBA74; &#xC9C0;&#xB3C4;&#xC758; &#xC911;&#xC2EC;&#xC774; &#xC544;&#xB2CC; <code>(0.5, 0.8)</code> &#xC9C0;&#xC810;&#xC744; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xC9C0;&#xB3C4;&#xAC00; &#xD655;&#xB300;&#xB429;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xD53C;&#xBD07; &#xC9C0;&#xC810;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC774; &#xC644;&#xB8CC;&#xB41C; &#xD6C4; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC704;&#xCE58;&#xAC00; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xC5D0;&#xC11C; &#xC9C0;&#xC815;&#xD588;&#xB358; &#xC704;&#xCE58;&#xC640; &#xB2E4;&#xB97C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xD53C;&#xBD07;&#xC740; &#xCE74;&#xBA54;&#xB77C;&#xAC00; &#xC704;&#xCE58;&#xD574;&#xC57C; &#xD558;&#xB294; &#xD654;&#xBA74;&#xC0C1; &#xC9C0;&#xC810;&#xC744; &#xC9C0;&#xC815;&#xD55C;&#xB2E4;&#xB294; &#xCE21;&#xBA74;&#xC5D0;&#xC11C;&#xB294; &#xCF58;&#xD150;&#xCE20; &#xD328;&#xB529;&#xACFC; &#xB3D9;&#xC77C;&#xD55C; &#xC5ED;&#xD560;&#xC744; &#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB7EC;&#xB098; <code>NaverMap</code>&#xC758; &#xC18D;&#xC131;&#xC778; &#xCF58;&#xD150;&#xCE20; &#xD328;&#xB529;&#xACFC; &#xB2EC;&#xB9AC; &#xD53C;&#xBD07;&#xC740; <code>CameraUpdate</code>&#xC758; &#xC18D;&#xC131;&#xC774;&#xBBC0;&#xB85C; &#xD558;&#xB098;&#xC758; &#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD;&#xC5D0;&#xB9CC; &#xC801;&#xC6A9;&#xB418;&#xBA70;, &#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;&#xC5D0; &#xC601;&#xAD6C;&#xC801;&#xC73C;&#xB85C; &#xC601;&#xD5A5;&#xC744; &#xBBF8;&#xCE58;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xD53C;&#xBD07; &#xC9C0;&#xC810;&#xC744; <code>(0.5, 0.8)</code>&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xACE0; &#xCE74;&#xBA54;&#xB77C;&#xB97C; &#xC774;&#xB3D9;&#xC2DC;&#xD0A4;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+<p><div id="d6903fc622fa668ac6fc2699b33c254f" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-f3bda594f27537a98120c0d98f974d2e" class="gbcg-selector gbcg-active" data-tab="Java-0-f3bda594f27537a98120c0d98f974d2e" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-e4f6dff8b012c9325ff30ff4d22caa61" class="gbcg-selector" data-tab="Kotlin-1-e4f6dff8b012c9325ff30ff4d22caa61" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-f3bda594f27537a98120c0d98f974d2e" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
     .pivot(<span class="hljs-keyword">new</span> PointF(<span class="hljs-number">0.5f</span>, <span class="hljs-number">0.8f</span>));
 
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-f3bda594f27537a98120c0d98f974d2e" id="java">Java</h3>
+        <div id="Java-0-f3bda594f27537a98120c0d98f974d2e" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .pivot(<span class="hljs-keyword">new</span> PointF(<span class="hljs-number">0.5f</span>, <span class="hljs-number">0.8f</span>));
+
+naverMap.moveCamera(cameraUpdate);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-e4f6dff8b012c9325ff30ff4d22caa61" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-e4f6dff8b012c9325ff30ff4d22caa61" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+        .pivot(PointF(<span class="hljs-number">0.5</span>f, <span class="hljs-number">0.8</span>f))
+
+naverMap.moveCamera(cameraUpdate)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="&#xC774;&#xB3D9;-&#xC81C;&#xD55C;">&#xC774;&#xB3D9; &#xC81C;&#xD55C;</h2>
 <p><code>NaverMap</code>&#xC758; &#xC18D;&#xC131;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xCE74;&#xBA54;&#xB77C;&#xAC00; &#xC774;&#xB3D9;&#xD560; &#xC218; &#xC788;&#xB294; &#xC601;&#xC5ED;&#xACFC; &#xCD5C;&#xC18C; &#xBC0F; &#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;&#xC744; &#xC81C;&#xD55C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <h3 id="&#xCD5C;&#xC18C;-&#xBC0F;-&#xCD5C;&#xB300;-&#xC90C;-&#xB808;&#xBCA8;">&#xCD5C;&#xC18C; &#xBC0F; &#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/NaverMap.html#setMinZoom-double-" target="_blank"><code>minZoom</code></a> &#xBC0F; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setMaxZoom-double-" target="_blank"><code>maxZoom</code></a> &#xC18D;&#xC131;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xCD5C;&#xC18C; &#xBC0F; &#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;&#xC744; &#xC81C;&#xD55C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC90C; &#xB808;&#xBCA8;&#xC744; 5~18 &#xBC94;&#xC704;&#xB85C; &#xC81C;&#xD55C;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">naverMap.setMinZoom(<span class="hljs-number">5.0</span>);
+<p><div id="02bbe5567ba9071aeb08ca89c78cbf23" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-acf5c054f28a1b3f332e19f0fc19b104" class="gbcg-selector gbcg-active" data-tab="Java-0-acf5c054f28a1b3f332e19f0fc19b104" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-45d09e9a870f1b6b8eaef768d0ecf7c6" class="gbcg-selector" data-tab="Kotlin-1-45d09e9a870f1b6b8eaef768d0ecf7c6" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-acf5c054f28a1b3f332e19f0fc19b104" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">naverMap.setMinZoom(<span class="hljs-number">5.0</span>);
 naverMap.setMaxZoom(<span class="hljs-number">18.0</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-acf5c054f28a1b3f332e19f0fc19b104" id="java">Java</h3>
+        <div id="Java-0-acf5c054f28a1b3f332e19f0fc19b104" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">naverMap.setMinZoom(<span class="hljs-number">5.0</span>);
+naverMap.setMaxZoom(<span class="hljs-number">18.0</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-45d09e9a870f1b6b8eaef768d0ecf7c6" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-45d09e9a870f1b6b8eaef768d0ecf7c6" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">naverMap.minZoom = <span class="hljs-number">5.0</span>
+naverMap.maxZoom = <span class="hljs-number">18.0</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xCE74;&#xBA54;&#xB77C;-&#xC601;&#xC5ED;-&#xC81C;&#xD55C;">&#xCE74;&#xBA54;&#xB77C; &#xC601;&#xC5ED; &#xC81C;&#xD55C;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/NaverMap.html#setExtent-com.naver.maps.geometry.LatLngBounds-" target="_blank"><code>extent</code></a> &#xC18D;&#xC131;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xB300;&#xC0C1; &#xC9C0;&#xC810;&#xC744; &#xC601;&#xC5ED; &#xB0B4;&#xB85C; &#xC81C;&#xD55C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xCE74;&#xBA54;&#xB77C;&#xAC00; &#xC81C;&#xD55C; &#xC601;&#xC5ED;&#xC744; &#xBC97;&#xC5B4;&#xB098;&#xB3C4;&#xB85D; API&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB354;&#xB77C;&#xB3C4; &#xB300;&#xC0C1; &#xC9C0;&#xC810;&#xC774; &#xC601;&#xC5ED; &#xB0B4;&#xB85C; &#xC870;&#xC815;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xB300;&#xC0C1; &#xC9C0;&#xC810;&#xC744; &#xD55C;&#xBC18;&#xB3C4; &#xC778;&#xADFC;&#xC73C;&#xB85C; &#xC81C;&#xD55C;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">naverMap.setExtent(<span class="hljs-keyword">new</span> LatLngBounds(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">31.43</span>, <span class="hljs-number">122.37</span>), <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">44.35</span>, <span class="hljs-number">132</span>)));
+<p><div id="54b2e34e0567333525333ce0e50356aa" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-bc0203004740aadf7cea597feb137db2" class="gbcg-selector gbcg-active" data-tab="Java-0-bc0203004740aadf7cea597feb137db2" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-84d8381cfb741999321a6d1c28949b64" class="gbcg-selector" data-tab="Kotlin-1-84d8381cfb741999321a6d1c28949b64" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-bc0203004740aadf7cea597feb137db2" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">naverMap.setExtent(<span class="hljs-keyword">new</span> LatLngBounds(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">31.43</span>, <span class="hljs-number">122.37</span>), <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">44.35</span>, <span class="hljs-number">132</span>)));
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-bc0203004740aadf7cea597feb137db2" id="java">Java</h3>
+        <div id="Java-0-bc0203004740aadf7cea597feb137db2" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">naverMap.setExtent(<span class="hljs-keyword">new</span> LatLngBounds(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">31.43</span>, <span class="hljs-number">122.37</span>), <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">44.35</span>, <span class="hljs-number">132</span>)));
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-84d8381cfb741999321a6d1c28949b64" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-84d8381cfb741999321a6d1c28949b64" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">naverMap.extent = LatLngBounds(LatLng(<span class="hljs-number">31.43</span>, <span class="hljs-number">122.37</span>), LatLng(<span class="hljs-number">44.35</span>, <span class="hljs-number">132.0</span>))
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p>&#xCE74;&#xBA54;&#xB77C; &#xC601;&#xC5ED;&#xC744; &#xC81C;&#xD55C;&#xD560; &#xB54C; &#xCD5C;&#xC18C; &#xC90C; &#xB808;&#xBCA8;&#xB3C4; &#xD568;&#xAED8; &#xC81C;&#xD55C;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC9C0;&#xB3C4;&#xAC00; &#xCD95;&#xC18C;&#xB418;&#xC5C8;&#xC744; &#xB54C; &#xC81C;&#xD55C; &#xC601;&#xC5ED;&#xC774; &#xB108;&#xBB34; &#xC791;&#xAC8C; &#xB098;&#xD0C0;&#xB0A0; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 
                                 
@@ -639,14 +1076,10 @@ naverMap.setMaxZoom(<span class="hljs-number">18.0</span>);
 
             
                 
-                <a href="3-1.html" class="navigation navigation-prev " aria-label="Previous page: 카메라와 투영">
+                <a href="3-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 카메라와 투영">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="4.html" class="navigation navigation-next " aria-label="Next page: 상호작용">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -655,7 +1088,7 @@ naverMap.setMaxZoom(<span class="hljs-number">18.0</span>);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"카메라 이동","level":"2.3.2","depth":2,"next":{"title":"상호작용","level":"2.4","depth":1,"path":"guide/4.md","ref":"guide/4.md","articles":[]},"previous":{"title":"카메라와 투영","level":"2.3.1","depth":2,"path":"guide/3-1.md","ref":"guide/3-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/3-2.md","mtime":"2018-11-12T09:12:53.513Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-12T09:13:00.717Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"카메라 이동","level":"2.3.2","depth":2,"next":{"title":"상호작용","level":"2.4","depth":1,"ref":"","articles":[{"title":"사용자 인터페이스","level":"2.4.1","depth":2,"path":"guide/4-1.md","ref":"guide/4-1.md","articles":[]},{"title":"위치","level":"2.4.2","depth":2,"path":"guide/4-2.md","ref":"guide/4-2.md","articles":[]}]},"previous":{"title":"카메라와 투영","level":"2.3.1","depth":2,"path":"guide/3-1.md","ref":"guide/3-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/3-2.md","mtime":"2019-01-16T03:36:24.082Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-16T03:36:36.642Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -666,6 +1099,10 @@ naverMap.setMaxZoom(<span class="hljs-number">18.0</span>);
     
         
         <script src="../gitbook/gitbook-plugin-otherlink/js/otherlink.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codegroup/code.group.js"></script>
         
     
         

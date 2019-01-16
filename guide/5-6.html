@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -238,16 +242,48 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="4.html">
+        <li class="chapter " data-level="2.4" >
             
-                <a href="4.html">
+                <span>
             
                     
                     상호작용
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="4-1.html">
+            
+                <a href="4-1.html">
+            
+                    
+                    사용자 인터페이스
+            
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="4-2.html">
+            
+                <a href="4-2.html">
+            
+                    
+                    위치
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -370,7 +406,7 @@
     
         <li class="chapter " data-level="3.1" >
             
-                <a target="_blank" href="ref://reference">
+                <a target="_blank" href="ref://reference/">
             
                     
                     API 레퍼런스
@@ -387,6 +423,19 @@
             
                     
                     데모 프로젝트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://github.com/navermaps/android-map-sdk/wiki/Changelog">
+            
+                    
+                    Changelog
             
                 </a>
             
@@ -490,33 +539,159 @@
 <h2 id="&#xCD94;&#xAC00;-&#xBC0F;-&#xC0AD;&#xC81C;">&#xCD94;&#xAC00; &#xBC0F; &#xC0AD;&#xC81C;</h2>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/GroundOverlay.html" target="_blank"><code>GroundOverlay</code></a> &#xAC1D;&#xCCB4;&#xB294; &#xC77C;&#xBC18;&#xC801;&#xC778; &#xC790;&#xBC14; &#xAC1D;&#xCCB4;&#xCC98;&#xB7FC; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0;, <a href="ref://../reference/com/naver/maps/map/overlay/GroundOverlay.html#setBounds-com.naver.maps.geometry.LatLngBounds-" target="_blank"><code>bounds</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC601;&#xC5ED;, <a href="ref://../reference/com/naver/maps/map/overlay/GroundOverlay.html#setImage-com.naver.maps.map.overlay.OverlayImage-" target="_blank"><code>image</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC9C0;&#xC815;&#xD55C; &#xD6C4;, <a href="ref://../reference/com/naver/maps/map/overlay/GroundOverlay.html#setMap-com.naver.maps.map.NaverMap-" target="_blank"><code>map</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;. &#xB2E8;, <code>map</code>&#xC744; &#xC9C0;&#xC815;&#xD558;&#xAE30; &#xC804;&#xC5D0;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; <code>bounds</code>&#xC640; <code>image</code>&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD558;&#xBA70;, &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774; &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">GroundOverlay groundOverlay = <span class="hljs-keyword">new</span> GroundOverlay();
-groundOverlay.setBounds(<span class="hljs-keyword">new</span> LatLngBounds(
-    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.566351</span>, <span class="hljs-number">126.977234</span>), <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568528</span>, <span class="hljs-number">126.979980</span>)));
+<p><div id="9a372d660621aeb3a93ef47425d77220" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-9569ad59bfe6e20a7925569f7c607c11" class="gbcg-selector gbcg-active" data-tab="Java-0-9569ad59bfe6e20a7925569f7c607c11" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-7cdf7ab56ff70f1c2421113962cd3f52" class="gbcg-selector" data-tab="Kotlin-1-7cdf7ab56ff70f1c2421113962cd3f52" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-9569ad59bfe6e20a7925569f7c607c11" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">GroundOverlay groundOverlay = <span class="hljs-keyword">new</span> GroundOverlay();
+groundOverlay.setBounds(<span class="hljs-keyword">new</span> LatLngBounds(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.566351</span>, <span class="hljs-number">126.977234</span>), <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568528</span>, <span class="hljs-number">126.979980</span>)));
 groundOverlay.setImage(OverlayImage.fromResource(R.drawable.ground_overlay_image));
 groundOverlay.setMap(naverMap);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-9569ad59bfe6e20a7925569f7c607c11" id="java">Java</h3>
+        <div id="Java-0-9569ad59bfe6e20a7925569f7c607c11" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">GroundOverlay groundOverlay = <span class="hljs-keyword">new</span> GroundOverlay();
+groundOverlay.setBounds(<span class="hljs-keyword">new</span> LatLngBounds(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.566351</span>, <span class="hljs-number">126.977234</span>), <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568528</span>, <span class="hljs-number">126.979980</span>)));
+groundOverlay.setImage(OverlayImage.fromResource(R.drawable.ground_overlay_image));
+groundOverlay.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-7cdf7ab56ff70f1c2421113962cd3f52" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-7cdf7ab56ff70f1c2421113962cd3f52" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> groundOverlay</span> = GroundOverlay()
+groundOverlay.bounds = LatLngBounds(LatLng(<span class="hljs-number">37.566351</span>, <span class="hljs-number">126.977234</span>), LatLng(<span class="hljs-number">37.568528</span>, <span class="hljs-number">126.979980</span>))
+groundOverlay.setImage(OverlayImage.fromResource(R.drawable.ground_overlay_image))
+groundOverlay.map = naverMap
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-6-ground.png" alt="&#xC9C0;&#xB3C4;&#xC5D0; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xCD94;&#xAC00;&#xB41C; &#xBAA8;&#xC2B5;"></p>
 <p><code>map</code>&#xC5D0; <code>null</code>&#xC744; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xC9C0;&#xB3C4;&#xC5D0;&#xC11C; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xC0AC;&#xB77C;&#xC9D1;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">groundOverlay.setMap(<span class="hljs-keyword">null</span>);
+<p><div id="91e4f417151a52241658af7cd72b6f16" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-88a393b882fbde69ed6a2bc080d18411" class="gbcg-selector gbcg-active" data-tab="Java-0-88a393b882fbde69ed6a2bc080d18411" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-f0fa3b9c08adf7d16c9264f8bf242a3c" class="gbcg-selector" data-tab="Kotlin-1-f0fa3b9c08adf7d16c9264f8bf242a3c" data-code-lang="Kotlin">Kotlin</a>
+    <a id="select-Java-2-b93cecb3506c4c6620ff6cbb6949a0ad" class="gbcg-selector" data-tab="Java-2-b93cecb3506c4c6620ff6cbb6949a0ad" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-3-b4d5a0a179d481f364b3af40d2e758ad" class="gbcg-selector" data-tab="Kotlin-3-b4d5a0a179d481f364b3af40d2e758ad" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-88a393b882fbde69ed6a2bc080d18411" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">groundOverlay.setMap(<span class="hljs-keyword">null</span>);
 </code></pre>
-<h2 id="&#xC601;&#xC5ED;">&#xC601;&#xC5ED;</h2>
-<p><a href="ref://../reference/com/naver/maps/map/overlay/GroundOverlay.html#setBounds-com.naver.maps.geometry.LatLngBounds-" target="_blank"><code>bounds</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC601;&#xC5ED;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC601;&#xC5ED;&#xC740; &#xD544;&#xC218;&#xC801;&#xC778; &#xC18D;&#xC131;&#xC73C;&#xB85C;, &#xC601;&#xC5ED;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC5D0; &#xC601;&#xC5ED;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">groundOverlay.setBounds(<span class="hljs-keyword">new</span> LatLngBounds(
-    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.566351</span>, <span class="hljs-number">126.977234</span>), <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568528</span>, <span class="hljs-number">126.979980</span>)));
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-88a393b882fbde69ed6a2bc080d18411" id="java">Java</h3>
+        <div id="Java-0-88a393b882fbde69ed6a2bc080d18411" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">groundOverlay.setMap(<span class="hljs-keyword">null</span>);
 </code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-f0fa3b9c08adf7d16c9264f8bf242a3c" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-f0fa3b9c08adf7d16c9264f8bf242a3c" class="gbcg-tab-item gbcb-Kotlin">
+          <p><code>Kotlin</code></p>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Java-2-b93cecb3506c4c6620ff6cbb6949a0ad" id="java">Java</h3>
+        <div id="Java-2-b93cecb3506c4c6620ff6cbb6949a0ad" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">groundOverlay.setBounds(<span class="hljs-keyword">new</span> LatLngBounds(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.566351</span>, <span class="hljs-number">126.977234</span>), <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.568528</span>, <span class="hljs-number">126.979980</span>)));
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-3-b4d5a0a179d481f364b3af40d2e758ad" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-3-b4d5a0a179d481f364b3af40d2e758ad" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">groundOverlay.bounds = LatLngBounds(LatLng(<span class="hljs-number">37.566351</span>, <span class="hljs-number">126.977234</span>), LatLng(<span class="hljs-number">37.568528</span>, <span class="hljs-number">126.979980</span>))
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="&#xC774;&#xBBF8;&#xC9C0;">&#xC774;&#xBBF8;&#xC9C0;</h2>
-<p><a href="ref://../reference/com/naver/maps/map/overlay/GroundOverlay.html#setImage-com.naver.maps.map.overlay.OverlayImage-" target="_blank"><code>image</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xBBF8;&#xC9C0;&#xB294; &#xD544;&#xC218;&#xC801;&#xC778; &#xC18D;&#xC131;&#xC73C;&#xB85C;, &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;. &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB824;&#xBA74; &#xBA3C;&#xC800; <a href="ref://../reference/com/naver/maps/map/overlay/OverlayImage.html" target="_blank"><code>OverlayImage</code></a> &#xAC1D;&#xCCB4;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. <code>OverlayImage</code>&#xB294; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xBE44;&#xD2B8;&#xB9F5; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xB85C;, &#xD329;&#xD1A0;&#xB9AC; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xB9AC;&#xC18C;&#xC2A4;, &#xC5D0;&#xC14B;, &#xBE44;&#xD2B8;&#xB9F5;, &#xBDF0; &#xB4F1;&#xC73C;&#xB85C;&#xBD80;&#xD130; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xD654;&#xBA74;&#xC0C1; &#xD06C;&#xAE30;&#xB294; &#xC90C; &#xB808;&#xBCA8;&#xC5D0; &#xB530;&#xB77C; &#xBCC0;&#xD558;&#xBBC0;&#xB85C; &#xC0AC;&#xC6A9;&#xC790; &#xB2E8;&#xB9D0;&#xC758; DPI(Dots Per Inch)&#xC640; &#xBB34;&#xAD00;&#xD55C; &#xB9AC;&#xC18C;&#xC2A4;&#xB098; &#xC5D0;&#xC14B;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xB9CC;&#xB4DC;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><a href="ref://../reference/com/naver/maps/map/overlay/GroundOverlay.html#setImage-com.naver.maps.map.overlay.OverlayImage-" target="_blank"><code>image</code></a> &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB824;&#xBA74; &#xBA3C;&#xC800; <a href="ref://../reference/com/naver/maps/map/overlay/OverlayImage.html" target="_blank"><code>OverlayImage</code></a> &#xAC1D;&#xCCB4;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. <code>OverlayImage</code>&#xB294; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xBE44;&#xD2B8;&#xB9F5; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xB85C;, &#xD329;&#xD1A0;&#xB9AC; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xB9AC;&#xC18C;&#xC2A4;, &#xC5D0;&#xC14B;, &#xBE44;&#xD2B8;&#xB9F5;, &#xBDF0; &#xB4F1;&#xC73C;&#xB85C;&#xBD80;&#xD130; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xD654;&#xBA74;&#xC0C1; &#xD06C;&#xAE30;&#xB294; &#xC90C; &#xB808;&#xBCA8;&#xC5D0; &#xB530;&#xB77C; &#xBCC0;&#xD558;&#xBBC0;&#xB85C; &#xC0AC;&#xC6A9;&#xC790; &#xB2E8;&#xB9D0;&#xC758; DPI(Dots Per Inch)&#xC640; &#xBB34;&#xAD00;&#xD55C; <code>nodpi</code> &#xB9AC;&#xC18C;&#xC2A4;&#xB098; &#xC5D0;&#xC14B;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xB9CC;&#xB4DC;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC5D0; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">groundOverlay.setImage(OverlayImage.fromResource(R.drawable.ground_overlay_image));
+<p><div id="770299244ca6586b237f15f92d4c26fa" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-6bb2b93b123c25088a9ec20f90e00f5f" class="gbcg-selector gbcg-active" data-tab="Java-0-6bb2b93b123c25088a9ec20f90e00f5f" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-ac7717c5ce8785441c161f04ea0b4c7b" class="gbcg-selector" data-tab="Kotlin-1-ac7717c5ce8785441c161f04ea0b4c7b" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-6bb2b93b123c25088a9ec20f90e00f5f" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">groundOverlay.setImage(OverlayImage.fromResource(R.drawable.ground_overlay_image));
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-6bb2b93b123c25088a9ec20f90e00f5f" id="java">Java</h3>
+        <div id="Java-0-6bb2b93b123c25088a9ec20f90e00f5f" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">groundOverlay.setImage(OverlayImage.fromResource(R.drawable.ground_overlay_image));
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-ac7717c5ce8785441c161f04ea0b4c7b" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-ac7717c5ce8785441c161f04ea0b4c7b" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">groundOverlay.setImage(OverlayImage.fromResource(R.drawable.ground_overlay_image))
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="&#xBD88;&#xD22C;&#xBA85;&#xB3C4;">&#xBD88;&#xD22C;&#xBA85;&#xB3C4;</h2>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/GroundOverlay.html#setAlpha-float-" target="_blank"><code>alpha</code></a> &#xC18D;&#xC131;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xBD88;&#xD22C;&#xBA85;&#xB3C4;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xAC12;&#xC758; &#xBC94;&#xC704;&#xB294; <code>0</code>~<code>1</code>&#xC774;&#xBA70;, <code>0</code>&#xC77C; &#xACBD;&#xC6B0; &#xC644;&#xC804;&#xD788; &#xD22C;&#xBA85;, <code>1</code>&#xC77C; &#xACBD;&#xC6B0; &#xC644;&#xC804;&#xD788; &#xBD88;&#xD22C;&#xBA85;&#xD55C; &#xC0C1;&#xD0DC;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;. &#xBD88;&#xD22C;&#xBA85;&#xB3C4;&#xAC00; <code>0</code>&#xC77C; &#xACBD;&#xC6B0; <code>visible</code>&#xC774; <code>false</code>&#xC778; &#xACBD;&#xC6B0;&#xC640; &#xB2EC;&#xB9AC; &#xC5EC;&#xC804;&#xD788; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB098; &#xC788;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xAC04;&#xC8FC;&#xB429;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xC774;&#xBCA4;&#xD2B8; &#xCC98;&#xB9AC;&#xC758; &#xB300;&#xC0C1;&#xC774; &#xB429;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xBC18;&#xD22C;&#xBA85;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">groundOverlay.setAlpha(<span class="hljs-number">0.5f</span>);
+<p><div id="83529a2e2256b9226ddb6e58bc774799" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-e7df3515d5dc9feb86769e8b092120d4" class="gbcg-selector gbcg-active" data-tab="Java-0-e7df3515d5dc9feb86769e8b092120d4" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-972ec41933006db3bb2e8fc1fea3582e" class="gbcg-selector" data-tab="Kotlin-1-972ec41933006db3bb2e8fc1fea3582e" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-e7df3515d5dc9feb86769e8b092120d4" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">groundOverlay.setAlpha(<span class="hljs-number">0.5f</span>);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-e7df3515d5dc9feb86769e8b092120d4" id="java">Java</h3>
+        <div id="Java-0-e7df3515d5dc9feb86769e8b092120d4" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">groundOverlay.setAlpha(<span class="hljs-number">0.5f</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-972ec41933006db3bb2e8fc1fea3582e" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-972ec41933006db3bb2e8fc1fea3582e" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">groundOverlay.alpha = <span class="hljs-number">0.5</span>f
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <p><img src="../assets/5-6-ground-alpha.png" alt="&#xC9C0;&#xC0C1; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xBC18;&#xD22C;&#xBA85;&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD55C; &#xBAA8;&#xC2B5;"></p>
 
                                 
@@ -561,7 +736,7 @@ groundOverlay.setMap(naverMap);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"지상 오버레이","level":"2.5.6","depth":2,"next":{"title":"경로선과 화살표","level":"2.5.7","depth":2,"path":"guide/5-7.md","ref":"guide/5-7.md","articles":[]},"previous":{"title":"위치 오버레이","level":"2.5.5","depth":2,"path":"guide/5-5.md","ref":"guide/5-5.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/5-6.md","mtime":"2018-11-12T09:12:53.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-12T09:13:00.717Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"지상 오버레이","level":"2.5.6","depth":2,"next":{"title":"경로선과 화살표","level":"2.5.7","depth":2,"path":"guide/5-7.md","ref":"guide/5-7.md","articles":[]},"previous":{"title":"위치 오버레이","level":"2.5.5","depth":2,"path":"guide/5-5.md","ref":"guide/5-5.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/5-6.md","mtime":"2019-01-16T03:36:24.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-16T03:36:36.642Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -572,6 +747,10 @@ groundOverlay.setMap(naverMap);
     
         
         <script src="../gitbook/gitbook-plugin-otherlink/js/otherlink.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codegroup/code.group.js"></script>
         
     
         

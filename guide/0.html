@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -238,16 +242,48 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="4.html">
+        <li class="chapter " data-level="2.4" >
             
-                <a href="4.html">
+                <span>
             
                     
                     상호작용
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="4-1.html">
+            
+                <a href="4-1.html">
+            
+                    
+                    사용자 인터페이스
+            
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="4-2.html">
+            
+                <a href="4-2.html">
+            
+                    
+                    위치
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -370,7 +406,7 @@
     
         <li class="chapter " data-level="3.1" >
             
-                <a target="_blank" href="ref://reference">
+                <a target="_blank" href="ref://reference/">
             
                     
                     API 레퍼런스
@@ -387,6 +423,19 @@
             
                     
                     데모 프로젝트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://github.com/navermaps/android-map-sdk/wiki/Changelog">
+            
+                    
+                    Changelog
             
                 </a>
             
@@ -508,7 +557,15 @@
 <p>&#xBAA8;&#xB4E0; API&#xC5D0; &#xB110; &#xAC00;&#xB2A5;&#xC131; &#xC560;&#xB108;&#xD14C;&#xC774;&#xC158;&#xC774; &#xBD99;&#xC5B4; &#xC788;&#xACE0; &#xAC8C;&#xD130; &#xBC0F; &#xC138;&#xD130;&#xC758; &#xBA85;&#xCE6D;&#xC774; &#xC77C;&#xAD00;&#xC801;&#xC73C;&#xB85C; &#xBD80;&#xC5EC;&#xB418;&#xC5B4; &#xC788;&#xC5B4; &#xCF54;&#xD2C0;&#xB9B0;&#xACFC; &#xC798; &#xD638;&#xD658;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <h3 id="&#xD604;&#xB300;&#xC801;&#xC778;-api">&#xD604;&#xB300;&#xC801;&#xC778; API</h3>
 <p>&#xBA54;&#xC11C;&#xB4DC; &#xCCB4;&#xC774;&#xB2DD;, &#xBD88;&#xBCC0; &#xAC1D;&#xCCB4;, &#xC5F4;&#xAC70;&#xD615; &#xC0AC;&#xC6A9; &#xB4F1; &#xD604;&#xB300;&#xC801; API &#xD328;&#xB7EC;&#xB2E4;&#xC784;&#xC744; &#xC801;&#xC6A9;&#xD574; &#xCF54;&#xB4DC;&#xAC00; &#xAC04;&#xACB0;&#xD558;&#xACE0; &#xC9C1;&#xAD00;&#xC801;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+<p><div id="4283a6c4a38aa0f4b6ac34f5d47a9226" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-7813b0dae49c7a4efbd07233553dae2b" class="gbcg-selector gbcg-active" data-tab="Java-0-7813b0dae49c7a4efbd07233553dae2b" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-407ba97f3dd107cd7beb181709f2ce49" class="gbcg-selector" data-tab="Kotlin-1-407ba97f3dd107cd7beb181709f2ce49" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-7813b0dae49c7a4efbd07233553dae2b" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
     .reason(<span class="hljs-number">3</span>)
     .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
     .finishCallback(() -&gt; {
@@ -520,9 +577,57 @@
 
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-7813b0dae49c7a4efbd07233553dae2b" id="java">Java</h3>
+        <div id="Java-0-7813b0dae49c7a4efbd07233553dae2b" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .reason(<span class="hljs-number">3</span>)
+    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+    .finishCallback(() -&gt; {
+        Toast.makeText(context, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC644;&#xB8CC;&quot;</span>, Toast.LENGTH_SHORT).show();
+    })
+    .cancelCallback(() -&gt; {
+        Toast.makeText(context, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC2E4;&#xD328;&quot;</span>, Toast.LENGTH_SHORT).show();
+    });
+
+naverMap.moveCamera(cameraUpdate);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-407ba97f3dd107cd7beb181709f2ce49" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-407ba97f3dd107cd7beb181709f2ce49" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+        .reason(<span class="hljs-number">3</span>)
+        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+        .finishCallback {
+            Toast.makeText(context, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC644;&#xB8CC;&quot;</span>, Toast.LENGTH_SHORT).show();
+        }
+        .cancelCallback {
+            Toast.makeText(context, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9; &#xC2E4;&#xD328;&quot;</span>, Toast.LENGTH_SHORT).show();
+        }
+
+naverMap.moveCamera(cameraUpdate)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xC9C1;&#xAD00;&#xC801;&#xC778;-api">&#xC9C1;&#xAD00;&#xC801;&#xC778; API</h3>
 <p>&#xAC1D;&#xCCB4;&#xAC00; &#xD544;&#xC694;&#xD558;&#xBA74; &#xC0DD;&#xC131;&#xD558;&#xACE0;, &#xC774;&#xBCA4;&#xD2B8; &#xCC98;&#xB9AC;&#xAC00; &#xD544;&#xC694;&#xD558;&#xBA74; &#xADF8; &#xAC1D;&#xCCB4;&#xC5D0; &#xC774;&#xBCA4;&#xD2B8; &#xB9AC;&#xC2A4;&#xB108;&#xB97C; &#xB2EC;&#xBA74; &#xB418;&#xB294; &#xB4F1; &#xC9C1;&#xAD00;&#xC801;&#xC73C;&#xB85C; &#xC608;&#xC0C1;&#xD560; &#xC218; &#xC788;&#xB294; &#xD615;&#xD0DC;&#xC758; API &#xAD6C;&#xC870;&#xB97C; &#xAC16;&#xCD94;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">Marker marker = <span class="hljs-keyword">new</span> Marker();
+<p><div id="1e5dc3bf655a7b04d57ed1e51c880616" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-ca44acf6d67b95f2486408a8753e505b" class="gbcg-selector gbcg-active" data-tab="Java-0-ca44acf6d67b95f2486408a8753e505b" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-ab29fe397ec4d983cc50c44c44b9bf4e" class="gbcg-selector" data-tab="Kotlin-1-ab29fe397ec4d983cc50c44c44b9bf4e" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-ca44acf6d67b95f2486408a8753e505b" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">Marker marker = <span class="hljs-keyword">new</span> Marker();
 marker.setPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5670135</span>, <span class="hljs-number">126.9783740</span>));
 marker.setOnClickListener(overlay -&gt; {
     Toast.makeText(context, <span class="hljs-string">&quot;&#xB9C8;&#xCEE4; &#xD074;&#xB9AD;&#xB428;&quot;</span>, Toast.LENGTH_SHORT).show();
@@ -530,6 +635,39 @@ marker.setOnClickListener(overlay -&gt; {
 });
 marker.setMap(naverMap);
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-ca44acf6d67b95f2486408a8753e505b" id="java">Java</h3>
+        <div id="Java-0-ca44acf6d67b95f2486408a8753e505b" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">Marker marker = <span class="hljs-keyword">new</span> Marker();
+marker.setPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5670135</span>, <span class="hljs-number">126.9783740</span>));
+marker.setOnClickListener(overlay -&gt; {
+    Toast.makeText(context, <span class="hljs-string">&quot;&#xB9C8;&#xCEE4; &#xD074;&#xB9AD;&#xB428;&quot;</span>, Toast.LENGTH_SHORT).show();
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+});
+marker.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-ab29fe397ec4d983cc50c44c44b9bf4e" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-ab29fe397ec4d983cc50c44c44b9bf4e" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> marker</span> = Marker().apply {
+    position = LatLng(<span class="hljs-number">37.5670135</span>, <span class="hljs-number">126.9783740</span>)
+    setOnClickListener {
+        Toast.makeText(context, <span class="hljs-string">&quot;&#xB9C8;&#xCEE4; &#xD074;&#xB9AD;&#xB428;&quot;</span>, Toast.LENGTH_SHORT).show()
+        <span class="hljs-literal">true</span>
+    }
+    map = naverMap
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="&#xC591;&#xC9C8;&#xC758;-&#xBB38;&#xC11C;&#xC640;-&#xB370;&#xBAA8;-&#xC571;">&#xC591;&#xC9C8;&#xC758; &#xBB38;&#xC11C;&#xC640; &#xB370;&#xBAA8; &#xC571;</h3>
 <p>&#xAC1C;&#xBC1C; &#xAC00;&#xC774;&#xB4DC;, API &#xB808;&#xD37C;&#xB7F0;&#xC2A4;, &#xB370;&#xBAA8; &#xC571; &#xB4F1; &#xB2E4;&#xC591;&#xD558;&#xACE0; &#xC218;&#xC900; &#xB192;&#xC740; &#xC790;&#xB8CC;&#xAC00; &#xC81C;&#xACF5;&#xB418;&#xC5B4; &#xAC1C;&#xBC1C;&#xC5D0; &#xCC38;&#xACE0;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 
@@ -575,7 +713,7 @@ marker.setMap(naverMap);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"소개","level":"1.2","depth":1,"next":{"title":"시작하기","level":"2.1","depth":1,"path":"guide/1.md","ref":"guide/1.md","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"home.md","ref":"home.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/0.md","mtime":"2018-11-12T09:12:53.514Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-12T09:13:00.717Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"소개","level":"1.2","depth":1,"next":{"title":"시작하기","level":"2.1","depth":1,"path":"guide/1.md","ref":"guide/1.md","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"home.md","ref":"home.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/0.md","mtime":"2019-01-16T03:36:24.088Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-16T03:36:36.642Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -586,6 +724,10 @@ marker.setMap(naverMap);
     
         
         <script src="../gitbook/gitbook-plugin-otherlink/js/otherlink.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codegroup/code.group.js"></script>
         
     
         

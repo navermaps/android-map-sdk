@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -236,16 +240,48 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="4.html">
+        <li class="chapter " data-level="2.4" >
             
-                <a href="4.html">
+                <span>
             
                     
                     상호작용
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="4-1.html">
+            
+                <a href="4-1.html">
+            
+                    
+                    사용자 인터페이스
+            
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="4-2.html">
+            
+                <a href="4-2.html">
+            
+                    
+                    위치
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -368,7 +404,7 @@
     
         <li class="chapter " data-level="3.1" >
             
-                <a target="_blank" href="ref://reference">
+                <a target="_blank" href="ref://reference/">
             
                     
                     API 레퍼런스
@@ -385,6 +421,19 @@
             
                     
                     데모 프로젝트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://github.com/navermaps/android-map-sdk/wiki/Changelog">
+            
+                    
+                    Changelog
             
                 </a>
             
@@ -484,25 +533,65 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#xC9C0;&#xB3C4;-&#xAC1D;&#xCCB4;">&#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;</h1>
-<p>&#xD558;&#xB098;&#xC758; &#xC9C0;&#xB3C4;&#xB294; &#xBDF0; &#xC694;&#xC18C;&#xC640; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC694;&#xC18C;&#xB85C; &#xAD6C;&#xC131;&#xB429;&#xB2C8;&#xB2E4;. &#xBDF0; &#xC694;&#xC18C;&#xB294; &#xD654;&#xBA74;&#xC5D0; &#xC9C0;&#xB3C4;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xBA70;, <a href="ref://../reference/com/naver/maps/map/MapFragment.html" target="_blank"><code>MapFragment</code></a>&#xC640; <a href="ref://../reference/com/naver/maps/map/MapView.html" target="_blank"><code>MapView</code></a>&#xAC00; &#xC5EC;&#xAE30;&#xC5D0; &#xD574;&#xB2F9;&#xD569;&#xB2C8;&#xB2E4;. &#xC9C0;&#xB3C4;&#xB97C; &#xB2E4;&#xB8E8;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC694;&#xC18C;&#xB294;  <a href="ref://../reference/com/naver/maps/map/NaverMap.html" target="_blank"><code>NaverMap</code></a> &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xB2F4;&#xB2F9;&#xD558;&#xBA70;, &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xACE0; &#xC0C1;&#xD638;&#xC791;&#xC6A9;&#xD558;&#xB294; &#xB4F1; &#xC9C0;&#xB3C4;&#xC640; &#xAD00;&#xB828;&#xB41C; &#xAE30;&#xB2A5; &#xB300;&#xBD80;&#xBD84;&#xC744; &#xC774; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;. 
-<code>MapFragment</code> &#xBC0F; <code>MapView</code>&#xB294; &#xAC1C;&#xBC1C;&#xC790;&#xAC00; &#xC9C1;&#xC811; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC73C;&#xB098; <code>NaverMap</code> &#xAC1D;&#xCCB4;&#xB294; &#xC624;&#xC9C1; &#xCF5C;&#xBC31; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC5BB;&#xC5B4;&#xC62C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD558;&#xB098;&#xC758; &#xC9C0;&#xB3C4;&#xB294; &#xBDF0; &#xC694;&#xC18C;&#xC640; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC694;&#xC18C;&#xB85C; &#xAD6C;&#xC131;&#xB429;&#xB2C8;&#xB2E4;. &#xBDF0; &#xC694;&#xC18C;&#xB294; &#xD654;&#xBA74;&#xC5D0; &#xC9C0;&#xB3C4;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xBA70;, <a href="ref://../reference/com/naver/maps/map/MapFragment.html" target="_blank"><code>MapFragment</code></a>&#xC640; <a href="ref://../reference/com/naver/maps/map/MapView.html" target="_blank"><code>MapView</code></a>&#xAC00; &#xC5EC;&#xAE30;&#xC5D0; &#xD574;&#xB2F9;&#xD569;&#xB2C8;&#xB2E4;. &#xC9C0;&#xB3C4;&#xB97C; &#xB2E4;&#xB8E8;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC694;&#xC18C;&#xB294;  <a href="ref://../reference/com/naver/maps/map/NaverMap.html" target="_blank"><code>NaverMap</code></a> &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xB2F4;&#xB2F9;&#xD558;&#xBA70;, &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xACE0; &#xC0C1;&#xD638;&#xC791;&#xC6A9;&#xD558;&#xB294; &#xB4F1; &#xC9C0;&#xB3C4;&#xC640; &#xAD00;&#xB828;&#xB41C; &#xAE30;&#xB2A5; &#xB300;&#xBD80;&#xBD84;&#xC744; &#xC774; &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;. <code>MapFragment</code> &#xBC0F; <code>MapView</code>&#xB294; &#xAC1C;&#xBC1C;&#xC790;&#xAC00; &#xC9C1;&#xC811; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC73C;&#xB098; <code>NaverMap</code> &#xAC1D;&#xCCB4;&#xB294; &#xC624;&#xC9C1; &#xCF5C;&#xBC31; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC5BB;&#xC5B4;&#xC62C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <h2 id="&#xC9C0;&#xB3C4;-&#xD45C;&#xC2DC;">&#xC9C0;&#xB3C4; &#xD45C;&#xC2DC;</h2>
 <p>&#xC9C0;&#xB3C4; &#xD654;&#xBA74;&#xC740; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8; &#xBC0F; &#xBDF0;&#xB85C; &#xC81C;&#xACF5;&#xB429;&#xB2C8;&#xB2E4;. &#xC774; &#xC911; &#xD55C; &#xAC00;&#xC9C0;&#xB97C; &#xB808;&#xC774;&#xC544;&#xC6C3;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xD654;&#xBA74;&#xC5D0; &#xC9C0;&#xB3C4;&#xAC00; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;.</p>
 <h3 id="mapfragment">MapFragment</h3>
 <p>&#xC9C0;&#xB3C4;&#xB97C; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xBC29;&#xBC95; &#xC911; &#xAC00;&#xC7A5; &#xAD8C;&#xC7A5;&#xB418;&#xB294; &#xAC83;&#xC740; <a href="ref://../reference/com/naver/maps/map/MapFragment.html" target="_blank"><code>MapFragment</code></a>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;. <code>MapFragment</code>&#xB294; <a href="https://developer.android.com/reference/android/support/v4/app/Fragment" target="_blank"><code>android.support.v4.app.Fragment</code></a>&#xC758; &#xD558;&#xC704; &#xD074;&#xB798;&#xC2A4;&#xB85C;, &#xC5EC;&#xD0C0; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xC640; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; &#xB808;&#xC774;&#xC544;&#xC6C3; XML &#xB610;&#xB294; <a href="https://developer.android.com/reference/android/support/v4/app/FragmentTransaction" target="_blank"><code>FragmentTransaction</code></a>&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xCD94;&#xAC00;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xB808;&#xC774;&#xC544;&#xC6C3; XML&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC9C0;&#xB3C4;&#xB97C; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-XML"><span class="hljs-tag">&lt;<span class="hljs-name">fragment</span> <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
-    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+<pre><code class="lang-XML"><span class="hljs-tag">&lt;<span class="hljs-name">fragment</span>
     <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/map&quot;</span>
+    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
     <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.naver.maps.map.MapFragment&quot;</span> /&gt;</span>
 </code></pre>
 <p>&#xB2E4;&#xC74C;&#xC740; <code>FragmentTransaction</code>&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC9C0;&#xB3C4;&#xB97C; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java">MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+<pre><code class="lang-XML"><span class="hljs-tag">&lt;<span class="hljs-name">FrameLayout</span>
+    <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/map&quot;</span>
+    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span> /&gt;</span>
+</code></pre>
+<p><div id="230322040425de1c5ec05dc377bee0b1" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-56e854da3361517f96883f4dd8c52d28" class="gbcg-selector gbcg-active" data-tab="Java-0-56e854da3361517f96883f4dd8c52d28" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-026b072cbf331511609cd2078d67e56e" class="gbcg-selector" data-tab="Kotlin-1-026b072cbf331511609cd2078d67e56e" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-56e854da3361517f96883f4dd8c52d28" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
 <span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
     mapFragment = MapFragment.newInstance();
     getSupportFragmentManager().beginTransaction().add(R.id.map, mapFragment).commit();
 }
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-56e854da3361517f96883f4dd8c52d28" id="java">Java</h3>
+        <div id="Java-0-56e854da3361517f96883f4dd8c52d28" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+<span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
+    mapFragment = MapFragment.newInstance();
+    getSupportFragmentManager().beginTransaction().add(R.id.map, mapFragment).commit();
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-026b072cbf331511609cd2078d67e56e" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-026b072cbf331511609cd2078d67e56e" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> mapFragment</span> = supportFragmentManager.findFragmentById(R.id.map) <span class="hljs-keyword">as</span> MapFragment?
+        ?: MapFragment.newInstance().also {
+            supportFragmentManager.beginTransaction().add(R.id.map, it).commit()
+        }
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="mapview">MapView</h3>
 <p>&#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xBDF0;&#xB97C; &#xBC14;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <a href="ref://../reference/com/naver/maps/map/MapView.html" target="_blank"><code>MapView</code></a>&#xB97C; &#xB808;&#xC774;&#xC544;&#xC6C3;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xBA74; <code>MapFragment</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD55C; &#xAC83;&#xACFC; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; &#xC9C0;&#xB3C4;&#xAC00; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xB808;&#xC774;&#xC544;&#xC6C3; XML&#xC5D0; <code>MapView</code>&#xB97C; &#xCD94;&#xAC00;&#xD574; &#xC9C0;&#xB3C4;&#xB97C; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
@@ -511,21 +600,34 @@
     <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
     <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span> /&gt;</span>
 </code></pre>
-<p>&#xB2E8;, <code>MapView</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC561;&#xD2F0;&#xBE44;&#xD2F0; &#xB77C;&#xC774;&#xD504; &#xC0AC;&#xC774;&#xD074;&#xC5D0; &#xB9DE;&#xCD94;&#xC5B4; <code>onCreate()</code>, <code>onStart()</code>, <code>onResume()</code>, <code>onPause()</code>, <code>onStop()</code>, <code>onDestroy()</code>, <code>onSaveInstanceState()</code>, <code>onLowMemory()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC9C0;&#xB3C4;&#xAC00; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. <code>MapFragment</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC774;&#xB7EC;&#xD55C; &#xC808;&#xCC28;&#xAC00; &#xD544;&#xC694;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBBC0;&#xB85C; <code>MapFragment</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC744; &#xAD8C;&#xC7A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<p>&#xB2E4;&#xC74C;&#xC740; &#xC561;&#xD2F0;&#xBE44;&#xD2F0;&#xC5D0;&#xC11C; <code>MapView</code>&#xC758; &#xB77C;&#xC774;&#xD504; &#xC0AC;&#xC774;&#xD074; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewActivity</span> </span>{
+<p><code>MapView</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; <code>MapView</code>&#xAC00; &#xD3EC;&#xD568;&#xB41C; &#xC561;&#xD2F0;&#xBE44;&#xD2F0;&#xC758; &#xB77C;&#xC774;&#xD504; &#xC0AC;&#xC774;&#xD074;&#xC5D0; &#xB9DE;&#xCD94;&#xC5B4; <code>onCreate()</code>, <code>onStart()</code>, <code>onResume()</code>, <code>onPause()</code>, <code>onStop()</code>, <code>onDestroy()</code>, <code>onSaveInstanceState()</code>, <code>onLowMemory()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xB2E8;, <code>MapView</code>&#xAC00; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xC5D0; &#xD3EC;&#xD568;&#xB420; &#xACBD;&#xC6B0; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xC758; <code>onCreateView()</code> &#xB610;&#xB294; <code>onViewCreated()</code>&#xC5D0;&#xC11C; <code>onCreate()</code>&#xB97C;, <code>onDestroyView()</code>&#xC5D0;&#xC11C; <code>onDestroy()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC9C0;&#xB3C4;&#xAC00; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. <code>MapFragment</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC774;&#xB7EC;&#xD55C; &#xC808;&#xCC28;&#xAC00; &#xD544;&#xC694;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBBC0;&#xB85C; <code>MapFragment</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC744; &#xAD8C;&#xC7A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xC5D0;&#xC11C; <code>MapView</code>&#xC758; &#xB77C;&#xC774;&#xD504; &#xC0AC;&#xC774;&#xD074; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="bb3a05c7f3f321940f073869463f8ce7" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-e87eedab4162962660d4892e26fd7b47" class="gbcg-selector gbcg-active" data-tab="Java-0-e87eedab4162962660d4892e26fd7b47" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-9e84f90d760b1cbb4a33a4d6a64ac0f9" class="gbcg-selector" data-tab="Kotlin-1-9e84f90d760b1cbb4a33a4d6a64ac0f9" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-e87eedab4162962660d4892e26fd7b47" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewFragment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fragment</span> </span>{
     <span class="hljs-keyword">private</span> MapView mapView;
 
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
-        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> View <span class="hljs-title">onCreateView</span><span class="hljs-params">(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+        @Nullable Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
 
-        mapView = findViewById(R.id.map_view);
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onViewCreated</span><span class="hljs-params">(@NonNull View view, @Nullable Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onViewCreated(view, savedInstanceState);
+        mapView = view.findViewById(R.id.map_view);
         mapView.onCreate(savedInstanceState);
     }
 
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-keyword">super</span>.onStart();
         mapView.onStart();
     }
@@ -543,6 +645,202 @@
     }
 
     <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(Bundle outState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onStop();
+        mapView.onStop();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDestroyView</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onDestroyView();
+        mapView.onDestroy();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLowMemory</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onLowMemory();
+        mapView.onLowMemory();
+    }
+}
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-e87eedab4162962660d4892e26fd7b47" id="java">Java</h3>
+        <div id="Java-0-e87eedab4162962660d4892e26fd7b47" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewFragment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fragment</span> </span>{
+    <span class="hljs-keyword">private</span> MapView mapView;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> View <span class="hljs-title">onCreateView</span><span class="hljs-params">(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+        @Nullable Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onViewCreated</span><span class="hljs-params">(@NonNull View view, @Nullable Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onViewCreated(view, savedInstanceState);
+        mapView = view.findViewById(R.id.map_view);
+        mapView.onCreate(savedInstanceState);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onStart();
+        mapView.onStart();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResume</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onResume();
+        mapView.onResume();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onPause</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onPause();
+        mapView.onPause();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(Bundle outState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onStop();
+        mapView.onStop();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDestroyView</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onDestroyView();
+        mapView.onDestroy();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLowMemory</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onLowMemory();
+        mapView.onLowMemory();
+    }
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-9e84f90d760b1cbb4a33a4d6a64ac0f9" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-9e84f90d760b1cbb4a33a4d6a64ac0f9" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewFragment</span> : <span class="hljs-type">Fragment</span></span>() {
+    <span class="hljs-keyword">private</span> lateinit <span class="hljs-variable"><span class="hljs-keyword">var</span> mapView</span>: MapView
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreateView</span><span class="hljs-params">(inflater: <span class="hljs-type">LayoutInflater, @Nullable container: ViewGroup,
+                     @Nullable savedInstanceState: Bundle</span>)</span>: View {</span>
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onViewCreated</span><span class="hljs-params">(view: <span class="hljs-type">View, @Nullable savedInstanceState: Bundle</span>)</span> {</span>
+        super.onViewCreated(view, savedInstanceState)
+        mapView = view.findViewById(R.id.map_view)
+        mapView.onCreate(savedInstanceState)
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span> {</span>
+        super.onStart()
+        mapView.onStart()
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onResume</span><span class="hljs-params">()</span> {</span>
+        super.onResume()
+        mapView.onResume()
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onPause</span><span class="hljs-params">()</span> {</span>
+        super.onPause()
+        mapView.onPause()
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(outState: <span class="hljs-type">Bundle</span>)</span> {</span>
+        super.onSaveInstanceState(outState)
+        mapView.onSaveInstanceState(outState)
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> {</span>
+        super.onStop()
+        mapView.onStop()
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onDestroyView</span><span class="hljs-params">()</span> {</span>
+        super.onDestroyView()
+        mapView.onDestroy()
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onLowMemory</span><span class="hljs-params">()</span> {</span>
+        super.onLowMemory()
+        mapView.onLowMemory()
+    }
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC561;&#xD2F0;&#xBE44;&#xD2F0;&#xC5D0;&#xC11C; <code>MapView</code>&#xC758; &#xB77C;&#xC774;&#xD504; &#xC0AC;&#xC774;&#xD074; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="e3ea4d1712cf34e4d16d0e1aed9a4f3c" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-57f93dd0db9ee6d0495541c134443bbc" class="gbcg-selector gbcg-active" data-tab="Java-0-57f93dd0db9ee6d0495541c134443bbc" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-14ce701f117736e798e1942afc8e3b88" class="gbcg-selector" data-tab="Kotlin-1-14ce701f117736e798e1942afc8e3b88" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-57f93dd0db9ee6d0495541c134443bbc" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> </span>{
+    <span class="hljs-keyword">private</span> MapView mapView;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+
+        <span class="hljs-comment">// ...</span>
+
+        mapView = findViewById(R.id.map_view);
+        mapView.onCreate(savedInstanceState);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onStart();
+        mapView.onStart();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResume</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onResume();
+        mapView.onResume();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onPause</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onPause();
+        mapView.onPause();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(Bundle outState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
+    }
+
+    <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-keyword">super</span>.onStop();
         mapView.onStop();
@@ -555,9 +853,65 @@
     }
 
     <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLowMemory</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onLowMemory();
+        mapView.onLowMemory();
+    }
+}
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-57f93dd0db9ee6d0495541c134443bbc" id="java">Java</h3>
+        <div id="Java-0-57f93dd0db9ee6d0495541c134443bbc" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> </span>{
+    <span class="hljs-keyword">private</span> MapView mapView;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+
+        <span class="hljs-comment">// ...</span>
+
+        mapView = findViewById(R.id.map_view);
+        mapView.onCreate(savedInstanceState);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onStart();
+        mapView.onStart();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResume</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onResume();
+        mapView.onResume();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onPause</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onPause();
+        mapView.onPause();
+    }
+
+    <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(Bundle outState)</span> </span>{
         <span class="hljs-keyword">super</span>.onSaveInstanceState(outState);
         mapView.onSaveInstanceState(outState);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onStop();
+        mapView.onStop();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onDestroy();
+        mapView.onDestroy();
     }
 
     <span class="hljs-meta">@Override</span>
@@ -567,15 +921,81 @@
     }
 }
 </code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-14ce701f117736e798e1942afc8e3b88" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-14ce701f117736e798e1942afc8e3b88" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewActivity</span> : <span class="hljs-type">Activity</span></span>() {
+    <span class="hljs-keyword">private</span> lateinit <span class="hljs-variable"><span class="hljs-keyword">var</span> mapView</span>: MapView
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+        super.onCreate(savedInstanceState)
+
+        <span class="hljs-comment">// ...</span>
+
+        mapView = findViewById(R.id.map_view)
+        mapView.onCreate(savedInstanceState)
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span> {</span>
+        super.onStart()
+        mapView.onStart()
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onResume</span><span class="hljs-params">()</span> {</span>
+        super.onResume()
+        mapView.onResume()
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onPause</span><span class="hljs-params">()</span> {</span>
+        super.onPause()
+        mapView.onPause()
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(outState: <span class="hljs-type">Bundle</span>)</span> {</span>
+        super.onSaveInstanceState(outState)
+        mapView.onSaveInstanceState(outState)
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> {</span>
+        super.onStop()
+        mapView.onStop()
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">()</span> {</span>
+        super.onDestroy()
+        mapView.onDestroy()
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onLowMemory</span><span class="hljs-params">()</span> {</span>
+        super.onLowMemory()
+        mapView.onLowMemory()
+    }
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="navermap-&#xAC1D;&#xCCB4;-&#xC5BB;&#xC5B4;&#xC624;&#xAE30;">NaverMap &#xAC1D;&#xCCB4; &#xC5BB;&#xC5B4;&#xC624;&#xAE30;</h2>
 <p><code>MapFragment</code> &#xBC0F; <code>MapView</code>&#xB294; &#xC9C0;&#xB3C4;&#xC5D0; &#xB300;&#xD55C; &#xBDF0; &#xC5ED;&#xD560;&#xB9CC;&#xC744; &#xB2F4;&#xB2F9;&#xD558;&#xBBC0;&#xB85C; API&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB824;&#xBA74; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xB294; <a href="ref://../reference/com/naver/maps/map/NaverMap.html" target="_blank"><code>NaverMap</code></a> &#xAC1D;&#xCCB4;&#xAC00; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;. <code>MapFragment</code> &#xB610;&#xB294; <code>MapView</code>&#xC758; <a href="ref://../reference/com/naver/maps/map/MapFragment.html#getMapAsync-com.naver.maps.map.OnMapReadyCallback-" target="_blank"><code>getMapAsync()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB85C; <a href="ref://../reference/com/naver/maps/map/OnMapReadyCallback.html" target="_blank"><code>OnMapReadyCallback</code></a>&#xC744; &#xB4F1;&#xB85D;&#xD558;&#xBA74; &#xBE44;&#xB3D9;&#xAE30;&#xB85C; <code>NaverMap</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC5BB;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <code>NaverMap</code> &#xAC1D;&#xCCB4;&#xAC00; &#xC900;&#xBE44;&#xB418;&#xBA74; <a href="ref://../reference/com/naver/maps/map/OnMapReadyCallback.html#onMapReady-com.naver.maps.map.NaverMap-" target="_blank"><code>onMapReady()</code></a> &#xCF5C;&#xBC31; &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; <code>OnMapReadyCallback</code>&#xC744; &#xB4F1;&#xB85D;&#xD574; <code>NaverMap</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC5BB;&#xC5B4;&#xC624;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
+<p><div id="96d285b454ebcd9eaca8a08f92339dfa" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-Java-0-90a0dc13f52785824fd56ceee42e074d" class="gbcg-selector gbcg-active" data-tab="Java-0-90a0dc13f52785824fd56ceee42e074d" data-code-lang="Java">Java</a>
+    <a id="select-Kotlin-1-8294f36e7e69dd0a83cb892634e06102" class="gbcg-selector" data-tab="Kotlin-1-8294f36e7e69dd0a83cb892634e06102" data-code-lang="Kotlin">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="Java-0-90a0dc13f52785824fd56ceee42e074d" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
         <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
 
-        setContentView(R.layout.map_fragment);
+        setContentView(R.layout.map_fragment_activity);
 
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
         <span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
@@ -593,6 +1013,65 @@
     }
 }
 </code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname Java-0-90a0dc13f52785824fd56ceee42e074d" id="java">Java</h3>
+        <div id="Java-0-90a0dc13f52785824fd56ceee42e074d" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+
+        setContentView(R.layout.map_fragment_activity);
+
+        MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+        <span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
+            mapFragment = MapFragment.newInstance();
+            getSupportFragmentManager().beginTransaction().add(R.id.map, mapFragment).commit();
+        }
+
+        mapFragment.getMapAsync(<span class="hljs-keyword">this</span>);
+    }
+
+    <span class="hljs-meta">@UiThread</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMapReady</span><span class="hljs-params">(@NonNull NaverMap naverMap)</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname Kotlin-1-8294f36e7e69dd0a83cb892634e06102" id="kotlin">Kotlin</h3>
+        <div id="Kotlin-1-8294f36e7e69dd0a83cb892634e06102" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> : <span class="hljs-type">FragmentActivity</span></span>(), OnMapReadyCallback {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
+        super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.map_fragment_activity)
+
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> mapFragment</span> = supportFragmentManager.findFragmentById(R.id.map) <span class="hljs-keyword">as</span> MapFragment?
+                ?: MapFragment.newInstance().also {
+                    supportFragmentManager.beginTransaction().add(R.id.map, it).commit()
+                }
+
+        mapFragment.getMapAsync(this)
+    }
+
+    @UiThread
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onMapReady</span><span class="hljs-params">(naverMap: <span class="hljs-type">NaverMap</span>)</span> {</span>
+        <span class="hljs-comment">// ...</span>
+    }
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 
                                 
                                 </section>
@@ -632,7 +1111,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"지도 객체","level":"2.2.1","depth":2,"next":{"title":"좌표 객체","level":"2.2.2","depth":2,"path":"guide/2-2.md","ref":"guide/2-2.md","articles":[]},"previous":{"title":"지도와 좌표","level":"2.2","depth":1,"ref":"","articles":[{"title":"지도 객체","level":"2.2.1","depth":2,"path":"guide/2-1.md","ref":"guide/2-1.md","articles":[]},{"title":"좌표 객체","level":"2.2.2","depth":2,"path":"guide/2-2.md","ref":"guide/2-2.md","articles":[]},{"title":"지도 옵션","level":"2.2.3","depth":2,"path":"guide/2-3.md","ref":"guide/2-3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/2-1.md","mtime":"2018-11-12T09:12:53.531Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-12T09:13:00.717Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"지도 객체","level":"2.2.1","depth":2,"next":{"title":"좌표 객체","level":"2.2.2","depth":2,"path":"guide/2-2.md","ref":"guide/2-2.md","articles":[]},"previous":{"title":"지도와 좌표","level":"2.2","depth":1,"ref":"","articles":[{"title":"지도 객체","level":"2.2.1","depth":2,"path":"guide/2-1.md","ref":"guide/2-1.md","articles":[]},{"title":"좌표 객체","level":"2.2.2","depth":2,"path":"guide/2-2.md","ref":"guide/2-2.md","articles":[]},{"title":"지도 옵션","level":"2.2.3","depth":2,"path":"guide/2-3.md","ref":"guide/2-3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"guide/2-1.md","mtime":"2019-01-16T03:36:24.251Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-16T03:36:36.642Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -643,6 +1122,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-otherlink/js/otherlink.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codegroup/code.group.js"></script>
         
     
         
