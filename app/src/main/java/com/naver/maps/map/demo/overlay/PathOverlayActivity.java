@@ -1,12 +1,12 @@
 /*
- * Copyright 2018 NAVER Corp.
- * 
+ * Copyright 2018-2019 NAVER Corp.
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -35,6 +35,7 @@ import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
 import com.naver.maps.map.overlay.OverlayImage;
 import com.naver.maps.map.overlay.PathOverlay;
+import com.naver.maps.map.util.GeometryUtils;
 
 public class PathOverlayActivity extends AppCompatActivity implements OnMapReadyCallback {
     private static final List<LatLng> COORDS_1 = Arrays.asList(
@@ -230,8 +231,10 @@ public class PathOverlayActivity extends AppCompatActivity implements OnMapReady
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 double value = progress / 100.0;
-                pathOverlay.setProgress(value);
                 progressValue.setText(getString(R.string.format_progress, progress));
+                if (fromUser) {
+                    pathOverlay.setProgress(value);
+                }
             }
 
             @Override
@@ -241,6 +244,12 @@ public class PathOverlayActivity extends AppCompatActivity implements OnMapReady
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
+        });
+
+        naverMap.setOnMapClickListener((point, coord) -> {
+            double progress = GeometryUtils.getProgress(pathOverlay.getCoords(), coord);
+            pathOverlay.setProgress(progress);
+            progressSeekBar.setProgress((int)(progress * 100));
         });
     }
 }

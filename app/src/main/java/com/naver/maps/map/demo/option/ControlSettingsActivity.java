@@ -1,12 +1,12 @@
 /*
- * Copyright 2018 NAVER Corp.
- * 
+ * Copyright 2018-2019 NAVER Corp.
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -29,13 +29,8 @@ import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
-import com.naver.maps.map.util.FusedLocationSource;
 
 public class ControlSettingsActivity extends AppCompatActivity implements OnMapReadyCallback {
-    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
-
-    private FusedLocationSource locationSource;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,8 +52,6 @@ public class ControlSettingsActivity extends AppCompatActivity implements OnMapR
             getSupportFragmentManager().beginTransaction().add(R.id.map_fragment, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);
-
-        locationSource = new FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE);
     }
 
     @Override
@@ -71,24 +64,7 @@ public class ControlSettingsActivity extends AppCompatActivity implements OnMapR
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-        @NonNull int[] grantResults) {
-        if (locationSource.onRequestPermissionsResult(requestCode, permissions, grantResults)) {
-            return;
-        }
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        locationSource = null;
-    }
-
-    @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
-        naverMap.setLocationSource(locationSource);
-
         findViewById(R.id.toggle_compass).setOnClickListener(v -> {
             Checkable checkable = (Checkable)v;
             boolean checked = !checkable.isChecked();

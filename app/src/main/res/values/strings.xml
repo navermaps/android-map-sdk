@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name">NAVER Map Android SDK Demo</string>
 
     <!-- main menu -->
@@ -41,7 +41,9 @@
     <string name="name_marker_collision">Marker Collision</string>
     <string name="description_marker_collision">마커 충돌 및 z-인덱스 제어</string>
     <string name="hide_collided_symbols">겹치는 심벌 숨김</string>
+    <string name="hide_collided_markers">겹치는 마커 숨김</string>
     <string name="hide_collided_captions">겹치는 캡션 숨김</string>
+    <string name="force_show">녹색 마커는 겹쳐도 아이콘 표시</string>
 
     <string name="name_info_window">Info Window</string>
     <string name="description_info_window">인포윈도우</string>
@@ -176,14 +178,6 @@
     <string name="name_content_padding">Content Padding</string>
     <string name="description_content_padding">콘텐츠 패딩 사용</string>
 
-    <string name="name_gesture_settings">Gesture Settings</string>
-    <string name="description_gesture_settings">제스처 설정</string>
-    <string name="scroll">스크롤</string>
-    <string name="zoom">줌</string>
-    <string name="tilt">틸트</string>
-    <string name="rotate">회전</string>
-    <string name="stop">스톱</string>
-
     <string name="name_control_settings">Control Settings</string>
     <string name="description_control_settings">지도 컨트롤 설정</string>
     <string name="compass">나침반</string>
@@ -193,7 +187,18 @@
     <string name="location_button">현위치 버튼</string>
     <string name="logo_click">로고 클릭</string>
 
-    <string name="name_xml_attributes">XML Attribures</string>
+    <string name="name_custom_control_layout">Custom Control Layout</string>
+    <string name="description_custom_control_layout">기본 지도 컨트롤을 비활성화하고 별도로 배치</string>
+
+    <string name="name_gesture_settings">Gesture Settings</string>
+    <string name="description_gesture_settings">제스처 설정</string>
+    <string name="scroll">스크롤</string>
+    <string name="zoom">줌</string>
+    <string name="tilt">틸트</string>
+    <string name="rotate">회전</string>
+    <string name="stop">스톱</string>
+
+    <string name="name_xml_attributes">XML Attributes</string>
     <string name="description_xml_attributes">레이아웃 XML 속성을 사용해 옵션 지정</string>
 
     <!-- event demo -->
@@ -222,8 +227,8 @@
     <string name="format_map_double_tap">지도 더블 탭\n(%1$.5f, %2$.5f)</string>
     <string name="format_map_two_finger_tap">지도 투 핑거 탭\n(%1$.5f, %2$.5f)</string>
 
-    <!-- misc demo -->
-    <string name="category_misc">Misc</string>
+    <!-- location demo -->
+    <string name="category_location">Location</string>
 
     <string name="name_location_tracking">Location Tracking</string>
     <string name="description_location_tracking">위치 트래킹 기능 사용</string>
@@ -234,6 +239,13 @@
 
     <string name="name_custom_location_source">Custom Location Source</string>
     <string name="description_custom_location_source">커스텀 위치 소스 지정</string>
+    <string name="format_location_changed">위치 변경\n(%1$.5f, %2$.5f)</string>
+
+    <string name="name_custom_location_tracking">Custom Location Tracking</string>
+    <string name="description_custom_location_tracking">내장 위치 트래킹 기능을 사용하지 않고 위치 사용</string>
+
+    <!-- misc demo -->
+    <string name="category_misc">Misc</string>
 
     <string name="name_snapshot">Snapshot</string>
     <string name="description_snapshot">지도 화면에 대한 스냅샷 촬영</string>

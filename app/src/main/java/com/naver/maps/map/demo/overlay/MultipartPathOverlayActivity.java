@@ -1,12 +1,12 @@
 /*
- * Copyright 2018 NAVER Corp.
- * 
+ * Copyright 2018-2019 NAVER Corp.
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -34,6 +34,7 @@ import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
 import com.naver.maps.map.overlay.MultipartPathOverlay;
 import com.naver.maps.map.overlay.OverlayImage;
+import com.naver.maps.map.util.GeometryUtils;
 
 public class MultipartPathOverlayActivity extends AppCompatActivity implements OnMapReadyCallback {
     private static final List<List<LatLng>> COORDS_1 = Arrays.asList(
@@ -255,8 +256,10 @@ public class MultipartPathOverlayActivity extends AppCompatActivity implements O
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 double value = progress / 100.0;
-                multipartPathOverlay.setProgress(value);
                 progressValue.setText(getString(R.string.format_progress, progress));
+                if (fromUser) {
+                    multipartPathOverlay.setProgress(value);
+                }
             }
 
             @Override
@@ -266,6 +269,12 @@ public class MultipartPathOverlayActivity extends AppCompatActivity implements O
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
+        });
+
+        naverMap.setOnMapClickListener((point, coord) -> {
+            double progress = GeometryUtils.getProgressForCoordParts(multipartPathOverlay.getCoordParts(), coord);
+            multipartPathOverlay.setProgress(progress);
+            progressSeekBar.setProgress((int)(progress * 100));
         });
     }
 }

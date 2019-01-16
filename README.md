@@ -15,10 +15,11 @@
 
 - [개발 가이드](https://navermaps.github.io/android-map-sdk/)
 - [API 레퍼런스](https://navermaps.github.io/android-map-sdk/reference/)
+- [Changelog](https://github.com/navermaps/android-map-sdk/wiki/Changelog)
 
 ## License
 
-Copyright (c) 2018 NAVER Corp.
+Copyright (c) 2018-2019 NAVER Corp.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

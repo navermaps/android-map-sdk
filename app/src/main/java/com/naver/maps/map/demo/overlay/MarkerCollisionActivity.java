@@ -1,12 +1,12 @@
 /*
- * Copyright 2018 NAVER Corp.
- * 
+ * Copyright 2018-2019 NAVER Corp.
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -20,6 +20,7 @@ import java.util.List;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.UiThread;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -32,9 +33,10 @@ import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
 import com.naver.maps.map.overlay.Marker;
+import com.naver.maps.map.util.MarkerIcons;
 
 public class MarkerCollisionActivity extends AppCompatActivity implements OnMapReadyCallback {
-    private int maxZIndex;
+    private boolean forceShowIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,13 +74,14 @@ public class MarkerCollisionActivity extends AppCompatActivity implements OnMapR
 
         for (int i = 0; i < 50; ++i) {
             Marker marker = new Marker();
+            setImportant(marker, i < 10);
             marker.setPosition(new LatLng(
                 (bounds.getNorthLatitude() - bounds.getSouthLatitude()) * Math.random() + bounds.getSouthLatitude(),
                 (bounds.getEastLongitude() - bounds.getWestLongitude()) * Math.random() + bounds.getWestLongitude()
             ));
             marker.setCaptionText("Marker #" + i);
             marker.setOnClickListener(overlay -> {
-                marker.setZIndex(++maxZIndex);
+                setImportant(marker, !(boolean)marker.getTag());
                 return true;
             });
             marker.setMap(naverMap);
@@ -94,6 +97,15 @@ public class MarkerCollisionActivity extends AppCompatActivity implements OnMapR
             }
         });
 
+        findViewById(R.id.hide_collided_markers).setOnClickListener(v -> {
+            Checkable checkable = (Checkable)v;
+            boolean checked = !checkable.isChecked();
+            checkable.setChecked(checked);
+            for (Marker marker : markers) {
+                marker.setHideCollidedMarkers(checked);
+            }
+        });
+
         findViewById(R.id.hide_collided_captions).setOnClickListener(v -> {
             Checkable checkable = (Checkable)v;
             boolean checked = !checkable.isChecked();
@@ -102,5 +114,24 @@ public class MarkerCollisionActivity extends AppCompatActivity implements OnMapR
                 marker.setHideCollidedCaptions(checked);
             }
         });
+
+        findViewById(R.id.force_show).setOnClickListener(v -> {
+            Checkable checkable = (Checkable)v;
+            boolean checked = !checkable.isChecked();
+            checkable.setChecked(checked);
+            forceShowIcon = checked;
+            for (Marker marker : markers) {
+                boolean important = (boolean)marker.getTag();
+                marker.setForceShowIcon(important && forceShowIcon);
+            }
+        });
+    }
+
+    @UiThread
+    private void setImportant(@NonNull Marker marker, boolean important) {
+        marker.setIcon(important ? MarkerIcons.GREEN : MarkerIcons.GRAY);
+        marker.setZIndex(important ? 1 : 0);
+        marker.setTag(important);
+        marker.setForceShowIcon(important && forceShowIcon);
     }
 }

@@ -5,7 +5,11 @@
     android:name="com.naver.maps.map.MapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:navermap_extent="31.43,122.37,44.35,132"
     app:navermap_latitude="35.1798159"
+    app:navermap_locationButtonEnabled="true"
+    app:navermap_logoGravity="top|right"
+    app:navermap_logoMargin="@dimen/logo_margin"
     app:navermap_longitude="129.0750222"
     app:navermap_tilt="40"
     app:navermap_zoom="10" />

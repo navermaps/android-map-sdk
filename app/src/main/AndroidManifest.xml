@@ -198,6 +198,11 @@
             android:description="@string/description_control_settings"
             android:label="@string/name_control_settings" />
         <activity
+            android:name=".option.CustomControlLayoutActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_custom_control_layout"
+            android:label="@string/name_custom_control_layout" />
+        <activity
             android:name=".option.GestureSettingsActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_gesture_settings"
@@ -230,17 +235,24 @@
             android:description="@string/description_zoom_gestures_event"
             android:label="@string/name_zoom_gestures_event" />
 
-        <!-- misc -->
+        <!-- location -->
         <activity
-            android:name=".misc.LocationTrackingActivity"
+            android:name=".location.LocationTrackingActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_location_tracking"
             android:label="@string/name_location_tracking" />
         <activity
-            android:name=".misc.CustomLocationSourceActivity"
+            android:name=".location.CustomLocationSourceActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_custom_location_source"
             android:label="@string/name_custom_location_source" />
+        <activity
+            android:name=".location.CustomLocationTrackingActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_custom_location_tracking"
+            android:label="@string/name_custom_location_tracking" />
+
+        <!-- misc -->
         <activity
             android:name=".misc.SnapshotActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
