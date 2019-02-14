@@ -71,6 +71,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/label_camera_idle" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:contentDescription="@string/content_description_crosshair"
+        android:src="@drawable/navermap_default_marker_icon_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/map_fragment"
+        app:layout_constraintStart_toStartOf="@+id/map_fragment" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:contentDescription="@string/content_description_marker"
+        android:src="@drawable/crosshair"
+        app:layout_constraintBottom_toBottomOf="@+id/map_fragment"
+        app:layout_constraintEnd_toEndOf="@+id/map_fragment"
+        app:layout_constraintStart_toStartOf="@+id/map_fragment"
+        app:layout_constraintTop_toTopOf="@+id/map_fragment" />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"

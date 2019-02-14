@@ -32,239 +32,462 @@
 
         <!-- basic -->
         <activity
-            android:name=".basic.MapFragmentActivity"
+            android:name=".java.basic.MapFragmentActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_map_fragment"
             android:label="@string/name_map_fragment" />
         <activity
-            android:name=".basic.MapFragmentInLayoutActivity"
+            android:name=".kotlin.basic.MapFragmentActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_map_fragment"
+            android:label="@string/name_map_fragment" />
+        <activity
+            android:name=".java.basic.MapFragmentInLayoutActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_map_fragment_in_layout"
             android:label="@string/name_map_fragment_in_layout" />
         <activity
-            android:name=".basic.MapViewActivity"
+            android:name=".kotlin.basic.MapFragmentInLayoutActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_map_fragment_in_layout"
+            android:label="@string/name_map_fragment_in_layout" />
+        <activity
+            android:name=".java.basic.MapViewActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_map_view"
             android:label="@string/name_map_view" />
         <activity
-            android:name=".basic.RetainedMapFragmentActivity"
+            android:name=".kotlin.basic.MapViewActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_map_view"
+            android:label="@string/name_map_view" />
+        <activity
+            android:name=".java.basic.RetainedMapFragmentActivity"
             android:description="@string/description_retained_map_fragment"
             android:label="@string/name_retained_map_fragment" />
         <activity
-            android:name=".basic.RetainedMapFragmentInLayoutActivity"
+            android:name=".kotlin.basic.RetainedMapFragmentActivity"
+            android:description="@string/description_retained_map_fragment"
+            android:label="@string/name_retained_map_fragment" />
+        <activity
+            android:name=".java.basic.RetainedMapFragmentInLayoutActivity"
+            android:description="@string/description_retained_map_fragment_in_layout"
+            android:label="@string/name_retained_map_fragment_in_layout" />
+        <activity
+            android:name=".kotlin.basic.RetainedMapFragmentInLayoutActivity"
             android:description="@string/description_retained_map_fragment_in_layout"
             android:label="@string/name_retained_map_fragment_in_layout" />
 
         <!-- overlay -->
         <activity
-            android:name=".overlay.MarkerActivity"
+            android:name=".java.overlay.MarkerActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_marker"
             android:label="@string/name_marker" />
         <activity
-            android:name=".overlay.MarkerCollisionActivity"
+            android:name=".kotlin.overlay.MarkerActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_marker"
+            android:label="@string/name_marker" />
+        <activity
+            android:name=".java.overlay.MarkerCollisionActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_marker_collision"
             android:label="@string/name_marker_collision" />
         <activity
-            android:name=".overlay.InfoWindowActivity"
+            android:name=".kotlin.overlay.MarkerCollisionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_marker_collision"
+            android:label="@string/name_marker_collision" />
+        <activity
+            android:name=".java.overlay.InfoWindowActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_info_window"
             android:label="@string/name_info_window" />
         <activity
-            android:name=".overlay.PolygonOverlayActivity"
+            android:name=".kotlin.overlay.InfoWindowActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_info_window"
+            android:label="@string/name_info_window" />
+        <activity
+            android:name=".java.overlay.PolygonOverlayActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_polygon_overlay"
             android:label="@string/name_polygon_overlay" />
         <activity
-            android:name=".overlay.PolylineOverlayActivity"
+            android:name=".kotlin.overlay.PolygonOverlayActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_polygon_overlay"
+            android:label="@string/name_polygon_overlay" />
+        <activity
+            android:name=".java.overlay.PolylineOverlayActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_polyline_overlay"
             android:label="@string/name_polyline_overlay" />
         <activity
-            android:name=".overlay.CircleOverlayActivity"
+            android:name=".kotlin.overlay.PolylineOverlayActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_polyline_overlay"
+            android:label="@string/name_polyline_overlay" />
+        <activity
+            android:name=".java.overlay.CircleOverlayActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_circle_overlay"
             android:label="@string/name_circle_overlay" />
         <activity
-            android:name=".overlay.LocationOverlayActivity"
+            android:name=".kotlin.overlay.CircleOverlayActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_circle_overlay"
+            android:label="@string/name_circle_overlay" />
+        <activity
+            android:name=".java.overlay.LocationOverlayActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_location_overlay"
             android:label="@string/name_location_overlay" />
         <activity
-            android:name=".overlay.GroundOverlayActivity"
+            android:name=".kotlin.overlay.LocationOverlayActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_location_overlay"
+            android:label="@string/name_location_overlay" />
+        <activity
+            android:name=".java.overlay.GroundOverlayActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_ground_overlay"
             android:label="@string/name_ground_overlay" />
         <activity
-            android:name=".overlay.PathOverlayActivity"
+            android:name=".kotlin.overlay.GroundOverlayActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_ground_overlay"
+            android:label="@string/name_ground_overlay" />
+        <activity
+            android:name=".java.overlay.PathOverlayActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_path_overlay"
             android:label="@string/name_path_overlay" />
         <activity
-            android:name=".overlay.MultipartPathOverlayActivity"
+            android:name=".kotlin.overlay.PathOverlayActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_path_overlay"
+            android:label="@string/name_path_overlay" />
+        <activity
+            android:name=".java.overlay.MultipartPathOverlayActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_multipart_path_overlay"
             android:label="@string/name_multipart_path_overlay" />
         <activity
-            android:name=".overlay.ArrowheadPathOverlayActivity"
+            android:name=".kotlin.overlay.MultipartPathOverlayActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_multipart_path_overlay"
+            android:label="@string/name_multipart_path_overlay" />
+        <activity
+            android:name=".java.overlay.ArrowheadPathOverlayActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_arrowhead_path_overlay"
+            android:label="@string/name_arrowhead_path_overlay" />
+        <activity
+            android:name=".kotlin.overlay.ArrowheadPathOverlayActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_arrowhead_path_overlay"
             android:label="@string/name_arrowhead_path_overlay" />
 
         <!-- camera -->
         <activity
-            android:name=".camera.CameraMoveActivity"
+            android:name=".java.camera.CameraMoveActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_camera_move"
             android:label="@string/name_camera_move" />
         <activity
-            android:name=".camera.CameraAnimationActivity"
+            android:name=".kotlin.camera.CameraMoveActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_camera_move"
+            android:label="@string/name_camera_move" />
+        <activity
+            android:name=".java.camera.CameraAnimationActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_camera_animation"
             android:label="@string/name_camera_animation" />
         <activity
-            android:name=".camera.CameraUpdateParamsActivity"
+            android:name=".kotlin.camera.CameraAnimationActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_camera_animation"
+            android:label="@string/name_camera_animation" />
+        <activity
+            android:name=".java.camera.CameraUpdateParamsActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_camera_update_params"
             android:label="@string/name_camera_update_params" />
         <activity
-            android:name=".camera.FitBoundsActivity"
+            android:name=".kotlin.camera.CameraUpdateParamsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_camera_update_params"
+            android:label="@string/name_camera_update_params" />
+        <activity
+            android:name=".java.camera.FitBoundsActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_fit_bounds"
             android:label="@string/name_fit_bounds" />
         <activity
-            android:name=".camera.PivotActivity"
+            android:name=".kotlin.camera.FitBoundsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_fit_bounds"
+            android:label="@string/name_fit_bounds" />
+        <activity
+            android:name=".java.camera.PivotActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_pivot"
             android:label="@string/name_pivot" />
         <activity
-            android:name=".camera.CameraEventActivity"
+            android:name=".kotlin.camera.PivotActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_pivot"
+            android:label="@string/name_pivot" />
+        <activity
+            android:name=".java.camera.CameraEventActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_camera_event"
+            android:label="@string/name_camera_event" />
+        <activity
+            android:name=".kotlin.camera.CameraEventActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_camera_event"
             android:label="@string/name_camera_event" />
 
         <!-- map -->
         <activity
-            android:name=".map.MapTypesAndLayerGroupsActivity"
+            android:name=".java.map.MapTypesAndLayerGroupsActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_map_types_and_layer_groups"
             android:label="@string/name_map_types_and_layer_groups" />
         <activity
-            android:name=".map.DisplayOptionsActivity"
+            android:name=".kotlin.map.MapTypesAndLayerGroupsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_map_types_and_layer_groups"
+            android:label="@string/name_map_types_and_layer_groups" />
+        <activity
+            android:name=".java.map.DisplayOptionsActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_display_options"
             android:label="@string/name_display_options" />
         <activity
-            android:name=".map.IndoorMapActivity"
+            android:name=".kotlin.map.DisplayOptionsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_display_options"
+            android:label="@string/name_display_options" />
+        <activity
+            android:name=".java.map.IndoorMapActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_indoor_map"
             android:label="@string/name_indoor_map" />
         <activity
-            android:name=".map.LiteModeActivity"
+            android:name=".kotlin.map.IndoorMapActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_indoor_map"
+            android:label="@string/name_indoor_map" />
+        <activity
+            android:name=".java.map.LiteModeActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_lite_mode"
             android:label="@string/name_lite_mode" />
         <activity
-            android:name=".map.NightModeActivity"
+            android:name=".kotlin.map.LiteModeActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_lite_mode"
+            android:label="@string/name_lite_mode" />
+        <activity
+            android:name=".java.map.NightModeActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_night_mode"
             android:label="@string/name_night_mode" />
         <activity
-            android:name=".map.LocaleActivity"
+            android:name=".kotlin.map.NightModeActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_night_mode"
+            android:label="@string/name_night_mode" />
+        <activity
+            android:name=".java.map.LocaleActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_locale"
+            android:label="@string/name_locale" />
+        <activity
+            android:name=".kotlin.map.LocaleActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_locale"
             android:label="@string/name_locale" />
 
         <!-- options -->
         <activity
-            android:name=".option.MinMaxZoomActivity"
+            android:name=".java.option.MinMaxZoomActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_min_max_zoom"
             android:label="@string/name_min_max_zoom" />
         <activity
-            android:name=".option.ExtentActivity"
+            android:name=".kotlin.option.MinMaxZoomActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_min_max_zoom"
+            android:label="@string/name_min_max_zoom" />
+        <activity
+            android:name=".java.option.ExtentActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_extent"
             android:label="@string/name_extent" />
         <activity
-            android:name=".option.ContentPaddingActivity"
+            android:name=".kotlin.option.ExtentActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_extent"
+            android:label="@string/name_extent" />
+        <activity
+            android:name=".java.option.ContentPaddingActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_content_padding"
             android:label="@string/name_content_padding" />
         <activity
-            android:name=".option.ControlSettingsActivity"
+            android:name=".kotlin.option.ContentPaddingActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_content_padding"
+            android:label="@string/name_content_padding" />
+        <activity
+            android:name=".java.option.ControlSettingsActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_control_settings"
             android:label="@string/name_control_settings" />
         <activity
-            android:name=".option.CustomControlLayoutActivity"
+            android:name=".kotlin.option.ControlSettingsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_control_settings"
+            android:label="@string/name_control_settings" />
+        <activity
+            android:name=".java.option.CustomControlLayoutActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_custom_control_layout"
             android:label="@string/name_custom_control_layout" />
         <activity
-            android:name=".option.GestureSettingsActivity"
+            android:name=".kotlin.option.CustomControlLayoutActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_custom_control_layout"
+            android:label="@string/name_custom_control_layout" />
+        <activity
+            android:name=".java.option.GestureSettingsActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_gesture_settings"
             android:label="@string/name_gesture_settings" />
         <activity
-            android:name=".option.XmlAttributesActivity"
+            android:name=".kotlin.option.GestureSettingsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_gesture_settings"
+            android:label="@string/name_gesture_settings" />
+        <activity
+            android:name=".java.option.XmlAttributesActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_xml_attributes"
+            android:label="@string/name_xml_attributes" />
+        <activity
+            android:name=".kotlin.option.XmlAttributesActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_xml_attributes"
             android:label="@string/name_xml_attributes" />
 
         <!-- event -->
         <activity
-            android:name=".event.MapClickEventActivity"
+            android:name=".java.event.MapClickEventActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_map_click_event"
             android:label="@string/name_map_click_event" />
         <activity
-            android:name=".event.OverlayClickEventActivity"
+            android:name=".kotlin.event.MapClickEventActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_map_click_event"
+            android:label="@string/name_map_click_event" />
+        <activity
+            android:name=".java.event.OverlayClickEventActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_overlay_click_event"
             android:label="@string/name_overlay_click_event" />
         <activity
-            android:name=".event.SymbolClickEventActivity"
+            android:name=".kotlin.event.OverlayClickEventActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_overlay_click_event"
+            android:label="@string/name_overlay_click_event" />
+        <activity
+            android:name=".java.event.SymbolClickEventActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_symbol_click_event"
             android:label="@string/name_symbol_click_event" />
         <activity
-            android:name=".event.ZoomGesturesEventActivity"
+            android:name=".kotlin.event.SymbolClickEventActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_symbol_click_event"
+            android:label="@string/name_symbol_click_event" />
+        <activity
+            android:name=".java.event.ZoomGesturesEventActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_zoom_gestures_event"
+            android:label="@string/name_zoom_gestures_event" />
+        <activity
+            android:name=".kotlin.event.ZoomGesturesEventActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_zoom_gestures_event"
             android:label="@string/name_zoom_gestures_event" />
 
         <!-- location -->
         <activity
-            android:name=".location.LocationTrackingActivity"
+            android:name=".java.location.LocationTrackingActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_location_tracking"
             android:label="@string/name_location_tracking" />
         <activity
-            android:name=".location.CustomLocationSourceActivity"
+            android:name=".kotlin.location.LocationTrackingActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_location_tracking"
+            android:label="@string/name_location_tracking" />
+        <activity
+            android:name=".java.location.CustomLocationSourceActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_custom_location_source"
             android:label="@string/name_custom_location_source" />
         <activity
-            android:name=".location.CustomLocationTrackingActivity"
+            android:name=".kotlin.location.CustomLocationSourceActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_custom_location_source"
+            android:label="@string/name_custom_location_source" />
+        <activity
+            android:name=".java.location.CustomLocationTrackingActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_custom_location_tracking"
+            android:label="@string/name_custom_location_tracking" />
+        <activity
+            android:name=".kotlin.location.CustomLocationTrackingActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_custom_location_tracking"
             android:label="@string/name_custom_location_tracking" />
 
         <!-- misc -->
         <activity
-            android:name=".misc.SnapshotActivity"
+            android:name=".java.misc.SnapshotActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_snapshot"
             android:label="@string/name_snapshot" />
         <activity
-            android:name=".misc.PickAllActivity"
+            android:name=".kotlin.misc.SnapshotActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_snapshot"
+            android:label="@string/name_snapshot" />
+        <activity
+            android:name=".java.misc.PickAllActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_pick_all"
             android:label="@string/name_pick_all" />
         <activity
-            android:name=".misc.TileCoverHelperActivity"
+            android:name=".kotlin.misc.PickAllActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_pick_all"
+            android:label="@string/name_pick_all" />
+        <activity
+            android:name=".java.misc.TileCoverHelperActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_tile_cover_helper"
+            android:label="@string/name_tile_cover_helper" />
+        <activity
+            android:name=".kotlin.misc.TileCoverHelperActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_tile_cover_helper"
             android:label="@string/name_tile_cover_helper" />

@@ -15,7 +15,7 @@
 
 - [개발 가이드](https://navermaps.github.io/android-map-sdk/)
 - [API 레퍼런스](https://navermaps.github.io/android-map-sdk/reference/)
-- [Changelog](https://github.com/navermaps/android-map-sdk/wiki/Changelog)
+- [Changelog](https://github.com/navermaps/android-map-sdk/blob/master/CHANGELOG.md)
 
 ## License
 
