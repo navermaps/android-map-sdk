@@ -74,7 +74,7 @@ public class MarkerActivity extends AppCompatActivity implements OnMapReadyCallb
 
         Marker markerWithCustomIcon = new Marker();
         markerWithCustomIcon.setPosition(new LatLng(37.57000, 126.97618));
-        markerWithCustomIcon.setIcon(MarkerIcons.BLUE);
+        markerWithCustomIcon.setIcon(MarkerIcons.BLACK);
         markerWithCustomIcon.setAngle(315);
         markerWithCustomIcon.setMap(naverMap);
 
@@ -110,5 +110,12 @@ public class MarkerActivity extends AppCompatActivity implements OnMapReadyCallb
         markerWithSubCaption.setSubCaptionColor(Color.GRAY);
         markerWithSubCaption.setSubCaptionText(getString(R.string.marker_sub_caption_2));
         markerWithSubCaption.setMap(naverMap);
+
+        Marker tintColorMarker = new Marker();
+        tintColorMarker.setPosition(new LatLng(37.56500, 126.9783881));
+        tintColorMarker.setIcon(MarkerIcons.BLACK);
+        tintColorMarker.setIconTintColor(Color.RED);
+        tintColorMarker.setAlpha(0.5f);
+        tintColorMarker.setMap(naverMap);
     }
 }

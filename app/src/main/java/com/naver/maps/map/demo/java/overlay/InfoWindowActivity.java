@@ -93,7 +93,6 @@ public class InfoWindowActivity extends AppCompatActivity implements OnMapReadyC
         marker1.setPosition(new LatLng(37.57000, 126.97618));
         marker1.setOnClickListener(overlay -> {
             infoWindow.open(marker1);
-            infoWindow.invalidate();
             return true;
         });
         marker1.setTag("Marker 1");
@@ -104,7 +103,6 @@ public class InfoWindowActivity extends AppCompatActivity implements OnMapReadyC
         marker2.setAngle(270f);
         marker2.setOnClickListener(overlay -> {
             infoWindow.open(marker2, Align.Left);
-            infoWindow.invalidate();
             return true;
         });
         marker2.setTag("Marker 2");

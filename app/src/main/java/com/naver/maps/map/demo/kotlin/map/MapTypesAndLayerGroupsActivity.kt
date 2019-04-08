@@ -75,6 +75,10 @@ class MapTypesAndLayerGroupsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         val menu = PopupMenu(this, layer_groups).apply {
             inflate(R.menu.layer_groups)
+            repeat(menu.size()) { i ->
+                val item = menu.getItem(i)
+                item.isChecked = naverMap.isLayerGroupEnabled(menuIdToLayerGroup(item.itemId))
+            }
             setOnMenuItemClickListener { item ->
                 val checked = !item.isChecked
                 item.isChecked = checked

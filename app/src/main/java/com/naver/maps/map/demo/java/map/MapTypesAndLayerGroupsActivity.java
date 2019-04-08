@@ -110,6 +110,11 @@ public class MapTypesAndLayerGroupsActivity extends AppCompatActivity implements
 
         PopupMenu menu = new PopupMenu(this, layerGroupButton);
         menu.inflate(R.menu.layer_groups);
+        int size = menu.getMenu().size();
+        for (int i = 0; i < size; ++i) {
+            MenuItem item = menu.getMenu().getItem(i);
+            item.setChecked(naverMap.isLayerGroupEnabled(menuIdToLayerGroup(item.getItemId())));
+        }
         menu.setOnMenuItemClickListener(item -> {
             boolean checked = !item.isChecked();
             item.setChecked(checked);

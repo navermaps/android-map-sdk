@@ -80,6 +80,11 @@
     <string name="name_arrowhead_path_overlay">Arrowhead Path</string>
     <string name="description_arrowhead_path_overlay">화살표 오버레이</string>
 
+    <string name="name_global_z_index">Global Z-Index</string>
+    <string name="description_global_z_index">오버레이간 계층 지정</string>
+    <string name="marker_over_path">경로선 위에 위치한 마커</string>
+    <string name="marker_under_path">경로선 아래에 위치한 마커</string>
+
     <!-- camera demo -->
     <string name="category_camera">Camera</string>
 

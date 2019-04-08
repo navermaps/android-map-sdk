@@ -69,7 +69,7 @@ class PickAllActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance().also {
+                ?: MapFragment.newInstance(NaverMapOptions().enabledLayerGroups(NaverMap.LAYER_GROUP_TRANSIT)).also {
                     supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
                 }
         mapFragment.getMapAsync(this)

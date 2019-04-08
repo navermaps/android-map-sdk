@@ -20,6 +20,12 @@
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="@string/naver_map_sdk_client_id" />
 
+        <!-- 공공기관용 클라이언트일 경우 주석 해제
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_TYPE"
+            android:value="gov" />
+        -->
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -189,6 +195,16 @@
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_arrowhead_path_overlay"
             android:label="@string/name_arrowhead_path_overlay" />
+        <activity
+            android:name=".java.overlay.GlobalZIndexActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_global_z_index"
+            android:label="@string/name_global_z_index" />
+        <activity
+            android:name=".kotlin.overlay.GlobalZIndexActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_global_z_index"
+            android:label="@string/name_global_z_index" />
 
         <!-- camera -->
         <activity

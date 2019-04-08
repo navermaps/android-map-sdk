@@ -34,6 +34,7 @@ import android.widget.TextView;
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.Pickable;
 import com.naver.maps.map.Symbol;
@@ -105,7 +106,8 @@ public class PickAllActivity extends AppCompatActivity implements OnMapReadyCall
 
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment == null) {
-            mapFragment = MapFragment.newInstance();
+            mapFragment = MapFragment.newInstance(new NaverMapOptions()
+                .enabledLayerGroups(NaverMap.LAYER_GROUP_TRANSIT));
             getSupportFragmentManager().beginTransaction().add(R.id.map_fragment, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);

@@ -81,7 +81,6 @@ class InfoWindowActivity : AppCompatActivity(), OnMapReadyCallback {
             position = LatLng(37.57000, 126.97618)
             setOnClickListener {
                 infoWindow.open(this)
-                infoWindow.invalidate()
                 true
             }
             tag = "Marker 1"
@@ -93,7 +92,6 @@ class InfoWindowActivity : AppCompatActivity(), OnMapReadyCallback {
             angle = 270f
             setOnClickListener {
                 infoWindow.open(this, Align.Left)
-                infoWindow.invalidate()
                 true
             }
             tag = "Marker 2"

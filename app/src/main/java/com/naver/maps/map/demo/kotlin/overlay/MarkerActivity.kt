@@ -66,7 +66,7 @@ class MarkerActivity : AppCompatActivity(), OnMapReadyCallback {
 
         Marker().apply {
             position = LatLng(37.57000, 126.97618)
-            icon = MarkerIcons.BLUE
+            icon = MarkerIcons.BLACK
             angle = 315f
             map = naverMap
         }
@@ -105,6 +105,14 @@ class MarkerActivity : AppCompatActivity(), OnMapReadyCallback {
             subCaptionTextSize = 10f
             subCaptionColor = Color.GRAY
             subCaptionText = getString(R.string.marker_sub_caption_2)
+            map = naverMap
+        }
+
+        Marker().apply {
+            position = LatLng(37.56500, 126.9783881)
+            icon = MarkerIcons.BLACK
+            iconTintColor = Color.RED
+            alpha = 0.5f
             map = naverMap
         }
     }
