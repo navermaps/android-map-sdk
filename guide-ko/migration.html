@@ -1,0 +1,1925 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.x → 3.x 마이그레이션 가이드 · 네이버 지도 안드로이드 SDK</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1.html" />
+    
+    
+    <link rel="prev" href="0.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Home
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="0.html">
+            
+                <a href="0.html">
+            
+                    
+                    소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">마이그레이션 가이드</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="migration.html">
+            
+                <a href="migration.html">
+            
+                    
+                    2.x → 3.x 마이그레이션 가이드
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">개발 가이드</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    지도와 좌표
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="2-1.html">
+            
+                <a href="2-1.html">
+            
+                    
+                    지도 객체
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="2-2.html">
+            
+                <a href="2-2.html">
+            
+                    
+                    좌표 객체
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="2-3.html">
+            
+                <a href="2-3.html">
+            
+                    
+                    지도 옵션
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    카메라
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="3-1.html">
+            
+                <a href="3-1.html">
+            
+                    
+                    카메라와 투영
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="3-2.html">
+            
+                <a href="3-2.html">
+            
+                    
+                    카메라 이동
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    상호작용
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="4-1.html">
+            
+                <a href="4-1.html">
+            
+                    
+                    사용자 인터페이스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="4-2.html">
+            
+                <a href="4-2.html">
+            
+                    
+                    위치
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    오버레이
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="5-1.html">
+            
+                <a href="5-1.html">
+            
+                    
+                    오버레이 공통
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="5-2.html">
+            
+                <a href="5-2.html">
+            
+                    
+                    마커
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="5-3.html">
+            
+                <a href="5-3.html">
+            
+                    
+                    정보 창
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.4" data-path="5-4.html">
+            
+                <a href="5-4.html">
+            
+                    
+                    셰이프
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.5" data-path="5-5.html">
+            
+                <a href="5-5.html">
+            
+                    
+                    위치 오버레이
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.6" data-path="5-6.html">
+            
+                <a href="5-6.html">
+            
+                    
+                    지상 오버레이
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.7" data-path="5-7.html">
+            
+                <a href="5-7.html">
+            
+                    
+                    경로선과 화살표
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">레퍼런스</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <a target="_blank" href="ref://../reference/">
+            
+                    
+                    API 레퍼런스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <a target="_blank" href="https://github.com/navermaps/android-map-sdk">
+            
+                    
+                    데모 프로젝트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <a target="_blank" href="https://github.com/navermaps/android-map-sdk/blob/master/CHANGELOG.md">
+            
+                    
+                    변경사항
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">관련 사이트</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <a target="_blank" href="ref://../guide-en/">
+            
+                    
+                    English(영어)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <a target="_blank" href="https://navermaps.github.io/ios-map-sdk">
+            
+                    
+                    iOS SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <a target="_blank" href="https://www.ncloud.com">
+            
+                    
+                    네이버 클라우드 플랫폼
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" >
+            
+                <a target="_blank" href="https://www.ncloud.com/support/question/service">
+            
+                    
+                    문의하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >2.x → 3.x 마이그레이션 가이드</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="2x-&#x2192;-3x-&#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;-&#xAC00;&#xC774;&#xB4DC;">2.x &#x2192; 3.x &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158; &#xAC00;&#xC774;&#xB4DC;</h1>
+<p>&#xC774; &#xBB38;&#xC11C;&#xB294; &#xB124;&#xC774;&#xBC84; &#xC9C0;&#xB3C4; Android SDK <a href="http://docs.ncloud.com/ko/naveropenapi_v3/maps/android-sdk/v2/start.html" target="_blank">&#xBC84;&#xC804; 2.x</a>&#xB97C; <a href="http://docs.ncloud.com/ko/naveropenapi_v3/maps/android-sdk/v3/start.html" target="_blank">&#xBC84;&#xC804; 3.x</a>&#xB85C; &#xB9C8;&#xC774;&#xADF8;&#xB808;&#xC774;&#xC158;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC744; &#xC124;&#xBA85;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xB354;-&#xC774;&#xC0C1;-&#xC81C;&#xACF5;&#xB418;&#xC9C0;-&#xC54A;&#xB294;-&#xAE30;&#xB2A5;">&#xB354; &#xC774;&#xC0C1; &#xC81C;&#xACF5;&#xB418;&#xC9C0; &#xC54A;&#xB294; &#xAE30;&#xB2A5;</h2>
+<p>&#xB2E4;&#xC74C; &#xAE30;&#xB2A5;&#xC740; 3.x SDK&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC81C;&#xACF5;&#xB418;&#xC9C0; &#xC54A;&#xC73C;&#xBBC0;&#xB85C; &#xBCC4;&#xB3C4;&#xB85C; &#xC81C;&#xACF5;&#xB418;&#xB294; &#xB300;&#xCCB4; &#xC218;&#xB2E8;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC571;&#xC5D0;&#xC11C; &#xAD6C;&#xD604;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<h3 id="&#xC88C;&#xD45C;-&#xC8FC;&#xC18C;-&#xBCC0;&#xD658;-&#xAE30;&#xB2A5;">&#xC88C;&#xD45C;-&#xC8FC;&#xC18C; &#xBCC0;&#xD658; &#xAE30;&#xB2A5;</h3>
+<p>3.x SDK&#xB294; 2.x SDK&#xC5D0;&#xC11C; <code>NMapActivity.findPlacemarkAtLocation()</code>&#xC744; &#xD638;&#xCD9C;&#xD574; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC5C8;&#xB358; &#xC88C;&#xD45C;-&#xC8FC;&#xC18C; &#xBCC0;&#xD658;(Reverse geocoding) &#xAE30;&#xB2A5;&#xC744; &#xC81C;&#xACF5;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB300;&#xC2E0; NAVER CLOUD PLATFORM&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; Reverse Geocoding API&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="http://docs.ncloud.com/ko/naveropenapi_v3/maps/reverse-geocoding/reverse-geocoding.html" target="_blank">Reverse Geocoding</a>&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xB124;&#xC774;&#xBC84;-&#xC9C0;&#xB3C4;&#xC571;-&#xC2E4;&#xD589;-&#xBC84;&#xD2BC;">&quot;&#xB124;&#xC774;&#xBC84; &#xC9C0;&#xB3C4;&#xC571; &#xC2E4;&#xD589;&quot; &#xBC84;&#xD2BC;</h3>
+<p>3.x SDK&#xB294; 2.x SDK&#xC5D0;&#xC11C; <code>NMapView.setBuiltInAppControls()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD65C;&#xC131;&#xD654;&#xD560; &#xC218; &#xC788;&#xC5C8;&#xB358; &quot;&#xB124;&#xC774;&#xBC84; &#xC9C0;&#xB3C4;&#xC571; &#xC2E4;&#xD589;&quot; &#xBC84;&#xD2BC;&#xC744; &#xC81C;&#xACF5;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB300;&#xC2E0; &#xC571;&#xC5D0;&#xC11C; &#xC9C1;&#xC811; &#xBC84;&#xD2BC;&#xC744; &#xBC30;&#xCE58;&#xD558;&#xACE0; NAVER CLOUD PLATFORM&#xC5D0;&#xC11C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xC9C0;&#xB3C4;&#xC571; &#xC5F0;&#xB3D9; URL Scheme &#xAE30;&#xB2A5;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="http://docs.ncloud.com/ko/naveropenapi_v3/maps/url-scheme/url-scheme.html" target="_blank">&#xC9C0;&#xB3C4;&#xC571; &#xC5F0;&#xB3D9; URL Scheme</a>&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xB9C8;&#xCEE4;-&#xB4DC;&#xB798;&#xADF8;">&#xB9C8;&#xCEE4; &#xB4DC;&#xB798;&#xADF8;</h3>
+<p>3.x SDK&#xB294; 2.x SDK&#xC5D0;&#xC11C; <code>NMapPOIitem.setFloatingMode()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC5C8;&#xB358; &#xB9C8;&#xCEE4; &#xB4DC;&#xB798;&#xADF8; &#xAE30;&#xB2A5;&#xC744; &#xC81C;&#xACF5;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB9C8;&#xCEE4;&#xB97C; &#xB4DC;&#xB798;&#xADF8;&#xD558;&#xB294; &#xB300;&#xC2E0; &#xD654;&#xBA74;&#xC758; &#xC911;&#xC2EC;&#xC5D0; &#xB9C8;&#xCEE4; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xB294; &#xBDF0;&#xB97C; &#xACE0;&#xC815;&#xD558;&#xACE0; &#xC9C0;&#xB3C4;&#xB97C; &#xC6C0;&#xC9C1;&#xC5EC; &#xC704;&#xCE58;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xAC83;&#xC744; &#xAD8C;&#xC7A5;&#xD569;&#xB2C8;&#xB2E4;. &#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; &#xB370;&#xBAA8; &#xC571;&#xC758; <a href="https://github.com/navermaps/android-map-sdk/blob/master/app/src/main/java/com/naver/maps/map/demo/java/camera/CameraEventActivity.java" target="_blank">CameraEventActivity</a> &#xC608;&#xC81C;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h2 id="&#xD658;&#xACBD;-&#xC124;&#xC815;">&#xD658;&#xACBD; &#xC124;&#xC815;</h2>
+<h3 id="&#xC758;&#xC874;&#xC131;-&#xCD94;&#xAC00;">&#xC758;&#xC874;&#xC131; &#xCD94;&#xAC00;</h3>
+<p>3.x SDK&#xC758; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xADF8;&#xB8F9; ID&#xB294; <code>com.naver.maps.open</code>&#xC5D0;&#xC11C; <code>com.naver.maps</code>&#xB85C;, &#xC544;&#xD2F0;&#xD329;&#xD2B8; ID&#xB294; <code>naver-map-ncp-api</code>&#xC5D0;&#xC11C; <code>map-sdk</code>&#xB85C; &#xBCC0;&#xACBD;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xC758;&#xC874;&#xC131; &#xC120;&#xC5B8;&#xC744; <code>com.naver.maps.open:naver-map-ncp-api:2.1.x</code>&#xC5D0;&#xC11C; <code>com.naver.maps:map-sdk:3.3.0</code>&#xC73C;&#xB85C; &#xBCC0;&#xACBD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB610;&#xD55C; 3.x SDK&#xB294; &#xBCC4;&#xB3C4;&#xC758; Bintray &#xC800;&#xC7A5;&#xC18C;&#xB97C; &#xD1B5;&#xD574; &#xBC30;&#xD3EC;&#xB429;&#xB2C8;&#xB2E4;. &#xC800;&#xC7A5;&#xC18C; &#xBAA9;&#xB85D;&#xC5D0; <code>https://navercorp.bintray.com/maps</code>&#xB97C; &#xCD94;&#xAC00;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><div id="021b268e2a5f8460c13bcc5f02085682" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-5a82e4edf82a561a4402c0d591615e5b" class="gbcg-selector gbcg-active" data-tab="0-5a82e4edf82a561a4402c0d591615e5b" data-tab-category="migration">2.x</a>
+    <a id="select-1-384f8d1fd90a0c4c9ac0f8ca4d84ec0d" class="gbcg-selector" data-tab="1-384f8d1fd90a0c4c9ac0f8ca4d84ec0d" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-5a82e4edf82a561a4402c0d591615e5b" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Gradle"><span class="hljs-comment">// &#xC571; &#xBAA8;&#xB4C8; build.gradle</span>
+<span class="hljs-keyword">dependencies</span> {
+    implementation <span class="hljs-string">&apos;com.naver.maps.open:naver-map-ncp-api:2.1.7&apos;</span>
+}
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-5a82e4edf82a561a4402c0d591615e5b" id="2x">2.x</h3>
+        <div id="0-5a82e4edf82a561a4402c0d591615e5b" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Gradle"><span class="hljs-comment">// &#xC571; &#xBAA8;&#xB4C8; build.gradle</span>
+<span class="hljs-keyword">dependencies</span> {
+    implementation <span class="hljs-string">&apos;com.naver.maps.open:naver-map-ncp-api:2.1.7&apos;</span>
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-384f8d1fd90a0c4c9ac0f8ca4d84ec0d" id="3x">3.x</h3>
+        <div id="1-384f8d1fd90a0c4c9ac0f8ca4d84ec0d" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Gradle"><span class="hljs-comment">// &#xB8E8;&#xD2B8; &#xD504;&#xB85C;&#xC81D;&#xD2B8; build.gradle</span>
+<span class="hljs-keyword">allprojects</span> {
+    <span class="hljs-keyword">repositories</span> {
+        maven {
+            url <span class="hljs-string">&apos;https://navercorp.bintray.com/maps&apos;</span>
+        }
+    }
+}
+
+<span class="hljs-comment">// &#xC571; &#xBAA8;&#xB4C8; build.gradle</span>
+<span class="hljs-keyword">dependencies</span> {
+    implementation <span class="hljs-string">&apos;com.naver.maps:map-sdk:3.3.0&apos;</span>
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="1.html">&#xC2DC;&#xC791;&#xD558;&#xAE30;</a> &#xBB38;&#xC11C;&#xC758; <a href="1.html#%EC%9D%98%EC%A1%B4%EC%84%B1-%EC%B6%94%EA%B0%80">&#xC758;&#xC874;&#xC131; &#xCD94;&#xAC00;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;-id-&#xC9C0;&#xC815;">&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID &#xC9C0;&#xC815;</h3>
+<p>3.x SDK&#xB294; <code>NMapView.setNcpClientId()</code>&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xB300;&#xC2E0; <a href="https://developer.android.com/guide/topics/manifest/manifest-intro" target="_blank"><code>AndroidManifest.xml</code></a>&#xC758; <a href="https://developer.android.com/guide/topics/manifest/meta-data-element" target="_blank"><code>&lt;meta-data&gt;</code></a>&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xAC70;&#xB098; <a href="ref://../reference/com/naver/maps/map/NaverMapSdk.html#setClient-com.naver.maps.map.NaverMapSdk.Client-" target="_blank"><code>NaverMapSdk.setClient()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xB97C; &#xC9C0;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="2f27cf1024b14aed33371e77b9898637" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-ae87d90ba68a6522175eecefd16c0be4" class="gbcg-selector gbcg-active" data-tab="0-ae87d90ba68a6522175eecefd16c0be4" data-tab-category="migration">2.x</a>
+    <a id="select-1-0160eb6c0643254f9f84ce127d33ffd7" class="gbcg-selector" data-tab="1-0160eb6c0643254f9f84ce127d33ffd7" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-ae87d90ba68a6522175eecefd16c0be4" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+
+        NMapView mapView = findViewById(...);
+        mapView.setNcpClientId(<span class="hljs-string">&quot;YOUR_CLIENT_ID_HERE&quot;</span>);
+    }
+}
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-ae87d90ba68a6522175eecefd16c0be4" id="2x">2.x</h3>
+        <div id="0-ae87d90ba68a6522175eecefd16c0be4" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
+        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
+
+        NMapView mapView = findViewById(...);
+        mapView.setNcpClientId(<span class="hljs-string">&quot;YOUR_CLIENT_ID_HERE&quot;</span>);
+    }
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-0160eb6c0643254f9f84ce127d33ffd7" id="3x">3.x</h3>
+        <div id="1-0160eb6c0643254f9f84ce127d33ffd7" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourApplication</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Application</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">super</span>.onCreate();
+
+        NaverMapSdk.getInstance(<span class="hljs-keyword">this</span>).setClient(
+           <span class="hljs-keyword">new</span> NaverMapSdk.NaverCloudPlatformClient(<span class="hljs-string">&quot;YOUR_CLIENT_ID_HERE&quot;</span>));
+    }
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="1.html">&#xC2DC;&#xC791;&#xD558;&#xAE30;</a> &#xBB38;&#xC11C;&#xC758; <a href="1.html#%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8-id-%EC%A7%80%EC%A0%95">&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8; ID &#xC9C0;&#xC815;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h2 id="&#xC9C0;&#xB3C4;-&#xAC1D;&#xCCB4;">&#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;</h2>
+<h3 id="&#xC9C0;&#xB3C4;-&#xD45C;&#xC2DC;">&#xC9C0;&#xB3C4; &#xD45C;&#xC2DC;</h3>
+<p>3.x SDK&#xB294; <a href="ref://../reference/com/naver/maps/map/MapFragment.html" target="_blank"><code>MapFragment</code></a> &#xB610;&#xB294; <a href="ref://../reference/com/naver/maps/map/MapView.html" target="_blank"><code>MapView</code></a>&#xAC00; <code>NMapView</code>&#xB97C; &#xB300;&#xC2E0;&#xD574; &#xC9C0;&#xB3C4;&#xC5D0; &#xB300;&#xD55C; &#xBDF0; &#xC5ED;&#xD560;&#xC744; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xB808;&#xC774;&#xC544;&#xC6C3; XML&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC9C0;&#xB3C4;&#xB97C; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="2debe502115f7b01fc0023e74b6c53e0" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-af84d3b57846403163a7526c992f3895" class="gbcg-selector gbcg-active" data-tab="0-af84d3b57846403163a7526c992f3895" data-tab-category="migration">2.x</a>
+    <a id="select-1-f247df4677be20edf617c771f030dd6e" class="gbcg-selector" data-tab="1-f247df4677be20edf617c771f030dd6e" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-af84d3b57846403163a7526c992f3895" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-XML"><span class="hljs-tag">&lt;<span class="hljs-name">com.nhn.android.maps.NMapView</span> 
+    <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/map_view&quot;</span>
+    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span> /&gt;</span>
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-af84d3b57846403163a7526c992f3895" id="2x">2.x</h3>
+        <div id="0-af84d3b57846403163a7526c992f3895" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-XML"><span class="hljs-tag">&lt;<span class="hljs-name">com.nhn.android.maps.NMapView</span> 
+    <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/map_view&quot;</span>
+    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span> /&gt;</span>
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-f247df4677be20edf617c771f030dd6e" id="3x">3.x</h3>
+        <div id="1-f247df4677be20edf617c771f030dd6e" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-XML"><span class="hljs-tag">&lt;<span class="hljs-name">fragment</span>
+    <span class="hljs-attr">android:id</span>=<span class="hljs-string">&quot;@+id/map_fragment&quot;</span>
+    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
+    <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;com.naver.maps.map.MapFragment&quot;</span> /&gt;</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="2-1.html">&#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;</a> &#xBB38;&#xC11C;&#xC758; <a href="2-1.html#mapfragment">MapFragment</a> &#xB610;&#xB294; <a href="2-1.html#mapview">MapView</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;-&#xAC1D;&#xCCB4;">&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xAC1D;&#xCCB4;</h3>
+<p>3.x SDK&#xB294; <a href="ref://../reference/com/naver/maps/map/NaverMap.html" target="_blank"><code>NaverMap</code></a>&#xC774; <code>NMapController</code>&#xB97C; &#xB300;&#xC2E0;&#xD574; &#xC9C0;&#xB3C4;&#xC5D0; &#xB300;&#xD55C; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC5ED;&#xD560;&#xC744; &#xD569;&#xB2C8;&#xB2E4;. <code>NMapView.getMapController()</code> &#xB300;&#xC2E0; <code>MapFragment</code> &#xB610;&#xB294; <code>MapView</code>&#xC758; <a href="ref://../reference/com/naver/maps/map/MapFragment.html#getMapAsync-com.naver.maps.map.OnMapReadyCallback-" target="_blank"><code>getMapAsync()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xAC1D;&#xCCB4;&#xB97C; &#xC5BB;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xB3C4; &#xBDF0;&#xC5D0; &#xB300;&#xD55C; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xAC1D;&#xCCB4;&#xB97C; &#xC5BB;&#xC5B4;&#xC624;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="7de37cf3caf0936f67df7512f146815f" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-bc41c6edc90f7262bc1a3a43b66d1e96" class="gbcg-selector gbcg-active" data-tab="0-bc41c6edc90f7262bc1a3a43b66d1e96" data-tab-category="migration">2.x</a>
+    <a id="select-1-253555522f3c2aa82a47b5e24d705c57" class="gbcg-selector" data-tab="1-253555522f3c2aa82a47b5e24d705c57" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-bc41c6edc90f7262bc1a3a43b66d1e96" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NMapController mapController = mapView.getMapController();
+<span class="hljs-comment">// ...</span>
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-bc41c6edc90f7262bc1a3a43b66d1e96" id="2x">2.x</h3>
+        <div id="0-bc41c6edc90f7262bc1a3a43b66d1e96" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NMapController mapController = mapView.getMapController();
+<span class="hljs-comment">// ...</span>
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-253555522f3c2aa82a47b5e24d705c57" id="3x">3.x</h3>
+        <div id="1-253555522f3c2aa82a47b5e24d705c57" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">mapFragment.getMapAsync(naverMap -&gt; {
+    <span class="hljs-comment">// ...</span>
+});
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="2-1.html">&#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;</a> &#xBB38;&#xC11C;&#xC758; <a href="2-1.html#navermap-%EA%B0%9D%EC%B2%B4-%EC%96%BB%EC%96%B4%EC%98%A4%EA%B8%B0">NaverMap &#xAC1D;&#xCCB4; &#xC5BB;&#xC5B4;&#xC624;&#xAE30;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xC88C;&#xD45C;">&#xC88C;&#xD45C;</h3>
+<p>3.x SDK&#xB294; <a href="ref://../reference/com/naver/maps/geometry/LatLng.html" target="_blank"><code>LatLng</code></a>&#xAC00; <code>NGeoPoint</code>&#xB97C; &#xB300;&#xC2E0;&#xD574; &#xC88C;&#xD45C;&#xB97C; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;. <code>LatLng</code>&#xC640; <code>NGeoPoint</code>&#xB294; &#xC0DD;&#xC131;&#xC790; &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xC758; &#xACBD;&#xC704;&#xB3C4; &#xC21C;&#xC11C;&#xAC00; &#xBC18;&#xB300;&#xC774;&#xBBC0;&#xB85C; &#xC8FC;&#xC758;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. </p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC88C;&#xD45C; &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xD1A0;&#xC2A4;&#xD2B8;&#xB85C; &#xC704;&#xB3C4;&#xC640; &#xACBD;&#xB3C4;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="d1a4bbe200d7a8e6c4599b6265acd1ea" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-369deeea5b116f5371eb94a3c673418e" class="gbcg-selector gbcg-active" data-tab="0-369deeea5b116f5371eb94a3c673418e" data-tab-category="migration">2.x</a>
+    <a id="select-1-c0d0ad67d1c021ad8e673f8eacddddf5" class="gbcg-selector" data-tab="1-c0d0ad67d1c021ad8e673f8eacddddf5" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-369deeea5b116f5371eb94a3c673418e" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NGeoPoint coord = <span class="hljs-keyword">new</span> NGeoPoint(<span class="hljs-number">126.9783740</span>, <span class="hljs-number">37.5670135</span>); <span class="hljs-comment">// &#xACBD;&#xB3C4;, &#xC704;&#xB3C4;&#xC21C;</span>
+
+Toast.makeText(context, <span class="hljs-string">&quot;&#xC704;&#xB3C4;: &quot;</span> + coord.latitude + <span class="hljs-string">&quot;, &#xACBD;&#xB3C4;: &quot;</span> + coord.longitude, Toast.LENGTH_SHORT).show();
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-369deeea5b116f5371eb94a3c673418e" id="2x">2.x</h3>
+        <div id="0-369deeea5b116f5371eb94a3c673418e" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NGeoPoint coord = <span class="hljs-keyword">new</span> NGeoPoint(<span class="hljs-number">126.9783740</span>, <span class="hljs-number">37.5670135</span>); <span class="hljs-comment">// &#xACBD;&#xB3C4;, &#xC704;&#xB3C4;&#xC21C;</span>
+
+Toast.makeText(context, <span class="hljs-string">&quot;&#xC704;&#xB3C4;: &quot;</span> + coord.latitude + <span class="hljs-string">&quot;, &#xACBD;&#xB3C4;: &quot;</span> + coord.longitude, Toast.LENGTH_SHORT).show();
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-c0d0ad67d1c021ad8e673f8eacddddf5" id="3x">3.x</h3>
+        <div id="1-c0d0ad67d1c021ad8e673f8eacddddf5" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">LatLng coord = <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5670135</span>, <span class="hljs-number">126.9783740</span>); <span class="hljs-comment">// &#xC704;&#xB3C4;, &#xACBD;&#xB3C4;&#xC21C;</span>
+
+Toast.makeText(context, <span class="hljs-string">&quot;&#xC704;&#xB3C4;: &quot;</span> + coord.latitude + <span class="hljs-string">&quot;, &#xACBD;&#xB3C4;: &quot;</span> + coord.longitude, Toast.LENGTH_SHORT).show();
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="2-2.html">&#xC88C;&#xD45C; &#xAC1D;&#xCCB4;</a> &#xBB38;&#xC11C;&#xC758; <a href="2-2.html#latlng">LatLng</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xC9C0;&#xB3C4;-&#xC720;&#xD615;-&#xC9C0;&#xC815;">&#xC9C0;&#xB3C4; &#xC720;&#xD615; &#xC9C0;&#xC815;</h3>
+<p>&#xC9C0;&#xB3C4;&#xC758; &#xC720;&#xD615;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB824;&#xBA74; <code>NMapController.setMapViewMode()</code> &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setMapType-com.naver.maps.map.NaverMap.MapType-" target="_blank"><code>NaverMap.setMapType()</code></a>&#xC744; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xB3C4;&#xC758; &#xC720;&#xD615;&#xC744; &#xD558;&#xC774;&#xBE0C;&#xB9AC;&#xB4DC;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="3c5f1d8b8277e7c4a757c27d503d0946" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-64793eefd47154d1e25d5d5b8960de9f" class="gbcg-selector gbcg-active" data-tab="0-64793eefd47154d1e25d5d5b8960de9f" data-tab-category="migration">2.x</a>
+    <a id="select-1-f53eaea359b3f345ec9679102895bff2" class="gbcg-selector" data-tab="1-f53eaea359b3f345ec9679102895bff2" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-64793eefd47154d1e25d5d5b8960de9f" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">mapController.setMapViewMode(NMapView.VIEW_MODE_HYBRID);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-64793eefd47154d1e25d5d5b8960de9f" id="2x">2.x</h3>
+        <div id="0-64793eefd47154d1e25d5d5b8960de9f" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">mapController.setMapViewMode(NMapView.VIEW_MODE_HYBRID);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-f53eaea359b3f345ec9679102895bff2" id="3x">3.x</h3>
+        <div id="1-f53eaea359b3f345ec9679102895bff2" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">naverMap.setMapType(NaverMap.MapType.Hybrid);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="2-3.html">&#xC9C0;&#xB3C4; &#xC635;&#xC158;</a> &#xBB38;&#xC11C;&#xC758; <a href="2-3.html#%EC%A7%80%EB%8F%84-%EC%9C%A0%ED%98%95">&#xC9C0;&#xB3C4; &#xC720;&#xD615;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xB808;&#xC774;&#xC5B4;-&#xADF8;&#xB8F9;-&#xC9C0;&#xC815;">&#xB808;&#xC774;&#xC5B4; &#xADF8;&#xB8F9; &#xC9C0;&#xC815;</h3>
+<p>&#xD2B9;&#xC815; &#xB808;&#xC774;&#xC5B4; &#xADF8;&#xB8F9;&#xC744; &#xD65C;&#xC131;&#xD654;&#xD558;&#xB824;&#xBA74; <code>NMapController.setMapViewTrafficMode()</code>, <code>NMapController.setMapViewBicycleMode()</code>&#xC640; &#xAC19;&#xC740; &#xAC1C;&#xBCC4; &#xBA54;&#xC11C;&#xB4DC; &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setLayerGroupEnabled-java.lang.String-boolean-" target="_blank"><code>NaverMap.setLayerGroupEnabled()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC2E4;&#xC2DC;&#xAC04; &#xAD50;&#xD1B5;&#xC815;&#xBCF4;, &#xC790;&#xC804;&#xAC70; &#xB808;&#xC774;&#xC5B4; &#xADF8;&#xB8F9;&#xC744; &#xD65C;&#xC131;&#xD654;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="f18d90290140cf86d11355d8f7d2bec8" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-dc93a2286b9741532ce8094cc16ca28e" class="gbcg-selector gbcg-active" data-tab="0-dc93a2286b9741532ce8094cc16ca28e" data-tab-category="migration">2.x</a>
+    <a id="select-1-f36d70f65819f9a1f231f6e247c5d102" class="gbcg-selector" data-tab="1-f36d70f65819f9a1f231f6e247c5d102" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-dc93a2286b9741532ce8094cc16ca28e" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">mapController.setMapViewTrafficMode(<span class="hljs-keyword">true</span>);
+mapController.setMapViewBicycleMode(<span class="hljs-keyword">true</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-dc93a2286b9741532ce8094cc16ca28e" id="2x">2.x</h3>
+        <div id="0-dc93a2286b9741532ce8094cc16ca28e" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">mapController.setMapViewTrafficMode(<span class="hljs-keyword">true</span>);
+mapController.setMapViewBicycleMode(<span class="hljs-keyword">true</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-f36d70f65819f9a1f231f6e247c5d102" id="3x">3.x</h3>
+        <div id="1-f36d70f65819f9a1f231f6e247c5d102" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">naverMap.setLayerGroupEnabled(NaverMap.LAYER_GROUP_TRAFFIC, <span class="hljs-keyword">true</span>);
+naverMap.setLayerGroupEnabled(NaverMap.LAYER_GROUP_BICYCLE, <span class="hljs-keyword">true</span>);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="2-3.html">&#xC9C0;&#xB3C4; &#xC635;&#xC158;</a> &#xBB38;&#xC11C;&#xC758; <a href="2-3.html#%EB%A0%88%EC%9D%B4%EC%96%B4-%EA%B7%B8%EB%A3%B9">&#xB808;&#xC774;&#xC5B4; &#xADF8;&#xB8F9;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h2 id="&#xCE74;&#xBA54;&#xB77C;&#xC640;-&#xD22C;&#xC601;">&#xCE74;&#xBA54;&#xB77C;&#xC640; &#xD22C;&#xC601;</h2>
+<h3 id="&#xCE74;&#xBA54;&#xB77C;&#xC758;-&#xC704;&#xCE58;">&#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC704;&#xCE58;</h3>
+<p>3.x SDK&#xB294; 2.x SDK&#xC640; &#xB2E4;&#xB978; &#xC90C; &#xB808;&#xBCA8; &#xCCB4;&#xACC4;&#xB97C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;. &#xB3D9;&#xC77C;&#xD55C; &#xCD95;&#xCC99;&#xC77C; &#xB54C; 3.x SDK&#xC758; &#xC90C; &#xB808;&#xBCA8;&#xC774; 2.x SDK&#xBCF4;&#xB2E4; 4 &#xC815;&#xB3C4; &#xD07D;&#xB2C8;&#xB2E4;. &#xB610;&#xD55C; &#xC90C; &#xB808;&#xBCA8;&#xC758; &#xD0C0;&#xC785;&#xC774; <code>int</code>&#xC5D0;&#xC11C; <code>double</code>&#xB85C; &#xBCC0;&#xACBD;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>3.x SDK&#xB294; &#xC88C;&#xD45C;, &#xC90C; &#xB808;&#xBCA8; &#xB4F1; &#xCE74;&#xBA54;&#xB77C;&#xC640; &#xAD00;&#xB828;&#xB41C; &#xAC12;&#xC744; &#xB0B1;&#xAC1C;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; 2.x SDK&#xC640; &#xB2EC;&#xB9AC; &#xC774;&#xB7EC;&#xD55C; &#xAC12;&#xC744; &#xBB36;&#xC740; <a href="ref://../reference/com/naver/maps/map/CameraPosition.html" target="_blank"><code>CameraPosition</code></a> &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="3-1.html">&#xCE74;&#xBA54;&#xB77C;&#xC640; &#xD22C;&#xC601;</a> &#xBB38;&#xC11C;&#xC758; <a href="3-1.html#%EC%B9%B4%EB%A9%94%EB%9D%BC%EC%9D%98%20%EC%9C%84%EC%B9%98">&#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC704;&#xCE58;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xCE74;&#xBA54;&#xB77C;&#xC758;-&#xD604;&#xC7AC;-&#xC704;&#xCE58;">&#xCE74;&#xBA54;&#xB77C;&#xC758; &#xD604;&#xC7AC; &#xC704;&#xCE58;</h3>
+<p>&#xCE74;&#xBA54;&#xB77C;&#xC758; &#xD604;&#xC7AC; &#xC704;&#xCE58;&#xB97C; &#xC5BB;&#xC5B4;&#xC624;&#xB824;&#xBA74; <code>NMapController.getMapCenter()</code> &#xBC0F; <code>NMapController.getZoomLevel()</code>&#xC744; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#getCameraPosition--" target="_blank"><code>NaverMap.getCameraPosition()</code></a>&#xC744; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xD604;&#xC7AC; &#xC704;&#xCE58;&#xB97C; &#xC5BB;&#xACE0; &#xD1A0;&#xC2A4;&#xD2B8;&#xB85C; &#xAC01; &#xC18D;&#xC131;&#xC744; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="ecc5074d7556f1adc7c98beec86ff393" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-6463c88895fee5535f60d681cfc5d75c" class="gbcg-selector gbcg-active" data-tab="0-6463c88895fee5535f60d681cfc5d75c" data-tab-category="migration">2.x</a>
+    <a id="select-1-bdda3f77f3f8919bfc907d5752ed7c8a" class="gbcg-selector" data-tab="1-bdda3f77f3f8919bfc907d5752ed7c8a" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-6463c88895fee5535f60d681cfc5d75c" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NGeoPoint center = mapController.getMapCenter();
+<span class="hljs-keyword">int</span> zoom = mapController.getZoomLevel();
+
+Toast.makeText(context, <span class="hljs-string">&quot;&#xC911;&#xC2EC; &#xC704;&#xB3C4;: &quot;</span> + center.latitude + <span class="hljs-string">&quot;, &quot;</span> +
+    <span class="hljs-string">&quot;&#xC911;&#xC2EC; &#xACBD;&#xB3C4;: &quot;</span> + center.longitude + <span class="hljs-string">&quot;, &quot;</span> +
+    <span class="hljs-string">&quot;&#xC90C; &#xB808;&#xBCA8;: &quot;</span> + zoom,
+    Toast.LENGTH_SHORT).show();
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-6463c88895fee5535f60d681cfc5d75c" id="2x">2.x</h3>
+        <div id="0-6463c88895fee5535f60d681cfc5d75c" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NGeoPoint center = mapController.getMapCenter();
+<span class="hljs-keyword">int</span> zoom = mapController.getZoomLevel();
+
+Toast.makeText(context, <span class="hljs-string">&quot;&#xC911;&#xC2EC; &#xC704;&#xB3C4;: &quot;</span> + center.latitude + <span class="hljs-string">&quot;, &quot;</span> +
+    <span class="hljs-string">&quot;&#xC911;&#xC2EC; &#xACBD;&#xB3C4;: &quot;</span> + center.longitude + <span class="hljs-string">&quot;, &quot;</span> +
+    <span class="hljs-string">&quot;&#xC90C; &#xB808;&#xBCA8;: &quot;</span> + zoom,
+    Toast.LENGTH_SHORT).show();
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-bdda3f77f3f8919bfc907d5752ed7c8a" id="3x">3.x</h3>
+        <div id="1-bdda3f77f3f8919bfc907d5752ed7c8a" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">CameraPosition cameraPosition = naverMap.getCameraPosition();
+
+Toast.makeText(context, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xC704;&#xB3C4;: &quot;</span> + cameraPosition.target.latitude + <span class="hljs-string">&quot;, &quot;</span> +
+    <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xACBD;&#xB3C4;: &quot;</span> + cameraPosition.target.longitude + <span class="hljs-string">&quot;, &quot;</span> +
+    <span class="hljs-string">&quot;&#xC90C; &#xB808;&#xBCA8;: &quot;</span> + cameraPosition.zoom + <span class="hljs-string">&quot;, &quot;</span> +
+    <span class="hljs-string">&quot;&#xAE30;&#xC6B8;&#xC784; &#xAC01;&#xB3C4;: &quot;</span> + cameraPosition.tilt + <span class="hljs-string">&quot;, &quot;</span> +
+    <span class="hljs-string">&quot;&#xBCA0;&#xC5B4;&#xB9C1; &#xAC01;&#xB3C4;: &quot;</span> + cameraPosition.bearing,
+    Toast.LENGTH_SHORT).show();
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="3-1.html">&#xCE74;&#xBA54;&#xB77C;&#xC640; &#xD22C;&#xC601;</a> &#xBB38;&#xC11C;&#xC758; <a href="3-1.html#%EC%B9%B4%EB%A9%94%EB%9D%BC%EC%9D%98-%ED%98%84%EC%9E%AC-%EC%9C%84%EC%B9%98">&#xCE74;&#xBA54;&#xB77C;&#xC758; &#xD604;&#xC7AC; &#xC704;&#xCE58;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xCE74;&#xBA54;&#xB77C;-&#xC774;&#xB3D9;">&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;</h3>
+<p>&#xCE74;&#xBA54;&#xB77C;&#xB97C; &#xC774;&#xB3D9;&#xD558;&#xB824;&#xBA74; <code>NMapController.setMapCenter()</code>&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/CameraUpdate.html" target="_blank"><code>CameraUpdate</code></a> &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD574; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#moveCamera-com.naver.maps.map.CameraUpdate-" target="_blank"><code>moveCamera()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xB300;&#xC0C1; &#xC88C;&#xD45C;&#xB97C; <code>(37.5666102, 126.9783881)</code> &#xC9C0;&#xC810;&#xC73C;&#xB85C;, &#xC90C; &#xB808;&#xBCA8;&#xC744; 15(2.x SDK &#xAE30;&#xC900; 11)&#xB85C; &#xBCC0;&#xACBD;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="f98b6e0c8251f94e44aaa7e89f9c7841" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-fcb77e3d2f233f6ec89d1b83ccebfebe" class="gbcg-selector gbcg-active" data-tab="0-fcb77e3d2f233f6ec89d1b83ccebfebe" data-tab-category="migration">2.x</a>
+    <a id="select-1-f03f8f8bcd246e0455e299fcf23b1cc4" class="gbcg-selector" data-tab="1-f03f8f8bcd246e0455e299fcf23b1cc4" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-fcb77e3d2f233f6ec89d1b83ccebfebe" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">mapController.setMapCenter(<span class="hljs-keyword">new</span> NGeoPoint(<span class="hljs-number">126.9783881</span>, <span class="hljs-number">37.5666102</span>), <span class="hljs-number">11</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-fcb77e3d2f233f6ec89d1b83ccebfebe" id="2x">2.x</h3>
+        <div id="0-fcb77e3d2f233f6ec89d1b83ccebfebe" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">mapController.setMapCenter(<span class="hljs-keyword">new</span> NGeoPoint(<span class="hljs-number">126.9783881</span>, <span class="hljs-number">37.5666102</span>), <span class="hljs-number">11</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-f03f8f8bcd246e0455e299fcf23b1cc4" id="3x">3.x</h3>
+        <div id="1-f03f8f8bcd246e0455e299fcf23b1cc4" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate.scrollAndZoomTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-number">15</span>);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="3-2.html">&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;</a> &#xBB38;&#xC11C;&#xC758; <a href="3-2.html#api-%ED%98%B8%EC%B6%9C%EB%A1%9C-%EC%B9%B4%EB%A9%94%EB%9D%BC-%EC%9D%B4%EB%8F%99%ED%95%98%EA%B8%B0">API &#xD638;&#xCD9C;&#xB85C; &#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;&#xD558;&#xAE30;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xCE74;&#xBA54;&#xB77C;-&#xBCC0;&#xACBD;-&#xC774;&#xBCA4;&#xD2B8;">&#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; &#xC774;&#xBCA4;&#xD2B8;</h3>
+<p>&#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1B;&#xC73C;&#xB824;&#xBA74; <code>NMapView.setOnMapStateChangeListener()</code> &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#addOnCameraChangeListener-com.naver.maps.map.NaverMap.OnCameraChangeListener-" target="_blank"><code>NaverMap.addOnCameraChangeListener()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xC774;&#xBCA4;&#xD2B8; &#xB9AC;&#xC2A4;&#xB108;&#xB97C; &#xB4F1;&#xB85D;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1B;&#xC544; &#xBCC0;&#xACBD;&#xB41C; &#xC704;&#xCE58;&#xB97C; &#xB85C;&#xAE45;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="a3edbefd9cb618c98258450368bd78fc" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-4caaccf4065e3e6465da42b342e6ca56" class="gbcg-selector gbcg-active" data-tab="0-4caaccf4065e3e6465da42b342e6ca56" data-tab-category="migration">2.x</a>
+    <a id="select-1-373837ace9d88a9b0e587628edc4d0cd" class="gbcg-selector" data-tab="1-373837ace9d88a9b0e587628edc4d0cd" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-4caaccf4065e3e6465da42b342e6ca56" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">mapView.setOnMapStateChangeListener(<span class="hljs-keyword">new</span> NMapView.OnMapStateChangeListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMapInitHandler</span><span class="hljs-params">(NMapView mapView, NMapError errorInfo)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onAnimationStateChange</span><span class="hljs-params">(NMapView mapView, <span class="hljs-keyword">int</span> animType, <span class="hljs-keyword">int</span> animState)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMapCenterChange</span><span class="hljs-params">(NMapView mapView, NGeoPoint center)</span> </span>{
+        Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>, <span class="hljs-string">&quot;&#xC911;&#xC2EC; &#xBCC0;&#xACBD; - &#xC704;&#xB3C4;: &quot;</span> + center.latitude + <span class="hljs-string">&quot;, &#xACBD;&#xB3C4;: &quot;</span> + center.longitude);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onZoomLevelChange</span><span class="hljs-params">(NMapView mapView, <span class="hljs-keyword">int</span> level)</span> </span>{
+        Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>, <span class="hljs-string">&quot;&#xC90C; &#xB808;&#xBCA8; &#xBCC0;&#xACBD;: &quot;</span> + level);
+    }
+});
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-4caaccf4065e3e6465da42b342e6ca56" id="2x">2.x</h3>
+        <div id="0-4caaccf4065e3e6465da42b342e6ca56" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">mapView.setOnMapStateChangeListener(<span class="hljs-keyword">new</span> NMapView.OnMapStateChangeListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMapInitHandler</span><span class="hljs-params">(NMapView mapView, NMapError errorInfo)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onAnimationStateChange</span><span class="hljs-params">(NMapView mapView, <span class="hljs-keyword">int</span> animType, <span class="hljs-keyword">int</span> animState)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMapCenterChange</span><span class="hljs-params">(NMapView mapView, NGeoPoint center)</span> </span>{
+        Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>, <span class="hljs-string">&quot;&#xC911;&#xC2EC; &#xBCC0;&#xACBD; - &#xC704;&#xB3C4;: &quot;</span> + center.latitude + <span class="hljs-string">&quot;, &#xACBD;&#xB3C4;: &quot;</span> + center.longitude);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onZoomLevelChange</span><span class="hljs-params">(NMapView mapView, <span class="hljs-keyword">int</span> level)</span> </span>{
+        Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>, <span class="hljs-string">&quot;&#xC90C; &#xB808;&#xBCA8; &#xBCC0;&#xACBD;: &quot;</span> + level);
+    }
+});
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-373837ace9d88a9b0e587628edc4d0cd" id="3x">3.x</h3>
+        <div id="1-373837ace9d88a9b0e587628edc4d0cd" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">naverMap.addOnCameraChangeListener((reason, animated) -&gt; {
+    CameraPosition cameraPosition = naverMap.getCameraPosition();
+
+    Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>, <span class="hljs-string">&quot;&#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; - &#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xC704;&#xB3C4;: &quot;</span> + cameraPosition.target.latitude + <span class="hljs-string">&quot;, &quot;</span> +
+        <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xACBD;&#xB3C4;: &quot;</span> + cameraPosition.target.longitude + <span class="hljs-string">&quot;, &quot;</span> +
+        <span class="hljs-string">&quot;&#xC90C; &#xB808;&#xBCA8;: &quot;</span> + cameraPosition.zoom + <span class="hljs-string">&quot;, &quot;</span> +
+        <span class="hljs-string">&quot;&#xAE30;&#xC6B8;&#xC784; &#xAC01;&#xB3C4;: &quot;</span> + cameraPosition.tilt + <span class="hljs-string">&quot;, &quot;</span> +
+        <span class="hljs-string">&quot;&#xBCA0;&#xC5B4;&#xB9C1; &#xAC01;&#xB3C4;: &quot;</span> + cameraPosition.bearing);
+});
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="3-2.html">&#xCE74;&#xBA54;&#xB77C; &#xC774;&#xB3D9;</a> &#xBB38;&#xC11C;&#xC758; <a href="3-2.html#%EC%B9%B4%EB%A9%94%EB%9D%BC-%EB%B3%80%EA%B2%BD-%EC%9D%B4%EB%B2%A4%ED%8A%B8">&#xCE74;&#xBA54;&#xB77C; &#xBCC0;&#xACBD; &#xC774;&#xBCA4;&#xD2B8;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xD22C;&#xC601;">&#xD22C;&#xC601;</h3>
+<p>&#xD654;&#xBA74; &#xC88C;&#xD45C;&#xC640; &#xC9C0;&#xB3C4; &#xC88C;&#xD45C;&#xB97C; &#xC0C1;&#xD638; &#xBCC0;&#xD658;&#xD558;&#xB824;&#xBA74; <code>NMapProjection</code> &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/Projection.html" target="_blank"><code>Projection</code></a> &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;. <a href="ref://../reference/com/naver/maps/map/NaverMap.html#getProjection--" target="_blank"><code>NaverMap.getProjection()</code></a>&#xC744; &#xD638;&#xCD9C;&#xD574; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD654;&#xBA74; &#xC88C;&#xD45C;&#xB97C; &#xC9C0;&#xB3C4; &#xC88C;&#xD45C;&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xB824;&#xBA74; <code>NMapProjection.fromPixels()</code> &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/Projection.html#fromScreenLocation-android.graphics.PointF-" target="_blank"><code>Projection.fromScreenLocation()</code></a>&#xC744;, &#xC9C0;&#xB3C4; &#xC88C;&#xD45C;&#xB97C; &#xD654;&#xBA74; &#xC88C;&#xD45C;&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xB824;&#xBA74; <code>NMapProjection.toPixels()</code> &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/Projection.html#toScreenLocation-com.naver.maps.geometry.LatLng-" target="_blank"><code>toScreenLocation()</code></a>&#xC744; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xD654;&#xBA74;&#xC758; <code>(100, 100)</code> &#xC9C0;&#xC810;&#xC744; &#xC9C0;&#xB3C4; &#xC88C;&#xD45C;&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="888b51821fa6464070bf3c5eb4a990de" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-3aea8ae2661421a44fa7a3f87f7120b8" class="gbcg-selector gbcg-active" data-tab="0-3aea8ae2661421a44fa7a3f87f7120b8" data-tab-category="migration">2.x</a>
+    <a id="select-1-5c2d1196339439d73d5cf9e11c063d39" class="gbcg-selector" data-tab="1-5c2d1196339439d73d5cf9e11c063d39" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-3aea8ae2661421a44fa7a3f87f7120b8" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">mapView.getMapProjection().fromPixels(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-3aea8ae2661421a44fa7a3f87f7120b8" id="2x">2.x</h3>
+        <div id="0-3aea8ae2661421a44fa7a3f87f7120b8" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">mapView.getMapProjection().fromPixels(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-5c2d1196339439d73d5cf9e11c063d39" id="3x">3.x</h3>
+        <div id="1-5c2d1196339439d73d5cf9e11c063d39" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">LatLng coord = naverMap.getProjection().fromScreenLocation(<span class="hljs-keyword">new</span> PointF(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>));
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xB3C4;&#xC758; <code>(37.5666102, 126.9783881)</code> &#xC9C0;&#xC810;&#xC744; &#xD654;&#xBA74; &#xC88C;&#xD45C;&#xB85C; &#xBCC0;&#xD658;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="95fa18e46dbb285a60714155dfb9179e" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-9a0b60518e618df56decf9084c50beb5" class="gbcg-selector gbcg-active" data-tab="0-9a0b60518e618df56decf9084c50beb5" data-tab-category="migration">2.x</a>
+    <a id="select-1-d912242d059e59803978f0b3621acdc7" class="gbcg-selector" data-tab="1-d912242d059e59803978f0b3621acdc7" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-9a0b60518e618df56decf9084c50beb5" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">Point point = <span class="hljs-keyword">new</span> Point();
+mapView.getMapProjection().toPixels(<span class="hljs-keyword">new</span> NGeoPoint(<span class="hljs-number">126.9783881</span>, <span class="hljs-number">37.5666102</span>), point);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-9a0b60518e618df56decf9084c50beb5" id="2x">2.x</h3>
+        <div id="0-9a0b60518e618df56decf9084c50beb5" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">Point point = <span class="hljs-keyword">new</span> Point();
+mapView.getMapProjection().toPixels(<span class="hljs-keyword">new</span> NGeoPoint(<span class="hljs-number">126.9783881</span>, <span class="hljs-number">37.5666102</span>), point);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-d912242d059e59803978f0b3621acdc7" id="3x">3.x</h3>
+        <div id="1-d912242d059e59803978f0b3621acdc7" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">PointF point = naverMap.getProjection().toScreenLocation(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>));
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="3-1.html">&#xCE74;&#xBA54;&#xB77C;&#xC640; &#xD22C;&#xC601;</a> &#xBB38;&#xC11C;&#xC758; <a href="3-1.html#%ED%99%94%EB%A9%B4-%EC%A2%8C%ED%91%9C%EC%99%80-%EC%A7%80%EB%8F%84-%EC%A2%8C%ED%91%9C-%EA%B0%84-%EB%B3%80%ED%99%98">&#xD654;&#xBA74; &#xC88C;&#xD45C;&#xC640; &#xC9C0;&#xB3C4; &#xC88C;&#xD45C; &#xAC04; &#xBCC0;&#xD658;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h2 id="&#xC0C1;&#xD638;&#xC791;&#xC6A9;">&#xC0C1;&#xD638;&#xC791;&#xC6A9;</h2>
+<h3 id="&#xCEE8;&#xD2B8;&#xB864;">&#xCEE8;&#xD2B8;&#xB864;</h3>
+<p>3.x SDK&#xC5D0;&#xB294; &#xC90C; &#xCEE8;&#xD2B8;&#xB864;&#xC744; &#xBE44;&#xB86F;&#xD55C; &#xC5EC;&#xB7EC; &#xAC00;&#xC9C0; &#xCEE8;&#xD2B8;&#xB864;&#xC774; &#xB0B4;&#xC7A5;&#xB418;&#xC5B4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. 2.x SDK&#xC5D0;&#xC11C; <code>NMapView.setBuiltInZoomControls()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD65C;&#xC131;&#xD654;&#xD558;&#xB294; &#xC90C; &#xCEE8;&#xD2B8;&#xB864;&#xC740; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xD65C;&#xC131;&#xD654;&#xB418;&#xBA70;, &#xBE44;&#xD65C;&#xC131;&#xD654;&#xD558;&#xB824;&#xBA74; <a href="ref://../reference/com/naver/maps/map/UiSettings.html#setZoomButtonEnabled-boolean-" target="_blank"><code>UiSettings.setZoomButtonEnabled()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;. <code>UiSettings</code> &#xAC1D;&#xCCB4;&#xB294; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#getUiSettings--" target="_blank"><code>NaverMap.getUiSettings()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xC5BB;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><div id="50cf205d9f0a1153c23ae15d4e12a9a4" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-069d0d8e906afb7e8c044f0142457b3e" class="gbcg-selector gbcg-active" data-tab="0-069d0d8e906afb7e8c044f0142457b3e" data-tab-category="migration">2.x</a>
+    <a id="select-1-a660ac92f60b0beae23b578a55dffafa" class="gbcg-selector" data-tab="1-a660ac92f60b0beae23b578a55dffafa" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-069d0d8e906afb7e8c044f0142457b3e" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">mapController.setBuiltInZoomControls(<span class="hljs-keyword">true</span>, <span class="hljs-keyword">null</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-069d0d8e906afb7e8c044f0142457b3e" id="2x">2.x</h3>
+        <div id="0-069d0d8e906afb7e8c044f0142457b3e" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">mapController.setBuiltInZoomControls(<span class="hljs-keyword">true</span>, <span class="hljs-keyword">null</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-a660ac92f60b0beae23b578a55dffafa" id="3x">3.x</h3>
+        <div id="1-a660ac92f60b0beae23b578a55dffafa" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">naverMap.getUiSettings().setZoomButtonEnabled(<span class="hljs-keyword">true</span>);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="4-1.html">&#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;</a> &#xBB38;&#xC11C;&#xC758; <a href="4-1.html#%EC%BB%A8%ED%8A%B8%EB%A1%A4">&#xCEE8;&#xD2B8;&#xB864;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="ui-&#xC774;&#xBCA4;&#xD2B8;">UI &#xC774;&#xBCA4;&#xD2B8;</h3>
+<p>&#xC9C0;&#xB3C4;&#xC758; &#xD074;&#xB9AD;, &#xB871; &#xD074;&#xB9AD; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1B;&#xC73C;&#xB824;&#xBA74; <code>NMapView.setOnMapViewTouchEventListener()</code> &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setOnMapClickListener-com.naver.maps.map.NaverMap.OnMapClickListener-" target="_blank"><code>NaverMap.setOnMapClickListener()</code></a> &#xBC0F; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setOnMapLongClickListener-com.naver.maps.map.NaverMap.OnMapLongClickListener-" target="_blank"><code>NaverMap.setOnMapLongClickListener()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xC774;&#xBCA4;&#xD2B8; &#xB9AC;&#xC2A4;&#xB108;&#xB97C; &#xB4F1;&#xB85D;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC9C0;&#xB3C4;&#xC758; &#xD074;&#xB9AD;, &#xB871; &#xD074;&#xB9AD; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1B;&#xC544; &#xD1A0;&#xC2A4;&#xD2B8;&#xB85C; &#xD074;&#xB9AD;&#xB41C; &#xC88C;&#xD45C;&#xB97C; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="6d5652d70d24dab601431b69c322f3ea" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-64c10b9880fb4f0c28bd9e1eddbf85ce" class="gbcg-selector gbcg-active" data-tab="0-64c10b9880fb4f0c28bd9e1eddbf85ce" data-tab-category="migration">2.x</a>
+    <a id="select-1-3a789196f84770813f47a84b70c1ed08" class="gbcg-selector" data-tab="1-3a789196f84770813f47a84b70c1ed08" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-64c10b9880fb4f0c28bd9e1eddbf85ce" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">mapView.setOnMapViewTouchEventListener(<span class="hljs-keyword">new</span> NMapView.OnMapViewTouchEventListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLongPress</span><span class="hljs-params">(NMapView mapView, MotionEvent ev)</span> </span>{
+        NGeoPoint coord = mapView.getMapProjection().fromPixels((<span class="hljs-keyword">int</span>)ev.getX(), (<span class="hljs-keyword">int</span>)ev.getY());
+        Toast.makeText(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;&#xB871; &#xD074;&#xB9AD;: &quot;</span> + coord.latitude + <span class="hljs-string">&quot;, &quot;</span> + coord.longitude, Toast.LENGTH_SHORT).show();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLongPressCanceled</span><span class="hljs-params">(NMapView mapView)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onTouchDown</span><span class="hljs-params">(NMapView mapView, MotionEvent ev)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onTouchUp</span><span class="hljs-params">(NMapView mapView, MotionEvent ev)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onScroll</span><span class="hljs-params">(NMapView mapView, MotionEvent e1, MotionEvent e2)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSingleTapUp</span><span class="hljs-params">(NMapView mapView, MotionEvent ev)</span> </span>{
+        NGeoPoint coord = mapView.getMapProjection().fromPixels((<span class="hljs-keyword">int</span>)ev.getX(), (<span class="hljs-keyword">int</span>)ev.getY());
+        Toast.makeText(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;&#xD074;&#xB9AD;: &quot;</span> + coord.latitude + <span class="hljs-string">&quot;, &quot;</span> + coord.longitude, Toast.LENGTH_SHORT).show();
+    }
+});
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-64c10b9880fb4f0c28bd9e1eddbf85ce" id="2x">2.x</h3>
+        <div id="0-64c10b9880fb4f0c28bd9e1eddbf85ce" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">mapView.setOnMapViewTouchEventListener(<span class="hljs-keyword">new</span> NMapView.OnMapViewTouchEventListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLongPress</span><span class="hljs-params">(NMapView mapView, MotionEvent ev)</span> </span>{
+        NGeoPoint coord = mapView.getMapProjection().fromPixels((<span class="hljs-keyword">int</span>)ev.getX(), (<span class="hljs-keyword">int</span>)ev.getY());
+        Toast.makeText(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;&#xB871; &#xD074;&#xB9AD;: &quot;</span> + coord.latitude + <span class="hljs-string">&quot;, &quot;</span> + coord.longitude, Toast.LENGTH_SHORT).show();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLongPressCanceled</span><span class="hljs-params">(NMapView mapView)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onTouchDown</span><span class="hljs-params">(NMapView mapView, MotionEvent ev)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onTouchUp</span><span class="hljs-params">(NMapView mapView, MotionEvent ev)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onScroll</span><span class="hljs-params">(NMapView mapView, MotionEvent e1, MotionEvent e2)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSingleTapUp</span><span class="hljs-params">(NMapView mapView, MotionEvent ev)</span> </span>{
+        NGeoPoint coord = mapView.getMapProjection().fromPixels((<span class="hljs-keyword">int</span>)ev.getX(), (<span class="hljs-keyword">int</span>)ev.getY());
+        Toast.makeText(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;&#xD074;&#xB9AD;: &quot;</span> + coord.latitude + <span class="hljs-string">&quot;, &quot;</span> + coord.longitude, Toast.LENGTH_SHORT).show();
+    }
+});
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-3a789196f84770813f47a84b70c1ed08" id="3x">3.x</h3>
+        <div id="1-3a789196f84770813f47a84b70c1ed08" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">naverMap.setOnMapClickListener((point, coord) -&gt;
+    Toast.makeText(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;&#xD074;&#xB9AD;: &quot;</span> +  coord.latitude + <span class="hljs-string">&quot;, &quot;</span> + coord.longitude, Toast.LENGTH_SHORT).show());
+
+naverMap.setOnMapLongClickListener((point, coord) -&gt;
+    Toast.makeText(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;&#xB871; &#xD074;&#xB9AD;: &quot;</span> + coord.latitude + <span class="hljs-string">&quot;, &quot;</span> + coord.longitude, Toast.LENGTH_SHORT).show());
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="4-1.html">&#xC0AC;&#xC6A9;&#xC790; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;</a> &#xBB38;&#xC11C;&#xC758; <a href="4-1.html#ui-%EC%9D%B4%EB%B2%A4%ED%8A%B8">UI &#xC774;&#xBCA4;&#xD2B8;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xC704;&#xCE58;">&#xC704;&#xCE58;</h3>
+<p>2.x SDK&#xB294; &#xC704;&#xCE58; &#xCD94;&#xC801; &#xAE30;&#xB2A5;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xBA74; <code>NMapLocationManager</code>, <code>NMapCompassManager</code>, <code>NMapMyLocationOverlay</code>&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xAE30;&#xB2A5;&#xC744; &#xD65C;&#xC131;&#xD654;&#xD558;&#xB294; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xAC01;&#xAC01; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>3.x SDK&#xC5D0;&#xB294; &#xC704;&#xCE58; &#xCD94;&#xC801; &#xAE30;&#xB2A5;&#xC774; &#xB0B4;&#xC7A5;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBBC0;&#xB85C; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setLocationSource-com.naver.maps.map.LocationSource-" target="_blank"><code>NaverMap.setLocationSource()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD574; <a href="ref://../reference/com/naver/maps/map/LocationSource.html" target="_blank"><code>LocationSource</code></a> &#xAD6C;&#xD604;&#xCCB4;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xACE0; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setLocationTrackingMode-com.naver.maps.map.LocationTrackingMode-" target="_blank"><code>NaverMap.setLocationTrackingMode()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xC704;&#xCE58; &#xCD94;&#xC801; &#xAE30;&#xB2A5;&#xC774; &#xD65C;&#xC131;&#xD654;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC704;&#xCE58; &#xCD94;&#xC801; &#xAE30;&#xB2A5;&#xC744; &#xD65C;&#xC131;&#xD654;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="0b3dd8647a0e0b21efa808619903ee75" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-c2d410dec7d1ef37494f31a9d3287622" class="gbcg-selector gbcg-active" data-tab="0-c2d410dec7d1ef37494f31a9d3287622" data-tab-category="migration">2.x</a>
+    <a id="select-1-0134d744147c03b5028d41c09b3df5f8" class="gbcg-selector" data-tab="1-0134d744147c03b5028d41c09b3df5f8" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-c2d410dec7d1ef37494f31a9d3287622" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NMapController mapController = mapView.getMapController();
+
+NMapLocationManager mapLocationManager = <span class="hljs-keyword">new</span> NMapLocationManager(context);
+mapLocationManager.setOnLocationChangeListener(onMyLocationChangeListener);
+mapLocationManager.enableMyLocation(<span class="hljs-keyword">new</span> NMapLocationManager.OnLocationChangeListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">onLocationChanged</span><span class="hljs-params">(NMapLocationManager locationManager, NGeoPoint myLocation)</span> </span>{
+        mapController.animateTo(myLocation);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLocationUpdateTimeout</span><span class="hljs-params">(NMapLocationManager locationManager)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLocationUnavailableArea</span><span class="hljs-params">(NMapLocationManager locationManager, NGeoPoint myLocation)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+});
+
+NMapCompassManager mapCompassManager = <span class="hljs-keyword">new</span> NMapCompassManager(context);
+mapCompassManager.enableCompass();
+
+NMapViewerResourceProvider mapViewerResourceProvider = <span class="hljs-keyword">new</span> NMapViewerResourceProvider(context);
+NMapOverlayManager overlayManager = <span class="hljs-keyword">new</span> NMapOverlayManager(context, mapView, mapViewerResourceProvider);
+NMapMyLocationOverlay myLocationOverlay = mapOverlayManager.createMyLocationOverlay(mapLocationManager, mapCompassManager);
+myLocationOverlay.setCompassHeadingVisible(<span class="hljs-keyword">true</span>);
+
+mapView.setAutoRotateEnabled(<span class="hljs-keyword">true</span>, <span class="hljs-keyword">false</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-c2d410dec7d1ef37494f31a9d3287622" id="2x">2.x</h3>
+        <div id="0-c2d410dec7d1ef37494f31a9d3287622" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NMapController mapController = mapView.getMapController();
+
+NMapLocationManager mapLocationManager = <span class="hljs-keyword">new</span> NMapLocationManager(context);
+mapLocationManager.setOnLocationChangeListener(onMyLocationChangeListener);
+mapLocationManager.enableMyLocation(<span class="hljs-keyword">new</span> NMapLocationManager.OnLocationChangeListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">onLocationChanged</span><span class="hljs-params">(NMapLocationManager locationManager, NGeoPoint myLocation)</span> </span>{
+        mapController.animateTo(myLocation);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLocationUpdateTimeout</span><span class="hljs-params">(NMapLocationManager locationManager)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onLocationUnavailableArea</span><span class="hljs-params">(NMapLocationManager locationManager, NGeoPoint myLocation)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+});
+
+NMapCompassManager mapCompassManager = <span class="hljs-keyword">new</span> NMapCompassManager(context);
+mapCompassManager.enableCompass();
+
+NMapViewerResourceProvider mapViewerResourceProvider = <span class="hljs-keyword">new</span> NMapViewerResourceProvider(context);
+NMapOverlayManager overlayManager = <span class="hljs-keyword">new</span> NMapOverlayManager(context, mapView, mapViewerResourceProvider);
+NMapMyLocationOverlay myLocationOverlay = mapOverlayManager.createMyLocationOverlay(mapLocationManager, mapCompassManager);
+myLocationOverlay.setCompassHeadingVisible(<span class="hljs-keyword">true</span>);
+
+mapView.setAutoRotateEnabled(<span class="hljs-keyword">true</span>, <span class="hljs-keyword">false</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-0134d744147c03b5028d41c09b3df5f8" id="3x">3.x</h3>
+        <div id="1-0134d744147c03b5028d41c09b3df5f8" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">naverMap.setLocationSource(<span class="hljs-keyword">new</span> FusedLocationSource(activity, LOCATION_PERMISSION_REQUEST_CODE));
+naverMap.setLocationTrackingMode(LocationTrackingMode.Face);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="4-2.html">&#xC704;&#xCE58;</a> &#xBB38;&#xC11C;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h2 id="&#xC624;&#xBC84;&#xB808;&#xC774;">&#xC624;&#xBC84;&#xB808;&#xC774;</h2>
+<h3 id="&#xC0AC;&#xC6A9;-&#xC900;&#xBE44;">&#xC0AC;&#xC6A9; &#xC900;&#xBE44;</h3>
+<p>2.x SDK&#xC5D0;&#xC11C; &#xC624;&#xBC84;&#xB808;&#xC774; &#xAE30;&#xB2A5;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xBA74; &#xBA3C;&#xC800; <code>NMapViewerResourceProvider</code>&#xC640; <code>NMapOverlayManager</code>&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0;, &#xAC01; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC5D0; <code>NMapXXXdata</code>&#xB97C; &#xC0DD;&#xC131;&#xD55C; &#xD6C4; <code>NMapOverlayManager.createXXX()</code> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>3.x SDK&#xC5D0;&#xC11C;&#xB294; &#xC624;&#xBC84;&#xB808;&#xC774; &#xAC1D;&#xCCB4; &#xAC01;&#xAC01;&#xC774; &#xAE30;&#xB2A5;&#xC744; &#xB3C5;&#xB9BD;&#xC801;&#xC73C;&#xB85C; &#xC644;&#xACB0;&#xC131; &#xC788;&#xAC8C; &#xC218;&#xD589;&#xD558;&#xBBC0;&#xB85C; &#xC774;&#xB7EC;&#xD55C; &#xC900;&#xBE44; &#xACFC;&#xC815;&#xC774; &#xD544;&#xC694;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD544;&#xC694;&#xD55C; &#xC624;&#xBC84;&#xB808;&#xC774; &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xC18D;&#xC131;&#xC744; &#xAC1D;&#xCCB4;&#xC5D0; &#xC9C1;&#xC811; &#xC9C0;&#xC815;&#xD55C; &#xD6C4; <code>setMap()</code>&#xC744; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xC9C0;&#xB3C4;&#xC5D0; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;. </p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC624;&#xBC84;&#xB808;&#xC774; &#xAE30;&#xB2A5;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xC704;&#xD574; &#xAD00;&#xB828; &#xAC1D;&#xCCB4;&#xB97C; &#xC900;&#xBE44;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="a01ad824709dde69c6240422d0617fc6" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-d1ecfdbfa947f83d8fa32fa580a226d9" class="gbcg-selector gbcg-active" data-tab="0-d1ecfdbfa947f83d8fa32fa580a226d9" data-tab-category="migration">2.x</a>
+    <a id="select-1-dbbb1fc678532228177780eb117687e2" class="gbcg-selector" data-tab="1-dbbb1fc678532228177780eb117687e2" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-d1ecfdbfa947f83d8fa32fa580a226d9" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NMapViewerResourceProvider mapViewerResourceProvider = <span class="hljs-keyword">new</span> NMapViewerResourceProvider(context);
+NMapOverlayManager overlayManager = <span class="hljs-keyword">new</span> NMapOverlayManager(context, mapView, mapViewerResourceProvider);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-d1ecfdbfa947f83d8fa32fa580a226d9" id="2x">2.x</h3>
+        <div id="0-d1ecfdbfa947f83d8fa32fa580a226d9" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NMapViewerResourceProvider mapViewerResourceProvider = <span class="hljs-keyword">new</span> NMapViewerResourceProvider(context);
+NMapOverlayManager overlayManager = <span class="hljs-keyword">new</span> NMapOverlayManager(context, mapView, mapViewerResourceProvider);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-dbbb1fc678532228177780eb117687e2" id="3x">3.x</h3>
+        <div id="1-dbbb1fc678532228177780eb117687e2" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java"><span class="hljs-comment">// &#xC900;&#xBE44; &#xACFC;&#xC815; &#xBD88;&#xD544;&#xC694;</span>
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="&#xD074;&#xB9AD;-&#xC774;&#xBCA4;&#xD2B8;">&#xD074;&#xB9AD; &#xC774;&#xBCA4;&#xD2B8;</h3>
+<p>2.x SDK&#xC5D0;&#xC11C;&#xB294; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xD074;&#xB9AD; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1B;&#xC73C;&#xB824;&#xBA74; &#xC624;&#xBC84;&#xB808;&#xC774; &#xC720;&#xD615;&#xBCC4;&#xB85C; <code>setOnFocusChangeListener()</code>, <code>setOnStateChangeListener()</code> &#xAC19;&#xC740; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xAC01;&#xAC01; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>3.x SDK&#xC5D0;&#xC11C;&#xB294; <a href="ref://../reference/com/naver/maps/map/overlay/Overlay.html#setOnClickListener-com.naver.maps.map.overlay.Overlay.OnClickListener-" target="_blank"><code>Overlay.setOnClickListener()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB85C; <a href="ref://../reference/com/naver/maps/map/overlay/Overlay.OnClickListener.html" target="_blank"><code>Overlay.OnClickListener</code></a>&#xB97C; &#xC9C0;&#xC815;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><div id="80862d77407209fcdb30fb6fbc2d5e20" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-158ca6578548a1457231bf9837f27dcf" class="gbcg-selector gbcg-active" data-tab="0-158ca6578548a1457231bf9837f27dcf" data-tab-category="migration">2.x</a>
+    <a id="select-1-2b50221a23834d4abbc523c8a6eb6e06" class="gbcg-selector" data-tab="1-2b50221a23834d4abbc523c8a6eb6e06" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-158ca6578548a1457231bf9837f27dcf" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NMapPOIdataOverlay overlay = ...
+overlay.setOnStateChangeListener(<span class="hljs-keyword">new</span> NMapPOIdataOverlay.OnStateChangeListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCalloutClick</span><span class="hljs-params">(NMapPOIdataOverlay poiDataOverlay, NMapPOIitem item)</span> </span>{
+        Toast.makeText(context, <span class="hljs-string">&quot;&#xC815;&#xBCF4; &#xCC3D; &#xD074;&#xB9AD;&quot;</span>, Toast.LENGTH_SHORT).show();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFocusChanged</span><span class="hljs-params">(NMapPOIdataOverlay poiDataOverlay, NMapPOIitem item)</span> </span>{
+        <span class="hljs-keyword">if</span> (item != <span class="hljs-keyword">null</span>) {
+            Toast.makeText(context, <span class="hljs-string">&quot;&#xC624;&#xBC84;&#xB808;&#xC774; &#xD074;&#xB9AD;&quot;</span>, Toast.LENGTH_SHORT).show();
+        }
+    }
+});
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-158ca6578548a1457231bf9837f27dcf" id="2x">2.x</h3>
+        <div id="0-158ca6578548a1457231bf9837f27dcf" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NMapPOIdataOverlay overlay = ...
+overlay.setOnStateChangeListener(<span class="hljs-keyword">new</span> NMapPOIdataOverlay.OnStateChangeListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCalloutClick</span><span class="hljs-params">(NMapPOIdataOverlay poiDataOverlay, NMapPOIitem item)</span> </span>{
+        Toast.makeText(context, <span class="hljs-string">&quot;&#xC815;&#xBCF4; &#xCC3D; &#xD074;&#xB9AD;&quot;</span>, Toast.LENGTH_SHORT).show();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFocusChanged</span><span class="hljs-params">(NMapPOIdataOverlay poiDataOverlay, NMapPOIitem item)</span> </span>{
+        <span class="hljs-keyword">if</span> (item != <span class="hljs-keyword">null</span>) {
+            Toast.makeText(context, <span class="hljs-string">&quot;&#xC624;&#xBC84;&#xB808;&#xC774; &#xD074;&#xB9AD;&quot;</span>, Toast.LENGTH_SHORT).show();
+        }
+    }
+});
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-2b50221a23834d4abbc523c8a6eb6e06" id="3x">3.x</h3>
+        <div id="1-2b50221a23834d4abbc523c8a6eb6e06" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">Overlay overlay = ...
+overlay.setOnClickListener(o -&gt; {
+    Toast.makeText(context, <span class="hljs-string">&quot;&#xC624;&#xBC84;&#xB808;&#xC774; &#xD074;&#xB9AD;&quot;</span>, Toast.LENGTH_SHORT).show();
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+});
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="5-2.html">&#xC624;&#xBC84;&#xB808;&#xC774; &#xACF5;&#xD1B5;</a> &#xBB38;&#xC11C;&#xC758; <a href="5-1.html#%EC%9D%B4%EB%B2%A4%ED%8A%B8">&#xC774;&#xBCA4;&#xD2B8;</a> &#xC808;&#xC744; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xB9C8;&#xCEE4;">&#xB9C8;&#xCEE4;</h3>
+<p>2.x SDK&#xC5D0;&#xC11C;&#xB294; &#xB9C8;&#xCEE4;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB824;&#xBA74; <code>NMapPOIdata</code>&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; <code>NMapOverlayManager.createPOIdataOverlay()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>3.x SDK&#xC5D0;&#xC11C;&#xB294; <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html" target="_blank"><code>Marker</code></a> &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xD544;&#xC694;&#xD55C; &#xC18D;&#xC131;&#xC744; &#xAC1D;&#xCCB4;&#xC5D0; &#xC9C1;&#xC811; &#xC9C0;&#xC815;&#xD55C; &#xD6C4; <code>setMap()</code>&#xC744; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;. </p>
+<p>&#xB9C8;&#xCEE4; &#xB4DC;&#xB798;&#xADF8; &#xAE30;&#xB2A5;&#xC740; &#xB354; &#xC774;&#xC0C1; &#xC81C;&#xACF5;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xB9C8;&#xCEE4;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="eb59f4b18c804332cc61b8c33104b080" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-ca999d52099ca0d9711cffeb4a16d0ca" class="gbcg-selector gbcg-active" data-tab="0-ca999d52099ca0d9711cffeb4a16d0ca" data-tab-category="migration">2.x</a>
+    <a id="select-1-0b852527eab649971fe6dbc847ae739a" class="gbcg-selector" data-tab="1-0b852527eab649971fe6dbc847ae739a" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-ca999d52099ca0d9711cffeb4a16d0ca" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NMapPOIdata poiData = <span class="hljs-keyword">new</span> NMapPOIdata(<span class="hljs-number">1</span>, mapViewerResourceProvider);
+poiData.beginPOIdata(<span class="hljs-number">1</span>);
+poiData.addPOIitem(<span class="hljs-number">126.9783740</span>, <span class="hljs-number">37.5670135</span>, <span class="hljs-keyword">null</span>, NMapPOIflagType.PIN, <span class="hljs-number">0</span>);
+poiData.endPOIdata();
+
+NMapPOIdataOverlay marker = mapOverlayManager.createPOIdataOverlay(poiData, <span class="hljs-keyword">null</span>);
+marker.showAllPOIdata(<span class="hljs-number">0</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-ca999d52099ca0d9711cffeb4a16d0ca" id="2x">2.x</h3>
+        <div id="0-ca999d52099ca0d9711cffeb4a16d0ca" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NMapPOIdata poiData = <span class="hljs-keyword">new</span> NMapPOIdata(<span class="hljs-number">1</span>, mapViewerResourceProvider);
+poiData.beginPOIdata(<span class="hljs-number">1</span>);
+poiData.addPOIitem(<span class="hljs-number">126.9783740</span>, <span class="hljs-number">37.5670135</span>, <span class="hljs-keyword">null</span>, NMapPOIflagType.PIN, <span class="hljs-number">0</span>);
+poiData.endPOIdata();
+
+NMapPOIdataOverlay marker = mapOverlayManager.createPOIdataOverlay(poiData, <span class="hljs-keyword">null</span>);
+marker.showAllPOIdata(<span class="hljs-number">0</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-0b852527eab649971fe6dbc847ae739a" id="3x">3.x</h3>
+        <div id="1-0b852527eab649971fe6dbc847ae739a" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">Marker marker = <span class="hljs-keyword">new</span> Marker();
+marker.setPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5670135</span>, <span class="hljs-number">126.9783740</span>));
+marker.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="5-2.html">&#xB9C8;&#xCEE4;</a> &#xBB38;&#xC11C;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xC815;&#xBCF4;-&#xCC3D;">&#xC815;&#xBCF4; &#xCC3D;</h3>
+<p>2.x SDK&#xC5D0;&#xC11C;&#xB294; &#xB9C8;&#xCEE4;&#xC758; &#xC81C;&#xBAA9;&#xC744; &#xC9C0;&#xC815;&#xD55C; &#xACBD;&#xC6B0; &#xB9C8;&#xCEE4;&#xB97C; &#xD074;&#xB9AD;&#xD558;&#xBA74; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xB9C8;&#xCEE4; &#xC704;&#xC5D0; &#xC815;&#xBCF4; &#xCC3D;&#xC774; &#xB098;&#xD0C0;&#xB0AC;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC815;&#xBCF4; &#xCC3D;&#xC744; &#xBCC4;&#xB3C4;&#xB85C; &#xC0DD;&#xC131;&#xD558;&#xAC70;&#xB098; &#xB3D9;&#xC2DC;&#xC5D0; &#xD55C; &#xAC1C; &#xC774;&#xC0C1; &#xB178;&#xCD9C;&#xD560; &#xC218; &#xC5C6;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;. </p>
+<p>3.x SDK&#xC5D0;&#xC11C;&#xB294; &#xC815;&#xBCF4; &#xCC3D;&#xB3C4; &#xB9C8;&#xCEE4;&#xCC98;&#xB7FC; &#xB3C5;&#xB9BD;&#xC801;&#xC778; &#xAC1D;&#xCCB4;&#xC774;&#xBBC0;&#xB85C; &#xC790;&#xC720;&#xB86D;&#xAC8C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xCD94;&#xAC00;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC815;&#xBCF4; &#xCC3D;&#xC744; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB824;&#xBA74; <a href="ref://../reference/com/naver/maps/map/overlay/InfoWindow.html" target="_blank"><code>InfoWindow</code></a> &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xD544;&#xC694;&#xD55C; &#xC18D;&#xC131;&#xC744; &#xAC1D;&#xCCB4;&#xC5D0; &#xC9C1;&#xC811; &#xC9C0;&#xC815;&#xD55C; &#xD6C4; <code>setMap()</code>&#xC744; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;. </p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xB9C8;&#xCEE4;&#xB97C; &#xD074;&#xB9AD;&#xD558;&#xBA74; &#xC815;&#xBCF4; &#xCC3D;&#xC744; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="cbc0880501079812f325bc9a59343caf" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-b0d370cfa787a560f1af006320d5c7ee" class="gbcg-selector gbcg-active" data-tab="0-b0d370cfa787a560f1af006320d5c7ee" data-tab-category="migration">2.x</a>
+    <a id="select-1-90ae50be7fea92748f00adca814c4755" class="gbcg-selector" data-tab="1-90ae50be7fea92748f00adca814c4755" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-b0d370cfa787a560f1af006320d5c7ee" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NMapPOIdata poiData = <span class="hljs-keyword">new</span> NMapPOIdata(<span class="hljs-number">1</span>, mapViewerResourceProvider);
+poiData.beginPOIdata(<span class="hljs-number">1</span>);
+poiData.addPOIitem(<span class="hljs-number">126.9783740</span>, <span class="hljs-number">37.5670135</span>, <span class="hljs-string">&quot;&#xC815;&#xBCF4; &#xCC3D; &#xB0B4;&#xC6A9;&quot;</span>, NMapPOIflagType.PIN, <span class="hljs-number">0</span>);
+poiData.endPOIdata();
+
+NMapPOIdataOverlay marker = mapOverlayManager.createPOIdataOverlay(poiData, <span class="hljs-keyword">null</span>);
+marker.setOnStateChangeListener(<span class="hljs-keyword">new</span> NMapPOIdataOverlay.OnStateChangeListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCalloutClick</span><span class="hljs-params">(NMapPOIdataOverlay poiDataOverlay, NMapPOIitem item)</span> </span>{
+        Toast.makeText(context, <span class="hljs-string">&quot;&#xC815;&#xBCF4; &#xCC3D; &#xD074;&#xB9AD;&quot;</span>, Toast.LENGTH_SHORT).show();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFocusChanged</span><span class="hljs-params">(NMapPOIdataOverlay poiDataOverlay, NMapPOIitem item)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+});
+marker.showAllPOIdata(<span class="hljs-number">0</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-b0d370cfa787a560f1af006320d5c7ee" id="2x">2.x</h3>
+        <div id="0-b0d370cfa787a560f1af006320d5c7ee" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NMapPOIdata poiData = <span class="hljs-keyword">new</span> NMapPOIdata(<span class="hljs-number">1</span>, mapViewerResourceProvider);
+poiData.beginPOIdata(<span class="hljs-number">1</span>);
+poiData.addPOIitem(<span class="hljs-number">126.9783740</span>, <span class="hljs-number">37.5670135</span>, <span class="hljs-string">&quot;&#xC815;&#xBCF4; &#xCC3D; &#xB0B4;&#xC6A9;&quot;</span>, NMapPOIflagType.PIN, <span class="hljs-number">0</span>);
+poiData.endPOIdata();
+
+NMapPOIdataOverlay marker = mapOverlayManager.createPOIdataOverlay(poiData, <span class="hljs-keyword">null</span>);
+marker.setOnStateChangeListener(<span class="hljs-keyword">new</span> NMapPOIdataOverlay.OnStateChangeListener() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCalloutClick</span><span class="hljs-params">(NMapPOIdataOverlay poiDataOverlay, NMapPOIitem item)</span> </span>{
+        Toast.makeText(context, <span class="hljs-string">&quot;&#xC815;&#xBCF4; &#xCC3D; &#xD074;&#xB9AD;&quot;</span>, Toast.LENGTH_SHORT).show();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onFocusChanged</span><span class="hljs-params">(NMapPOIdataOverlay poiDataOverlay, NMapPOIitem item)</span> </span>{
+        <span class="hljs-comment">// &#xBBF8;&#xC0AC;&#xC6A9;</span>
+    }
+});
+marker.showAllPOIdata(<span class="hljs-number">0</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-90ae50be7fea92748f00adca814c4755" id="3x">3.x</h3>
+        <div id="1-90ae50be7fea92748f00adca814c4755" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">InfoWindow infoWindow = <span class="hljs-keyword">new</span> InfoWindow();
+infoWindow.setAdapter(<span class="hljs-keyword">new</span> InfoWindow.DefaultTextAdapter(context) {
+    <span class="hljs-meta">@NonNull</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> CharSequence <span class="hljs-title">getText</span><span class="hljs-params">(@NonNull InfoWindow infoWindow)</span> </span>{
+        <span class="hljs-keyword">return</span> (CharSequence)infoWindow.getMarker().getTag();
+    }
+});
+infoWindow.setOnClickListener(overlay -&gt; {
+    Toast.makeText(context, <span class="hljs-string">&quot;&#xC815;&#xBCF4; &#xCC3D; &#xD074;&#xB9AD;&quot;</span>, Toast.LENGTH_SHORT).show();
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+});
+
+Marker marker = <span class="hljs-keyword">new</span> Marker();
+marker.setPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5670135</span>, <span class="hljs-number">126.9783740</span>));
+marker.setTag(<span class="hljs-string">&quot;&#xC815;&#xBCF4; &#xCC3D; &#xB0B4;&#xC6A9;&quot;</span>);
+marker.setOnClickListener(overlay -&gt; {
+    infoWindow.open((Marker)overlay);
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+});
+marker.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="5-3.html">&#xC815;&#xBCF4; &#xCC3D;</a> &#xBB38;&#xC11C;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xC170;&#xC774;&#xD504;">&#xC170;&#xC774;&#xD504;</h3>
+<p>2.x SDK&#xC5D0;&#xC11C;&#xB294; &#xC170;&#xC774;&#xD504;&#xB97C; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB824;&#xBA74; <code>NMapPathData</code>&#xC5D0; &#xC170;&#xC774;&#xD504;&#xC758; &#xC88C;&#xD45C;&#xB97C;, <code>NMapPathLineStyle</code> &#xB610;&#xB294; <code>NMapCircleStyle</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC170;&#xC774;&#xD504;&#xC758; &#xC2A4;&#xD0C0;&#xC77C;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xACE0; <code>NMapOverlayManager.createPathDataOverlay()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>3.x SDK&#xC5D0;&#xC11C;&#xB294; <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html" target="_blank"><code>PolylineOverlay</code></a>, <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html" target="_blank"><code>PolygonOverlay</code></a>, <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html" target="_blank"><code>CircleOverlay</code></a> &#xB4F1; &#xC720;&#xD615;&#xBCC4; &#xC170;&#xC774;&#xD504; &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xD544;&#xC694;&#xD55C; &#xC18D;&#xC131;&#xC744; &#xAC1D;&#xCCB4;&#xC5D0; &#xC9C1;&#xC811; &#xC9C0;&#xC815;&#xD55C; &#xD6C4; <code>setMap()</code>&#xC744; &#xD638;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;. </p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xD3F4;&#xB9AC;&#xB77C;&#xC778;&#xC744; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="8e325f9fc2b980022ab21a40de510002" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-3d1348100d061aee2b5ba643cd0e257d" class="gbcg-selector gbcg-active" data-tab="0-3d1348100d061aee2b5ba643cd0e257d" data-tab-category="migration">2.x</a>
+    <a id="select-1-73e50a7499928375347362509182877d" class="gbcg-selector" data-tab="1-73e50a7499928375347362509182877d" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-3d1348100d061aee2b5ba643cd0e257d" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NMapPathLineStyle pathLineStyle = <span class="hljs-keyword">new</span> NMapPathLineStyle(context);
+pathLineStyle.setPataDataType(NMapPathLineStyle.DATA_TYPE_POLYLINE);
+pathLineStyle.setLineColor(<span class="hljs-number">0x00FF00</span>, <span class="hljs-number">0xFF</span>);
+
+NMapPathData pathData = <span class="hljs-keyword">new</span> NMapPathData(<span class="hljs-number">9</span>);
+pathData.initPathData();
+pathData.addPathPoint(<span class="hljs-number">126.97714</span>, <span class="hljs-number">37.57152</span>, NMapPathLineStyle.TYPE_SOLID);
+pathData.addPathPoint(<span class="hljs-number">126.98268</span>, <span class="hljs-number">37.56607</span>, <span class="hljs-number">0</span>);
+pathData.addPathPoint(<span class="hljs-number">126.97707</span>, <span class="hljs-number">37.56445</span>, <span class="hljs-number">0</span>);
+pathData.addPathPoint(<span class="hljs-number">126.97822</span>, <span class="hljs-number">37.55855</span>, <span class="hljs-number">0</span>);
+pathData.endPathData();
+
+NMapPathDataOverlay polyline = mapOverlayManager.createPathDataOverlay(pathData);
+polyline.showAllPathData(<span class="hljs-number">0</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-3d1348100d061aee2b5ba643cd0e257d" id="2x">2.x</h3>
+        <div id="0-3d1348100d061aee2b5ba643cd0e257d" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NMapPathLineStyle pathLineStyle = <span class="hljs-keyword">new</span> NMapPathLineStyle(context);
+pathLineStyle.setPataDataType(NMapPathLineStyle.DATA_TYPE_POLYLINE);
+pathLineStyle.setLineColor(<span class="hljs-number">0x00FF00</span>, <span class="hljs-number">0xFF</span>);
+
+NMapPathData pathData = <span class="hljs-keyword">new</span> NMapPathData(<span class="hljs-number">9</span>);
+pathData.initPathData();
+pathData.addPathPoint(<span class="hljs-number">126.97714</span>, <span class="hljs-number">37.57152</span>, NMapPathLineStyle.TYPE_SOLID);
+pathData.addPathPoint(<span class="hljs-number">126.98268</span>, <span class="hljs-number">37.56607</span>, <span class="hljs-number">0</span>);
+pathData.addPathPoint(<span class="hljs-number">126.97707</span>, <span class="hljs-number">37.56445</span>, <span class="hljs-number">0</span>);
+pathData.addPathPoint(<span class="hljs-number">126.97822</span>, <span class="hljs-number">37.55855</span>, <span class="hljs-number">0</span>);
+pathData.endPathData();
+
+NMapPathDataOverlay polyline = mapOverlayManager.createPathDataOverlay(pathData);
+polyline.showAllPathData(<span class="hljs-number">0</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-73e50a7499928375347362509182877d" id="3x">3.x</h3>
+        <div id="1-73e50a7499928375347362509182877d" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">PolylineOverlay polyline = <span class="hljs-keyword">new</span> PolylineOverlay();
+polyline.setCoords(Arrays.asList(
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+));
+polyline.setColor(<span class="hljs-number">0xFF00FF00</span>);
+polyline.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xD3F4;&#xB9AC;&#xACE4;&#xC744; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="e0cef9b49d40729f2ca039ca2749432b" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-47b8c571cdae2b2217edb979c727a127" class="gbcg-selector gbcg-active" data-tab="0-47b8c571cdae2b2217edb979c727a127" data-tab-category="migration">2.x</a>
+    <a id="select-1-db3fe546d0551ff707cea160c767fc98" class="gbcg-selector" data-tab="1-db3fe546d0551ff707cea160c767fc98" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-47b8c571cdae2b2217edb979c727a127" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NMapPathLineStyle pathLineStyle = <span class="hljs-keyword">new</span> NMapPathLineStyle(context);
+pathLineStyle.setPataDataType(NMapPathLineStyle.DATA_TYPE_POLYGON);
+pathLineStyle.setFillColor(<span class="hljs-number">0xFFFFFF</span>, <span class="hljs-number">0xFF</span>);
+pathLineStyle.setLineColor(<span class="hljs-number">0x00FF00</span>, <span class="hljs-number">0xFF</span>);
+
+NMapPathData pathData = <span class="hljs-keyword">new</span> NMapPathData(<span class="hljs-number">5</span>);
+pathData.initPathData();
+pathData.addPathPoint126.9712268, <span class="hljs-number">37.5640984</span>, NMapPathLineStyle.TYPE_SOLID);
+pathData.addPathPoint126.9767904, <span class="hljs-number">37.5651279</span>, <span class="hljs-number">0</span>);
+pathData.addPathPoint126.9832241, <span class="hljs-number">37.5625365</span>, <span class="hljs-number">0</span>);
+pathData.addPathPoint126.9809297, <span class="hljs-number">37.5585305</span>, <span class="hljs-number">0</span>);
+pathData.addPathPoint126.974617, <span class="hljs-number">37.5590777</span>, <span class="hljs-number">0</span>);
+pathData.endPathData();
+pathData.setPathLineStyle(pathLineStyle);
+
+NMapPathDataOverlay polygon = mapOverlayManager.createPathDataOverlay(pathData);
+polygon.showAllPathData(<span class="hljs-number">0</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-47b8c571cdae2b2217edb979c727a127" id="2x">2.x</h3>
+        <div id="0-47b8c571cdae2b2217edb979c727a127" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NMapPathLineStyle pathLineStyle = <span class="hljs-keyword">new</span> NMapPathLineStyle(context);
+pathLineStyle.setPataDataType(NMapPathLineStyle.DATA_TYPE_POLYGON);
+pathLineStyle.setFillColor(<span class="hljs-number">0xFFFFFF</span>, <span class="hljs-number">0xFF</span>);
+pathLineStyle.setLineColor(<span class="hljs-number">0x00FF00</span>, <span class="hljs-number">0xFF</span>);
+
+NMapPathData pathData = <span class="hljs-keyword">new</span> NMapPathData(<span class="hljs-number">5</span>);
+pathData.initPathData();
+pathData.addPathPoint126.9712268, <span class="hljs-number">37.5640984</span>, NMapPathLineStyle.TYPE_SOLID);
+pathData.addPathPoint126.9767904, <span class="hljs-number">37.5651279</span>, <span class="hljs-number">0</span>);
+pathData.addPathPoint126.9832241, <span class="hljs-number">37.5625365</span>, <span class="hljs-number">0</span>);
+pathData.addPathPoint126.9809297, <span class="hljs-number">37.5585305</span>, <span class="hljs-number">0</span>);
+pathData.addPathPoint126.974617, <span class="hljs-number">37.5590777</span>, <span class="hljs-number">0</span>);
+pathData.endPathData();
+pathData.setPathLineStyle(pathLineStyle);
+
+NMapPathDataOverlay polygon = mapOverlayManager.createPathDataOverlay(pathData);
+polygon.showAllPathData(<span class="hljs-number">0</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-db3fe546d0551ff707cea160c767fc98" id="3x">3.x</h3>
+        <div id="1-db3fe546d0551ff707cea160c767fc98" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">PolygonOverlay polygon = <span class="hljs-keyword">new</span> PolygonOverlay();
+polygon.setCoords(Arrays.asList(
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5651279</span>, <span class="hljs-number">126.9767904</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5625365</span>, <span class="hljs-number">126.9832241</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5585305</span>, <span class="hljs-number">126.9809297</span>),
+    <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5590777</span>, <span class="hljs-number">126.974617</span>)
+));
+polygon.setColor(<span class="hljs-number">0xFFFFFFFF</span>);
+polygon.setOutlineColor(<span class="hljs-number">0xFF00FF00</span>);
+polygon.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC11C;&#xD074;&#xC744; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="ea13bc0653feadf68a154048a76edc80" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-a9f1b88715339d059c1f0412a4c14012" class="gbcg-selector gbcg-active" data-tab="0-a9f1b88715339d059c1f0412a4c14012" data-tab-category="migration">2.x</a>
+    <a id="select-1-fbde54a54c081df759a4e18d3894e1fb" class="gbcg-selector" data-tab="1-fbde54a54c081df759a4e18d3894e1fb" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-a9f1b88715339d059c1f0412a4c14012" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NMapCircleStyle circleStyle = <span class="hljs-keyword">new</span> NMapCircleStyle(context);
+circleStyle.setFillColor(<span class="hljs-number">0xFFFFFF</span>, <span class="hljs-number">0xFF</span>);
+circleStyle.setStrokeColor(<span class="hljs-number">0x00FF00</span>, <span class="hljs-number">0xFF</span>);
+
+NMapCircleData circleData = <span class="hljs-keyword">new</span> NMapCircleData(<span class="hljs-number">1</span>);
+circleData.initCircleData();
+circleData.addCirclePoint(<span class="hljs-number">126.9783881</span>, <span class="hljs-number">37.5666102</span>, <span class="hljs-number">50f</span>);
+circleData.endCircleData();
+circleData.setCircleStyle(circleStyle);
+
+NMapPathDataOverlay circle = mapOverlayManager.createPathDataOverlay(pathData);
+circle.showAllPathData(<span class="hljs-number">0</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-a9f1b88715339d059c1f0412a4c14012" id="2x">2.x</h3>
+        <div id="0-a9f1b88715339d059c1f0412a4c14012" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NMapCircleStyle circleStyle = <span class="hljs-keyword">new</span> NMapCircleStyle(context);
+circleStyle.setFillColor(<span class="hljs-number">0xFFFFFF</span>, <span class="hljs-number">0xFF</span>);
+circleStyle.setStrokeColor(<span class="hljs-number">0x00FF00</span>, <span class="hljs-number">0xFF</span>);
+
+NMapCircleData circleData = <span class="hljs-keyword">new</span> NMapCircleData(<span class="hljs-number">1</span>);
+circleData.initCircleData();
+circleData.addCirclePoint(<span class="hljs-number">126.9783881</span>, <span class="hljs-number">37.5666102</span>, <span class="hljs-number">50f</span>);
+circleData.endCircleData();
+circleData.setCircleStyle(circleStyle);
+
+NMapPathDataOverlay circle = mapOverlayManager.createPathDataOverlay(pathData);
+circle.showAllPathData(<span class="hljs-number">0</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-fbde54a54c081df759a4e18d3894e1fb" id="3x">3.x</h3>
+        <div id="1-fbde54a54c081df759a4e18d3894e1fb" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">CircleOverlay circle = <span class="hljs-keyword">new</span> CircleOverlay();
+circle.setCenter(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>));
+circle.setRadius(<span class="hljs-number">50</span>);
+circle.setColor(<span class="hljs-number">0xFFFFFFFF</span>);
+circle.setOutlineColor(<span class="hljs-number">0xFF00FF00</span>);
+circle.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="5-4.html">&#xC170;&#xC774;&#xD504;</a> &#xBB38;&#xC11C;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+<h3 id="&#xC704;&#xCE58;-&#xC624;&#xBC84;&#xB808;&#xC774;">&#xC704;&#xCE58; &#xC624;&#xBC84;&#xB808;&#xC774;</h3>
+<p>2.x SDK&#xB294; &#xC704;&#xCE58; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC640; &#xC704;&#xCE58; &#xCD94;&#xC801; &#xAE30;&#xB2A5;&#xC774; &#xBD84;&#xB9AC;&#xB418;&#xC9C0; &#xC54A;&#xC544; <code>NMapLocationManager</code>, <code>NMapCompassManager</code>&#xB97C; &#xC0DD;&#xC131;&#xD574;&#xC57C;&#xB9CC; &#xC704;&#xCE58; &#xC624;&#xBC84;&#xB808;&#xC774;&#xB97C; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB610;&#xD55C; &#xC624;&#xBC84;&#xB808;&#xC774;&#xC758; &#xC704;&#xCE58; &#xB4F1;&#xC744; &#xC784;&#xC758;&#xB85C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC5C6;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>3.x SDK&#xB294; &#xC704;&#xCE58; &#xC624;&#xBC84;&#xB808;&#xC774;&#xAC00; &#xC704;&#xCE58; &#xCD94;&#xC801; &#xAE30;&#xB2A5;&#xACFC; &#xB3C5;&#xB9BD;&#xC801;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xBBC0;&#xB85C; <a href="ref://../reference/com/naver/maps/map/NaverMap.html#getLocationOverlay--" target="_blank"><code>NaverMap.getLocationOverlay()</code></a>&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0; &#xC811;&#xADFC;&#xD55C; &#xD6C4; &#xD544;&#xC694;&#xD55C; &#xC18D;&#xC131;&#xC744; &#xC9C1;&#xC811; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><div id="154da20e513efe51e7abe90260f830f8" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-fc88de2c0c7b91398a8ac8a8ebff2e18" class="gbcg-selector gbcg-active" data-tab="0-fc88de2c0c7b91398a8ac8a8ebff2e18" data-tab-category="migration">2.x</a>
+    <a id="select-1-139aee29ec69fdc0075c02f06fc2ef36" class="gbcg-selector" data-tab="1-139aee29ec69fdc0075c02f06fc2ef36" data-tab-category="migration">3.x</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-fc88de2c0c7b91398a8ac8a8ebff2e18" class="gbcg-tab-item gbcb-2.x">
+        <pre><code class="lang-Java">NMapLocationManager mapLocationManager = <span class="hljs-keyword">new</span> NMapLocationManager(context);
+NMapCompassManager mapCompassManager = <span class="hljs-keyword">new</span> NMapCompassManager(context);
+NMapMyLocationOverlay myLocationOverlay = mapOverlayManager.createMyLocationOverlay(mapLocationManager, mapCompassManager);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-fc88de2c0c7b91398a8ac8a8ebff2e18" id="2x">2.x</h3>
+        <div id="0-fc88de2c0c7b91398a8ac8a8ebff2e18" class="gbcg-tab-item gbcb-2.x">
+          <pre><code class="lang-Java">NMapLocationManager mapLocationManager = <span class="hljs-keyword">new</span> NMapLocationManager(context);
+NMapCompassManager mapCompassManager = <span class="hljs-keyword">new</span> NMapCompassManager(context);
+NMapMyLocationOverlay myLocationOverlay = mapOverlayManager.createMyLocationOverlay(mapLocationManager, mapCompassManager);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-139aee29ec69fdc0075c02f06fc2ef36" id="3x">3.x</h3>
+        <div id="1-139aee29ec69fdc0075c02f06fc2ef36" class="gbcg-tab-item gbcb-3.x">
+          <pre><code class="lang-Java">LocationOverlay locationOverlay = naverMap.getLocationOverlay();
+locationOverlay.setVisible(<span class="hljs-keyword">true</span>);
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xC790;&#xC138;&#xD55C; &#xB0B4;&#xC6A9;&#xC740; <a href="5-5.html">&#xC704;&#xCE58; &#xC624;&#xBC84;&#xB808;&#xC774;</a> &#xBB38;&#xC11C;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xC138;&#xC694;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0.html" class="navigation navigation-prev " aria-label="Previous page: 소개">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="1.html" class="navigation navigation-next " aria-label="Next page: 시작하기">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.x → 3.x 마이그레이션 가이드","level":"2.1","depth":1,"next":{"title":"시작하기","level":"3.1","depth":1,"path":"1.md","ref":"1.md","articles":[]},"previous":{"title":"소개","level":"1.2","depth":1,"path":"0.md","ref":"0.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"migration.md","mtime":"2019-04-08T03:01:39.198Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-08T03:01:41.032Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-otherlink/js/otherlink.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-codegroup/code.group.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
