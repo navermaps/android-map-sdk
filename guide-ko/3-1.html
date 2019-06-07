@@ -583,14 +583,14 @@
 <h3 id="cameraposition-&#xAC1D;&#xCCB4;">CameraPosition &#xAC1D;&#xCCB4;</h3>
 <p><a href="ref://../reference/com/naver/maps/map/CameraPosition.html" target="_blank"><code>CameraPosition</code></a>&#xC740; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC704;&#xCE58;&#xB97C; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xC785;&#xB2C8;&#xB2E4;. <code>CameraPosition</code>&#xC758; &#xBAA8;&#xB4E0; &#xC18D;&#xC131;&#xC740; <code>final</code>&#xC774;&#xBBC0;&#xB85C; &#xC0DD;&#xC131;&#xC790;&#xB85C;&#xB9CC; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xACE0;, &#xD55C; &#xBC88; &#xC0DD;&#xC131;&#xB41C; &#xAC1D;&#xCCB4;&#xC758; &#xC18D;&#xC131;&#xC740; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; <code>CameraPosition</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xD1A0;&#xC2A4;&#xD2B8;&#xB85C; &#xAC01; &#xC18D;&#xC131;&#xC744; &#xCD9C;&#xB825;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p><div id="11c85b41f9011e475e559f00fcc06b1b" class="gbcg gbcg-codegroup">
+<p><div id="1955e0fed5ba0dde6be9bd8f36c07172" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-b88732044d8dfbee0a3ed849c9f63001" class="gbcg-selector gbcg-active" data-tab="0-b88732044d8dfbee0a3ed849c9f63001" data-tab-category="undefined">Java</a>
-    <a id="select-1-6783ef500ac6df818b938533fe2bbdc9" class="gbcg-selector" data-tab="1-6783ef500ac6df818b938533fe2bbdc9" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-030fec90e1c9a2ff3cbcaee664ce9082" class="gbcg-selector gbcg-active" data-tab="0-030fec90e1c9a2ff3cbcaee664ce9082" data-tab-category="undefined">Java</a>
+    <a id="select-1-68612f274e5a1ab088aa5a43ff4b0612" class="gbcg-selector" data-tab="1-68612f274e5a1ab088aa5a43ff4b0612" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-b88732044d8dfbee0a3ed849c9f63001" class="gbcg-tab-item gbcb-Java">
+      <div id="0-030fec90e1c9a2ff3cbcaee664ce9082" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java">CameraPosition cameraPosition = <span class="hljs-keyword">new</span> CameraPosition(
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-comment">// &#xB300;&#xC0C1; &#xC9C0;&#xC810;</span>
     <span class="hljs-number">16</span>, <span class="hljs-comment">// &#xC90C; &#xB808;&#xBCA8;</span>
@@ -598,7 +598,8 @@
     <span class="hljs-number">180</span> <span class="hljs-comment">// &#xBCA0;&#xC5B4;&#xB9C1; &#xAC01;&#xB3C4;</span>
 );
 
-Toast.makeText(context, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xC704;&#xB3C4;: &quot;</span> + cameraPosition.target.latitude + <span class="hljs-string">&quot;, &quot;</span> +
+Toast.makeText(context,
+    <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xC704;&#xB3C4;: &quot;</span> + cameraPosition.target.latitude + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xACBD;&#xB3C4;: &quot;</span> + cameraPosition.target.longitude + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;&#xC90C; &#xB808;&#xBCA8;: &quot;</span> + cameraPosition.zoom + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;&#xAE30;&#xC6B8;&#xC784; &#xAC01;&#xB3C4;: &quot;</span> + cameraPosition.tilt + <span class="hljs-string">&quot;, &quot;</span> +
@@ -609,8 +610,8 @@ Toast.makeText(context, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-b88732044d8dfbee0a3ed849c9f63001" id="java">Java</h3>
-        <div id="0-b88732044d8dfbee0a3ed849c9f63001" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-030fec90e1c9a2ff3cbcaee664ce9082" id="java">Java</h3>
+        <div id="0-030fec90e1c9a2ff3cbcaee664ce9082" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java">CameraPosition cameraPosition = <span class="hljs-keyword">new</span> CameraPosition(
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-comment">// &#xB300;&#xC0C1; &#xC9C0;&#xC810;</span>
     <span class="hljs-number">16</span>, <span class="hljs-comment">// &#xC90C; &#xB808;&#xBCA8;</span>
@@ -618,7 +619,8 @@ Toast.makeText(context, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0
     <span class="hljs-number">180</span> <span class="hljs-comment">// &#xBCA0;&#xC5B4;&#xB9C1; &#xAC01;&#xB3C4;</span>
 );
 
-Toast.makeText(context, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xC704;&#xB3C4;: &quot;</span> + cameraPosition.target.latitude + <span class="hljs-string">&quot;, &quot;</span> +
+Toast.makeText(context,
+    <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xC704;&#xB3C4;: &quot;</span> + cameraPosition.target.latitude + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xACBD;&#xB3C4;: &quot;</span> + cameraPosition.target.longitude + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;&#xC90C; &#xB808;&#xBCA8;: &quot;</span> + cameraPosition.zoom + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;&#xAE30;&#xC6B8;&#xC784; &#xAC01;&#xB3C4;: &quot;</span> + cameraPosition.tilt + <span class="hljs-string">&quot;, &quot;</span> +
@@ -628,8 +630,8 @@ Toast.makeText(context, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-6783ef500ac6df818b938533fe2bbdc9" id="kotlin">Kotlin</h3>
-        <div id="1-6783ef500ac6df818b938533fe2bbdc9" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-68612f274e5a1ab088aa5a43ff4b0612" id="kotlin">Kotlin</h3>
+        <div id="1-68612f274e5a1ab088aa5a43ff4b0612" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraPosition</span> = CameraPosition(
         LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-comment">// &#xB300;&#xC0C1; &#xC9C0;&#xC810;</span>
         <span class="hljs-number">16.0</span>, <span class="hljs-comment">// &#xC90C; &#xB808;&#xBCA8;</span>
@@ -637,7 +639,8 @@ Toast.makeText(context, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0
         <span class="hljs-number">180.0</span> <span class="hljs-comment">// &#xBCA0;&#xC5B4;&#xB9C1; &#xAC01;&#xB3C4;</span>
 )
 
-Toast.makeText(this, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xC704;&#xB3C4;: ${cameraPosition.target.latitude}, &quot;</span> +
+Toast.makeText(this,
+        <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xC704;&#xB3C4;: ${cameraPosition.target.latitude}, &quot;</span> +
         <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#xC810; &#xACBD;&#xB3C4;: ${cameraPosition.target.longitude}, &quot;</span> +
         <span class="hljs-string">&quot;&#xC90C; &#xB808;&#xBCA8;: ${cameraPosition.zoom}, &quot;</span> +
         <span class="hljs-string">&quot;&#xAE30;&#xC6B8;&#xC784; &#xAC01;&#xB3C4;: ${cameraPosition.tilt}, &quot;</span> +
@@ -651,23 +654,25 @@ Toast.makeText(this, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#
 </div></p>
 <p><code>CameraPosition</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD560; &#xB54C; &#xAE30;&#xC6B8;&#xC784; &#xAC01;&#xB3C4;&#xC640; &#xBCA0;&#xC5B4;&#xB9C1; &#xAC01;&#xB3C4;&#xB294; &#xC0DD;&#xB7B5;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC0DD;&#xB7B5;&#xD560; &#xACBD;&#xC6B0; <code>0</code>&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xB300;&#xC0C1; &#xC9C0;&#xC810;&#xACFC; &#xC90C; &#xB808;&#xBCA8;&#xB9CC;&#xC744; &#xC9C0;&#xC815;&#xD574; <code>CameraPosition</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p><div id="f55e28fd615d9c345159704cfeee3969" class="gbcg gbcg-codegroup">
+<p><div id="963cf205a6891784c7b5b2f8003aaa46" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-8deda58889e4790f90fed6590ca0a909" class="gbcg-selector gbcg-active" data-tab="0-8deda58889e4790f90fed6590ca0a909" data-tab-category="undefined">Java</a>
+    <a id="select-0-d67de989558100a5b53ec0c721f180b9" class="gbcg-selector gbcg-active" data-tab="0-d67de989558100a5b53ec0c721f180b9" data-tab-category="undefined">Java</a>
     <a id="select-1-60a91f3e43b7d2ac06916f16a35e9ed4" class="gbcg-selector" data-tab="1-60a91f3e43b7d2ac06916f16a35e9ed4" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-8deda58889e4790f90fed6590ca0a909" class="gbcg-tab-item gbcb-Java">
-        <pre><code class="lang-Java">CameraPosition cameraPosition = <span class="hljs-keyword">new</span> CameraPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-number">16</span>);
+      <div id="0-d67de989558100a5b53ec0c721f180b9" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraPosition cameraPosition =
+    <span class="hljs-keyword">new</span> CameraPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-number">16</span>);
 </code></pre>
       </div>
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-8deda58889e4790f90fed6590ca0a909" id="java">Java</h3>
-        <div id="0-8deda58889e4790f90fed6590ca0a909" class="gbcg-tab-item gbcb-Java">
-          <pre><code class="lang-Java">CameraPosition cameraPosition = <span class="hljs-keyword">new</span> CameraPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-number">16</span>);
+        <h3 class="gbcg-tabname 0-d67de989558100a5b53ec0c721f180b9" id="java">Java</h3>
+        <div id="0-d67de989558100a5b53ec0c721f180b9" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraPosition cameraPosition =
+    <span class="hljs-keyword">new</span> CameraPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-number">16</span>);
 </code></pre>
         </div>
       </div>
@@ -888,14 +893,14 @@ Toast.makeText(this, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#
 </div></p>
 <p><a href="ref://../reference/com/naver/maps/map/Projection.html#getMetersPerPixel-double-double-" target="_blank"><code>getMetersPerPixel(latitude, zoom)</code></a> &#xB610;&#xB294; <a href="ref://../reference/com/naver/maps/map/Projection.html#getMetersPerDp-double-double-" target="_blank"><code>getMetersPerDp(latitude, zoom)</code></a>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xD604;&#xC7AC; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC704;&#xCE58;&#xC640; &#xBB34;&#xAD00;&#xD558;&#xAC8C; &#xD2B9;&#xC815;&#xD55C; &#xC704;&#xB3C4;&#xC640; &#xC90C; &#xB808;&#xBCA8;&#xC5D0;&#xC11C;&#xC758; &#xCD95;&#xCC99;&#xC744; &#xAD6C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD2B9;&#xD788; <code>getMetersPerDp</code>&#xB294; &#xC2A4;&#xD0DC;&#xD2F1; &#xBA54;&#xC11C;&#xB4DC;&#xC774;&#xBBC0;&#xB85C; &#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xB2E4;&#xC591;&#xD55C; &#xC704;&#xB3C4;&#xC640; &#xC90C; &#xB808;&#xBCA8;&#xC5D0;&#xC11C;&#xC758; &#xCD95;&#xCC99;&#xC744; &#xAD6C;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p><div id="20e3abc85af92963281a2a2e83378363" class="gbcg gbcg-codegroup">
+<p><div id="33d6332f50df33dbdd58f0179ce1764d" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-07c708cda4930808a932b48eb63b1aef" class="gbcg-selector gbcg-active" data-tab="0-07c708cda4930808a932b48eb63b1aef" data-tab-category="undefined">Java</a>
-    <a id="select-1-f0ef065d79bc4b71afb5d8227d10ef76" class="gbcg-selector" data-tab="1-f0ef065d79bc4b71afb5d8227d10ef76" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-c9d243353f2f4f1f84979d08bbf08062" class="gbcg-selector gbcg-active" data-tab="0-c9d243353f2f4f1f84979d08bbf08062" data-tab-category="undefined">Java</a>
+    <a id="select-1-9f1883a7eeaf81ea9084add6e9880d13" class="gbcg-selector" data-tab="1-9f1883a7eeaf81ea9084add6e9880d13" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-07c708cda4930808a932b48eb63b1aef" class="gbcg-tab-item gbcb-Java">
+      <div id="0-c9d243353f2f4f1f84979d08bbf08062" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java"><span class="hljs-comment">// &#xC801;&#xB3C4;, &#xC90C; &#xB808;&#xBCA8; 10</span>
 <span class="hljs-keyword">double</span> metersPerPixel1 = projection.getMetersPerPixel(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
 
@@ -906,14 +911,15 @@ Toast.makeText(this, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#
 <span class="hljs-keyword">double</span> metersPerPixel3 = projection.getMetersPerPixel(<span class="hljs-number">35</span>, <span class="hljs-number">14</span>);
 
 <span class="hljs-comment">// &#xC801;&#xB3C4;, &#xC90C; &#xB808;&#xBCA8; 10, &#xBBF8;&#xD130;/DP &#xB2E8;&#xC704;</span>
-<span class="hljs-keyword">double</span> metersPerDp1 = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>); <span class="hljs-comment">// &#xC2A4;&#xD0DC;&#xD2F1; &#xBA54;&#xC11C;&#xB4DC;&#xC774;&#xBBC0;&#xB85C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xD544;&#xC694; &#xC5C6;&#xC74C;</span>
+<span class="hljs-comment">// &#xC2A4;&#xD0DC;&#xD2F1; &#xBA54;&#xC11C;&#xB4DC;&#xC774;&#xBBC0;&#xB85C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xD544;&#xC694; &#xC5C6;&#xC74C;</span>
+<span class="hljs-keyword">double</span> metersPerDp1 = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
 </code></pre>
       </div>
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-07c708cda4930808a932b48eb63b1aef" id="java">Java</h3>
-        <div id="0-07c708cda4930808a932b48eb63b1aef" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-c9d243353f2f4f1f84979d08bbf08062" id="java">Java</h3>
+        <div id="0-c9d243353f2f4f1f84979d08bbf08062" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java"><span class="hljs-comment">// &#xC801;&#xB3C4;, &#xC90C; &#xB808;&#xBCA8; 10</span>
 <span class="hljs-keyword">double</span> metersPerPixel1 = projection.getMetersPerPixel(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
 
@@ -924,13 +930,14 @@ Toast.makeText(this, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#
 <span class="hljs-keyword">double</span> metersPerPixel3 = projection.getMetersPerPixel(<span class="hljs-number">35</span>, <span class="hljs-number">14</span>);
 
 <span class="hljs-comment">// &#xC801;&#xB3C4;, &#xC90C; &#xB808;&#xBCA8; 10, &#xBBF8;&#xD130;/DP &#xB2E8;&#xC704;</span>
-<span class="hljs-keyword">double</span> metersPerDp1 = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>); <span class="hljs-comment">// &#xC2A4;&#xD0DC;&#xD2F1; &#xBA54;&#xC11C;&#xB4DC;&#xC774;&#xBBC0;&#xB85C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xD544;&#xC694; &#xC5C6;&#xC74C;</span>
+<span class="hljs-comment">// &#xC2A4;&#xD0DC;&#xD2F1; &#xBA54;&#xC11C;&#xB4DC;&#xC774;&#xBBC0;&#xB85C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xD544;&#xC694; &#xC5C6;&#xC74C;</span>
+<span class="hljs-keyword">double</span> metersPerDp1 = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-f0ef065d79bc4b71afb5d8227d10ef76" id="kotlin">Kotlin</h3>
-        <div id="1-f0ef065d79bc4b71afb5d8227d10ef76" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-9f1883a7eeaf81ea9084add6e9880d13" id="kotlin">Kotlin</h3>
+        <div id="1-9f1883a7eeaf81ea9084add6e9880d13" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-comment">// &#xC801;&#xB3C4;, &#xC90C; &#xB808;&#xBCA8; 10</span>
 <span class="hljs-variable"><span class="hljs-keyword">val</span> metersPerPixel1</span> = projection.getMetersPerPixel(<span class="hljs-number">0.0</span>, <span class="hljs-number">10.0</span>)
 
@@ -941,7 +948,8 @@ Toast.makeText(this, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#
 <span class="hljs-variable"><span class="hljs-keyword">val</span> metersPerPixel3</span> = projection.getMetersPerPixel(<span class="hljs-number">35.0</span>, <span class="hljs-number">14.0</span>)
 
 <span class="hljs-comment">// &#xC801;&#xB3C4;, &#xC90C; &#xB808;&#xBCA8; 10, &#xBBF8;&#xD130;/DP &#xB2E8;&#xC704;</span>
-<span class="hljs-variable"><span class="hljs-keyword">val</span> metersPerDp1</span> = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>) <span class="hljs-comment">// &#xC2A4;&#xD0DC;&#xD2F1; &#xBA54;&#xC11C;&#xB4DC;&#xC774;&#xBBC0;&#xB85C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xD544;&#xC694; &#xC5C6;&#xC74C;</span>
+<span class="hljs-comment">// &#xC2A4;&#xD0DC;&#xD2F1; &#xBA54;&#xC11C;&#xB4DC;&#xC774;&#xBBC0;&#xB85C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xD544;&#xC694; &#xC5C6;&#xC74C;</span>
+<span class="hljs-variable"><span class="hljs-keyword">val</span> metersPerDp1</span> = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>)
 </code></pre>
         </div>
       </div>
@@ -987,7 +995,7 @@ Toast.makeText(this, <span class="hljs-string">&quot;&#xB300;&#xC0C1; &#xC9C0;&#
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"카메라와 투영","level":"3.3.1","depth":2,"next":{"title":"카메라 이동","level":"3.3.2","depth":2,"path":"3-2.md","ref":"3-2.md","articles":[]},"previous":{"title":"카메라","level":"3.3","depth":1,"ref":"","articles":[{"title":"카메라와 투영","level":"3.3.1","depth":2,"path":"3-1.md","ref":"3-1.md","articles":[]},{"title":"카메라 이동","level":"3.3.2","depth":2,"path":"3-2.md","ref":"3-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"3-1.md","mtime":"2019-04-08T03:01:39.172Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-08T03:01:41.032Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"카메라와 투영","level":"3.3.1","depth":2,"next":{"title":"카메라 이동","level":"3.3.2","depth":2,"path":"3-2.md","ref":"3-2.md","articles":[]},"previous":{"title":"카메라","level":"3.3","depth":1,"ref":"","articles":[{"title":"카메라와 투영","level":"3.3.1","depth":2,"path":"3-1.md","ref":"3-1.md","articles":[]},{"title":"카메라 이동","level":"3.3.2","depth":2,"path":"3-2.md","ref":"3-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"3-1.md","mtime":"2019-06-07T03:53:41.498Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-07T03:53:43.320Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

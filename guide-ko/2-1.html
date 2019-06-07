@@ -584,40 +584,43 @@
     <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">&quot;match_parent&quot;</span>
     <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">&quot;match_parent&quot;</span> /&gt;</span>
 </code></pre>
-<p><div id="230322040425de1c5ec05dc377bee0b1" class="gbcg gbcg-codegroup">
+<p><div id="0257fd3d5d65b84cdd9c9d0a31e40f9a" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-56e854da3361517f96883f4dd8c52d28" class="gbcg-selector gbcg-active" data-tab="0-56e854da3361517f96883f4dd8c52d28" data-tab-category="undefined">Java</a>
-    <a id="select-1-026b072cbf331511609cd2078d67e56e" class="gbcg-selector" data-tab="1-026b072cbf331511609cd2078d67e56e" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-4eb4133c4d97b891dafc0f7c7b5128af" class="gbcg-selector gbcg-active" data-tab="0-4eb4133c4d97b891dafc0f7c7b5128af" data-tab-category="undefined">Java</a>
+    <a id="select-1-e41ca018d9e93ab7970951658c941814" class="gbcg-selector" data-tab="1-e41ca018d9e93ab7970951658c941814" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-56e854da3361517f96883f4dd8c52d28" class="gbcg-tab-item gbcb-Java">
-        <pre><code class="lang-Java">MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+      <div id="0-4eb4133c4d97b891dafc0f7c7b5128af" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">FragmentManager fm = getSupportFragmentManager();
+MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
 <span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
     mapFragment = MapFragment.newInstance();
-    getSupportFragmentManager().beginTransaction().add(R.id.map, mapFragment).commit();
+    fm.beginTransaction().add(R.id.map, mapFragment).commit();
 }
 </code></pre>
       </div>
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-56e854da3361517f96883f4dd8c52d28" id="java">Java</h3>
-        <div id="0-56e854da3361517f96883f4dd8c52d28" class="gbcg-tab-item gbcb-Java">
-          <pre><code class="lang-Java">MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+        <h3 class="gbcg-tabname 0-4eb4133c4d97b891dafc0f7c7b5128af" id="java">Java</h3>
+        <div id="0-4eb4133c4d97b891dafc0f7c7b5128af" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">FragmentManager fm = getSupportFragmentManager();
+MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
 <span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
     mapFragment = MapFragment.newInstance();
-    getSupportFragmentManager().beginTransaction().add(R.id.map, mapFragment).commit();
+    fm.beginTransaction().add(R.id.map, mapFragment).commit();
 }
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-026b072cbf331511609cd2078d67e56e" id="kotlin">Kotlin</h3>
-        <div id="1-026b072cbf331511609cd2078d67e56e" class="gbcg-tab-item gbcb-Kotlin">
-          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> mapFragment</span> = supportFragmentManager.findFragmentById(R.id.map) <span class="hljs-keyword">as</span> MapFragment?
+        <h3 class="gbcg-tabname 1-e41ca018d9e93ab7970951658c941814" id="kotlin">Kotlin</h3>
+        <div id="1-e41ca018d9e93ab7970951658c941814" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> fm</span> = supportFragmentManager
+<span class="hljs-variable"><span class="hljs-keyword">val</span> mapFragment</span> = fm.findFragmentById(R.id.map) <span class="hljs-keyword">as</span> MapFragment?
         ?: MapFragment.newInstance().also {
-            supportFragmentManager.beginTransaction().add(R.id.map, it).commit()
+            fm.beginTransaction().add(R.id.map, it).commit()
         }
 </code></pre>
         </div>
@@ -635,25 +638,26 @@
 </code></pre>
 <p><code>MapView</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; <code>MapView</code>&#xAC00; &#xD3EC;&#xD568;&#xB41C; &#xC561;&#xD2F0;&#xBE44;&#xD2F0;&#xC758; &#xB77C;&#xC774;&#xD504; &#xC0AC;&#xC774;&#xD074;&#xC5D0; &#xB9DE;&#xCD94;&#xC5B4; <code>onCreate()</code>, <code>onStart()</code>, <code>onResume()</code>, <code>onPause()</code>, <code>onStop()</code>, <code>onDestroy()</code>, <code>onSaveInstanceState()</code>, <code>onLowMemory()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xB2E8;, <code>MapView</code>&#xAC00; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xC5D0; &#xD3EC;&#xD568;&#xB420; &#xACBD;&#xC6B0; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xC758; <code>onCreateView()</code> &#xB610;&#xB294; <code>onViewCreated()</code>&#xC5D0;&#xC11C; <code>onCreate()</code>&#xB97C;, <code>onDestroyView()</code>&#xC5D0;&#xC11C; <code>onDestroy()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC9C0;&#xB3C4;&#xAC00; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. <code>MapFragment</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC774;&#xB7EC;&#xD55C; &#xC808;&#xCC28;&#xAC00; &#xD544;&#xC694;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBBC0;&#xB85C; <code>MapFragment</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC744; &#xAD8C;&#xC7A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xC5D0;&#xC11C; <code>MapView</code>&#xC758; &#xB77C;&#xC774;&#xD504; &#xC0AC;&#xC774;&#xD074; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p><div id="bb3a05c7f3f321940f073869463f8ce7" class="gbcg gbcg-codegroup">
+<p><div id="050b2347ed49d3abc853abb9949c5c0f" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-e87eedab4162962660d4892e26fd7b47" class="gbcg-selector gbcg-active" data-tab="0-e87eedab4162962660d4892e26fd7b47" data-tab-category="undefined">Java</a>
-    <a id="select-1-9e84f90d760b1cbb4a33a4d6a64ac0f9" class="gbcg-selector" data-tab="1-9e84f90d760b1cbb4a33a4d6a64ac0f9" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-1b45a5852293bb12faeebe51c9c367d8" class="gbcg-selector gbcg-active" data-tab="0-1b45a5852293bb12faeebe51c9c367d8" data-tab-category="undefined">Java</a>
+    <a id="select-1-c510a39d962d76d310f249ff239df436" class="gbcg-selector" data-tab="1-c510a39d962d76d310f249ff239df436" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-e87eedab4162962660d4892e26fd7b47" class="gbcg-tab-item gbcb-Java">
+      <div id="0-1b45a5852293bb12faeebe51c9c367d8" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewFragment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fragment</span> </span>{
     <span class="hljs-keyword">private</span> MapView mapView;
 
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> View <span class="hljs-title">onCreateView</span><span class="hljs-params">(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-        @Nullable Bundle savedInstanceState)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> View <span class="hljs-title">onCreateView</span><span class="hljs-params">(@NonNull LayoutInflater inflater,
+        @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)</span> </span>{
         <span class="hljs-comment">// ...</span>
     }
 
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onViewCreated</span><span class="hljs-params">(@NonNull View view, @Nullable Bundle savedInstanceState)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onViewCreated</span><span class="hljs-params">(@NonNull View view,
+        @Nullable Bundle savedInstanceState)</span> </span>{
         <span class="hljs-keyword">super</span>.onViewCreated(view, savedInstanceState);
         mapView = view.findViewById(R.id.map_view);
         mapView.onCreate(savedInstanceState);
@@ -706,19 +710,20 @@
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-e87eedab4162962660d4892e26fd7b47" id="java">Java</h3>
-        <div id="0-e87eedab4162962660d4892e26fd7b47" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-1b45a5852293bb12faeebe51c9c367d8" id="java">Java</h3>
+        <div id="0-1b45a5852293bb12faeebe51c9c367d8" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewFragment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fragment</span> </span>{
     <span class="hljs-keyword">private</span> MapView mapView;
 
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> View <span class="hljs-title">onCreateView</span><span class="hljs-params">(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-        @Nullable Bundle savedInstanceState)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> View <span class="hljs-title">onCreateView</span><span class="hljs-params">(@NonNull LayoutInflater inflater,
+        @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)</span> </span>{
         <span class="hljs-comment">// ...</span>
     }
 
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onViewCreated</span><span class="hljs-params">(@NonNull View view, @Nullable Bundle savedInstanceState)</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onViewCreated</span><span class="hljs-params">(@NonNull View view,
+        @Nullable Bundle savedInstanceState)</span> </span>{
         <span class="hljs-keyword">super</span>.onViewCreated(view, savedInstanceState);
         mapView = view.findViewById(R.id.map_view);
         mapView.onCreate(savedInstanceState);
@@ -770,13 +775,13 @@
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-9e84f90d760b1cbb4a33a4d6a64ac0f9" id="kotlin">Kotlin</h3>
-        <div id="1-9e84f90d760b1cbb4a33a4d6a64ac0f9" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-c510a39d962d76d310f249ff239df436" id="kotlin">Kotlin</h3>
+        <div id="1-c510a39d962d76d310f249ff239df436" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewFragment</span> : <span class="hljs-type">Fragment</span></span>() {
     <span class="hljs-keyword">private</span> lateinit <span class="hljs-variable"><span class="hljs-keyword">var</span> mapView</span>: MapView
 
-    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreateView</span><span class="hljs-params">(inflater: <span class="hljs-type">LayoutInflater, @Nullable container: ViewGroup,
-                     @Nullable savedInstanceState: Bundle</span>)</span>: View {</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreateView</span><span class="hljs-params">(inflater: <span class="hljs-type">LayoutInflater, container: ViewGroup,
+                     savedInstanceState: Bundle</span>)</span>: View {</span>
         <span class="hljs-comment">// ...</span>
     }
 
@@ -1015,25 +1020,27 @@
 <h2 id="navermap-&#xAC1D;&#xCCB4;-&#xC5BB;&#xC5B4;&#xC624;&#xAE30;">NaverMap &#xAC1D;&#xCCB4; &#xC5BB;&#xC5B4;&#xC624;&#xAE30;</h2>
 <p><code>MapFragment</code> &#xBC0F; <code>MapView</code>&#xB294; &#xC9C0;&#xB3C4;&#xC5D0; &#xB300;&#xD55C; &#xBDF0; &#xC5ED;&#xD560;&#xB9CC;&#xC744; &#xB2F4;&#xB2F9;&#xD558;&#xBBC0;&#xB85C; API&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB824;&#xBA74; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xB294; <a href="ref://../reference/com/naver/maps/map/NaverMap.html" target="_blank"><code>NaverMap</code></a> &#xAC1D;&#xCCB4;&#xAC00; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;. <code>MapFragment</code> &#xB610;&#xB294; <code>MapView</code>&#xC758; <a href="ref://../reference/com/naver/maps/map/MapFragment.html#getMapAsync-com.naver.maps.map.OnMapReadyCallback-" target="_blank"><code>getMapAsync()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB85C; <a href="ref://../reference/com/naver/maps/map/OnMapReadyCallback.html" target="_blank"><code>OnMapReadyCallback</code></a>&#xC744; &#xB4F1;&#xB85D;&#xD558;&#xBA74; &#xBE44;&#xB3D9;&#xAE30;&#xB85C; <code>NaverMap</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC5BB;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <code>NaverMap</code> &#xAC1D;&#xCCB4;&#xAC00; &#xC900;&#xBE44;&#xB418;&#xBA74; <a href="ref://../reference/com/naver/maps/map/OnMapReadyCallback.html#onMapReady-com.naver.maps.map.NaverMap-" target="_blank"><code>onMapReady()</code></a> &#xCF5C;&#xBC31; &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB429;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; <code>OnMapReadyCallback</code>&#xC744; &#xB4F1;&#xB85D;&#xD574; <code>NaverMap</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC5BB;&#xC5B4;&#xC624;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p><div id="96d285b454ebcd9eaca8a08f92339dfa" class="gbcg gbcg-codegroup">
+<p><div id="f872aac449656f20937c90972f9c2ea5" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-90a0dc13f52785824fd56ceee42e074d" class="gbcg-selector gbcg-active" data-tab="0-90a0dc13f52785824fd56ceee42e074d" data-tab-category="undefined">Java</a>
-    <a id="select-1-8294f36e7e69dd0a83cb892634e06102" class="gbcg-selector" data-tab="1-8294f36e7e69dd0a83cb892634e06102" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-7498bfc5ee3b93ada3d7f7e1ebba67b9" class="gbcg-selector gbcg-active" data-tab="0-7498bfc5ee3b93ada3d7f7e1ebba67b9" data-tab-category="undefined">Java</a>
+    <a id="select-1-0114d321c6d049d8daa262cb48b4e0d1" class="gbcg-selector" data-tab="1-0114d321c6d049d8daa262cb48b4e0d1" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-90a0dc13f52785824fd56ceee42e074d" class="gbcg-tab-item gbcb-Java">
-        <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
+      <div id="0-7498bfc5ee3b93ada3d7f7e1ebba67b9" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span>
+    <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
         <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
 
         setContentView(R.layout.map_fragment_activity);
 
-        MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+        FragmentManager fm = getSupportFragmentManager();
+        MapFragment mapFragment = (MapFragment).findFragmentById(R.id.map);
         <span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
             mapFragment = MapFragment.newInstance();
-            getSupportFragmentManager().beginTransaction().add(R.id.map, mapFragment).commit();
+            fm.beginTransaction().add(R.id.map, mapFragment).commit();
         }
 
         mapFragment.getMapAsync(<span class="hljs-keyword">this</span>);
@@ -1050,19 +1057,21 @@
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-90a0dc13f52785824fd56ceee42e074d" id="java">Java</h3>
-        <div id="0-90a0dc13f52785824fd56ceee42e074d" class="gbcg-tab-item gbcb-Java">
-          <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
+        <h3 class="gbcg-tabname 0-7498bfc5ee3b93ada3d7f7e1ebba67b9" id="java">Java</h3>
+        <div id="0-7498bfc5ee3b93ada3d7f7e1ebba67b9" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span>
+    <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
         <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);
 
         setContentView(R.layout.map_fragment_activity);
 
-        MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+        FragmentManager fm = getSupportFragmentManager();
+        MapFragment mapFragment = (MapFragment).findFragmentById(R.id.map);
         <span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
             mapFragment = MapFragment.newInstance();
-            getSupportFragmentManager().beginTransaction().add(R.id.map, mapFragment).commit();
+            fm.beginTransaction().add(R.id.map, mapFragment).commit();
         }
 
         mapFragment.getMapAsync(<span class="hljs-keyword">this</span>);
@@ -1078,17 +1087,18 @@
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-8294f36e7e69dd0a83cb892634e06102" id="kotlin">Kotlin</h3>
-        <div id="1-8294f36e7e69dd0a83cb892634e06102" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-0114d321c6d049d8daa262cb48b4e0d1" id="kotlin">Kotlin</h3>
+        <div id="1-0114d321c6d049d8daa262cb48b4e0d1" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> : <span class="hljs-type">FragmentActivity</span></span>(), OnMapReadyCallback {
     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.map_fragment_activity)
 
-        <span class="hljs-variable"><span class="hljs-keyword">val</span> mapFragment</span> = supportFragmentManager.findFragmentById(R.id.map) <span class="hljs-keyword">as</span> MapFragment?
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> fm</span> = supportFragmentManager
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> mapFragment</span> = fm.findFragmentById(R.id.map) <span class="hljs-keyword">as</span> MapFragment?
                 ?: MapFragment.newInstance().also {
-                    supportFragmentManager.beginTransaction().add(R.id.map, it).commit()
+                    fm.beginTransaction().add(R.id.map, it).commit()
                 }
 
         mapFragment.getMapAsync(this)
@@ -1144,7 +1154,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"지도 객체","level":"3.2.1","depth":2,"next":{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},"previous":{"title":"지도와 좌표","level":"3.2","depth":1,"ref":"","articles":[{"title":"지도 객체","level":"3.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},{"title":"지도 옵션","level":"3.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"2-1.md","mtime":"2019-04-08T03:01:39.298Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-08T03:01:41.032Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"지도 객체","level":"3.2.1","depth":2,"next":{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},"previous":{"title":"지도와 좌표","level":"3.2","depth":1,"ref":"","articles":[{"title":"지도 객체","level":"3.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},{"title":"지도 옵션","level":"3.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"2-1.md","mtime":"2019-06-07T03:53:41.592Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-07T03:53:43.320Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

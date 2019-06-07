@@ -688,14 +688,14 @@ polyline.map = naverMap
 </div></p>
 <p>Even if you change the coordinates object specified in the <code>coords</code> property or the one obtained with the property, the changes are not applied. To apply the changes, the changed coordinates object should be set in the <code>coords</code> property again.</p>
 <p>The following code example changes part of the list of coordinates of a polyline overlay.</p>
-<p><div id="0bd4a9d5027bb25e865e350550089f90" class="gbcg gbcg-codegroup">
+<p><div id="d5eb43aefeb4ae9bd2db1bef1b87bd7e" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-233df62867eb24d429e7c7affba83ecd" class="gbcg-selector gbcg-active" data-tab="0-233df62867eb24d429e7c7affba83ecd" data-tab-category="undefined">Java</a>
-    <a id="select-1-77aae73dcf54ae5e15dde22aa443f664" class="gbcg-selector" data-tab="1-77aae73dcf54ae5e15dde22aa443f664" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-14a6c21f78a65811bee4c641202fdbee" class="gbcg-selector gbcg-active" data-tab="0-14a6c21f78a65811bee4c641202fdbee" data-tab-category="undefined">Java</a>
+    <a id="select-1-045224c3efa468ea4cd2f8e04e199b89" class="gbcg-selector" data-tab="1-045224c3efa468ea4cd2f8e04e199b89" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-233df62867eb24d429e7c7affba83ecd" class="gbcg-tab-item gbcb-Java">
+      <div id="0-14a6c21f78a65811bee4c641202fdbee" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java">List&lt;LatLng&gt; coords = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
 Collections.addAll(coords,
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
@@ -705,15 +705,17 @@ Collections.addAll(coords,
 );
 polyline.setCoords(coords);
 
-coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// Not yet applied</span>
-polyline.setCoords(coords); <span class="hljs-comment">// Applied</span>
+coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>));
+<span class="hljs-comment">// Not yet applied</span>
+polyline.setCoords(coords);
+<span class="hljs-comment">// Applied</span>
 </code></pre>
       </div>
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-233df62867eb24d429e7c7affba83ecd" id="java">Java</h3>
-        <div id="0-233df62867eb24d429e7c7affba83ecd" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-14a6c21f78a65811bee4c641202fdbee" id="java">Java</h3>
+        <div id="0-14a6c21f78a65811bee4c641202fdbee" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java">List&lt;LatLng&gt; coords = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
 Collections.addAll(coords,
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
@@ -723,14 +725,16 @@ Collections.addAll(coords,
 );
 polyline.setCoords(coords);
 
-coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// Not yet applied</span>
-polyline.setCoords(coords); <span class="hljs-comment">// Applied</span>
+coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>));
+<span class="hljs-comment">// Not yet applied</span>
+polyline.setCoords(coords);
+<span class="hljs-comment">// Applied</span>
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-77aae73dcf54ae5e15dde22aa443f664" id="kotlin">Kotlin</h3>
-        <div id="1-77aae73dcf54ae5e15dde22aa443f664" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-045224c3efa468ea4cd2f8e04e199b89" id="kotlin">Kotlin</h3>
+        <div id="1-045224c3efa468ea4cd2f8e04e199b89" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> coords</span> = mutableListOf(
         LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
         LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
@@ -739,8 +743,10 @@ polyline.setCoords(coords); <span class="hljs-comment">// Applied</span>
 )
 polyline.coords = coords
 
-coords[<span class="hljs-number">0</span>] = LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>) <span class="hljs-comment">// Not yet applied</span>
-polyline.coords = coords <span class="hljs-comment">// Applied</span>
+coords[<span class="hljs-number">0</span>] = LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)
+<span class="hljs-comment">// Not yet applied</span>
+polyline.coords = coords
+<span class="hljs-comment">// Applied</span>
 </code></pre>
         </div>
       </div>
@@ -1072,14 +1078,14 @@ polygon.map = naverMap
 </div></p>
 <p>Even if you change the coordinates object specified in the <code>coords</code> property or the one obtained with the property, the changes are not applied. To apply the changes, the changed coordinates object should be set in the <code>coords</code> property again.</p>
 <p>The following code example changes part of the list of coordinates of a polygon overlay.</p>
-<p><div id="9c50a29ba6cb4a5368415820eb536498" class="gbcg gbcg-codegroup">
+<p><div id="3d451efdd0731a21a3df11903ce3e5f2" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-dddfb598dd311f1e6b65dddcab0c9692" class="gbcg-selector gbcg-active" data-tab="0-dddfb598dd311f1e6b65dddcab0c9692" data-tab-category="undefined">Java</a>
-    <a id="select-1-123d51397613f124762f5bc768a4b4d4" class="gbcg-selector" data-tab="1-123d51397613f124762f5bc768a4b4d4" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-7d1b490c5aa0afa0ec556a052fb98c81" class="gbcg-selector gbcg-active" data-tab="0-7d1b490c5aa0afa0ec556a052fb98c81" data-tab-category="undefined">Java</a>
+    <a id="select-1-442d1e672eed229478f11ae517726b82" class="gbcg-selector" data-tab="1-442d1e672eed229478f11ae517726b82" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-dddfb598dd311f1e6b65dddcab0c9692" class="gbcg-tab-item gbcb-Java">
+      <div id="0-7d1b490c5aa0afa0ec556a052fb98c81" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java">List&lt;LatLng&gt; coords = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
 Collections.addAll(coords,
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>),
@@ -1090,15 +1096,17 @@ Collections.addAll(coords,
 );
 polygon.setCoords(coords);
 
-coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// Not yet reflected</span>
-polygon.setCoords(coords); <span class="hljs-comment">// Reflected</span>
+coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>));
+<span class="hljs-comment">// Not yet reflected</span>
+polygon.setCoords(coords);
+<span class="hljs-comment">// Reflected</span>
 </code></pre>
       </div>
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-dddfb598dd311f1e6b65dddcab0c9692" id="java">Java</h3>
-        <div id="0-dddfb598dd311f1e6b65dddcab0c9692" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-7d1b490c5aa0afa0ec556a052fb98c81" id="java">Java</h3>
+        <div id="0-7d1b490c5aa0afa0ec556a052fb98c81" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java">List&lt;LatLng&gt; coords = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
 Collections.addAll(coords,
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>),
@@ -1109,14 +1117,16 @@ Collections.addAll(coords,
 );
 polygon.setCoords(coords);
 
-coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)); <span class="hljs-comment">// Not yet reflected</span>
-polygon.setCoords(coords); <span class="hljs-comment">// Reflected</span>
+coords.set(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>));
+<span class="hljs-comment">// Not yet reflected</span>
+polygon.setCoords(coords);
+<span class="hljs-comment">// Reflected</span>
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-123d51397613f124762f5bc768a4b4d4" id="kotlin">Kotlin</h3>
-        <div id="1-123d51397613f124762f5bc768a4b4d4" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-442d1e672eed229478f11ae517726b82" id="kotlin">Kotlin</h3>
+        <div id="1-442d1e672eed229478f11ae517726b82" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> coords</span> = mutableListOf(
         LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>),
         LatLng(<span class="hljs-number">37.5651279</span>, <span class="hljs-number">126.9767904</span>),
@@ -1126,8 +1136,10 @@ polygon.setCoords(coords); <span class="hljs-comment">// Reflected</span>
 )
 polygon.coords = coords
 
-coords[<span class="hljs-number">0</span>] = LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>) <span class="hljs-comment">// Not yet reflected</span>
-polygon.coords = coords <span class="hljs-comment">// Reflected</span>
+coords[<span class="hljs-number">0</span>] = LatLng(<span class="hljs-number">37.5734571</span>, <span class="hljs-number">126.975335</span>)
+<span class="hljs-comment">// Not yet reflected</span>
+polygon.coords = coords
+<span class="hljs-comment">// Reflected</span>
 </code></pre>
         </div>
       </div>
@@ -1570,7 +1582,7 @@ circle.map = naverMap
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Shapes","level":"2.5.4","depth":2,"next":{"title":"Location Overlay","level":"2.5.5","depth":2,"path":"5-5.md","ref":"5-5.md","articles":[]},"previous":{"title":"Info Window","level":"2.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"5-4.md","mtime":"2019-04-08T03:01:31.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-08T03:01:33.413Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Shapes","level":"2.5.4","depth":2,"next":{"title":"Location Overlay","level":"2.5.5","depth":2,"path":"5-5.md","ref":"5-5.md","articles":[]},"previous":{"title":"Info Window","level":"2.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"5-4.md","mtime":"2019-06-07T03:53:33.997Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-07T03:53:35.795Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

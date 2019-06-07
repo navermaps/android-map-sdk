@@ -563,14 +563,14 @@
 <h3 id="cameraposition-object">CameraPosition object</h3>
 <p><a href="ref://../reference/com/naver/maps/map/CameraPosition.html" target="_blank"><code>CameraPosition</code></a> is a class that represents the position of a camera. All properties of the <code>CameraPosition</code> class are <code>final</code>, so each of them can be specified by a constructor, and properties of the object once created cannot be modified.</p>
 <p>The following code example creates a <code>CameraPosition</code> object and displays its properties as a toast message.</p>
-<p><div id="42ca6501aff9e81725fde583a102ecdc" class="gbcg gbcg-codegroup">
+<p><div id="76637057cb5057feeda561304240097a" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-aa47edd900a7235412c3c850bcb726a8" class="gbcg-selector gbcg-active" data-tab="0-aa47edd900a7235412c3c850bcb726a8" data-tab-category="undefined">Java</a>
-    <a id="select-1-0f33bee01eed57fcb2f270bf602e0b43" class="gbcg-selector" data-tab="1-0f33bee01eed57fcb2f270bf602e0b43" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-ef1a07a9952ce3fe094247fe35269c6d" class="gbcg-selector gbcg-active" data-tab="0-ef1a07a9952ce3fe094247fe35269c6d" data-tab-category="undefined">Java</a>
+    <a id="select-1-93ae2987a3a9b8ccbdcde6d5a567fa10" class="gbcg-selector" data-tab="1-93ae2987a3a9b8ccbdcde6d5a567fa10" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-aa47edd900a7235412c3c850bcb726a8" class="gbcg-tab-item gbcb-Java">
+      <div id="0-ef1a07a9952ce3fe094247fe35269c6d" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java">CameraPosition cameraPosition = <span class="hljs-keyword">new</span> CameraPosition(
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-comment">// Target position</span>
     <span class="hljs-number">16</span>, <span class="hljs-comment">// Zoom level</span>
@@ -578,7 +578,8 @@
     <span class="hljs-number">180</span> <span class="hljs-comment">// Bearing angle</span>
 );
 
-Toast.makeText(context, <span class="hljs-string">&quot;Target position latitude: &quot;</span> + cameraPosition.target.latitude + <span class="hljs-string">&quot;, &quot;</span> +
+Toast.makeText(context,
+    <span class="hljs-string">&quot;Target position latitude: &quot;</span> + cameraPosition.target.latitude + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;Target position longitude: &quot;</span> + cameraPosition.target.longitude + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;Zoom level: &quot;</span> + cameraPosition.zoom + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;Tilt angle: &quot;</span> + cameraPosition.tilt + <span class="hljs-string">&quot;, &quot;</span> +
@@ -589,8 +590,8 @@ Toast.makeText(context, <span class="hljs-string">&quot;Target position latitude
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-aa47edd900a7235412c3c850bcb726a8" id="java">Java</h3>
-        <div id="0-aa47edd900a7235412c3c850bcb726a8" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-ef1a07a9952ce3fe094247fe35269c6d" id="java">Java</h3>
+        <div id="0-ef1a07a9952ce3fe094247fe35269c6d" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java">CameraPosition cameraPosition = <span class="hljs-keyword">new</span> CameraPosition(
     <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-comment">// Target position</span>
     <span class="hljs-number">16</span>, <span class="hljs-comment">// Zoom level</span>
@@ -598,7 +599,8 @@ Toast.makeText(context, <span class="hljs-string">&quot;Target position latitude
     <span class="hljs-number">180</span> <span class="hljs-comment">// Bearing angle</span>
 );
 
-Toast.makeText(context, <span class="hljs-string">&quot;Target position latitude: &quot;</span> + cameraPosition.target.latitude + <span class="hljs-string">&quot;, &quot;</span> +
+Toast.makeText(context,
+    <span class="hljs-string">&quot;Target position latitude: &quot;</span> + cameraPosition.target.latitude + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;Target position longitude: &quot;</span> + cameraPosition.target.longitude + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;Zoom level: &quot;</span> + cameraPosition.zoom + <span class="hljs-string">&quot;, &quot;</span> +
     <span class="hljs-string">&quot;Tilt angle: &quot;</span> + cameraPosition.tilt + <span class="hljs-string">&quot;, &quot;</span> +
@@ -608,8 +610,8 @@ Toast.makeText(context, <span class="hljs-string">&quot;Target position latitude
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-0f33bee01eed57fcb2f270bf602e0b43" id="kotlin">Kotlin</h3>
-        <div id="1-0f33bee01eed57fcb2f270bf602e0b43" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-93ae2987a3a9b8ccbdcde6d5a567fa10" id="kotlin">Kotlin</h3>
+        <div id="1-93ae2987a3a9b8ccbdcde6d5a567fa10" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraPosition</span> = CameraPosition(
         LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-comment">// Target position</span>
         <span class="hljs-number">16.0</span>, <span class="hljs-comment">// Zoom level</span>
@@ -617,7 +619,8 @@ Toast.makeText(context, <span class="hljs-string">&quot;Target position latitude
         <span class="hljs-number">180.0</span> <span class="hljs-comment">// Bearing angle</span>
 )
 
-Toast.makeText(this, <span class="hljs-string">&quot;Target position latitude: ${cameraPosition.target.latitude}, &quot;</span> +
+Toast.makeText(this,
+        <span class="hljs-string">&quot;Target position latitude: ${cameraPosition.target.latitude}, &quot;</span> +
         <span class="hljs-string">&quot;Target position longitude: ${cameraPosition.target.longitude}, &quot;</span> +
         <span class="hljs-string">&quot;Zoom level: ${cameraPosition.zoom}, &quot;</span> +
         <span class="hljs-string">&quot;Tilt angle: ${cameraPosition.tilt}, &quot;</span> +
@@ -631,23 +634,25 @@ Toast.makeText(this, <span class="hljs-string">&quot;Target position latitude: $
 </div></p>
 <p>When creating a <code>CameraPosition</code> object, you can omit the tilt and bearing. These properties are set to <code>0</code> when omitted.</p>
 <p>The following code example creates a <code>CameraPosition</code> object by specifying the target position and zoom level.</p>
-<p><div id="f55e28fd615d9c345159704cfeee3969" class="gbcg gbcg-codegroup">
+<p><div id="963cf205a6891784c7b5b2f8003aaa46" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-8deda58889e4790f90fed6590ca0a909" class="gbcg-selector gbcg-active" data-tab="0-8deda58889e4790f90fed6590ca0a909" data-tab-category="undefined">Java</a>
+    <a id="select-0-d67de989558100a5b53ec0c721f180b9" class="gbcg-selector gbcg-active" data-tab="0-d67de989558100a5b53ec0c721f180b9" data-tab-category="undefined">Java</a>
     <a id="select-1-60a91f3e43b7d2ac06916f16a35e9ed4" class="gbcg-selector" data-tab="1-60a91f3e43b7d2ac06916f16a35e9ed4" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-8deda58889e4790f90fed6590ca0a909" class="gbcg-tab-item gbcb-Java">
-        <pre><code class="lang-Java">CameraPosition cameraPosition = <span class="hljs-keyword">new</span> CameraPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-number">16</span>);
+      <div id="0-d67de989558100a5b53ec0c721f180b9" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraPosition cameraPosition =
+    <span class="hljs-keyword">new</span> CameraPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-number">16</span>);
 </code></pre>
       </div>
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-8deda58889e4790f90fed6590ca0a909" id="java">Java</h3>
-        <div id="0-8deda58889e4790f90fed6590ca0a909" class="gbcg-tab-item gbcb-Java">
-          <pre><code class="lang-Java">CameraPosition cameraPosition = <span class="hljs-keyword">new</span> CameraPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-number">16</span>);
+        <h3 class="gbcg-tabname 0-d67de989558100a5b53ec0c721f180b9" id="java">Java</h3>
+        <div id="0-d67de989558100a5b53ec0c721f180b9" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraPosition cameraPosition =
+    <span class="hljs-keyword">new</span> CameraPosition(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>), <span class="hljs-number">16</span>);
 </code></pre>
         </div>
       </div>
@@ -868,14 +873,14 @@ Toast.makeText(this, <span class="hljs-string">&quot;Target position latitude: $
 </div></p>
 <p>With <a href="ref://../reference/com/naver/maps/map/Projection.html#getMetersPerPixel-double-double-" target="_blank"><code>getMetersPerPixel(latitude, zoom)</code></a> or <a href="ref://../reference/com/naver/maps/map/Projection.html#getMetersPerDp-double-double-" target="_blank"><code>getMetersPerDp(latitude, zoom)</code></a>, you can get the scale at the specified latitude and zoom level, regardless of the current camera position. Since <code>getMetersPerDp</code> is a static method, you can use it without creating a map object.</p>
 <p>The following code example gets the scale based on various latitudes and zoom levels.</p>
-<p><div id="1aa705a057cb22937baf618887590f84" class="gbcg gbcg-codegroup">
+<p><div id="858fa4f30443bb1fe20daaf71ed48196" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-04d2355ce7e072519fcd6567f81af3bb" class="gbcg-selector gbcg-active" data-tab="0-04d2355ce7e072519fcd6567f81af3bb" data-tab-category="undefined">Java</a>
-    <a id="select-1-716d3c703803bfec631df26e7642f021" class="gbcg-selector" data-tab="1-716d3c703803bfec631df26e7642f021" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-c73009963c232c92354866c492559c67" class="gbcg-selector gbcg-active" data-tab="0-c73009963c232c92354866c492559c67" data-tab-category="undefined">Java</a>
+    <a id="select-1-8509d5f96153ead8901c535b20a63a61" class="gbcg-selector" data-tab="1-8509d5f96153ead8901c535b20a63a61" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-04d2355ce7e072519fcd6567f81af3bb" class="gbcg-tab-item gbcb-Java">
+      <div id="0-c73009963c232c92354866c492559c67" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java"><span class="hljs-comment">// Equator, zoom level 10</span>
 <span class="hljs-keyword">double</span> metersPerPixel1 = projection.getMetersPerPixel(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
 
@@ -886,14 +891,15 @@ Toast.makeText(this, <span class="hljs-string">&quot;Target position latitude: $
 <span class="hljs-keyword">double</span> metersPerPixel3 = projection.getMetersPerPixel(<span class="hljs-number">35</span>, <span class="hljs-number">14</span>);
 
 <span class="hljs-comment">// Equator, zoom level 10, in m/DP</span>
-<span class="hljs-keyword">double</span> metersPerDp1 = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>); <span class="hljs-comment">// No instance is needed because it is a static method.</span>
+<span class="hljs-comment">// No instance is needed because it is a static method.</span>
+<span class="hljs-keyword">double</span> metersPerDp1 = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
 </code></pre>
       </div>
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-04d2355ce7e072519fcd6567f81af3bb" id="java">Java</h3>
-        <div id="0-04d2355ce7e072519fcd6567f81af3bb" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-c73009963c232c92354866c492559c67" id="java">Java</h3>
+        <div id="0-c73009963c232c92354866c492559c67" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java"><span class="hljs-comment">// Equator, zoom level 10</span>
 <span class="hljs-keyword">double</span> metersPerPixel1 = projection.getMetersPerPixel(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
 
@@ -904,13 +910,14 @@ Toast.makeText(this, <span class="hljs-string">&quot;Target position latitude: $
 <span class="hljs-keyword">double</span> metersPerPixel3 = projection.getMetersPerPixel(<span class="hljs-number">35</span>, <span class="hljs-number">14</span>);
 
 <span class="hljs-comment">// Equator, zoom level 10, in m/DP</span>
-<span class="hljs-keyword">double</span> metersPerDp1 = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>); <span class="hljs-comment">// No instance is needed because it is a static method.</span>
+<span class="hljs-comment">// No instance is needed because it is a static method.</span>
+<span class="hljs-keyword">double</span> metersPerDp1 = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>);
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-716d3c703803bfec631df26e7642f021" id="kotlin">Kotlin</h3>
-        <div id="1-716d3c703803bfec631df26e7642f021" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-8509d5f96153ead8901c535b20a63a61" id="kotlin">Kotlin</h3>
+        <div id="1-8509d5f96153ead8901c535b20a63a61" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-comment">// Equator, zoom level 10</span>
 <span class="hljs-variable"><span class="hljs-keyword">val</span> metersPerPixel1</span> = projection.getMetersPerPixel(<span class="hljs-number">0.0</span>, <span class="hljs-number">10.0</span>)
 
@@ -921,7 +928,8 @@ Toast.makeText(this, <span class="hljs-string">&quot;Target position latitude: $
 <span class="hljs-variable"><span class="hljs-keyword">val</span> metersPerPixel3</span> = projection.getMetersPerPixel(<span class="hljs-number">35.0</span>, <span class="hljs-number">14.0</span>)
 
 <span class="hljs-comment">// Equator, zoom level 10, in meters/DP</span>
-<span class="hljs-variable"><span class="hljs-keyword">val</span> metersPerDp1</span> = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>) <span class="hljs-comment">// No instance is needed because it is a static method.</span>
+<span class="hljs-comment">// No instance is needed because it is a static method.</span>
+<span class="hljs-variable"><span class="hljs-keyword">val</span> metersPerDp1</span> = Projection.getMetersPerDp(<span class="hljs-number">0</span>, <span class="hljs-number">10</span>)
 </code></pre>
         </div>
       </div>
@@ -967,7 +975,7 @@ Toast.makeText(this, <span class="hljs-string">&quot;Target position latitude: $
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Camera and Projection","level":"2.3.1","depth":2,"next":{"title":"Camera Movement","level":"2.3.2","depth":2,"path":"3-2.md","ref":"3-2.md","articles":[]},"previous":{"title":"Camera","level":"2.3","depth":1,"ref":"","articles":[{"title":"Camera and Projection","level":"2.3.1","depth":2,"path":"3-1.md","ref":"3-1.md","articles":[]},{"title":"Camera Movement","level":"2.3.2","depth":2,"path":"3-2.md","ref":"3-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"3-1.md","mtime":"2019-04-08T03:01:31.573Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-08T03:01:33.413Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Camera and Projection","level":"2.3.1","depth":2,"next":{"title":"Camera Movement","level":"2.3.2","depth":2,"path":"3-2.md","ref":"3-2.md","articles":[]},"previous":{"title":"Camera","level":"2.3","depth":1,"ref":"","articles":[{"title":"Camera and Projection","level":"2.3.1","depth":2,"path":"3-1.md","ref":"3-1.md","articles":[]},{"title":"Camera Movement","level":"2.3.2","depth":2,"path":"3-2.md","ref":"3-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"3-1.md","mtime":"2019-06-07T03:53:33.969Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-07T03:53:35.795Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
