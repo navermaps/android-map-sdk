@@ -46,9 +46,14 @@
     <string name="force_show">녹색 마커는 겹쳐도 아이콘 표시</string>
 
     <string name="name_info_window">Info Window</string>
-    <string name="description_info_window">인포윈도우</string>
+    <string name="description_info_window">정보 창</string>
     <string name="format_info_window_on_marker">마커: %s</string>
     <string name="format_info_window_on_map">좌표: (%1$.5f, %2$.5f)</string>
+
+    <string name="name_custom_info_window">Custom Info Window</string>
+    <string name="description_custom_info_window">커스텀 어댑터를 사용하는 정보 창</string>
+    <string name="content_description_icon">아이콘</string>
+    <string name="format_coord">(%1$.5f, %2$.5f)</string>
 
     <string name="name_polygon_overlay">Polygon</string>
     <string name="description_polygon_overlay">폴리곤 오버레이</string>
@@ -107,8 +112,8 @@
     <string name="description_camera_event">카메라 이벤트 사용</string>
     <string name="label_camera_change">이동:</string>
     <string name="label_camera_idle">대기:</string>
-    <string name="content_description_marker">중심 마커</string>
-    <string name="content_description_crosshair">중심점</string>
+    <string name="content_description_center_marker">중심 마커</string>
+    <string name="content_description_center_crosshair">중심점</string>
     <string name="format_camera_position">(%1$.5f, %2$.5f) / %3$.2f / %4$.2f / %5$.2f</string>
     <string name="camera_update_finished">카메라 이동 완료</string>
     <string name="camera_update_cancelled">카메라 이동 취소</string>
@@ -208,6 +213,9 @@
     <string name="name_xml_attributes">XML Attributes</string>
     <string name="description_xml_attributes">레이아웃 XML 속성을 사용해 옵션 지정</string>
 
+    <string name="name_map_view_options">MapView &amp; NaverMapOptions</string>
+    <string name="description_map_view_options">MapView를 동적으로 생성하고 NaverMapOptions 적용</string>
+
     <!-- event demo -->
     <string name="category_event">Map Event</string>
 
@@ -254,15 +262,20 @@
     <!-- misc demo -->
     <string name="category_misc">Misc</string>
 
-    <string name="name_snapshot">Snapshot</string>
-    <string name="description_snapshot">지도 화면에 대한 스냅샷 촬영</string>
-    <string name="snapshot">snapshot</string>
-
     <string name="name_pick_all">Pick All Overlays &amp; Symbols</string>
     <string name="description_pick_all">특정 지점 주변의 모든 오버레이와 심벌을 피킹</string>
     <string name="format_pickable_symbol">Symbol(%s)</string>
     <string name="format_pickable_marker">Marker(%s)</string>
     <string name="pickable_overlay">Overlay</string>
+
+    <string name="name_projection">Projection</string>
+    <string name="description_projection">지도 좌표와 화면 좌표 간 변환</string>
+    <string name="content_description_target_crosshair">기준점</string>
+    <string name="format_point_coord">화면 좌표: (%1$.1f, %2$.1f)\n지도 좌표: (%3$.5f, %4$.5f)</string>
+
+    <string name="name_snapshot">Snapshot</string>
+    <string name="description_snapshot">지도 화면에 대한 스냅샷 촬영</string>
+    <string name="snapshot">snapshot</string>
 
     <string name="name_tile_cover_helper">Tile Cover Helper</string>
     <string name="description_tile_cover_helper">타일 커버 헬퍼 사용</string>

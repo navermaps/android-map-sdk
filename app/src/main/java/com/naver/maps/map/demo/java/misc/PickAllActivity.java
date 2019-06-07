@@ -17,9 +17,11 @@ package com.naver.maps.map.demo.java.misc;
 
 import java.util.Collections;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.recyclerview.extensions.ListAdapter;
@@ -72,6 +74,7 @@ public class PickAllActivity extends AppCompatActivity implements OnMapReadyCall
                     return oldItem.equals(newItem);
                 }
 
+                @SuppressLint("DiffUtilEquals")
                 @Override
                 public boolean areContentsTheSame(@NonNull Pickable oldItem, @NonNull Pickable newItem) {
                     return oldItem.equals(newItem);
@@ -93,7 +96,7 @@ public class PickAllActivity extends AppCompatActivity implements OnMapReadyCall
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_pick_all);

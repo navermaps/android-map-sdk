@@ -15,6 +15,7 @@
  */
 package com.naver.maps.map.demo.kotlin.misc
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.recyclerview.extensions.ListAdapter
@@ -48,6 +49,7 @@ class PickAllActivity : AppCompatActivity(), OnMapReadyCallback {
     private class Adapter : ListAdapter<Pickable, ViewHolder>(object : DiffUtil.ItemCallback<Pickable>() {
         override fun areItemsTheSame(oldItem: Pickable, newItem: Pickable) = oldItem == newItem
 
+        @SuppressLint("DiffUtilEquals")
         override fun areContentsTheSame(oldItem: Pickable, newItem: Pickable) = oldItem == newItem
     }) {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =

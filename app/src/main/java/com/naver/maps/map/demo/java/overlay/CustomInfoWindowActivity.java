@@ -16,12 +16,16 @@
 package com.naver.maps.map.demo.java.overlay;
 
 import android.content.Context;
+import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.MapFragment;
@@ -32,21 +36,37 @@ import com.naver.maps.map.overlay.Align;
 import com.naver.maps.map.overlay.InfoWindow;
 import com.naver.maps.map.overlay.Marker;
 
-public class InfoWindowActivity extends AppCompatActivity implements OnMapReadyCallback {
-    private static class InfoWindowAdapter extends InfoWindow.DefaultTextAdapter {
+public class CustomInfoWindowActivity extends AppCompatActivity implements OnMapReadyCallback {
+    private static class InfoWindowAdapter extends InfoWindow.ViewAdapter {
+        @NonNull
+        private final Context context;
+        private View rootView;
+        private ImageView icon;
+        private TextView text;
+
         private InfoWindowAdapter(@NonNull Context context) {
-            super(context);
+            this.context = context;
         }
 
         @NonNull
         @Override
-        public CharSequence getText(@NonNull InfoWindow infoWindow) {
-            if (infoWindow.getMarker() != null) {
-                return getContext().getString(R.string.format_info_window_on_marker, infoWindow.getMarker().getTag());
-            } else {
-                return getContext().getString(R.string.format_info_window_on_map,
-                    infoWindow.getPosition().latitude, infoWindow.getPosition().longitude);
+        public View getView(@NonNull InfoWindow infoWindow) {
+            if (rootView == null) {
+                rootView = View.inflate(context, R.layout.view_custom_info_window, null);
+                icon = rootView.findViewById(R.id.icon);
+                text = rootView.findViewById(R.id.text);
             }
+
+            if (infoWindow.getMarker() != null) {
+                icon.setImageResource(R.drawable.ic_place_black_24dp);
+                text.setText((String)infoWindow.getMarker().getTag());
+            } else {
+                icon.setImageResource(R.drawable.ic_my_location_black_24dp);
+                text.setText(context.getString(
+                    R.string.format_coord, infoWindow.getPosition().latitude, infoWindow.getPosition().longitude));
+            }
+
+            return rootView;
         }
     }
 
@@ -82,13 +102,14 @@ public class InfoWindowActivity extends AppCompatActivity implements OnMapReadyC
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
         InfoWindow infoWindow = new InfoWindow();
-        infoWindow.setPosition(new LatLng(37.5666102, 126.9783881));
+        infoWindow.setAnchor(new PointF(0, 1));
+        infoWindow.setOffsetX(getResources().getDimensionPixelSize(R.dimen.custom_info_window_offset_x));
+        infoWindow.setOffsetY(getResources().getDimensionPixelSize(R.dimen.custom_info_window_offset_y));
         infoWindow.setAdapter(new InfoWindowAdapter(this));
         infoWindow.setOnClickListener(overlay -> {
             infoWindow.close();
             return true;
         });
-        infoWindow.open(naverMap);
 
         Marker marker1 = new Marker();
         marker1.setPosition(new LatLng(37.57000, 126.97618));
@@ -108,6 +129,8 @@ public class InfoWindowActivity extends AppCompatActivity implements OnMapReadyC
         });
         marker2.setTag("Marker 2");
         marker2.setMap(naverMap);
+
+        infoWindow.open(marker1);
 
         naverMap.setOnMapClickListener((point, coord) -> {
             infoWindow.setPosition(coord);

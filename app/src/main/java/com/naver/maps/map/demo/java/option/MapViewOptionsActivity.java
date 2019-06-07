@@ -15,30 +15,30 @@
  */
 package com.naver.maps.map.demo.java.option;
 
-import java.util.Arrays;
-
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 
-import com.naver.maps.map.CameraUpdate;
-import com.naver.maps.map.MapFragment;
+import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraPosition;
+import com.naver.maps.map.MapView;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
-import com.naver.maps.map.overlay.PolylineOverlay;
-import com.naver.maps.map.util.MapConstants;
 
-public class ExtentActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MapViewOptionsActivity extends AppCompatActivity implements OnMapReadyCallback {
+    private MapView mapView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_map_fragment);
+        setContentView(R.layout.activity_map_view_options);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -46,12 +46,16 @@ public class ExtentActivity extends AppCompatActivity implements OnMapReadyCallb
             actionBar.setDisplayShowHomeEnabled(true);
         }
 
-        MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
-        if (mapFragment == null) {
-            mapFragment = MapFragment.newInstance(new NaverMapOptions().extent(MapConstants.EXTENT_KOREA));
-            getSupportFragmentManager().beginTransaction().add(R.id.map_fragment, mapFragment).commit();
-        }
-        mapFragment.getMapAsync(this);
+        NaverMapOptions options = new NaverMapOptions()
+            .enabledLayerGroups(NaverMap.LAYER_GROUP_TRAFFIC, NaverMap.LAYER_GROUP_TRANSIT)
+            .camera(new CameraPosition(new LatLng(37.5116620, 127.0594274), 15));
+
+        mapView = new MapView(this, options);
+        mapView.onCreate(savedInstanceState);
+        mapView.getMapAsync(this);
+
+        ViewGroup container = findViewById(R.id.container);
+        container.addView(mapView);
     }
 
     @Override
@@ -64,17 +68,48 @@ public class ExtentActivity extends AppCompatActivity implements OnMapReadyCallb
     }
 
     @Override
-    public void onMapReady(@NonNull NaverMap naverMap) {
-        int padding = getResources().getDimensionPixelSize(R.dimen.fit_bounds_padding);
-        naverMap.moveCamera(CameraUpdate.fitBounds(MapConstants.EXTENT_KOREA, padding));
+    protected void onStart() {
+        super.onStart();
+        mapView.onStart();
+    }
 
-        PolylineOverlay polylineOverlay = new PolylineOverlay();
-        polylineOverlay.setCoords(Arrays.asList(
-            MapConstants.EXTENT_KOREA.getSouthWest(),
-            MapConstants.EXTENT_KOREA.getNorthWest(),
-            MapConstants.EXTENT_KOREA.getNorthEast(),
-            MapConstants.EXTENT_KOREA.getSouthEast(),
-            MapConstants.EXTENT_KOREA.getSouthWest()));
-        polylineOverlay.setMap(naverMap);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mapView.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mapView.onStop();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        mapView.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mapView.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mapView.onLowMemory();
+    }
+
+    @Override
+    public void onMapReady(@NonNull NaverMap naverMap) {
     }
 }

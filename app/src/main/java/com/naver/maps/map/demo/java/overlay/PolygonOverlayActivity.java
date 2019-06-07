@@ -21,6 +21,7 @@ import java.util.List;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.graphics.ColorUtils;
 import android.support.v7.app.ActionBar;
@@ -54,7 +55,7 @@ public class PolygonOverlayActivity extends AppCompatActivity implements OnMapRe
         new LatLng(37.5628377, 126.976066)));
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_map_fragment);

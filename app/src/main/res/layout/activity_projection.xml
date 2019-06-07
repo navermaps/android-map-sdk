@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/map_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/crosshair"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginBottom="120dp"
+        android:contentDescription="@string/content_description_target_crosshair"
+        android:src="@drawable/crosshair"
+        app:layout_constraintBottom_toBottomOf="@+id/map_fragment"
+        app:layout_constraintStart_toStartOf="@+id/map_fragment" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CCFFFFFF"
+        android:padding="4dp"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/crosshair"
+        app:layout_constraintStart_toEndOf="@+id/crosshair"
+        app:layout_constraintTop_toTopOf="@+id/crosshair"
+        tools:text="화면 좌표: (100, 200)\n지도 좌표: (37.12345, 127.12345)" />
+
+</android.support.constraint.ConstraintLayout>

@@ -116,6 +116,16 @@
             android:description="@string/description_info_window"
             android:label="@string/name_info_window" />
         <activity
+            android:name=".java.overlay.CustomInfoWindowActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_custom_info_window"
+            android:label="@string/name_custom_info_window" />
+        <activity
+            android:name=".kotlin.overlay.CustomInfoWindowActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_custom_info_window"
+            android:label="@string/name_custom_info_window" />
+        <activity
             android:name=".java.overlay.PolygonOverlayActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_polygon_overlay"
@@ -401,6 +411,16 @@
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_xml_attributes"
             android:label="@string/name_xml_attributes" />
+        <activity
+            android:name=".java.option.MapViewOptionsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_map_view_options"
+            android:label="@string/name_map_view_options" />
+        <activity
+            android:name=".kotlin.option.MapViewOptionsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_map_view_options"
+            android:label="@string/name_map_view_options" />
 
         <!-- event -->
         <activity
@@ -478,16 +498,6 @@
 
         <!-- misc -->
         <activity
-            android:name=".java.misc.SnapshotActivity"
-            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:description="@string/description_snapshot"
-            android:label="@string/name_snapshot" />
-        <activity
-            android:name=".kotlin.misc.SnapshotActivity"
-            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:description="@string/description_snapshot"
-            android:label="@string/name_snapshot" />
-        <activity
             android:name=".java.misc.PickAllActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_pick_all"
@@ -497,6 +507,26 @@
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_pick_all"
             android:label="@string/name_pick_all" />
+        <activity
+            android:name=".java.misc.ProjectionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_projection"
+            android:label="@string/name_projection" />
+        <activity
+            android:name=".kotlin.misc.ProjectionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_projection"
+            android:label="@string/name_projection" />
+        <activity
+            android:name=".java.misc.SnapshotActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_snapshot"
+            android:label="@string/name_snapshot" />
+        <activity
+            android:name=".kotlin.misc.SnapshotActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_snapshot"
+            android:label="@string/name_snapshot" />
         <activity
             android:name=".java.misc.TileCoverHelperActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"

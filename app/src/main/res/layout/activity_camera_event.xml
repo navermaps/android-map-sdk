@@ -75,17 +75,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="7dp"
-        android:contentDescription="@string/content_description_crosshair"
+        android:contentDescription="@string/content_description_center_marker"
         android:src="@drawable/navermap_default_marker_icon_blue"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/crosshair"
         app:layout_constraintEnd_toEndOf="@+id/map_fragment"
         app:layout_constraintStart_toStartOf="@+id/map_fragment" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/crosshair"
         android:layout_width="14dp"
         android:layout_height="14dp"
-        android:contentDescription="@string/content_description_marker"
+        android:contentDescription="@string/content_description_center_crosshair"
         android:src="@drawable/crosshair"
         app:layout_constraintBottom_toBottomOf="@+id/map_fragment"
         app:layout_constraintEnd_toEndOf="@+id/map_fragment"
