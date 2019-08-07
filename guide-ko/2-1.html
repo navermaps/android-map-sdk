@@ -628,6 +628,52 @@ MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
     </div>
   </div>
 </div></p>
+<p><code>MapFragment</code>&#xB97C; &#xB2E4;&#xB978; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8; &#xB0B4;&#xC5D0; &#xBC30;&#xCE58;&#xD560; &#xACBD;&#xC6B0; <code>supportFragmentManager</code> &#xB300;&#xC2E0; <a href="https://developer.android.com/reference/android/support/v4/app/Fragment.html#getchildfragmentmanager" target="_blank"><code>childFragmentManager</code></a>&#xB97C; &#xC0AC;&#xC6A9;&#xD574; <code>MapFragment</code>&#xB97C; &#xC790;&#xC2DD; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xB85C; &#xB450;&#xC5B4;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; <code>MapFragment</code>&#xB97C; &#xB2E4;&#xB978; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8; &#xB0B4;&#xC5D0; &#xBC30;&#xCE58;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="d1654aedf82c21c61915de8c68aae306" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-660e7233930c5b16d6dab60684543568" class="gbcg-selector gbcg-active" data-tab="0-660e7233930c5b16d6dab60684543568" data-tab-category="undefined">Java</a>
+    <a id="select-1-174a2befdd9b227ddf59f00acd893945" class="gbcg-selector" data-tab="1-174a2befdd9b227ddf59f00acd893945" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-660e7233930c5b16d6dab60684543568" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">FragmentManager fm = getChildFragmentManager();
+MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
+<span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
+    mapFragment = MapFragment.newInstance();
+    fm.beginTransaction().add(R.id.map, mapFragment).commit();
+}
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-660e7233930c5b16d6dab60684543568" id="java">Java</h3>
+        <div id="0-660e7233930c5b16d6dab60684543568" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">FragmentManager fm = getChildFragmentManager();
+MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
+<span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
+    mapFragment = MapFragment.newInstance();
+    fm.beginTransaction().add(R.id.map, mapFragment).commit();
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-174a2befdd9b227ddf59f00acd893945" id="kotlin">Kotlin</h3>
+        <div id="1-174a2befdd9b227ddf59f00acd893945" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> fm</span> = childFragmentManager
+<span class="hljs-variable"><span class="hljs-keyword">val</span> mapFragment</span> = fm.findFragmentById(R.id.map) <span class="hljs-keyword">as</span> MapFragment?
+        ?: MapFragment.newInstance().also {
+            fm.beginTransaction().add(R.id.map, it).commit()
+        }
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h3 id="mapview">MapView</h3>
 <p>&#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xBDF0;&#xB97C; &#xBC14;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <a href="ref://../reference/com/naver/maps/map/MapView.html" target="_blank"><code>MapView</code></a>&#xB97C; &#xB808;&#xC774;&#xC544;&#xC6C3;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xBA74; <code>MapFragment</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD55C; &#xAC83;&#xACFC; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; &#xC9C0;&#xB3C4;&#xAC00; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xB808;&#xC774;&#xC544;&#xC6C3; XML&#xC5D0; <code>MapView</code>&#xB97C; &#xCD94;&#xAC00;&#xD574; &#xC9C0;&#xB3C4;&#xB97C; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
@@ -1154,7 +1200,7 @@ MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"지도 객체","level":"3.2.1","depth":2,"next":{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},"previous":{"title":"지도와 좌표","level":"3.2","depth":1,"ref":"","articles":[{"title":"지도 객체","level":"3.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},{"title":"지도 옵션","level":"3.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"2-1.md","mtime":"2019-06-07T03:53:41.592Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-07T03:53:43.320Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"지도 객체","level":"3.2.1","depth":2,"next":{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},"previous":{"title":"지도와 좌표","level":"3.2","depth":1,"ref":"","articles":[{"title":"지도 객체","level":"3.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},{"title":"지도 옵션","level":"3.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"2-1.md","mtime":"2019-08-07T04:24:29.724Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-07T04:24:31.471Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
