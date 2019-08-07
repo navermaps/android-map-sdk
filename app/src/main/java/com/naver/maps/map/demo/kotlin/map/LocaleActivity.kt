@@ -26,7 +26,7 @@ import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import kotlinx.android.synthetic.main.activity_locale.*
-import java.util.*
+import java.util.Locale
 
 class LocaleActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {

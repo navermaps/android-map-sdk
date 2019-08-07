@@ -130,6 +130,7 @@
         <item>Satellite</item>
         <item>Hybrid</item>
         <item>Terrain</item>
+        <item>None</item>
     </string-array>
     <string name="layer_groups">레이어 그룹…</string>
     <string name="building">건물</string>

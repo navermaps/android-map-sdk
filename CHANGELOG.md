@@ -1,3 +1,28 @@
+# 3.5.0
+
+Release Date: 2019-08-07
+
+### 새로운 기능
+
+- 배경 지도를 그리지 않는 지도 유형 추가
+  - `NaverMap.MapType#None`
+- 밝은/어두운 기본 배경색을 각각 상수로 제공
+  - `NaverMap#DEFAULT_BACKGROUND_COLOR_LIGHT`, `NaverMap#DEFAULT_BACKGROUND_COLOR_DARK`
+
+### 개선
+
+- `PolygonOverlay`의 외곽선 퀄리티 개선
+- 성능 및 데이터 사용량 개선
+
+### 버그 수정
+
+- `PolygonOverlay`의 `holes`를 지정할 경우 일부 영역이 비정상적으로 렌더링되는 오류 수정
+- `onMapReady()` 내에서 `locationTrackingMode`를 `Follow`나 `Face`로 지정하면 `NoFollow`로 바뀌는 오류 수정
+- 경로의 길이가 매우 긴 경우 `GeometryUtils#getProgress()`의 오차가 큰 오류 수정
+- 일부 지도 심벌이 경로선 아래에 나타나는 현상 수정
+- 남/북극을 초과하는 영역에 배경색이 적용되지 않는 현상 수정
+- 일부 아랍 문자가 노출되지 않는 현상 수정
+
 # 3.4.0
 
 Release Date: 2019-06-07

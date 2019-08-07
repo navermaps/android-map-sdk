@@ -27,7 +27,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.naver.maps.geometry.LatLng
-import com.naver.maps.map.*
+import com.naver.maps.map.MapFragment
+import com.naver.maps.map.NaverMap
+import com.naver.maps.map.NaverMapOptions
+import com.naver.maps.map.OnMapReadyCallback
+import com.naver.maps.map.Pickable
+import com.naver.maps.map.Symbol
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.overlay.Marker
 import kotlinx.android.synthetic.main.activity_pick_all.*

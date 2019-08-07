@@ -97,6 +97,8 @@ public class NightModeActivity extends AppCompatActivity implements OnMapReadyCa
 
             nightModeEnabled = naverMap.isNightModeEnabled();
 
+            naverMap.setBackgroundColor(nightModeEnabled
+                ? NaverMap.DEFAULT_BACKGROUND_COLOR_DARK : NaverMap.DEFAULT_BACKGROUND_COLOR_LIGHT);
             naverMap.setBackgroundResource(nightModeEnabled
                 ? NaverMap.DEFAULT_BACKGROUND_DRWABLE_DARK : NaverMap.DEFAULT_BACKGROUND_DRWABLE_LIGHT);
 

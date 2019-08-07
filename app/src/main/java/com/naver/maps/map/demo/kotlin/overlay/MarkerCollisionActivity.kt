@@ -27,7 +27,7 @@ import com.naver.maps.map.demo.R
 import com.naver.maps.map.overlay.Marker
 import com.naver.maps.map.util.MarkerIcons
 import kotlinx.android.synthetic.main.activity_marker_collision.*
-import java.util.*
+import java.util.ArrayList
 
 class MarkerCollisionActivity : AppCompatActivity(), OnMapReadyCallback {
     private var forceShowIcon: Boolean = false

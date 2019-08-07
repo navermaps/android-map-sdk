@@ -18,7 +18,11 @@ package com.naver.maps.map.demo.kotlin.location
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import com.naver.maps.map.*
+import com.naver.maps.map.LocationTrackingMode
+import com.naver.maps.map.MapFragment
+import com.naver.maps.map.NaverMap
+import com.naver.maps.map.NaverMapOptions
+import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.util.FusedLocationSource
 import kotlinx.android.synthetic.main.activity_location_tracking.*
@@ -90,6 +94,8 @@ class LocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
 
             locationSource?.isCompassEnabled = mode == LocationTrackingMode.Follow || mode == LocationTrackingMode.Face
         }
+
+        naverMap.locationTrackingMode = LocationTrackingMode.Follow
     }
 
     companion object {

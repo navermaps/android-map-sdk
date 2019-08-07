@@ -37,6 +37,8 @@ import com.naver.maps.map.demo.R;
 import com.naver.maps.map.overlay.LocationOverlay;
 
 public class LocationOverlayActivity extends AppCompatActivity implements OnMapReadyCallback {
+    private Animator animator;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,8 +67,6 @@ public class LocationOverlayActivity extends AppCompatActivity implements OnMapR
         }
         return super.onOptionsItemSelected(item);
     }
-
-    private Animator animator;
 
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {

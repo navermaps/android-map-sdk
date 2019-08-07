@@ -105,5 +105,7 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
 
             locationSource.setCompassEnabled(mode == LocationTrackingMode.Follow || mode == LocationTrackingMode.Face);
         });
+
+        naverMap.setLocationTrackingMode(LocationTrackingMode.Follow);
     }
 }

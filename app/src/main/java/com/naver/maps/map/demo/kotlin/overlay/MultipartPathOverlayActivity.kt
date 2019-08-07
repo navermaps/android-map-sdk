@@ -82,7 +82,7 @@ class MultipartPathOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
         value_progress.setOnClickListener {
             seek_bar_progress.progress = 100
         }
-        
+
         seek_bar_progress.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 val value = progress / 100.0

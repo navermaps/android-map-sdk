@@ -53,6 +53,12 @@ public class CustomLocationTrackingActivity extends AppCompatActivity implements
         Manifest.permission.ACCESS_COARSE_LOCATION
     };
 
+    private boolean trackingEnabled;
+    private boolean locationEnabled;
+    private boolean waiting;
+    private NaverMap map;
+    private FloatingActionButton fab;
+
     private final LocationCallback locationCallback = new LocationCallback() {
         @Override
         public void onLocationResult(LocationResult locationResult) {
@@ -72,12 +78,6 @@ public class CustomLocationTrackingActivity extends AppCompatActivity implements
             }
         }
     };
-
-    private boolean trackingEnabled;
-    private boolean locationEnabled;
-    private boolean waiting;
-    private NaverMap map;
-    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

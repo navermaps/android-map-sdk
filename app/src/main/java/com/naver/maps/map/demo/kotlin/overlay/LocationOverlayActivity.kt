@@ -15,7 +15,11 @@
  */
 package com.naver.maps.map.demo.kotlin.overlay
 
-import android.animation.*
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.AnimatorSet
+import android.animation.ArgbEvaluator
+import android.animation.ObjectAnimator
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
