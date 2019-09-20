@@ -96,16 +96,6 @@
             android:description="@string/description_marker"
             android:label="@string/name_marker" />
         <activity
-            android:name=".java.overlay.MarkerCollisionActivity"
-            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:description="@string/description_marker_collision"
-            android:label="@string/name_marker_collision" />
-        <activity
-            android:name=".kotlin.overlay.MarkerCollisionActivity"
-            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:description="@string/description_marker_collision"
-            android:label="@string/name_marker_collision" />
-        <activity
             android:name=".java.overlay.InfoWindowActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_info_window"
@@ -215,6 +205,16 @@
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_global_z_index"
             android:label="@string/name_global_z_index" />
+        <activity
+            android:name=".java.overlay.OverlayCollisionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_overlay_collision"
+            android:label="@string/name_overlay_collision" />
+        <activity
+            android:name=".kotlin.overlay.OverlayCollisionActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_overlay_collision"
+            android:label="@string/name_overlay_collision" />
 
         <!-- camera -->
         <activity

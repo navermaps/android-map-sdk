@@ -96,7 +96,8 @@ class MarkerActivity : AppCompatActivity(), OnMapReadyCallback {
         Marker().apply {
             position = LatLng(37.56436, 126.97499)
             icon = MarkerIcons.YELLOW
-            captionAlign = Align.Left
+            captionMinZoom = 12.0
+            setCaptionAligns(Align.Left)
             captionText = getString(R.string.marker_caption_1)
             map = naverMap
         }

@@ -37,6 +37,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_list.*
 import org.jetbrains.anko.alert
 import org.jetbrains.anko.toast
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     class ListFragment : Fragment() {
@@ -119,7 +120,7 @@ class MainActivity : AppCompatActivity() {
 
             private fun getDemos(context: Context, language: String) =
                     try {
-                        val packageName = "${context.packageName}.${language.toLowerCase()}"
+                        val packageName = "${context.packageName}.${language.toLowerCase(Locale.ROOT)}"
                         context.packageManager
                                 .getPackageInfo(context.packageName, PackageManager.GET_ACTIVITIES)
                                 .activities

@@ -67,6 +67,78 @@
 
     </com.google.android.flexbox.FlexboxLayout>
 
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/caption_aligns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexWrap="wrap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/options">
+
+        <TextView
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/label_caption_aligns"/>
+
+        <CheckedTextView
+            android:id="@+id/bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+            android:gravity="center_vertical"
+            android:text="@string/bottom" />
+
+        <CheckedTextView
+            android:id="@+id/edges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="false"
+            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+            android:gravity="center_vertical"
+            android:text="@string/edges" />
+
+        <CheckedTextView
+            android:id="@+id/apexes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="false"
+            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+            android:gravity="center_vertical"
+            android:text="@string/apexes" />
+
+        <CheckedTextView
+            android:id="@+id/outsides"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="false"
+            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+            android:gravity="center_vertical"
+            android:text="@string/outsides" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
     <FrameLayout
         android:id="@+id/map_fragment"
         android:layout_width="0dp"
@@ -75,6 +147,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/options" />
+        app:layout_constraintTop_toBottomOf="@+id/caption_aligns" />
 
 </android.support.constraint.ConstraintLayout>

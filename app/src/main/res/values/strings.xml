@@ -38,13 +38,6 @@
     <string name="marker_caption_2">서브 캡션이 있는 마커</string>
     <string name="marker_sub_caption_2">🇰🇷서브 캡션👩🏿‍🍳</string>
 
-    <string name="name_marker_collision">Marker Collision</string>
-    <string name="description_marker_collision">마커 충돌 및 z-인덱스 제어</string>
-    <string name="hide_collided_symbols">겹치는 심벌 숨김</string>
-    <string name="hide_collided_markers">겹치는 마커 숨김</string>
-    <string name="hide_collided_captions">겹치는 캡션 숨김</string>
-    <string name="force_show">녹색 마커는 겹쳐도 아이콘 표시</string>
-
     <string name="name_info_window">Info Window</string>
     <string name="description_info_window">정보 창</string>
     <string name="format_info_window_on_marker">마커: %s</string>
@@ -89,6 +82,18 @@
     <string name="description_global_z_index">오버레이간 계층 지정</string>
     <string name="marker_over_path">경로선 위에 위치한 마커</string>
     <string name="marker_under_path">경로선 아래에 위치한 마커</string>
+
+    <string name="name_overlay_collision">Overlay &amp; Symbol Collision</string>
+    <string name="description_overlay_collision">오버레이 &amp; 심벌 충돌 옵션</string>
+    <string name="hide_collided_symbols">겹치는 심벌 숨김</string>
+    <string name="hide_collided_markers">겹치는 마커 숨김</string>
+    <string name="hide_collided_captions">겹치는 캡션 숨김</string>
+    <string name="force_show">녹색 마커는 겹쳐도 아이콘 표시</string>
+    <string name="label_caption_aligns">캡션 방향:</string>
+    <string name="bottom">아래</string>
+    <string name="edges">모서리</string>
+    <string name="apexes">꼭지점</string>
+    <string name="outsides">바깥쪽</string>
 
     <!-- camera demo -->
     <string name="category_camera">Camera</string>

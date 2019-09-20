@@ -98,7 +98,8 @@ public class MarkerActivity extends AppCompatActivity implements OnMapReadyCallb
         Marker markerWithCaption = new Marker();
         markerWithCaption.setPosition(new LatLng(37.56436, 126.97499));
         markerWithCaption.setIcon(MarkerIcons.YELLOW);
-        markerWithCaption.setCaptionAlign(Align.Left);
+        markerWithCaption.setCaptionMinZoom(12);
+        markerWithCaption.setCaptionAligns(Align.Left);
         markerWithCaption.setCaptionText(getString(R.string.marker_caption_1));
         markerWithCaption.setMap(naverMap);
 

@@ -1,3 +1,38 @@
+# 3.6.0
+
+Release Date: 2019-09-20
+
+### 새로운 기능
+
+- 마커 캡션의 최소/최대 줌 레벨을 아이콘과 별도로 지정할 수 있는 기능 추가
+  - `Marker#captionMaxZoom`, `captionMinZoom`
+- 마커 캡션이 다른 요소와 겹칠 경우 동적으로 다른 곳에 배치하는 옵션 추가
+  - `Marker#getCaptionAligns()` / `setCaptionAligns()`
+- 마커가 충돌되어 사라지더라도 자신의 영역을 유지하도록 하는 옵션 추가
+  - `Marker#occupySpaceOnCollision`
+- 경로선과 겹치는 마커, 캡션, 지도 심벌을 숨기는 기능 추가
+  - `PathOverlay#isHideCollidedSymbols` / `isHideCollidedMarkers` / `isHideCollidedCaptions`
+  - `MultipartPathOverlay#isHideCollidedSymbols` / `isHideCollidedMarkers` / `isHideCollidedCaptions`
+- 카메라 이동 트랜지션 취소 시 원인을 전달할 수 있도록 `reason` 파라메터 추가
+  - `NaverMap.cancelTransitions(int)`
+
+### 개선
+
+- `GroundOverlay`, `InfoWindow`에 더 큰 이미지를 사용할 수 있도록 개선
+- 메모리 사용량 개선
+
+### 버그 수정
+
+- `PolylineOverlay`의 `capType`, `joinType`이 적용되지 않는 오류 수정
+- `NaverMapOptions.useTextureView(true)` 지정시 크래시가 발생하는 오류 수정
+- `onDestroy()`를 부르기 전에 지도 뷰가 윈도우에서 떨어져나갈 경우 ANR이 발생하는 현상 수정
+- `PolylineOverlay`에 일부 크랙이 발생하는 현상 수정
+- `extent`를 지정하고 지도를 빠르게 패닝하면 지도가 잘못된 방향으로 이동하는 현상 수정
+- 마커가 충돌되어 사라지는 중에 충돌하지 않는 곳으로 위치를 변경하면 하면 페이드인이 일어나는 현상 수정
+- 지도 회전시 일부 심벌이 번쩍이는 현상 수정
+- 지도 뷰의 높이가 작을 때 경로선 패턴이 나타나지 않는 현상 수정
+- 높이가 너비보다 큰 이미지를 경로선 패턴으로 사용하면 패턴이 부자연스럽게 나타나는 현상 수정
+
 # 3.5.0
 
 Release Date: 2019-08-07
