@@ -558,7 +558,15 @@
 <h2 id="add-dependencies">Add dependencies</h2>
 <p>You can get the NAVER Maps SDK from <a href="https://bintray.com/navercorp/maps" target="_blank">Bintray</a>. Add repository settings to <code>build.gradle</code> of your root project.</p>
 <p>The following code example shows how to add repository settings.</p>
-<pre><code class="lang-Gradle"><span class="hljs-keyword">allprojects</span> {
+<p><div id="b0096723e655292fea3921ad4011bf9a" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-d7fbe20f7f6818a29572c51393ad03da" class="gbcg-selector gbcg-active" data-tab="0-d7fbe20f7f6818a29572c51393ad03da" data-tab-category="gradle">Groovy</a>
+    <a id="select-1-f9dfbce84c2ac0b2e97936fc5223ee02" class="gbcg-selector" data-tab="1-f9dfbce84c2ac0b2e97936fc5223ee02" data-tab-category="gradle">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-d7fbe20f7f6818a29572c51393ad03da" class="gbcg-tab-item gbcb-Groovy">
+        <pre><code class="lang-Gradle"><span class="hljs-keyword">allprojects</span> {
     <span class="hljs-keyword">repositories</span> {
         google()
         jcenter()
@@ -570,13 +578,83 @@
     }
 }
 </code></pre>
-<p>Declare dependencies for the NAVER Maps SDK in <code>build.gradle</code> of your app module.</p>
-<p>The following code example shows how to declare dependencies for the SDK.</p>
-<pre><code class="lang-Gradle"><span class="hljs-keyword">dependencies</span> {
-    <span class="hljs-comment">// NAVER Maps SDK</span>
-    implementation <span class="hljs-string">&apos;com.naver.maps:map-sdk:3.5.0&apos;</span>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-d7fbe20f7f6818a29572c51393ad03da" id="groovy">Groovy</h3>
+        <div id="0-d7fbe20f7f6818a29572c51393ad03da" class="gbcg-tab-item gbcb-Groovy">
+          <pre><code class="lang-Gradle"><span class="hljs-keyword">allprojects</span> {
+    <span class="hljs-keyword">repositories</span> {
+        google()
+        jcenter()
+
+        <span class="hljs-comment">// NAVER Maps repository</span>
+        maven {
+            url <span class="hljs-string">&apos;https://navercorp.bintray.com/maps&apos;</span>
+        }
+    }
 }
 </code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-f9dfbce84c2ac0b2e97936fc5223ee02" id="kotlin">Kotlin</h3>
+        <div id="1-f9dfbce84c2ac0b2e97936fc5223ee02" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven(<span class="hljs-string">&quot;https://navercorp.bintray.com/maps&quot;</span>) <span class="hljs-comment">// NAVER Maps repository</span>
+    }
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>Declare dependencies for the NAVER Maps SDK in <code>build.gradle</code> of your app module.</p>
+<p>The following code example shows how to declare dependencies for the SDK.</p>
+<p><div id="5c5b541057064b3e5a4bdf56297aaa48" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-e69c231de75859f12e6631ccd2f3d389" class="gbcg-selector gbcg-active" data-tab="0-e69c231de75859f12e6631ccd2f3d389" data-tab-category="gradle">Groovy</a>
+    <a id="select-1-81d89824f1b970fe44f98763cf6a3ff5" class="gbcg-selector" data-tab="1-81d89824f1b970fe44f98763cf6a3ff5" data-tab-category="gradle">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-e69c231de75859f12e6631ccd2f3d389" class="gbcg-tab-item gbcb-Groovy">
+        <pre><code class="lang-Gradle"><span class="hljs-keyword">dependencies</span> {
+    <span class="hljs-comment">// NAVER Map SDK</span>
+    implementation <span class="hljs-string">&apos;com.naver.maps:map-sdk:3.6.0&apos;</span>
+}
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-e69c231de75859f12e6631ccd2f3d389" id="groovy">Groovy</h3>
+        <div id="0-e69c231de75859f12e6631ccd2f3d389" class="gbcg-tab-item gbcb-Groovy">
+          <pre><code class="lang-Gradle"><span class="hljs-keyword">dependencies</span> {
+    <span class="hljs-comment">// NAVER Map SDK</span>
+    implementation <span class="hljs-string">&apos;com.naver.maps:map-sdk:3.6.0&apos;</span>
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-81d89824f1b970fe44f98763cf6a3ff5" id="kotlin">Kotlin</h3>
+        <div id="1-81d89824f1b970fe44f98763cf6a3ff5" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">dependencies {
+    <span class="hljs-comment">// NAVER Map SDK</span>
+    implementation(<span class="hljs-string">&quot;com.naver.maps:map-sdk:3.6.0&quot;</span>)
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
 <h2 id="set-client-id">Set Client ID</h2>
 <p>Set your Client ID in the SDK to use the Maps API. You can set your Client ID in the following two different ways.</p>
 <h3 id="set-your-client-id-in-androidmanifestxml">Set your Client ID in AndroidManifest.xml</h3>
@@ -787,7 +865,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Get Started","level":"2.1","depth":1,"next":{"title":"Map and Coordinates","level":"2.2","depth":1,"ref":"","articles":[{"title":"Map Object","level":"2.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},{"title":"Coordinates Object","level":"2.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},{"title":"Map Options","level":"2.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]}]},"previous":{"title":"Introduction","level":"1.2","depth":1,"path":"0.md","ref":"0.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"1.md","mtime":"2019-08-07T04:24:22.014Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-07T04:24:23.837Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Get Started","level":"2.1","depth":1,"next":{"title":"Map and Coordinates","level":"2.2","depth":1,"ref":"","articles":[{"title":"Map Object","level":"2.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},{"title":"Coordinates Object","level":"2.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},{"title":"Map Options","level":"2.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]}]},"previous":{"title":"Introduction","level":"1.2","depth":1,"path":"0.md","ref":"0.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"1.md","mtime":"2019-09-20T06:36:10.516Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-20T06:36:12.271Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
