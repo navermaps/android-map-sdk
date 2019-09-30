@@ -1,3 +1,12 @@
+# 3.6.1
+
+Release Date: 2019-09-30
+
+### 버그 수정
+
+- 지도 데이터가 올바르게 캐시되지 않는 오류 수정
+- `CameraUpdate.Finish`/`CancelCallback` 내에서 `Finish`/`CancelCallback`을 지정하면 무시되는 오류 수정
+
 # 3.6.0
 
 Release Date: 2019-09-20
