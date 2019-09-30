@@ -684,10 +684,10 @@ MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
 </code></pre>
 <p><code>MapView</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xB54C;&#xB294; &#xBC18;&#xB4DC;&#xC2DC; <code>MapView</code>&#xAC00; &#xD3EC;&#xD568;&#xB41C; &#xC561;&#xD2F0;&#xBE44;&#xD2F0;&#xC758; &#xB77C;&#xC774;&#xD504; &#xC0AC;&#xC774;&#xD074;&#xC5D0; &#xB9DE;&#xCD94;&#xC5B4; <code>onCreate()</code>, <code>onStart()</code>, <code>onResume()</code>, <code>onPause()</code>, <code>onStop()</code>, <code>onDestroy()</code>, <code>onSaveInstanceState()</code>, <code>onLowMemory()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xB2E8;, <code>MapView</code>&#xAC00; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xC5D0; &#xD3EC;&#xD568;&#xB420; &#xACBD;&#xC6B0; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xC758; <code>onCreateView()</code> &#xB610;&#xB294; <code>onViewCreated()</code>&#xC5D0;&#xC11C; <code>onCreate()</code>&#xB97C;, <code>onDestroyView()</code>&#xC5D0;&#xC11C; <code>onDestroy()</code>&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB807;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC9C0;&#xB3C4;&#xAC00; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. <code>MapFragment</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC774;&#xB7EC;&#xD55C; &#xC808;&#xCC28;&#xAC00; &#xD544;&#xC694;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBBC0;&#xB85C; <code>MapFragment</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC744; &#xAD8C;&#xC7A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xC5D0;&#xC11C; <code>MapView</code>&#xC758; &#xB77C;&#xC774;&#xD504; &#xC0AC;&#xC774;&#xD074; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p><div id="050b2347ed49d3abc853abb9949c5c0f" class="gbcg gbcg-codegroup">
+<p><div id="d7eea1eb9e38e6c4d87aa75c9907b4cc" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-1b45a5852293bb12faeebe51c9c367d8" class="gbcg-selector gbcg-active" data-tab="0-1b45a5852293bb12faeebe51c9c367d8" data-tab-category="undefined">Java</a>
-    <a id="select-1-c510a39d962d76d310f249ff239df436" class="gbcg-selector" data-tab="1-c510a39d962d76d310f249ff239df436" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-21c28f9964236a4b0dd71a31b015b954" class="gbcg-selector" data-tab="1-21c28f9964236a4b0dd71a31b015b954" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -821,53 +821,53 @@ MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-c510a39d962d76d310f249ff239df436" id="kotlin">Kotlin</h3>
-        <div id="1-c510a39d962d76d310f249ff239df436" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-21c28f9964236a4b0dd71a31b015b954" id="kotlin">Kotlin</h3>
+        <div id="1-21c28f9964236a4b0dd71a31b015b954" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapViewFragment</span> : <span class="hljs-type">Fragment</span></span>() {
     <span class="hljs-keyword">private</span> lateinit <span class="hljs-variable"><span class="hljs-keyword">var</span> mapView</span>: MapView
 
-    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreateView</span><span class="hljs-params">(inflater: <span class="hljs-type">LayoutInflater, container: ViewGroup,
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreateView</span><span class="hljs-params">(inflater: <span class="hljs-type">LayoutInflater, container: ViewGroup,
                      savedInstanceState: Bundle</span>)</span>: View {</span>
         <span class="hljs-comment">// ...</span>
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onViewCreated</span><span class="hljs-params">(view: <span class="hljs-type">View, @Nullable savedInstanceState: Bundle</span>)</span> {</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onViewCreated</span><span class="hljs-params">(view: <span class="hljs-type">View, @Nullable savedInstanceState: Bundle</span>)</span> {</span>
         super.onViewCreated(view, savedInstanceState)
         mapView = view.findViewById(R.id.map_view)
         mapView.onCreate(savedInstanceState)
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStart</span><span class="hljs-params">()</span> {</span>
         super.onStart()
         mapView.onStart()
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onResume</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onResume</span><span class="hljs-params">()</span> {</span>
         super.onResume()
         mapView.onResume()
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onPause</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onPause</span><span class="hljs-params">()</span> {</span>
         super.onPause()
         mapView.onPause()
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(outState: <span class="hljs-type">Bundle</span>)</span> {</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onSaveInstanceState</span><span class="hljs-params">(outState: <span class="hljs-type">Bundle</span>)</span> {</span>
         super.onSaveInstanceState(outState)
         mapView.onSaveInstanceState(outState)
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStop</span><span class="hljs-params">()</span> {</span>
         super.onStop()
         mapView.onStop()
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onDestroyView</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onDestroyView</span><span class="hljs-params">()</span> {</span>
         super.onDestroyView()
         mapView.onDestroy()
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onLowMemory</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onLowMemory</span><span class="hljs-params">()</span> {</span>
         super.onLowMemory()
         mapView.onLowMemory()
     }
@@ -1200,7 +1200,7 @@ MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"지도 객체","level":"3.2.1","depth":2,"next":{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},"previous":{"title":"지도와 좌표","level":"3.2","depth":1,"ref":"","articles":[{"title":"지도 객체","level":"3.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},{"title":"지도 옵션","level":"3.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"2-1.md","mtime":"2019-09-20T06:36:18.433Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-20T06:36:20.129Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"지도 객체","level":"3.2.1","depth":2,"next":{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},"previous":{"title":"지도와 좌표","level":"3.2","depth":1,"ref":"","articles":[{"title":"지도 객체","level":"3.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},{"title":"좌표 객체","level":"3.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},{"title":"지도 옵션","level":"3.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"2-1.md","mtime":"2019-09-30T03:34:48.400Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-30T03:34:50.078Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
