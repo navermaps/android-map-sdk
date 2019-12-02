@@ -995,14 +995,14 @@ MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
 <h2 id="obtain-navermap-object">Obtain NaverMap object</h2>
 <p>As the <code>MapFragment</code> and <code>MapView</code> are only in charge of map views, you need the <a href="ref://../reference/com/naver/maps/map/NaverMap.html" target="_blank"><code>NaverMap</code></a> object, which is in charge of interfaces, to call an API. Add <a href="ref://../reference/com/naver/maps/map/OnMapReadyCallback.html" target="_blank"><code>OnMapReadyCallback</code></a> by using the <code>MapFragment</code> or <code>MapView</code>&#x2019;s <a href="ref://../reference/com/naver/maps/map/MapFragment.html#getMapAsync-com.naver.maps.map.OnMapReadyCallback-" target="_blank"><code>getMapAsync()</code></a> method, and you can asynchronously obtain the <code>NaverMap</code> object. When the <code>NaverMap</code> object is ready, the <a href="ref://../reference/com/naver/maps/map/OnMapReadyCallback.html#onMapReady-com.naver.maps.map.NaverMap-" target="_blank"><code>onMapReady()</code></a> callback method is called.</p>
 <p>The following code example shows how to obtain the <code>NaverMap</code> object by adding the <code>OnMapReadyCallback</code>.</p>
-<p><div id="f872aac449656f20937c90972f9c2ea5" class="gbcg gbcg-codegroup">
+<p><div id="8a6889e365dec86cc507e14dc435abc2" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-7498bfc5ee3b93ada3d7f7e1ebba67b9" class="gbcg-selector gbcg-active" data-tab="0-7498bfc5ee3b93ada3d7f7e1ebba67b9" data-tab-category="undefined">Java</a>
+    <a id="select-0-1751c1fd2ff58e47f4adfea6344c5fe1" class="gbcg-selector gbcg-active" data-tab="0-1751c1fd2ff58e47f4adfea6344c5fe1" data-tab-category="undefined">Java</a>
     <a id="select-1-0114d321c6d049d8daa262cb48b4e0d1" class="gbcg-selector" data-tab="1-0114d321c6d049d8daa262cb48b4e0d1" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-7498bfc5ee3b93ada3d7f7e1ebba67b9" class="gbcg-tab-item gbcb-Java">
+      <div id="0-1751c1fd2ff58e47f4adfea6344c5fe1" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span>
     <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
     <span class="hljs-meta">@Override</span>
@@ -1012,7 +1012,7 @@ MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
         setContentView(R.layout.map_fragment_activity);
 
         FragmentManager fm = getSupportFragmentManager();
-        MapFragment mapFragment = (MapFragment).findFragmentById(R.id.map);
+        MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
         <span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
             mapFragment = MapFragment.newInstance();
             fm.beginTransaction().add(R.id.map, mapFragment).commit();
@@ -1032,8 +1032,8 @@ MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-7498bfc5ee3b93ada3d7f7e1ebba67b9" id="java">Java</h3>
-        <div id="0-7498bfc5ee3b93ada3d7f7e1ebba67b9" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-1751c1fd2ff58e47f4adfea6344c5fe1" id="java">Java</h3>
+        <div id="0-1751c1fd2ff58e47f4adfea6344c5fe1" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MapFragmentActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span>
     <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
     <span class="hljs-meta">@Override</span>
@@ -1043,7 +1043,7 @@ MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
         setContentView(R.layout.map_fragment_activity);
 
         FragmentManager fm = getSupportFragmentManager();
-        MapFragment mapFragment = (MapFragment).findFragmentById(R.id.map);
+        MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
         <span class="hljs-keyword">if</span> (mapFragment == <span class="hljs-keyword">null</span>) {
             mapFragment = MapFragment.newInstance();
             fm.beginTransaction().add(R.id.map, mapFragment).commit();
@@ -1129,7 +1129,7 @@ MapFragment mapFragment = (MapFragment)fm.findFragmentById(R.id.map);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Map Object","level":"2.2.1","depth":2,"next":{"title":"Coordinates Object","level":"2.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},"previous":{"title":"Map and Coordinates","level":"2.2","depth":1,"ref":"","articles":[{"title":"Map Object","level":"2.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},{"title":"Coordinates Object","level":"2.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},{"title":"Map Options","level":"2.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"2-1.md","mtime":"2019-09-30T03:34:40.634Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-30T03:34:42.301Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Map Object","level":"2.2.1","depth":2,"next":{"title":"Coordinates Object","level":"2.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},"previous":{"title":"Map and Coordinates","level":"2.2","depth":1,"ref":"","articles":[{"title":"Map Object","level":"2.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},{"title":"Coordinates Object","level":"2.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},{"title":"Map Options","level":"2.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"2-1.md","mtime":"2019-12-02T03:17:53.845Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-02T03:17:55.530Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
