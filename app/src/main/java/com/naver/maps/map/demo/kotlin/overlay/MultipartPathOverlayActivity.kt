@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2019 NAVER Corp.
+ * Copyright 2018-2020 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -85,10 +85,10 @@ class MultipartPathOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
 
         seek_bar_progress.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                val value = progress / 100.0
+                val value = progress - 100
                 value_progress.text = getString(R.string.format_progress, progress)
                 if (fromUser) {
-                    multipartPathOverlay.progress = value
+                    multipartPathOverlay.progress = value / 100.0
                 }
             }
 
@@ -102,7 +102,7 @@ class MultipartPathOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
         naverMap.setOnMapClickListener { _, coord ->
             val progress = GeometryUtils.getProgressForCoordParts(multipartPathOverlay.coordParts, coord)
             multipartPathOverlay.progress = progress
-            seek_bar_progress.progress = (progress * 100).toInt()
+            seek_bar_progress.progress = (progress * 100).toInt() + 100
         }
     }
 

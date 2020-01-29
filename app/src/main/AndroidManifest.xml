@@ -196,6 +196,16 @@
             android:description="@string/description_arrowhead_path_overlay"
             android:label="@string/name_arrowhead_path_overlay" />
         <activity
+            android:name=".java.overlay.OverlayMinMaxZoomActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_overlay_min_max_zoom"
+            android:label="@string/name_overlay_min_max_zoom" />
+        <activity
+            android:name=".kotlin.overlay.OverlayMinMaxZoomActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_overlay_min_max_zoom"
+            android:label="@string/name_overlay_min_max_zoom" />
+        <activity
             android:name=".java.overlay.GlobalZIndexActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_global_z_index"

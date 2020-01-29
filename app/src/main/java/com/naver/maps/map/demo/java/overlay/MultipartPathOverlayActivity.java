@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2019 NAVER Corp.
+ * Copyright 2018-2020 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -254,10 +254,10 @@ public class MultipartPathOverlayActivity extends AppCompatActivity implements O
         progressSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                double value = progress / 100.0;
+                progress -= 100;
                 progressValue.setText(getString(R.string.format_progress, progress));
                 if (fromUser) {
-                    multipartPathOverlay.setProgress(value);
+                    multipartPathOverlay.setProgress(progress / 100.0);
                 }
             }
 
@@ -273,7 +273,7 @@ public class MultipartPathOverlayActivity extends AppCompatActivity implements O
         naverMap.setOnMapClickListener((point, coord) -> {
             double progress = GeometryUtils.getProgressForCoordParts(multipartPathOverlay.getCoordParts(), coord);
             multipartPathOverlay.setProgress(progress);
-            progressSeekBar.setProgress((int)(progress * 100));
+            progressSeekBar.setProgress((int)(progress * 100) + 100);
         });
     }
 }

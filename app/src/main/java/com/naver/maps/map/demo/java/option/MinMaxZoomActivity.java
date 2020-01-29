@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2019 NAVER Corp.
+ * Copyright 2018-2020 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
@@ -33,7 +34,7 @@ public class MinMaxZoomActivity extends AppCompatActivity implements OnMapReadyC
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_map_fragment);
+        setContentView(R.layout.activity_min_max_zoom);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -60,5 +61,8 @@ public class MinMaxZoomActivity extends AppCompatActivity implements OnMapReadyC
 
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
+        TextView zoom = findViewById(R.id.zoom);
+        naverMap.addOnCameraChangeListener((reason, animated) ->
+            zoom.setText(getString(R.string.format_zoom, naverMap.getCameraPosition().zoom)));
     }
 }

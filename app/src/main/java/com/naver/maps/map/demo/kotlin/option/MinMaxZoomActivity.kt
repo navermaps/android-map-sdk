@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2019 NAVER Corp.
+ * Copyright 2018-2020 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,12 +23,13 @@ import com.naver.maps.map.NaverMap
 import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
+import kotlinx.android.synthetic.main.activity_min_max_zoom.*
 
 class MinMaxZoomActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_map_fragment)
+        setContentView(R.layout.activity_min_max_zoom)
 
         supportActionBar?.let {
             it.setDisplayHomeAsUpEnabled(true)
@@ -51,5 +52,8 @@ class MinMaxZoomActivity : AppCompatActivity(), OnMapReadyCallback {
             }
 
     override fun onMapReady(naverMap: NaverMap) {
+        naverMap.addOnCameraChangeListener { _, _ ->
+            zoom.text = getString(R.string.format_zoom, naverMap.cameraPosition.zoom)
+        }
     }
 }

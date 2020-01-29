@@ -26,8 +26,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:max="100"
-        android:progress="30"
+        android:max="200"
+        android:progress="130"
         app:layout_constraintEnd_toStartOf="@+id/value_progress"
         app:layout_constraintStart_toEndOf="@+id/label_progress"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,3 +1,24 @@
+# 3.7.0
+
+Release Date: 2020-01-29
+
+### 새로운 기능
+
+- 지도의 줌 레벨과 오버레이의 최소/최대 줌 레벨이 동일할 때 오버레이를 보일지 여부를 지정하는 기능 추가
+  - `Overlay#isMinZoomInclusive` / `Overlay#isMaxZoomInclusive`
+- 특정 영역이 화면에 온전히 보이는 최대 줌 레벨을 반환하는 유틸리티 메서드 추가
+  - `CameraUtils#getFittableZoom()`
+
+### 개선
+
+- 경로선 진척률을 음수로 지정할 수 있도록 개선
+  - `PathOverlay#progress` / `MultipartPathOverlay#progress`
+
+### 버그 수정
+
+- 지도를 터치하면 카메라가 이동하지 않았는데도 `OnCameraIdleListener#onCameraIdle()`이 호출되는 오류 수정
+- 카메라의 영역을 제한하고 영역 바깥쪽에서 제스처로 지도를 스크롤하면 카메라가 잘못된 위치로 이동하는 현상 수정 
+
 # 3.6.2
 
 Release Date: 2019-12-02
@@ -29,12 +50,12 @@ Release Date: 2019-09-20
 - 마커 캡션이 다른 요소와 겹칠 경우 동적으로 다른 곳에 배치하는 옵션 추가
   - `Marker#getCaptionAligns()` / `setCaptionAligns()`
 - 마커가 충돌되어 사라지더라도 자신의 영역을 유지하도록 하는 옵션 추가
-  - `Marker#occupySpaceOnCollision`
+  - `Marker#isOccupySpaceOnCollision`
 - 경로선과 겹치는 마커, 캡션, 지도 심벌을 숨기는 기능 추가
   - `PathOverlay#isHideCollidedSymbols` / `isHideCollidedMarkers` / `isHideCollidedCaptions`
   - `MultipartPathOverlay#isHideCollidedSymbols` / `isHideCollidedMarkers` / `isHideCollidedCaptions`
 - 카메라 이동 트랜지션 취소 시 원인을 전달할 수 있도록 `reason` 파라메터 추가
-  - `NaverMap.cancelTransitions(int)`
+  - `NaverMap#cancelTransitions(int)`
 
 ### 개선
 
@@ -44,7 +65,7 @@ Release Date: 2019-09-20
 ### 버그 수정
 
 - `PolylineOverlay`의 `capType`, `joinType`이 적용되지 않는 오류 수정
-- `NaverMapOptions.useTextureView(true)` 지정시 크래시가 발생하는 오류 수정
+- `NaverMapOptions#useTextureView(true)` 지정시 크래시가 발생하는 오류 수정
 - `onDestroy()`를 부르기 전에 지도 뷰가 윈도우에서 떨어져나갈 경우 ANR이 발생하는 현상 수정
 - `PolylineOverlay`에 일부 크랙이 발생하는 현상 수정
 - `extent`를 지정하고 지도를 빠르게 패닝하면 지도가 잘못된 방향으로 이동하는 현상 수정

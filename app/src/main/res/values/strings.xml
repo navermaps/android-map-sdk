@@ -78,6 +78,14 @@
     <string name="name_arrowhead_path_overlay">Arrowhead Path</string>
     <string name="description_arrowhead_path_overlay">화살표 오버레이</string>
 
+    <string name="name_overlay_min_max_zoom">Overlay Min/Max Zoom</string>
+    <string name="description_overlay_min_max_zoom">오버레이의 최소/최대 줌레벨 제한</string>
+    <string name="format_zoom">%.2f</string>
+    <string name="caption_marker_1">[15, 17]</string>
+    <string name="caption_marker_2">(15, 17]</string>
+    <string name="caption_marker_3">[15, 17)</string>
+    <string name="caption_marker_4">(15, 17)</string>
+
     <string name="name_global_z_index">Global Z-Index</string>
     <string name="description_global_z_index">오버레이간 계층 지정</string>
     <string name="marker_over_path">경로선 위에 위치한 마커</string>

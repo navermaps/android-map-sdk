@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/map_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/zoom"
+        android:layout_width="64sp"
+        android:layout_height="36sp"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@drawable/rounded_rectangle"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="16.00" />
+
+</merge>
