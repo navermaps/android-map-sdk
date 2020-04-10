@@ -74,22 +74,28 @@ class NightModeActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         naverMap.addOnOptionChangeListener {
-            if (nightModeEnabled != naverMap.isNightModeEnabled) {
-                nightModeEnabled = naverMap.isNightModeEnabled
+            if (nightModeEnabled == naverMap.isNightModeEnabled) {
+                return@addOnOptionChangeListener
+            }
 
-                naverMap.setBackgroundResource(run {
-                    if (nightModeEnabled) {
-                        NaverMap.DEFAULT_BACKGROUND_DRWABLE_DARK
-                    } else {
-                        NaverMap.DEFAULT_BACKGROUND_DRWABLE_LIGHT
-                    }
-                })
+            nightModeEnabled = naverMap.isNightModeEnabled
 
-                val icon = if (nightModeEnabled) MarkerIcons.GRAY else Marker.DEFAULT_ICON
+            naverMap.backgroundColor = if (nightModeEnabled) {
+                NaverMap.DEFAULT_BACKGROUND_COLOR_DARK
+            } else {
+                NaverMap.DEFAULT_BACKGROUND_COLOR_LIGHT
+            }
 
-                markers.forEach { marker ->
-                    marker.icon = icon
-                }
+            naverMap.setBackgroundResource(if (nightModeEnabled) {
+                NaverMap.DEFAULT_BACKGROUND_DRWABLE_DARK
+            } else {
+                NaverMap.DEFAULT_BACKGROUND_DRWABLE_LIGHT
+            })
+
+            val icon = if (nightModeEnabled) MarkerIcons.GRAY else Marker.DEFAULT_ICON
+
+            markers.forEach { marker ->
+                marker.icon = icon
             }
         }
 

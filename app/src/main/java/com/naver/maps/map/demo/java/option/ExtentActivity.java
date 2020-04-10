@@ -69,12 +69,7 @@ public class ExtentActivity extends AppCompatActivity implements OnMapReadyCallb
         naverMap.moveCamera(CameraUpdate.fitBounds(MapConstants.EXTENT_KOREA, padding));
 
         PolylineOverlay polylineOverlay = new PolylineOverlay();
-        polylineOverlay.setCoords(Arrays.asList(
-            MapConstants.EXTENT_KOREA.getSouthWest(),
-            MapConstants.EXTENT_KOREA.getNorthWest(),
-            MapConstants.EXTENT_KOREA.getNorthEast(),
-            MapConstants.EXTENT_KOREA.getSouthEast(),
-            MapConstants.EXTENT_KOREA.getSouthWest()));
+        polylineOverlay.setCoords(Arrays.asList(MapConstants.EXTENT_KOREA.toPolygon()));
         polylineOverlay.setMap(naverMap);
     }
 }

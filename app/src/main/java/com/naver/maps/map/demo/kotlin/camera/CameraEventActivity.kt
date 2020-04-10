@@ -30,7 +30,6 @@ import kotlinx.android.synthetic.main.activity_camera_event.*
 import org.jetbrains.anko.toast
 
 class CameraEventActivity : AppCompatActivity(), OnMapReadyCallback {
-    private var positionFlag = false
     private var moving = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,25 +72,24 @@ class CameraEventActivity : AppCompatActivity(), OnMapReadyCallback {
             if (moving) {
                 naverMap.cancelTransitions()
             } else {
-                val coord = if (positionFlag) COORD_2 else COORD_1
-
-                naverMap.moveCamera(CameraUpdate.scrollTo(coord)
-                        .animate(CameraAnimation.Fly, 5000)
+                naverMap.moveCamera(CameraUpdate.scrollTo(COORD_1)
+                        .animate(CameraAnimation.Fly, 3000)
                         .cancelCallback {
-                            moving = false
-                            fab.setImageResource(R.drawable.ic_play_arrow_black_24dp)
-                            toast(R.string.camera_update_cancelled)
+                            setIdle(R.string.camera_update_cancelled)
                         }
                         .finishCallback {
-                            moving = false
-                            fab.setImageResource(R.drawable.ic_play_arrow_black_24dp)
-                            toast(R.string.camera_update_finished)
+                            naverMap.moveCamera(CameraUpdate.scrollTo(COORD_2)
+                                    .animate(CameraAnimation.Fly, 3000)
+                                    .cancelCallback {
+                                        setIdle(R.string.camera_update_cancelled)
+                                    }
+                                    .finishCallback {
+                                        setIdle(R.string.camera_update_finished)
+                                    })
                         })
 
                 moving = true
                 fab.setImageResource(R.drawable.ic_stop_black_24dp)
-
-                positionFlag = !positionFlag
             }
         }
 
@@ -106,6 +104,12 @@ class CameraEventActivity : AppCompatActivity(), OnMapReadyCallback {
             camera_idle.text = getString(R.string.format_camera_position,
                     position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing)
         }
+    }
+
+    private fun setIdle(message: Int) {
+        moving = false
+        fab.setImageResource(R.drawable.ic_play_arrow_black_24dp)
+        toast(message)
     }
 
     companion object {

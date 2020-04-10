@@ -266,6 +266,12 @@
     <string name="location_tracking_mode_follow">Follow</string>
     <string name="location_tracking_mode_face">Face</string>
 
+    <string name="name_location_activation_hook">Location Activation Hook</string>
+    <string name="description_location_activation_hook">위치 활성화시 사용자에게 확인 창 노출</string>
+    <string name="location_activation_confirm">지도에 현재 위치를 표시하시겠습니까?</string>
+    <string name="yes">네</string>
+    <string name="no">아니요</string>
+
     <string name="name_custom_location_source">Custom Location Source</string>
     <string name="description_custom_location_source">커스텀 위치 소스 지정</string>
     <string name="format_location_changed">위치 변경\n(%1$.5f, %2$.5f)</string>

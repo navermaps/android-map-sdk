@@ -44,18 +44,16 @@ class CustomLocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
             if (locationResult == null) {
                 return
             }
-            map?.let { map ->
-                val lastLocation = locationResult.lastLocation
-                val coord = LatLng(lastLocation)
-                val locationOverlay = map.locationOverlay
-                locationOverlay.position = coord
-                locationOverlay.bearing = lastLocation.bearing
-                map.moveCamera(CameraUpdate.scrollTo(coord))
-                if (waiting) {
-                    waiting = false
-                    fab.setImageResource(R.drawable.ic_location_disabled_black_24dp)
-                    locationOverlay.isVisible = true
-                }
+            val lastLocation = locationResult.lastLocation
+            val coord = LatLng(lastLocation)
+            val locationOverlay = map.locationOverlay
+            locationOverlay.position = coord
+            locationOverlay.bearing = lastLocation.bearing
+            map.moveCamera(CameraUpdate.scrollTo(coord))
+            if (waiting) {
+                waiting = false
+                fab.setImageResource(R.drawable.ic_location_disabled_black_24dp)
+                locationOverlay.isVisible = true
             }
         }
     }
@@ -63,7 +61,7 @@ class CustomLocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
     private var trackingEnabled: Boolean = false
     private var locationEnabled: Boolean = false
     private var waiting: Boolean = false
-    private var map: NaverMap? = null
+    private lateinit var map: NaverMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

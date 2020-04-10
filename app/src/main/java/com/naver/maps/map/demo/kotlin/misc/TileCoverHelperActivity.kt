@@ -64,12 +64,7 @@ class TileCoverHelperActivity : AppCompatActivity(), OnMapReadyCallback {
                     overlays.put(tileId, PolygonOverlay().apply {
                         val bounds = TileId.toLatLngBounds(tileId)
 
-                        coords = listOf(
-                                bounds.southWest,
-                                bounds.northWest,
-                                bounds.northEast,
-                                bounds.southEast,
-                                bounds.southWest)
+                        coords = bounds.toPolygon().toList()
                         color = Color.argb(
                                 63,
                                 (Math.random() * 255 + 0.5).toInt(),

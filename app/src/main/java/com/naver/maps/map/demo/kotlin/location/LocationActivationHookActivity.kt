@@ -15,7 +15,9 @@
  */
 package com.naver.maps.map.demo.kotlin.location
 
+import android.app.AlertDialog
 import android.os.Bundle
+import android.support.v4.app.DialogFragment
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.naver.maps.map.LocationTrackingMode
@@ -25,16 +27,33 @@ import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.util.FusedLocationSource
-import kotlinx.android.synthetic.main.activity_location_tracking.*
+import com.naver.maps.map.util.FusedLocationSource.ActivationHook
 
-class LocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
+class LocationActivationHookActivity : AppCompatActivity(), OnMapReadyCallback {
+    class LocationConfirmDialogFragment : DialogFragment() {
+        override fun onCreateDialog(savedInstanceState: Bundle?): AlertDialog =
+                AlertDialog.Builder(requireActivity())
+                        .setTitle(R.string.location_activation_confirm)
+                        .setPositiveButton(R.string.yes) { _, _ ->
+                            (activity as? LocationActivationHookActivity)?.continueLocationTracking()
+                        }
+                        .setNegativeButton(R.string.no) { _, _ ->
+                            (activity as? LocationActivationHookActivity)?.cancelLocationTracking()
+                        }
+                        .setOnCancelListener {
+                            (activity as? LocationActivationHookActivity)?.cancelLocationTracking()
+                        }
+                        .create()
+    }
+
     private lateinit var locationSource: FusedLocationSource
     private lateinit var map: NaverMap
+    private var locationActivationCallback: Runnable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_location_tracking)
+        setContentView(R.layout.activity_map_fragment)
 
         supportActionBar?.let {
             it.setDisplayHomeAsUpEnabled(true)
@@ -47,7 +66,24 @@ class LocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
                 }
         mapFragment.getMapAsync(this)
 
-        locationSource = FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE)
+        locationSource = FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE).apply {
+            activationHook = ActivationHook { continueCallback: Runnable ->
+                locationActivationCallback = continueCallback
+                LocationConfirmDialogFragment().show(supportFragmentManager, null)
+            }
+        }
+    }
+
+    private fun continueLocationTracking() {
+        locationActivationCallback?.let {
+            it.run()
+            locationActivationCallback = null
+            locationSource.activationHook = null
+        }
+    }
+
+    private fun cancelLocationTracking() {
+        map.locationTrackingMode = LocationTrackingMode.None
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
@@ -70,33 +106,11 @@ class LocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(naverMap: NaverMap) {
         map = naverMap
-
         naverMap.locationSource = locationSource
-
-        location_tracking_mode_none.setOnClickListener {
-            naverMap.locationTrackingMode = LocationTrackingMode.None
-        }
-        location_tracking_mode_no_follow.setOnClickListener {
-            naverMap.locationTrackingMode = LocationTrackingMode.NoFollow
-        }
-        location_tracking_mode_follow.setOnClickListener {
-            naverMap.locationTrackingMode = LocationTrackingMode.Follow
-        }
-        location_tracking_mode_face.setOnClickListener {
-            naverMap.locationTrackingMode = LocationTrackingMode.Face
-        }
-
         naverMap.addOnOptionChangeListener {
             val mode = naverMap.locationTrackingMode
-            location_tracking_mode_none.isChecked = mode == LocationTrackingMode.None
-            location_tracking_mode_no_follow.isChecked = mode == LocationTrackingMode.NoFollow
-            location_tracking_mode_follow.isChecked = mode == LocationTrackingMode.Follow
-            location_tracking_mode_face.isChecked = mode == LocationTrackingMode.Face
-
             locationSource.isCompassEnabled = mode == LocationTrackingMode.Follow || mode == LocationTrackingMode.Face
         }
-
-        naverMap.locationTrackingMode = LocationTrackingMode.Follow
     }
 
     companion object {

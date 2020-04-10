@@ -39,7 +39,7 @@ public class CameraEventActivity extends AppCompatActivity implements OnMapReady
     private static final LatLng COORD_1 = new LatLng(35.1798159, 129.0750222);
     private static final LatLng COORD_2 = new LatLng(37.5666102, 126.9783881);
 
-    private boolean positionFlag;
+    private FloatingActionButton fab;
     private boolean moving;
 
     @Override
@@ -81,30 +81,21 @@ public class CameraEventActivity extends AppCompatActivity implements OnMapReady
         marker2.setPosition(COORD_2);
         marker2.setMap(naverMap);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
         fab.setOnClickListener(v -> {
             if (moving) {
                 naverMap.cancelTransitions();
             } else {
-                LatLng coord = positionFlag ? COORD_2 : COORD_1;
-
-                naverMap.moveCamera(CameraUpdate.scrollTo(coord)
-                    .animate(CameraAnimation.Fly, 5000)
-                    .cancelCallback(() -> {
-                        moving = false;
-                        fab.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                        Toast.makeText(this, R.string.camera_update_cancelled, Toast.LENGTH_SHORT).show();
-                    })
-                    .finishCallback(() -> {
-                        moving = false;
-                        fab.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                        Toast.makeText(this, R.string.camera_update_finished, Toast.LENGTH_SHORT).show();
-                    }));
+                naverMap.moveCamera(CameraUpdate.scrollTo(COORD_1)
+                    .animate(CameraAnimation.Fly, 3000)
+                    .cancelCallback(() -> setIdle(R.string.camera_update_cancelled))
+                    .finishCallback(() -> naverMap.moveCamera(CameraUpdate.scrollTo(COORD_2)
+                        .animate(CameraAnimation.Fly, 3000)
+                        .cancelCallback(() -> setIdle(R.string.camera_update_cancelled))
+                        .finishCallback(() -> setIdle(R.string.camera_update_finished)))));
 
                 moving = true;
                 fab.setImageResource(R.drawable.ic_stop_black_24dp);
-
-                positionFlag = !positionFlag;
             }
         });
 
@@ -121,5 +112,11 @@ public class CameraEventActivity extends AppCompatActivity implements OnMapReady
             cameraIdle.setText(getString(R.string.format_camera_position,
                 position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing));
         });
+    }
+
+    private void setIdle(int message) {
+        moving = false;
+        fab.setImageResource(R.drawable.ic_play_arrow_black_24dp);
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

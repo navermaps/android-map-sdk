@@ -15,13 +15,16 @@
  */
 package com.naver.maps.map.demo.java.location;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.CheckedTextView;
 
 import com.naver.maps.map.LocationTrackingMode;
 import com.naver.maps.map.MapFragment;
@@ -31,17 +34,47 @@ import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
 import com.naver.maps.map.util.FusedLocationSource;
 
-public class LocationTrackingActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class LocationActivationHookActivity extends AppCompatActivity implements OnMapReadyCallback {
+    public static class LocationConfirmDialogFragment extends DialogFragment {
+        @NonNull
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            return new AlertDialog.Builder(requireActivity())
+                .setTitle(R.string.location_activation_confirm)
+                .setPositiveButton(R.string.yes, (dialog, whichButton) -> {
+                    Activity activity = getActivity();
+                    if (activity != null) {
+                        ((LocationActivationHookActivity)activity).continueLocationTracking();
+                    }
+                })
+                .setNegativeButton(R.string.no, (dialog, whichButton) -> {
+                    Activity activity = getActivity();
+                    if (activity != null) {
+                        ((LocationActivationHookActivity)activity).cancelLocationTracking();
+                    }
+                })
+                .setOnCancelListener(dialog -> {
+                    Activity activity = getActivity();
+                    if (activity != null) {
+                        ((LocationActivationHookActivity)activity).cancelLocationTracking();
+                    }
+                })
+                .create();
+        }
+    }
+
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 100;
 
     private FusedLocationSource locationSource;
+    @Nullable
+    private Runnable locationActivationCallback;
     private NaverMap map;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_location_tracking);
+        setContentView(R.layout.activity_map_fragment);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -57,6 +90,21 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
         mapFragment.getMapAsync(this);
 
         locationSource = new FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE);
+        locationSource.setActivationHook(continueCallback -> {
+            locationActivationCallback = continueCallback;
+            new LocationConfirmDialogFragment().show(getSupportFragmentManager(), null);
+        });
+    }
+
+    private void continueLocationTracking() {
+        if (locationActivationCallback != null) {
+            locationActivationCallback.run();
+            locationActivationCallback = null;
+            locationSource.setActivationHook(null);
+        }
+    }
+    private void cancelLocationTracking() {
+        map.setLocationTrackingMode(LocationTrackingMode.None);
     }
 
     @Override
@@ -83,29 +131,10 @@ public class LocationTrackingActivity extends AppCompatActivity implements OnMap
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
         map = naverMap;
-
         naverMap.setLocationSource(locationSource);
-
-        CheckedTextView none = findViewById(R.id.location_tracking_mode_none);
-        CheckedTextView noFollow = findViewById(R.id.location_tracking_mode_no_follow);
-        CheckedTextView follow = findViewById(R.id.location_tracking_mode_follow);
-        CheckedTextView face = findViewById(R.id.location_tracking_mode_face);
-
-        none.setOnClickListener(v -> naverMap.setLocationTrackingMode(LocationTrackingMode.None));
-        noFollow.setOnClickListener(v -> naverMap.setLocationTrackingMode(LocationTrackingMode.NoFollow));
-        follow.setOnClickListener(v -> naverMap.setLocationTrackingMode(LocationTrackingMode.Follow));
-        face.setOnClickListener(v -> naverMap.setLocationTrackingMode(LocationTrackingMode.Face));
-
         naverMap.addOnOptionChangeListener(() -> {
             LocationTrackingMode mode = naverMap.getLocationTrackingMode();
-            none.setChecked(mode == LocationTrackingMode.None);
-            noFollow.setChecked(mode == LocationTrackingMode.NoFollow);
-            follow.setChecked(mode == LocationTrackingMode.Follow);
-            face.setChecked(mode == LocationTrackingMode.Face);
-
             locationSource.setCompassEnabled(mode == LocationTrackingMode.Follow || mode == LocationTrackingMode.Face);
         });
-
-        naverMap.setLocationTrackingMode(LocationTrackingMode.Follow);
     }
 }

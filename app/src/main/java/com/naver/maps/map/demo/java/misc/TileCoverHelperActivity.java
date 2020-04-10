@@ -78,12 +78,7 @@ public class TileCoverHelperActivity extends AppCompatActivity implements OnMapR
                 LatLngBounds bounds = TileId.toLatLngBounds(tileId);
 
                 PolygonOverlay overlay = new PolygonOverlay();
-                overlay.setCoords(Arrays.asList(
-                    bounds.getSouthWest(),
-                    bounds.getNorthWest(),
-                    bounds.getNorthEast(),
-                    bounds.getSouthEast(),
-                    bounds.getSouthWest()));
+                overlay.setCoords(Arrays.asList(bounds.toPolygon()));
                 overlay.setColor(Color.argb(
                     63,
                     (int)(Math.random() * 255 + 0.5),

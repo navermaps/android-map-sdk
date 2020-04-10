@@ -486,6 +486,16 @@
             android:description="@string/description_location_tracking"
             android:label="@string/name_location_tracking" />
         <activity
+            android:name=".java.location.LocationActivationHookActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_location_activation_hook"
+            android:label="@string/name_location_activation_hook" />
+        <activity
+            android:name=".kotlin.location.LocationActivationHookActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_location_tracking"
+            android:label="@string/name_location_activation_hook" />
+        <activity
             android:name=".java.location.CustomLocationSourceActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_custom_location_source"

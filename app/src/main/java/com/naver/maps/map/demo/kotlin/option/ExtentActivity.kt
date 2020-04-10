@@ -59,12 +59,7 @@ class ExtentActivity : AppCompatActivity(), OnMapReadyCallback {
         naverMap.moveCamera(CameraUpdate.fitBounds(MapConstants.EXTENT_KOREA, padding))
 
         PolylineOverlay().apply {
-            coords = listOf(
-                    MapConstants.EXTENT_KOREA.southWest,
-                    MapConstants.EXTENT_KOREA.northWest,
-                    MapConstants.EXTENT_KOREA.northEast,
-                    MapConstants.EXTENT_KOREA.southEast,
-                    MapConstants.EXTENT_KOREA.southWest)
+            coords = MapConstants.EXTENT_KOREA.toPolygon().toList()
             map = naverMap
         }
     }

@@ -1,3 +1,26 @@
+# 3.8.0
+
+Release Date: 2020-04-10
+
+### 새로운 기능
+
+- `FusedLocationSource`가 활성화되어 있는지에 대한 상태 속성 추가
+  - `FusedLocationSource#isActivated`
+- `FusedLocationSource`가 활성화되기 직전에 후킹하는 기능 추가
+  - `FusedLocationSource.ActivationHook`, `FusedLocationSource#activationHook`
+
+### 개선
+
+- 마커간 우선순위가 동일할 경우 아이콘이 먼저 자리를 잡은 후 캡션이 자리를 잡도록 개선
+- 마커 캡션의 오프셋에 음수를 지정할 수 있도록 개선
+- 카메라 이동이 연속적으로 일어날 때에는 `OnCameraIdleListener#onCameraIdle()`이 호출되지 않도록 개선
+
+### 버그 수정
+
+- `Marker#subCaptionRequestedWidth`를 변경해도 보조 캡션의 너비가 즉시 변경되지 않는 현상 수정
+- `LatLngBounds`가 클 때 `CameraUtils.getFittableZoom()` 및 `CameraUpdate.fitBounds()`에 오차가 발생하는 오류 수정
+- 인터넷이 오프라인일 때 캐시가 되어있더라도 심벌이 나타나지 않는 현상 수정
+
 # 3.7.1
 
 Release Date: 2020-03-09
