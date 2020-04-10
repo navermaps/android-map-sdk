@@ -619,18 +619,19 @@
 </div></p>
 <p><code>FusedLocationSource</code>&#xB294; &#xB7F0;&#xD0C0;&#xC784; &#xAD8C;&#xD55C; &#xCC98;&#xB9AC;&#xB97C; &#xC704;&#xD574; &#xC561;&#xD2F0;&#xBE44;&#xD2F0; &#xB610;&#xB294; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8;&#xB97C; &#xD544;&#xC694;&#xB85C; &#xD569;&#xB2C8;&#xB2E4;. &#xC0DD;&#xC131;&#xC790;&#xC5D0; &#xC561;&#xD2F0;&#xBE44;&#xD2F0;&#xB098; &#xD504;&#xB798;&#xADF8;&#xBA3C;&#xD2B8; &#xAC1D;&#xCCB4;&#xB97C; &#xC804;&#xB2EC;&#xD558;&#xACE0; &#xAD8C;&#xD55C; &#xC694;&#xCCAD; &#xCF54;&#xB4DC;&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; <code>onRequestPermissionResult()</code>&#xC758; &#xACB0;&#xACFC;&#xB97C; <code>FusedLocationSource</code>&#xC758; <a href="ref://../reference/com/naver/maps/map/util/FusedLocationSource.html#onRequestPermissionsResult-int-java.lang.String:A-int:A-" target="_blank"><code>onRequestPermissionsResult()</code></a>&#xC5D0; &#xC804;&#xB2EC;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC74C;&#xC740; &#xC561;&#xD2F0;&#xBE44;&#xD2F0;&#xC5D0;&#xC11C; <code>FusedLocationSource</code>&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; <code>NaverMap</code>&#xC5D0; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<p><div id="6766fd11d7bfb0f6adedccab299469dd" class="gbcg gbcg-codegroup">
+<p><div id="25a3648f855b7713d24dc73086ac6421" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-2c91476049783d201988aa4833366d87" class="gbcg-selector gbcg-active" data-tab="0-2c91476049783d201988aa4833366d87" data-tab-category="undefined">Java</a>
-    <a id="select-1-1665ec109b95ae0fee69c4321940e5d5" class="gbcg-selector" data-tab="1-1665ec109b95ae0fee69c4321940e5d5" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-25f3a85fa2ff5b9966a79a9e605de9ff" class="gbcg-selector gbcg-active" data-tab="0-25f3a85fa2ff5b9966a79a9e605de9ff" data-tab-category="undefined">Java</a>
+    <a id="select-1-3e289d67f18294f6aa26ec33d23dbe69" class="gbcg-selector" data-tab="1-3e289d67f18294f6aa26ec33d23dbe69" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-2c91476049783d201988aa4833366d87" class="gbcg-tab-item gbcb-Java">
+      <div id="0-25f3a85fa2ff5b9966a79a9e605de9ff" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LocationTrackingActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AppCompatActivity</span>
     <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> LOCATION_PERMISSION_REQUEST_CODE = <span class="hljs-number">1000</span>;
     <span class="hljs-keyword">private</span> FusedLocationSource locationSource;
+    <span class="hljs-keyword">private</span> NaverMap naverMap;
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
@@ -645,6 +646,9 @@
         @NonNull String[] permissions,  @NonNull <span class="hljs-keyword">int</span>[] grantResults)</span> </span>{
         <span class="hljs-keyword">if</span> (locationSource.onRequestPermissionsResult(
             requestCode, permissions, grantResults)) {
+            <span class="hljs-keyword">if</span> (!locationSource.isActivated()) { <span class="hljs-comment">// &#xAD8C;&#xD55C; &#xAC70;&#xBD80;&#xB428;</span>
+                naverMap.setLocationTrackingMode(LocationTrackingMode.None);
+            }
             <span class="hljs-keyword">return</span>;
         }
         <span class="hljs-keyword">super</span>.onRequestPermissionsResult(
@@ -653,6 +657,7 @@
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMapReady</span><span class="hljs-params">(@NonNull NaverMap naverMap)</span> </span>{
+        <span class="hljs-keyword">this</span>.naverMap = naverMap;
         naverMap.setLocationSource(locationSource);
     }
 }
@@ -661,12 +666,13 @@
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-2c91476049783d201988aa4833366d87" id="java">Java</h3>
-        <div id="0-2c91476049783d201988aa4833366d87" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-25f3a85fa2ff5b9966a79a9e605de9ff" id="java">Java</h3>
+        <div id="0-25f3a85fa2ff5b9966a79a9e605de9ff" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LocationTrackingActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AppCompatActivity</span>
     <span class="hljs-keyword">implements</span> <span class="hljs-title">OnMapReadyCallback</span> </span>{
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> LOCATION_PERMISSION_REQUEST_CODE = <span class="hljs-number">1000</span>;
     <span class="hljs-keyword">private</span> FusedLocationSource locationSource;
+    <span class="hljs-keyword">private</span> NaverMap naverMap;
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>{
@@ -681,6 +687,9 @@
         @NonNull String[] permissions,  @NonNull <span class="hljs-keyword">int</span>[] grantResults)</span> </span>{
         <span class="hljs-keyword">if</span> (locationSource.onRequestPermissionsResult(
             requestCode, permissions, grantResults)) {
+            <span class="hljs-keyword">if</span> (!locationSource.isActivated()) { <span class="hljs-comment">// &#xAD8C;&#xD55C; &#xAC70;&#xBD80;&#xB428;</span>
+                naverMap.setLocationTrackingMode(LocationTrackingMode.None);
+            }
             <span class="hljs-keyword">return</span>;
         }
         <span class="hljs-keyword">super</span>.onRequestPermissionsResult(
@@ -689,6 +698,7 @@
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onMapReady</span><span class="hljs-params">(@NonNull NaverMap naverMap)</span> </span>{
+        <span class="hljs-keyword">this</span>.naverMap = naverMap;
         naverMap.setLocationSource(locationSource);
     }
 }
@@ -696,10 +706,11 @@
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-1665ec109b95ae0fee69c4321940e5d5" id="kotlin">Kotlin</h3>
-        <div id="1-1665ec109b95ae0fee69c4321940e5d5" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-3e289d67f18294f6aa26ec33d23dbe69" id="kotlin">Kotlin</h3>
+        <div id="1-3e289d67f18294f6aa26ec33d23dbe69" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LocationTrackingActivity</span> : <span class="hljs-type">AppCompatActivity</span></span>(), OnMapReadyCallback {
     <span class="hljs-keyword">private</span> lateinit <span class="hljs-variable"><span class="hljs-keyword">var</span> locationSource</span>: FusedLocationSource
+    <span class="hljs-keyword">private</span> lateinit <span class="hljs-variable"><span class="hljs-keyword">var</span> naverMap</span>: NaverMap
 
     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
         super.onCreate(savedInstanceState)
@@ -713,12 +724,16 @@
                                             grantResults: IntArray</span>)</span> {</span>
         <span class="hljs-keyword">if</span> (locationSource.onRequestPermissionsResult(requestCode, permissions,
                 grantResults)) {
+            <span class="hljs-keyword">if</span> (!locationSource.isActivated) { <span class="hljs-comment">// &#xAD8C;&#xD55C; &#xAC70;&#xBD80;&#xB428;</span>
+                naverMap.locationTrackingMode = LocationTrackingMode.None
+            }
             <span class="hljs-keyword">return</span>
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onMapReady</span><span class="hljs-params">(naverMap: <span class="hljs-type">NaverMap</span>)</span> {</span>
+        this.naverMap = naverMap
         naverMap.locationSource = locationSource
     }
 
@@ -1408,7 +1423,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"위치","level":"3.4.2","depth":2,"next":{"title":"오버레이","level":"3.5","depth":1,"ref":"","articles":[{"title":"오버레이 공통","level":"3.5.1","depth":2,"path":"5-1.md","ref":"5-1.md","articles":[]},{"title":"마커","level":"3.5.2","depth":2,"path":"5-2.md","ref":"5-2.md","articles":[]},{"title":"정보 창","level":"3.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},{"title":"셰이프","level":"3.5.4","depth":2,"path":"5-4.md","ref":"5-4.md","articles":[]},{"title":"위치 오버레이","level":"3.5.5","depth":2,"path":"5-5.md","ref":"5-5.md","articles":[]},{"title":"지상 오버레이","level":"3.5.6","depth":2,"path":"5-6.md","ref":"5-6.md","articles":[]},{"title":"경로선과 화살표","level":"3.5.7","depth":2,"path":"5-7.md","ref":"5-7.md","articles":[]}]},"previous":{"title":"사용자 인터페이스","level":"3.4.1","depth":2,"path":"4-1.md","ref":"4-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"4-2.md","mtime":"2020-03-09T06:40:35.441Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-09T06:40:37.161Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"위치","level":"3.4.2","depth":2,"next":{"title":"오버레이","level":"3.5","depth":1,"ref":"","articles":[{"title":"오버레이 공통","level":"3.5.1","depth":2,"path":"5-1.md","ref":"5-1.md","articles":[]},{"title":"마커","level":"3.5.2","depth":2,"path":"5-2.md","ref":"5-2.md","articles":[]},{"title":"정보 창","level":"3.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},{"title":"셰이프","level":"3.5.4","depth":2,"path":"5-4.md","ref":"5-4.md","articles":[]},{"title":"위치 오버레이","level":"3.5.5","depth":2,"path":"5-5.md","ref":"5-5.md","articles":[]},{"title":"지상 오버레이","level":"3.5.6","depth":2,"path":"5-6.md","ref":"5-6.md","articles":[]},{"title":"경로선과 화살표","level":"3.5.7","depth":2,"path":"5-7.md","ref":"5-7.md","articles":[]}]},"previous":{"title":"사용자 인터페이스","level":"3.4.1","depth":2,"path":"4-1.md","ref":"4-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"4-2.md","mtime":"2020-04-10T03:40:59.108Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-10T03:41:00.015Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
