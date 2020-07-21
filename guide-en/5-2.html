@@ -550,7 +550,7 @@
                                 <h1 id="marker">Marker</h1>
 <p>A marker is an overlay indicating a single location on the map. It is the most frequently used element on the map. It displays an icon and caption at the specified coordinates on the map. The icon and caption of a marker move along with the map, but maintain their form even if the map is zoomed in or out. A marker can also receive click events, consume them or propagate them to the map.</p>
 <h2 id="add-and-remove-markers">Add and remove markers</h2>
-<p>A <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html" target="_blank"><code>Marker</code></a> can be created just like a general Java object. Create an object, set coordinates in the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setPosition-com.naver.maps.geometry.LatLng-" target="_blank"><code>position</code></a> property, and set a map object in the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setMap-com.naver.maps.map.NaverMap-" target="_blank"><code>map</code></a> property to display a marker. Note that you should set the <code>position</code> property before setting the <code>map</code> property; otherwise an exception occurs.</p>
+<p>A <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html" target="_blank"><code>Marker</code></a> can be created just like a general Java object. Create an object, set coordinates in the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setPosition%28com.naver.maps.geometry.LatLng%29" target="_blank"><code>position</code></a> property, and set a map object in the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setMap%28com.naver.maps.map.NaverMap%29" target="_blank"><code>map</code></a> property to display a marker. Note that you should set the <code>position</code> property before setting the <code>map</code> property; otherwise an exception occurs.</p>
 <p>The following code example creates a marker object and adds it to the map.</p>
 <p><div id="54ab10105ef7fdcc42c3646a84937384" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -622,7 +622,7 @@ marker.map = naverMap
   </div>
 </div></p>
 <h2 id="coordinates">Coordinates</h2>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setPosition-com.naver.maps.geometry.LatLng-" target="_blank"><code>position</code></a> property specifies coordinates. Coordinates are required; if you add a marker with no coordinates to the map, an exception occurs. If you change the coordinates of the marker that has already been added to the map, the marker moves to the position of the changed coordinates.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setPosition%28com.naver.maps.geometry.LatLng%29" target="_blank"><code>position</code></a> property specifies coordinates. Coordinates are required; if you add a marker with no coordinates to the map, an exception occurs. If you change the coordinates of the marker that has already been added to the map, the marker moves to the position of the changed coordinates.</p>
 <p>The following code example specifies a marker&#x2019;s coordinates.</p>
 <p><div id="ec0165cc1451b6d5ad28ffe48e45e38c" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -657,7 +657,7 @@ marker.map = naverMap
 <h2 id="icon">Icon</h2>
 <p>An icon is an important element that visually indicates a marker. Indicating a single location on the map like a pin, it cannot be omitted. You can specify the image and size of an icon.</p>
 <h3 id="image">Image</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setIcon-com.naver.maps.map.overlay.OverlayImage-" target="_blank"><code>icon</code></a> property specifies an icon. Before specifying an icon, you should create an <a href="ref://../reference/com/naver/maps/map/overlay/OverlayImage.html" target="_blank"><code>OverlayImage</code></a> object. <code>OverlayImage</code> is a class that represents bitmap images that can be used by overlays. Using the factory methods defined in this class, you can create an instance from resources, assets, bitmaps and views. As images to be used as marker icons should be handled depending on user devices&#x2019; dots per inch (DPI), using <a href="https://developer.android.com/guide/topics/resources/drawable-resource" target="_blank">Drawable resources</a> is recommended.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setIcon%28com.naver.maps.map.overlay.OverlayImage%29" target="_blank"><code>icon</code></a> property specifies an icon. Before specifying an icon, you should create an <a href="ref://../reference/com/naver/maps/map/overlay/OverlayImage.html" target="_blank"><code>OverlayImage</code></a> object. <code>OverlayImage</code> is a class that represents bitmap images that can be used by overlays. Using the factory methods defined in this class, you can create an instance from resources, assets, bitmaps and views. As images to be used as marker icons should be handled depending on user devices&#x2019; dots per inch (DPI), using <a href="https://developer.android.com/guide/topics/resources/drawable-resource" target="_blank">Drawable resources</a> is recommended.</p>
 <p>The following code example sets an icon for a marker.</p>
 <p><div id="490007252906f271a42f579b4626fefd" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -692,7 +692,7 @@ marker.map = naverMap
 <p><img src="../assets/5-2-change-icon.png" alt="Icon specified"></p>
 <p>The NAVER Maps SDK provides various built-in marker icons. For the list of icons available, refer to <a href="ref://../reference/com/naver/maps/map/util/MarkerIcons.html" target="_blank"><code>MarkerIcons</code></a>.</p>
 <h3 id="add-colors">Add colors</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setIconTintColor-com.naver.maps.map.overlay.OverlayImage-" target="_blank"><code>iconTintColor</code></a> property adds a color to an icon image. The color you specified is <a href="https://en.wikipedia.org/wiki/Additive_color" target="_blank">additive-mixed</a> with the color of an icon image. Note that the alpha of the additive color is ignored and only the alpha of the icon image color is used.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setIconTintColor%28com.naver.maps.map.overlay.OverlayImage%29" target="_blank"><code>iconTintColor</code></a> property adds a color to an icon image. The color you specified is <a href="https://en.wikipedia.org/wiki/Additive_color" target="_blank">additive-mixed</a> with the color of an icon image. Note that the alpha of the additive color is ignored and only the alpha of the icon image color is used.</p>
 <p>To make the mixed color vibrant, it is better to use a grayscale image icon. The NAVER Maps SDK provides built-in <a href="ref://../reference/com/naver/maps/map/util/MarkerIcons.html#BLACK" target="_blank"><code>MarkerIcons.BLACK</code></a>, which is appropriate for additive mixing.</p>
 <p>The following code example specifies a marker icon with <code>MarkerIcons.BLACK</code> and adds red to the icon.</p>
 <p><div id="94a2fef05f45ebc927b06681fb8ebed0" class="gbcg gbcg-codegroup">
@@ -730,7 +730,7 @@ marker.iconTintColor = Color.RED
 </div></p>
 <p><img src="../assets/5-2-tint-color.png" alt="iconTintColor specified"></p>
 <h3 id="size">Size</h3>
-<p>Set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setWidth-int-" target="_blank"><code>width</code></a> and <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setHeight-int-" target="_blank"><code>height</code></a> properties to change the size of an icon.</p>
+<p>Set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setWidth%28int%29" target="_blank"><code>width</code></a> and <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setHeight%28int%29" target="_blank"><code>height</code></a> properties to change the size of an icon.</p>
 <p>The following code example sets a marker&#x2019;s width and height to 50 px and 80 px, respectively.</p>
 <p><div id="252c6e13e6bb2d336d40b4695b1d1b93" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -802,7 +802,7 @@ marker.height = Marker.SIZE_AUTO
   </div>
 </div></p>
 <h3 id="anchor">Anchor</h3>
-<p>Using the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setAnchor-android.graphics.PointF-" target="_blank"><code>anchor</code></a> property, you can make the position indicated by an image match the position where a marker is placed. Anchor is the point on the icon image that will be placed at the coordinates of the marker. An anchor point is a proportion value where the top left is <code>(0, 0)</code>, and the bottom right is <code>(1, 1)</code>.</p>
+<p>Using the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setAnchor%28android.graphics.PointF%29" target="_blank"><code>anchor</code></a> property, you can make the position indicated by an image match the position where a marker is placed. Anchor is the point on the icon image that will be placed at the coordinates of the marker. An anchor point is a proportion value where the top left is <code>(0, 0)</code>, and the bottom right is <code>(1, 1)</code>.</p>
 <p>This property is useful when the default marker image is not used. For example, if you specify an image that has a tail at the bottom right as a marker&#x2019;s icon as shown below, the image points to the bottom right but the marker is anchored to the map based on the point at the bottom of the middle of the image, which makes a gap between the coordinates of the image and those of the marker.</p>
 <p><img src="../assets/5-2-distance.png" alt="Difference of coordinates between the image and the marker"></p>
 <p>In this case, set the anchor property to <code>(1, 1)</code>, which means the bottom right, to clear the coordinates difference between the image and the marker.</p>
@@ -839,7 +839,7 @@ marker.height = Marker.SIZE_AUTO
 </div></p>
 <p><img src="../assets/5-2-anchor.png" alt="Image anchor set to bottom right"></p>
 <h3 id="rotation">Rotation</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setAngle-float-" target="_blank"><code>angle</code></a> property rotates an icon. It becomes bigger clockwise, based on the upper side of the screen. That is, the direction is up for 0 degree, right for 90 degrees, and down for 180 degrees.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setAngle%28float%29" target="_blank"><code>angle</code></a> property rotates an icon. It becomes bigger clockwise, based on the upper side of the screen. That is, the direction is up for 0 degree, right for 90 degrees, and down for 180 degrees.</p>
 <p>The following code example rotates a marker&#x2019;s icon 90 degrees clockwise.</p>
 <p><div id="4bae544f40ff5d0581af303189383417" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -912,7 +912,7 @@ marker.angle = <span class="hljs-number">90</span>f
 <h3 id="flat">Flat</h3>
 <p>A marker basically maintains its shape even if users tilt or rotate the map.</p>
 <p><img src="../assets/5-2-no-flat.png" alt="Icon shape maintained even if the map is tilted or rotated"></p>
-<p>However, if the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setFlat-boolean-" target="_blank"><code>isFlat</code></a> property is set to <code>true</code>, the icon is flattened. Flat icons rotate and tilt as the camera rotates and tilts.</p>
+<p>However, if the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setFlat%28boolean%29" target="_blank"><code>isFlat</code></a> property is set to <code>true</code>, the icon is flattened. Flat icons rotate and tilt as the camera rotates and tilts.</p>
 <p>The following code example sets a marker icon to be flat.</p>
 <p><div id="fed27333cf35babb870eb7ef3fdbaa8f" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -945,7 +945,7 @@ marker.angle = <span class="hljs-number">90</span>f
   </div>
 </div></p>
 <p><img src="../assets/5-2-flat.png" alt="Flat icon"></p>
-<p>Specify the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setAngle-float-" target="_blank"><code>angle</code></a> property for a flat icon, then the icon is rotated against the map. The direction is north for 0 degree, east for 90 degrees, and south for 180 degrees.</p>
+<p>Specify the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setAngle%28float%29" target="_blank"><code>angle</code></a> property for a flat icon, then the icon is rotated against the map. The direction is north for 0 degree, east for 90 degrees, and south for 180 degrees.</p>
 <p>The following code example sets a marker&#x2019;s icon to be flat and rotates it 90 degrees clockwise.</p>
 <p><div id="07c88620499acd30e169827076948b76" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -984,7 +984,7 @@ marker.isFlat = <span class="hljs-literal">true</span>
 <h3 id="perspective">Perspective</h3>
 <p>Since markers are not displayed in perspective by default, there is no difference in size between the distant marker and the closer marker even if the map is tilted.</p>
 <p><img src="../assets/5-2-perspective-false.png" alt="Markers no in perspective"></p>
-<p>Set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setIconPerspectiveEnabled-boolean-" target="_blank"><code>isIconPerspectiveEnabled</code></a> property to <code>true</code> to apply perspective to icons. Icons displayed in perspective get bigger as they appear closer to the bottom of the screen, and smaller as farther.</p>
+<p>Set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setIconPerspectiveEnabled%28boolean%29" target="_blank"><code>isIconPerspectiveEnabled</code></a> property to <code>true</code> to apply perspective to icons. Icons displayed in perspective get bigger as they appear closer to the bottom of the screen, and smaller as farther.</p>
 <p>The following code example applies perspective to a marker&#x2019;s icon.</p>
 <p><div id="0b81daa8308277e7cf33e657355c0ba4" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1020,7 +1020,7 @@ marker.isFlat = <span class="hljs-literal">true</span>
 <h2 id="caption">Caption</h2>
 <p>A caption is text displayed with a marker image. It is used to show text information of the position which a marker points to.</p>
 <h3 id="text">Text</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionText-java.lang.String-" target="_blank"><code>captionText</code></a> property specifies text to be displayed as a caption. If the property is set to an empty string or <code>null</code>, a caption does not appear.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionText%28java.lang.String%29" target="_blank"><code>captionText</code></a> property specifies text to be displayed as a caption. If the property is set to an empty string or <code>null</code>, a caption does not appear.</p>
 <p>The following code example specifies the caption text of a marker a <code>&quot;Hello&quot;</code>.</p>
 <p><div id="b3908f42f01f889f3b90912c04be1da9" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1054,7 +1054,7 @@ marker.isFlat = <span class="hljs-literal">true</span>
 </div></p>
 <p><img src="../assets/5-2-caption.png" alt="Caption added"></p>
 <h3 id="line-break-of-caption-text">Line break of caption text</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionRequestedWidth-int-" target="_blank"><code>captionRequestedWidth</code></a> property limits the width of caption text. If a line of caption text is too long to fit the specified width, it automatically wraps. Note that if text is written without spaces, it may not wrap. If the property is set to <code>0</code>, caption text does not wrap.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionRequestedWidth%28int%29" target="_blank"><code>captionRequestedWidth</code></a> property limits the width of caption text. If a line of caption text is too long to fit the specified width, it automatically wraps. Note that if text is written without spaces, it may not wrap. If the property is set to <code>0</code>, caption text does not wrap.</p>
 <p>The following code example limits a marker&#x2019;s caption width to 200 px.</p>
 <p><div id="1611ceee01b49e86dfeed6a03e9d4d81" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1091,7 +1091,7 @@ marker.captionRequestedWidth = <span class="hljs-number">200</span>
 </div></p>
 <p><img src="../assets/5-2-caption-width.png" alt="Caption width specified"></p>
 <h3 id="direction">Direction</h3>
-<p>A cation is placed beneath an icon by default, but you can change the alignment with the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionAlign-com.naver.maps.map.overlay.Align-" target="_blank"><code>captionAlign</code></a> property. There are 9 available options including top, bottom, left, right, diagonal directions and center, which are defined in the <a href="ref://../reference/com/naver/maps/map/overlay/Align.html" target="_blank"><code>Align</code></a> enum.</p>
+<p>A cation is placed beneath an icon by default, but you can change the alignment with the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionAlign%28com.naver.maps.map.overlay.Align%29" target="_blank"><code>captionAlign</code></a> property. There are 9 available options including top, bottom, left, right, diagonal directions and center, which are defined in the <a href="ref://../reference/com/naver/maps/map/overlay/Align.html" target="_blank"><code>Align</code></a> enum.</p>
 <p>The following code example places a marker&#x2019;s caption above an icon.</p>
 <p><div id="6e4fd2f84ff0377d4a63fd9b0a72cd9b" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1124,7 +1124,7 @@ marker.captionRequestedWidth = <span class="hljs-number">200</span>
   </div>
 </div></p>
 <p><img src="../assets/5-2-caption-top.png" alt="Caption displayed above the icon"></p>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionOffset-int-" target="_blank"><code>captionOffset</code></a> property specifies the distance between the icon and the caption. Note that the <code>captionOffset</code> will be ignored if the <code>captionAlign</code> property is <code>CENTER</code>.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionOffset%28int%29" target="_blank"><code>captionOffset</code></a> property specifies the distance between the icon and the caption. Note that the <code>captionOffset</code> will be ignored if the <code>captionAlign</code> property is <code>CENTER</code>.</p>
 <p>The following code example specifies the distance between a marker&#x2019;s icon and caption to 30 px.</p>
 <p><div id="0c89a4951b5aec9c3af503cc22f03b5a" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1158,7 +1158,7 @@ marker.captionRequestedWidth = <span class="hljs-number">200</span>
 </div></p>
 <p><img src="../assets/5-2-offset.png" alt="Caption offset specified"></p>
 <h3 id="color">Color</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionColor-int-" target="_blank"><code>captionColor</code></a> property specifies a caption&#x2019;s color, the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionHaloColor-int-" target="_blank"><code>captionHaloColor</code></a> property specifies a caption&#x2019;s outline color.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionColor%28int%29" target="_blank"><code>captionColor</code></a> property specifies a caption&#x2019;s color, the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionHaloColor%28int%29" target="_blank"><code>captionHaloColor</code></a> property specifies a caption&#x2019;s outline color.</p>
 <p>The following code example sets a marker&#x2019;s caption color to blue, outline to light green.</p>
 <p><div id="1f696f062ae125c0dc48553c1ae96e1c" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1195,7 +1195,7 @@ marker.captionHaloColor = Color.rgb(<span class="hljs-number">200</span>, <span 
 </div></p>
 <p><img src="../assets/5-2-color.png" alt="Caption color specified"></p>
 <h3 id="size">Size</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionTextSize-float-" target="_blank"><code>captionTextSize</code></a> property specifies the size of caption text.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setCaptionTextSize%28float%29" target="_blank"><code>captionTextSize</code></a> property specifies the size of caption text.</p>
 <p>The following code example sets the size of a marker&#x2019;s caption text to 16 dp.</p>
 <p><div id="873e23965d7475bb372fdf54913090b3" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1230,7 +1230,7 @@ marker.captionHaloColor = Color.rgb(<span class="hljs-number">200</span>, <span 
 <p><img src="../assets/5-2-caption-size.png" alt="Caption size specified"></p>
 <h3 id="sub-caption">Sub caption</h3>
 <p>A sub caption is another caption that can be added to a main cation. Allowing you to specify its text, color and size, separate from the main caption&#x2019;s, sub captions are useful to provide addition information. Note that the alignment and offset of a sub caption cannot be specified; it is unconditionally placed beneath the main caption.</p>
-<p>The names of the properties of a sub caption are mostly the same as those of the main caption, except that they begin with <code>sub</code>, such as <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setSubCaptionText-java.lang.String-" target="_blank"><code>subCaptionText</code></a>, <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setSubCaptionColor-int-" target="_blank"><code>subCaptionColor</code></a>, <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setSubCaptionHaloColor-int-" target="_blank"><code>subCaptionHaloColor</code></a>, <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setSubCaptionTextSize-float-" target="_blank"><code>subCaptionTextSize</code></a>, and <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setSubCaptionRequestedWidth-int-" target="_blank"><code>subCaptionRequestedWidth</code></a>.</p>
+<p>The names of the properties of a sub caption are mostly the same as those of the main caption, except that they begin with <code>sub</code>, such as <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setSubCaptionText%28java.lang.String%29" target="_blank"><code>subCaptionText</code></a>, <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setSubCaptionColor%28int%29" target="_blank"><code>subCaptionColor</code></a>, <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setSubCaptionHaloColor%28int%29" target="_blank"><code>subCaptionHaloColor</code></a>, <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setSubCaptionTextSize%28float%29" target="_blank"><code>subCaptionTextSize</code></a>, and <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setSubCaptionRequestedWidth%28int%29" target="_blank"><code>subCaptionRequestedWidth</code></a>.</p>
 <p>The following code example adds a sub caption to a marker.</p>
 <p><div id="a1cda557ba7b3f8b08873f2b17d5afcd" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1273,7 +1273,7 @@ marker.subCaptionTextSize = <span class="hljs-number">10</span>f
 </div></p>
 <p><img src="../assets/5-2-sub-caption.png" alt="Sub caption added"></p>
 <h2 id="opacity">Opacity</h2>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setAlpha-float-" target="_blank"><code>alpha</code></a> property specifies opacity of a marker. Opacity applies to both an icon and a caption. The value ranges from <code>0</code> to <code>1</code>, where <code>0</code> is fully transparent and <code>1</code> is fully opaque. Even though the <code>alpha</code> property is <code>0</code>, the subjects are still considered to be on the screen, unlike the case where the <code>visible</code> is <code>false</code>. Therefore, they can be overlapped or can receive events.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setAlpha%28float%29" target="_blank"><code>alpha</code></a> property specifies opacity of a marker. Opacity applies to both an icon and a caption. The value ranges from <code>0</code> to <code>1</code>, where <code>0</code> is fully transparent and <code>1</code> is fully opaque. Even though the <code>alpha</code> property is <code>0</code>, the subjects are still considered to be on the screen, unlike the case where the <code>visible</code> is <code>false</code>. Therefore, they can be overlapped or can receive events.</p>
 <p>The following code example sets a marker to be semitransparent.</p>
 <p><div id="7313052caffec89660d9d3c9de803a74" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1311,7 +1311,7 @@ marker.subCaptionTextSize = <span class="hljs-number">10</span>f
 <h3 id="z-index">Z index</h3>
 <p>When multiple markers are overlapped, markers closer to the bottom of the screen are basically displayed on top of those more distant than them. That is, markers displayed on top of others change as the camera is rotated, as shown in the figure below.</p>
 <p><img src="../assets/5-2-zindex1.png" alt="z-index 1"> <img src="../assets/5-2-zindex-2.png" alt="z-index 2"> <img src="../assets/5-2-zindex-3.png" alt="z-index 3"></p>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Overlay.html#setGlobalZIndex-int-" target="_blank"><code>globalZIndex</code></a> and <a href="ref://../reference/com/naver/maps/map/overlay/Overlay.html#setZIndex-int-" target="_blank"><code>zIndex</code></a> properties specify a z index which defines the stack order of a marker. A marker with a high z index is displayed on top of those with lower z indexes.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/Overlay.html#setGlobalZIndex%28int%29" target="_blank"><code>globalZIndex</code></a> and <a href="ref://../reference/com/naver/maps/map/overlay/Overlay.html#setZIndex%28int%29" target="_blank"><code>zIndex</code></a> properties specify a z index which defines the stack order of a marker. A marker with a high z index is displayed on top of those with lower z indexes.</p>
 <p>The following code example specifies the stacking order of three markers as yellow -&gt; green -&gt; blue. </p>
 <p><div id="a9adca4fc11f698116bb9c09d4e39bba" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1354,7 +1354,7 @@ blueMarker.zIndex = <span class="hljs-number">-10</span>
 <h3 id="overlapping-of-markers-and-symbols">Overlapping of markers and symbols</h3>
 <p>Overlapping of markers and symbols makes the map more complex and less visible.</p>
 <p><img src="../assets/5-2-symbol-duplicate.png" alt="Overlapping of markers and symbols"></p>
-<p>Set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setHideCollidedSymbols-boolean-" target="_blank"><code>isHideCollidedSymbols</code></a> property to <code>true</code> to hide symbols overlapped with markers.</p>
+<p>Set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setHideCollidedSymbols%28boolean%29" target="_blank"><code>isHideCollidedSymbols</code></a> property to <code>true</code> to hide symbols overlapped with markers.</p>
 <p>The following code example sets symbols overlapped with markers to be hidden from the map.</p>
 <p><div id="8a43ce0006bc3274000ef2f527e45634" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1390,7 +1390,7 @@ blueMarker.zIndex = <span class="hljs-number">-10</span>
 <h3 id="overlapping-of-markers">Overlapping of markers</h3>
 <p>As you can see in the figure below, a marker can be overlapped with other markers as well as symbols, making the map hard to read.</p>
 <p><img src="../assets/5-2-duplicate-marker.png" alt="Marker overlapped with other markers"></p>
-<p>Set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setHideCollidedMarkers-boolean-" target="_blank"><code>isHideCollidedMarkers</code></a> property to <code>true</code> to hide overlapped markers. Then, only markers that are not overlapped are displayed on the map. If two markers are overlapped, the one with a higher z index has priority over the other.</p>
+<p>Set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setHideCollidedMarkers%28boolean%29" target="_blank"><code>isHideCollidedMarkers</code></a> property to <code>true</code> to hide overlapped markers. Then, only markers that are not overlapped are displayed on the map. If two markers are overlapped, the one with a higher z index has priority over the other.</p>
 <p>The following code example sets markers overlapped with other markers to be hidden from the map.</p>
 <p><div id="9dbca112cd5fbc240351956411a7a0ff" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1423,7 +1423,7 @@ blueMarker.zIndex = <span class="hljs-number">-10</span>
   </div>
 </div></p>
 <p><img src="../assets/5-2-hide-collide-markers.png" alt="Hide markers overlapped with other markers"></p>
-<p>You can also set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setHideCollidedCaptions-boolean-" target="_blank"><code>isHideCollidedCaptions</code></a> property to <code>true</code> to hide the caption of a marker overlapped with other markers. Then, only captions of markers that are not overlapped are displayed on the map. Note that if the <code>hideCollidedMarkers</code> property is set to <code>true</code>, <code>hideCollidedCaptions</code> is ignored.</p>
+<p>You can also set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setHideCollidedCaptions%28boolean%29" target="_blank"><code>isHideCollidedCaptions</code></a> property to <code>true</code> to hide the caption of a marker overlapped with other markers. Then, only captions of markers that are not overlapped are displayed on the map. Note that if the <code>hideCollidedMarkers</code> property is set to <code>true</code>, <code>hideCollidedCaptions</code> is ignored.</p>
 <p>The following code example sets the caption of a marker overlapped with other markers to be hidden from the map.</p>
 <p><div id="9c8e922ff17f2e6cad191bd7f7050697" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1457,7 +1457,7 @@ blueMarker.zIndex = <span class="hljs-number">-10</span>
 </div></p>
 <p><img src="../assets/5-2-hide-collide-markers.png" alt="Hide the caption of a marker overlapped with other markers"></p>
 <h3 id="force-markers-to-appear">Force markers to appear</h3>
-<p>Set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setForceShowIcon-boolean-" target="_blank"><code>isForceShowIcon</code></a> property to <code>true</code> to force a marker icon to appear even if it is overlapped with other markers for which <code>isHideCollidedMarkers</code> is set to <code>true</code>. The <code>isForceShowIcon</code> property forces important markers to appear while hiding overlapping markers. Set the <code>zIndex</code> of an important marker to be higher and set its <code>isHideCollidedMarkers</code> and <code>isForceShowIcon</code> to <code>true</code>, while lower the <code>zIndex</code> of a less important marker and set its <code>isHideCollidedMarkers</code> to <code>true</code>.</p>
+<p>Set the <a href="ref://../reference/com/naver/maps/map/overlay/Marker.html#setForceShowIcon%28boolean%29" target="_blank"><code>isForceShowIcon</code></a> property to <code>true</code> to force a marker icon to appear even if it is overlapped with other markers for which <code>isHideCollidedMarkers</code> is set to <code>true</code>. The <code>isForceShowIcon</code> property forces important markers to appear while hiding overlapping markers. Set the <code>zIndex</code> of an important marker to be higher and set its <code>isHideCollidedMarkers</code> and <code>isForceShowIcon</code> to <code>true</code>, while lower the <code>zIndex</code> of a less important marker and set its <code>isHideCollidedMarkers</code> to <code>true</code>.</p>
 <p>The following code example hides overlapped markers but forces an important marker to appear.</p>
 <p><div id="fb8ab6d4a3917e9e779265a83bf5a8dc" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1571,7 +1571,7 @@ normalMarkers.forEach { marker -&gt;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Marker","level":"2.5.2","depth":2,"next":{"title":"Info Window","level":"2.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},"previous":{"title":"Overlays","level":"2.5.1","depth":2,"path":"5-1.md","ref":"5-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"5-2.md","mtime":"2020-04-10T03:40:55.351Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-10T03:40:56.260Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Marker","level":"2.5.2","depth":2,"next":{"title":"Info Window","level":"2.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},"previous":{"title":"Overlays","level":"2.5.1","depth":2,"path":"5-1.md","ref":"5-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"5-2.md","mtime":"2020-07-21T03:02:31.518Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-21T03:02:32.347Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

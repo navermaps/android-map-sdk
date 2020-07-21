@@ -552,7 +552,7 @@
 <h2 id="polyline-overlays">Polyline overlays</h2>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html" target="_blank"><code>PolylineOverlay</code></a> is an overlay that draws a line. It allows you to specify the stroke width, color, stroke pattern, line cap type and joint type of a line. A polyline overlay is proper for a line as a figure. If you need to express an element such as a path, use <a href="ref://../reference/com/naver/maps/map/overlay/PathOverlay.html" target="_blank"><code>PathOverlay</code></a>.</p>
 <h2 id="add-and-remove-polyline-overlays">Add and remove polyline overlays</h2>
-<p>A polyline overlay can be created just like a general Java object. Create an object, set a list of coordinates in the <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setCoords-java.util.List-" target="_blank"><code>coords</code></a> property and then set a map object in the <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setMap-com.naver.maps.map.NaverMap-" target="_blank"><code>map</code></a> property to add a polyline overlay. Note that you should specify the <code>coords</code> property before specifying the <code>map</code> property; otherwise an exception occurs.</p>
+<p>A polyline overlay can be created just like a general Java object. Create an object, set a list of coordinates in the <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setCoords%28java.util.List%29" target="_blank"><code>coords</code></a> property and then set a map object in the <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setMap%28com.naver.maps.map.NaverMap%29" target="_blank"><code>map</code></a> property to add a polyline overlay. Note that you should specify the <code>coords</code> property before specifying the <code>map</code> property; otherwise an exception occurs.</p>
 <p>The following code example creates a polyline overlay object and adds it to the map.</p>
 <p><div id="e5bd052ccdc968f93265dd28c8678a04" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -639,7 +639,7 @@ polyline.map = naverMap
   </div>
 </div></p>
 <h3 id="list-of-coordinates">List of coordinates</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setCoords-java.util.List-" target="_blank"><code>coords</code></a> property specifies a list of coordinates. This property is required; if you add a polyline overlay with no list of coordinates to the map, an exception occurs. Also, if the list of coordinates is less than <code>2</code> in size or has <code>null</code>, an exception occurs.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setCoords%28java.util.List%29" target="_blank"><code>coords</code></a> property specifies a list of coordinates. This property is required; if you add a polyline overlay with no list of coordinates to the map, an exception occurs. Also, if the list of coordinates is less than <code>2</code> in size or has <code>null</code>, an exception occurs.</p>
 <p>The following code example specifies a list of coordinates for a polyline overlay.</p>
 <p><div id="09b17f47c1a8942b8eb1b234660c631e" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -754,7 +754,7 @@ polyline.coords = coords
   </div>
 </div></p>
 <h3 id="stroke-width">Stroke width</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setWidth-int-" target="_blank"><code>width</code></a> property specifies the stroke width of a polyline.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setWidth%28int%29" target="_blank"><code>width</code></a> property specifies the stroke width of a polyline.</p>
 <p>The following code example sets the width of a polyline overlay to 10 px.</p>
 <p><div id="68a242f441f17444ac89bace74f84b5b" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -788,7 +788,7 @@ polyline.coords = coords
 </div></p>
 <p><img src="../assets/5-4-polyline-width.png" alt="Stroke width specified"></p>
 <h3 id="fill-color">Fill color</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setColor-int-" target="_blank"><code>color</code></a> property specifies the color of a polyline overlay.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setColor%28int%29" target="_blank"><code>color</code></a> property specifies the color of a polyline overlay.</p>
 <p>The following code example sets the color of a polyline overlay to green.</p>
 <p><div id="74a36ed8316925325548f6fc67a0ed47" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -822,7 +822,7 @@ polyline.coords = coords
 </div></p>
 <p><img src="../assets/5-4-polyline-color.png" alt="Polyline color specified"></p>
 <h3 id="stroke-pattern">Stroke pattern</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setPattern-int...-" target="_blank"><code>pattern</code></a> property specifies the stroke pattern of a polyline overlay. The stroke pattern is expressed as an array of integers in px, where the elements with even indexes are the length of a dash, and those with odd indexes are the length of a gap. For example, an array of <code>[5, 10, 3, 7]</code> repeats the pattern that includes a dash of 5 px, a gap of 10 px, a dash of 3 px and a gap of 7 px.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setPattern%28int...%29" target="_blank"><code>pattern</code></a> property specifies the stroke pattern of a polyline overlay. The stroke pattern is expressed as an array of integers in px, where the elements with even indexes are the length of a dash, and those with odd indexes are the length of a gap. For example, an array of <code>[5, 10, 3, 7]</code> repeats the pattern that includes a dash of 5 px, a gap of 10 px, a dash of 3 px and a gap of 7 px.</p>
 <p>The following code example sets the stroke pattern of a polyline overlay to a dash of 10 px and a gap of 5 px.</p>
 <p><div id="fa06276c1d0c78d28cdf98e80a41d463" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -856,7 +856,7 @@ polyline.coords = coords
 </div></p>
 <p><img src="../assets/5-4-polyline-pattern.png" alt="Stroke patter specified"></p>
 <h3 id="line-cap-type">Line cap type</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setCapType-com.naver.maps.map.overlay.PolylineOverlay.LineCap-" target="_blank"><code>capType</code></a> property specifies the cap type of a polyline overlay. The available line cap types are defined in the <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.LineCap.html" target="_blank"><code>LineCap</code></a> enum. The following three types are available:</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setCapType%28com.naver.maps.map.overlay.PolylineOverlay.LineCap%29" target="_blank"><code>capType</code></a> property specifies the cap type of a polyline overlay. The available line cap types are defined in the <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.LineCap.html" target="_blank"><code>LineCap</code></a> enum. The following three types are available:</p>
 <ul>
 <li><a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.LineCap.html#Round" target="_blank"><code>Round</code></a>: Adds a semicircle with diameter equal to the stroke width at the end of the line.</li>
 <li><a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.LineCap.html#Butt" target="_blank"><code>Butt</code></a>: This cap is squared off exactly at the end of the line, at the specified coordinates.</li>
@@ -895,7 +895,7 @@ polyline.coords = coords
   </div>
 </div></p>
 <h3 id="joint-type">Joint type</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setJoinType-com.naver.maps.map.overlay.PolylineOverlay.LineJoin-" target="_blank"><code>joinType</code></a> property specifies the joint type of a polyline overlay. The available joint types are defined in the <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.LineJoin.html" target="_blank"><code>LineJoin</code></a> enum. The following three types are available:</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setJoinType%28com.naver.maps.map.overlay.PolylineOverlay.LineJoin%29" target="_blank"><code>joinType</code></a> property specifies the joint type of a polyline overlay. The available joint types are defined in the <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.LineJoin.html" target="_blank"><code>LineJoin</code></a> enum. The following three types are available:</p>
 <ul>
 <li><a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.LineJoin.html#Bevel" target="_blank"><code>Bevel</code></a>: Flat bevel on the outside of the joint.</li>
 <li><a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.LineJoin.html#Miter" target="_blank"><code>Miter</code></a>: Mitered joint with fixed pointed extrusion on the outside of the joint.</li>
@@ -936,7 +936,7 @@ polyline.coords = coords
 <h2 id="polygon-overlays">Polygon overlays</h2>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html" target="_blank"><code>PolygonOverlay</code></a> is an overlay that draws a polygon. A polygon overlay consists of an exterior ring and an interior ring, expressing various types of figures, including simple triangles, rectangles and polygons with holes. You can specify the fill color, stroke width and stroke color of a polygon overlay.</p>
 <h2 id="add-and-remove-polygon-overlays">Add and remove polygon overlays</h2>
-<p>A polygon overlay can be created just like a general Java object. Create an object, set a list of coordinates in the <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setCoords-java.util.List-" target="_blank"><code>coords</code></a> property and then set a map object in the <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setMap-com.naver.maps.map.NaverMap-" target="_blank"><code>map</code></a> property to add a polygon overlay. Note that you should specify the <code>coords</code> property before specifying the <code>map</code> property; otherwise an exception occurs.</p>
+<p>A polygon overlay can be created just like a general Java object. Create an object, set a list of coordinates in the <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setCoords%28java.util.List%29" target="_blank"><code>coords</code></a> property and then set a map object in the <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setMap%28com.naver.maps.map.NaverMap%29" target="_blank"><code>map</code></a> property to add a polygon overlay. Note that you should specify the <code>coords</code> property before specifying the <code>map</code> property; otherwise an exception occurs.</p>
 <p>The following code example creates a polygon overlay object and adds it to the map.</p>
 <p><div id="b592322ea87bd6d5a2f1252ed6d50da8" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1026,7 +1026,7 @@ polygon.map = naverMap
   </div>
 </div></p>
 <h3 id="list-of-coordinates">List of coordinates</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setCoords-java.util.List-" target="_blank"><code>coords</code></a> property specifies a list of coordinates. This property is required. The list of coordinates to specify a polygon should be in clockwise order; otherwise the polygon is not properly drawn or cannot receive an event. If you add a polygon overlay with no list of coordinates to the map, an exception occurs. Also, if the list of coordinates is less than <code>3</code> in size or has <code>null</code>, an exception occurs.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setCoords%28java.util.List%29" target="_blank"><code>coords</code></a> property specifies a list of coordinates. This property is required. The list of coordinates to specify a polygon should be in clockwise order; otherwise the polygon is not properly drawn or cannot receive an event. If you add a polygon overlay with no list of coordinates to the map, an exception occurs. Also, if the list of coordinates is less than <code>3</code> in size or has <code>null</code>, an exception occurs.</p>
 <p>The following code example specifies a list of coordinates for a polygon overlay.</p>
 <p><div id="50caf25fcc3adf56c7dc1ab7c3eab115" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1147,7 +1147,7 @@ polygon.coords = coords
   </div>
 </div></p>
 <h3 id="holes">Holes</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setHoles-java.util.List-" target="_blank"><code>holes</code></a> property specifies a hole inside a polygon. A polygon can have multiple inner holes, which can neither be colored nor receive events. The list of coordinates to specify each hole should be in counterclockwise order; otherwise it is not properly drawn or the polygon cannot receive an event. Also, if the list of coordinates for each hole is less than <code>3</code> in size or has <code>null</code>, an exception occurs.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setHoles%28java.util.List%29" target="_blank"><code>holes</code></a> property specifies a hole inside a polygon. A polygon can have multiple inner holes, which can neither be colored nor receive events. The list of coordinates to specify each hole should be in counterclockwise order; otherwise it is not properly drawn or the polygon cannot receive an event. Also, if the list of coordinates for each hole is less than <code>3</code> in size or has <code>null</code>, an exception occurs.</p>
 <p>The following code example specifies a hole in a polygon overlay.</p>
 <p><div id="cca27b28d7e0b51974fbcaa90be8c93c" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1193,7 +1193,7 @@ polygon.coords = coords
 </div></p>
 <p><img src="../assets/5-4-polygon-with-holes.png" alt="Inner hole specified"></p>
 <h3 id="fill-color">Fill color</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setColor-int-" target="_blank"><code>color</code></a> property specifies the fill color of a polygon overlay.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setColor%28int%29" target="_blank"><code>color</code></a> property specifies the fill color of a polygon overlay.</p>
 <p>The following code example sets the color of a polygon overlay to green.</p>
 <p><div id="b421b4b40f6c4b269becb1026ae0d8fd" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1227,7 +1227,7 @@ polygon.coords = coords
 </div></p>
 <p><img src="../assets/5-4-polygon-color.png" alt="Green polygon"></p>
 <h3 id="stroke-width">Stroke width</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setOutlineWidth-int-" target="_blank"><code>outlineWidth</code></a> property specifies the stroke width of a polygon overlay. Set the property to <code>0</code> to draw no outline.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setOutlineWidth%28int%29" target="_blank"><code>outlineWidth</code></a> property specifies the stroke width of a polygon overlay. Set the property to <code>0</code> to draw no outline.</p>
 <p>The following code example sets the stroke width of a polygon overlay to 5 px.</p>
 <p><div id="1e90aabad6c7c566591d5e9f149eefe5" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1261,7 +1261,7 @@ polygon.coords = coords
 </div></p>
 <p><img src="../assets/5-4-polygon-outline.png" alt="Stroke width specified"></p>
 <h3 id="stroke-color">Stroke color</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setOutlineColor-int-" target="_blank"><code>outlineColor</code></a> property specifies the stroke color of a polygon overlay.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setOutlineColor%28int%29" target="_blank"><code>outlineColor</code></a> property specifies the stroke color of a polygon overlay.</p>
 <p>The following code example sets the stroke color of a polygon overlay to green.</p>
 <p><div id="bed371b70cc854f3c04dfa48635798ae" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1297,7 +1297,7 @@ polygon.coords = coords
 <h2 id="circle-overlays">Circle overlays</h2>
 <p><a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html" target="_blank"><code>CircleOverlay</code></a> is an overlay that draws a circle with the specified center and radius. You can specify the fill color, stroke width and stroke color of a circle overlay.</p>
 <h2 id="add-and-remove-circle-overlays">Add and remove circle overlays</h2>
-<p>A circle overlay can be created just like a general Java object. Create an object, set a center in the <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setCenter-com.naver.maps.geometry.LatLng-" target="_blank"><code>center</code></a> property and a radius in the <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setRadius-double-" target="_blank"><code>radius</code></a> property, and then set a map object in the <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setMap-com.naver.maps.map.NaverMap-" target="_blank"><code>map</code></a> property to draw a circle overlay. Note that you should specify the <code>center</code> property before specifying the <code>map</code> property; otherwise an exception occurs.</p>
+<p>A circle overlay can be created just like a general Java object. Create an object, set a center in the <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setCenter%28com.naver.maps.geometry.LatLng%29" target="_blank"><code>center</code></a> property and a radius in the <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setRadius%28double%29" target="_blank"><code>radius</code></a> property, and then set a map object in the <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setMap%28com.naver.maps.map.NaverMap%29" target="_blank"><code>map</code></a> property to draw a circle overlay. Note that you should specify the <code>center</code> property before specifying the <code>map</code> property; otherwise an exception occurs.</p>
 <p>The following code example creates a circle overlay object and adds it to the map.</p>
 <p><div id="7c3731efb5ba5252bf3cac863f83ca12" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1372,7 +1372,7 @@ circle.map = naverMap
   </div>
 </div></p>
 <h3 id="center">Center</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setCenter-com.naver.maps.geometry.LatLng-" target="_blank"><code>center</code></a> property specifies the center of a circle overlay. This property is required; if you add a circle overlay with no center specified to the map, an exception occurs. If you change the coordinates of the circle overlay that is already added to the map, it moves to the changed coordinates.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setCenter%28com.naver.maps.geometry.LatLng%29" target="_blank"><code>center</code></a> property specifies the center of a circle overlay. This property is required; if you add a circle overlay with no center specified to the map, an exception occurs. If you change the coordinates of the circle overlay that is already added to the map, it moves to the changed coordinates.</p>
 <p>The following code example specifies the center of a circle overlay.</p>
 <p><div id="d22dc20f4f592cbe0b2af61bd03446ec" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1405,7 +1405,7 @@ circle.map = naverMap
   </div>
 </div></p>
 <h3 id="radius">Radius</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setRadius-double-" target="_blank"><code>radius</code></a> property specifies the radius of a circle overlay.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setRadius%28double%29" target="_blank"><code>radius</code></a> property specifies the radius of a circle overlay.</p>
 <p>The following code example sets the radius of a circle overlay to 500 meters.</p>
 <p><div id="ba6b17440abc71556006e4fd341155d7" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1438,7 +1438,7 @@ circle.map = naverMap
   </div>
 </div></p>
 <h3 id="fill-color">Fill color</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setColor-int-" target="_blank"><code>color</code></a> property specifies the fill color of a circle overlay.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setColor%28int%29" target="_blank"><code>color</code></a> property specifies the fill color of a circle overlay.</p>
 <p>The following code example sets the fill color of a circle overlay to green.</p>
 <p><div id="43c37365becbeee8b206c2cef0c156c2" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1472,7 +1472,7 @@ circle.map = naverMap
 </div></p>
 <p><img src="../assets/5-4-circle-color.png" alt="Circle color specified"></p>
 <h3 id="stroke-width">Stroke width</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setOutlineWidth-int-" target="_blank"><code>outlineWidth</code></a> property specifies the stroke width of a circle overlay.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setOutlineWidth%28int%29" target="_blank"><code>outlineWidth</code></a> property specifies the stroke width of a circle overlay.</p>
 <p>The following code example sets the stroke width of a circle overlay to 10 px.</p>
 <p><div id="e739ae0bb156acbb4659821bc9b8b6f1" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1506,7 +1506,7 @@ circle.map = naverMap
 </div></p>
 <p><img src="../assets/5-4-circle-outline.png" alt="Stroke width specified"></p>
 <h3 id="stroke-color">Stroke color</h3>
-<p>The <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setOutlineColor-int-" target="_blank"><code>outlineColor</code></a> property specifies the stroke color of a circle overlay.</p>
+<p>The <a href="ref://../reference/com/naver/maps/map/overlay/CircleOverlay.html#setOutlineColor%28int%29" target="_blank"><code>outlineColor</code></a> property specifies the stroke color of a circle overlay.</p>
 <p>The following code example sets the stroke color of a circle overlay to green.</p>
 <p><div id="ca08c9658ced1479fb62b136f53a0ced" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
@@ -1582,7 +1582,7 @@ circle.map = naverMap
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Shapes","level":"2.5.4","depth":2,"next":{"title":"Location Overlay","level":"2.5.5","depth":2,"path":"5-5.md","ref":"5-5.md","articles":[]},"previous":{"title":"Info Window","level":"2.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"5-4.md","mtime":"2020-04-10T03:40:55.115Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-10T03:40:56.260Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Shapes","level":"2.5.4","depth":2,"next":{"title":"Location Overlay","level":"2.5.5","depth":2,"path":"5-5.md","ref":"5-5.md","articles":[]},"previous":{"title":"Info Window","level":"2.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"5-4.md","mtime":"2020-07-21T03:02:31.262Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-21T03:02:32.347Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
