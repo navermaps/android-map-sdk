@@ -1,3 +1,22 @@
+# 3.9.0
+
+Release Date: 2020-07-21
+
+### 새로운 기능
+
+- 마커 보조 캡션의 최소/최대 줌 레벨을 주 캡션과 별도로 지정할 수 있도록 속성 제공
+  - `Marker#subCaptionMinZoom` / `Marker#subCaptionMaxZoom`
+
+### 개선
+
+- 타일에 변경이 없으면 `TileCoverHelper.Listener#onTileChanged()`가 호출되지 않도록 개선
+
+### 버그 수정
+
+- 지적편집도 활성화시 지도를 틸트하지 않아도 3D 건물이 보이는 현상 수정
+- 스크롤 제스처를 비활성화해도 일부 제스처에 의해 카메라의 위치가 변경되는 현상 수정
+- `MapView`가 생성되자마자 `onDestroyView()`가 불리면 크래시가 발생하는 오류 수정
+
 # 3.8.0
 
 Release Date: 2020-04-10

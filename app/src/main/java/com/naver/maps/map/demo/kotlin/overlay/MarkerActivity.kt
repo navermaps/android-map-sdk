@@ -107,9 +107,11 @@ class MarkerActivity : AppCompatActivity(), OnMapReadyCallback {
             icon = MarkerIcons.PINK
             captionTextSize = 14f
             captionText = getString(R.string.marker_caption_2)
+            captionMinZoom = 12.0
             subCaptionTextSize = 10f
             subCaptionColor = Color.GRAY
             subCaptionText = getString(R.string.marker_sub_caption_2)
+            subCaptionMinZoom = 13.0
             map = naverMap
         }
 

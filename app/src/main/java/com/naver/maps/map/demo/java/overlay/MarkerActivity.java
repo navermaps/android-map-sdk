@@ -108,9 +108,11 @@ public class MarkerActivity extends AppCompatActivity implements OnMapReadyCallb
         markerWithSubCaption.setIcon(MarkerIcons.PINK);
         markerWithSubCaption.setCaptionTextSize(14);
         markerWithSubCaption.setCaptionText(getString(R.string.marker_caption_2));
+        markerWithSubCaption.setCaptionMinZoom(12);
         markerWithSubCaption.setSubCaptionTextSize(10);
         markerWithSubCaption.setSubCaptionColor(Color.GRAY);
         markerWithSubCaption.setSubCaptionText(getString(R.string.marker_sub_caption_2));
+        markerWithSubCaption.setSubCaptionMinZoom(13);
         markerWithSubCaption.setMap(naverMap);
 
         Marker tintColorMarker = new Marker();
