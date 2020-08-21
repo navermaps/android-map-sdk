@@ -41,6 +41,8 @@ public class CameraEventActivity extends AppCompatActivity implements OnMapReady
 
     private FloatingActionButton fab;
     private boolean moving;
+    private int cameraChangeCount;
+    private int cameraIdleCount;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -102,14 +104,14 @@ public class CameraEventActivity extends AppCompatActivity implements OnMapReady
         TextView cameraChange = findViewById(R.id.camera_change);
         naverMap.addOnCameraChangeListener((reason, animated) -> {
             CameraPosition position = naverMap.getCameraPosition();
-            cameraChange.setText(getString(R.string.format_camera_position,
+            cameraChange.setText(getString(R.string.format_camera_event, ++cameraChangeCount,
                 position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing));
         });
 
         TextView cameraIdle = findViewById(R.id.camera_idle);
         naverMap.addOnCameraIdleListener(() -> {
             CameraPosition position = naverMap.getCameraPosition();
-            cameraIdle.setText(getString(R.string.format_camera_position,
+            cameraIdle.setText(getString(R.string.format_camera_event, ++cameraIdleCount,
                 position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing));
         });
     }

@@ -31,6 +31,8 @@ import org.jetbrains.anko.toast
 
 class CameraEventActivity : AppCompatActivity(), OnMapReadyCallback {
     private var moving = false
+    private var cameraChangeCount = 0
+    private var cameraIdleCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,13 +97,13 @@ class CameraEventActivity : AppCompatActivity(), OnMapReadyCallback {
 
         naverMap.addOnCameraChangeListener { _, _ ->
             val position = naverMap.cameraPosition
-            camera_change.text = getString(R.string.format_camera_position,
+            camera_change.text = getString(R.string.format_camera_event, ++cameraChangeCount,
                     position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing)
         }
 
         naverMap.addOnCameraIdleListener {
             val position = naverMap.cameraPosition
-            camera_idle.text = getString(R.string.format_camera_position,
+            camera_idle.text = getString(R.string.format_camera_event, ++cameraIdleCount,
                     position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing)
         }
     }

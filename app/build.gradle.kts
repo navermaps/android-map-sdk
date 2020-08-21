@@ -16,8 +16,8 @@ android {
         applicationId = "com.naver.maps.map.demo"
         minSdkVersion(15)
         targetSdkVersion(29)
-        versionCode = 3090000
-        versionName = "3.9.0"
+        versionCode = 3090100
+        versionName = "3.9.1"
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -45,5 +45,5 @@ dependencies {
     implementation("com.android.support.constraint:constraint-layout:1.1.3")
     implementation("com.google.android:flexbox:1.0.0")
     implementation("com.google.android.gms:play-services-location:16.0.0")
-    implementation("com.naver.maps:map-sdk:3.9.0")
+    implementation("com.naver.maps:map-sdk:3.9.1")
 }

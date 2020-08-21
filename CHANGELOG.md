@@ -1,3 +1,15 @@
+# 3.9.1
+
+Release Date: 2020-08-21
+
+### 개선
+
+- 지도에 나타나는 심벌의 밀도 개선
+
+### 버그 수정
+
+- 지도를 클릭하면 카메라 이동이 없어도 `OnCameraIdleListener#onCameraIdle()`이 호출되는 현상 수정
+
 # 3.9.0
 
 Release Date: 2020-07-21
