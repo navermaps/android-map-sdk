@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/content_description_run"
         android:tint="@color/white"
         app:srcCompat="@drawable/ic_play_arrow_black_24dp" />
 

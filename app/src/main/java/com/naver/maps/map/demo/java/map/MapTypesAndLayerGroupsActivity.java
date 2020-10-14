@@ -38,20 +38,19 @@ import com.naver.maps.map.demo.R;
 public class MapTypesAndLayerGroupsActivity extends AppCompatActivity implements OnMapReadyCallback {
     @NonNull
     private static String menuIdToLayerGroup(@IdRes int id) {
-        switch (id) {
-        case R.id.building:
+        if (id == R.id.building) {
             return NaverMap.LAYER_GROUP_BUILDING;
-        case R.id.traffic:
+        } else if (id == R.id.traffic) {
             return NaverMap.LAYER_GROUP_TRAFFIC;
-        case R.id.transit:
+        } else if (id == R.id.transit) {
             return NaverMap.LAYER_GROUP_TRANSIT;
-        case R.id.bicycle:
+        } else if (id == R.id.bicycle) {
             return NaverMap.LAYER_GROUP_BICYCLE;
-        case R.id.cadastral:
+        } else if (id == R.id.cadastral) {
             return NaverMap.LAYER_GROUP_CADASTRAL;
-        case R.id.mountain:
+        } else if (id == R.id.mountain) {
             return NaverMap.LAYER_GROUP_MOUNTAIN;
-        default:
+        } else {
             throw new AssertionError();
         }
     }

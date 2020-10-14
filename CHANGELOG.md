@@ -1,3 +1,23 @@
+# 3.10.0
+
+Release Date: 2020-10-14
+
+### 새로운 기능
+
+- 콘텐츠 패딩을 포함한 영역을 반환하는 `NaverMap#coveringBounds` / `NaverMap#coveringRegion` 추가
+
+### 개선
+
+- 성능 및 안정성 개선
+
+### 버그 수정
+
+- `MapView`를 윈도우에서 제거한 후 다시 추가하면 크래시가 발생하는 오류 수정
+- 콘텐츠 패딩을 변경한 후 `OnCameraIdleListener#onCameraIdle()`이 호출되지 않는 오류 수정
+- 지도가 처음 로딩될 때 검은 화면이 나오는 현상 수정
+- 카메라를 움직일 때 줌 레벨을 변경하지 않더라도 미세하게 변경되는 현상 수정
+- `isHideCollidedSymbols`가 `true`인 마커와 심벌이 겹칠 때 간혹 심벌이 나타나는 현상 수정
+
 # 3.9.1
 
 Release Date: 2020-08-21

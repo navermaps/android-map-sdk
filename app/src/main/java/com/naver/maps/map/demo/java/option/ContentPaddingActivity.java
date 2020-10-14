@@ -21,8 +21,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.naver.maps.geometry.LatLng;
+import com.naver.maps.geometry.LatLngBounds;
 import com.naver.maps.map.CameraAnimation;
 import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.CameraUpdate;
@@ -88,6 +90,18 @@ public class ContentPaddingActivity extends AppCompatActivity implements OnMapRe
             LatLng coord = positionFlag ? COORD_1 : COORD_2;
             naverMap.moveCamera(CameraUpdate.scrollTo(coord).animate(CameraAnimation.Fly, 3000));
             positionFlag = !positionFlag;
+        });
+
+        TextView contentBounds = findViewById(R.id.content_bounds);
+        TextView coveringBounds = findViewById(R.id.covering_bounds);
+        naverMap.addOnCameraChangeListener((reason, animated) -> {
+            LatLngBounds content = naverMap.getContentBounds();
+            contentBounds.setText(getString(R.string.format_bounds, content.getSouthLatitude(),
+                content.getWestLongitude(), content.getNorthLatitude(), content.getEastLongitude()));
+
+            LatLngBounds covering = naverMap.getCoveringBounds();
+            coveringBounds.setText(getString(R.string.format_bounds, covering.getSouthLatitude(),
+                covering.getWestLongitude(), covering.getNorthLatitude(), covering.getEastLongitude()));
         });
     }
 }

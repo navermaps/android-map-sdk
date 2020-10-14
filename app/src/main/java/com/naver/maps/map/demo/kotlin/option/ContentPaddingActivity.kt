@@ -31,7 +31,6 @@ import com.naver.maps.map.overlay.Marker
 import kotlinx.android.synthetic.main.activity_content_padding.*
 
 class ContentPaddingActivity : AppCompatActivity(), OnMapReadyCallback {
-
     private var positionFlag: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,6 +82,16 @@ class ContentPaddingActivity : AppCompatActivity(), OnMapReadyCallback {
             val coord = if (positionFlag) COORD_1 else COORD_2
             naverMap.moveCamera(CameraUpdate.scrollTo(coord).animate(CameraAnimation.Fly, 3000))
             positionFlag = !positionFlag
+        }
+
+        naverMap.addOnCameraChangeListener { _, _ ->
+            val content = naverMap.contentBounds
+            content_bounds.text = getString(R.string.format_bounds,
+                    content.southLatitude, content.westLongitude, content.northLatitude, content.eastLongitude)
+
+            val covering = naverMap.coveringBounds
+            covering_bounds.text = getString(R.string.format_bounds,
+                    covering.southLatitude, covering.westLongitude, covering.northLatitude, covering.eastLongitude)
         }
     }
 

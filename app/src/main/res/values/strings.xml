@@ -108,6 +108,7 @@
 
     <string name="name_camera_move">Camera Move</string>
     <string name="description_camera_move">간단한 카메라 이동</string>
+    <string name="content_description_run">실행</string>
 
     <string name="name_camera_animation">Camera Animations</string>
     <string name="description_camera_animation">카메라 이동시 애니메이션 적용</string>
@@ -127,6 +128,7 @@
     <string name="label_camera_idle">대기:</string>
     <string name="content_description_center_marker">중심 마커</string>
     <string name="content_description_center_crosshair">중심점</string>
+    <string name="content_description_move_camera">카메라 이동</string>
     <string name="format_camera_event">[%1$d] (%2$.5f, %3$.5f) / %4$.2f / %5$.1f / %6$.1f</string>
     <string name="camera_update_finished">카메라 이동 완료</string>
     <string name="camera_update_cancelled">카메라 이동 취소</string>
@@ -197,12 +199,16 @@
 
     <string name="name_min_max_zoom">Min/Max Zoom</string>
     <string name="description_min_max_zoom">최소/최대 줌레벨 제한</string>
+    <string name="content_description_reset">초기화</string>
 
     <string name="name_extent">Map Extent</string>
     <string name="description_extent">지도 영역 제한</string>
 
     <string name="name_content_padding">Content Padding</string>
     <string name="description_content_padding">콘텐츠 패딩 사용</string>
+    <string name="label_content_bounds">콘텐츠 영역:</string>
+    <string name="label_covering_bounds">전체 영역:</string>
+    <string name="format_bounds">(%1$.4f, %2$.4f) (%3$.4f, %4$.4f)</string>
 
     <string name="name_control_settings">Control Settings</string>
     <string name="description_control_settings">지도 컨트롤 설정</string>
@@ -215,6 +221,7 @@
 
     <string name="name_custom_control_layout">Custom Control Layout</string>
     <string name="description_custom_control_layout">기본 지도 컨트롤을 비활성화하고 별도로 배치</string>
+    <string name="content_description_relayout">재배치</string>
 
     <string name="name_gesture_settings">Gesture Settings</string>
     <string name="description_gesture_settings">제스처 설정</string>
@@ -294,8 +301,9 @@
     <string name="format_point_coord">화면 좌표: (%1$.1f, %2$.1f)\n지도 좌표: (%3$.5f, %4$.5f)</string>
 
     <string name="name_snapshot">Snapshot</string>
-    <string name="description_snapshot">지도 화면에 대한 스냅샷 촬영</string>
-    <string name="snapshot">snapshot</string>
+    <string name="description_snapshot">지도 화면에 대한 스냅숏 촬영</string>
+    <string name="snapshot">스냅숏</string>
+    <string name="content_description_take_snapshot">스냅숏 촬영</string>
 
     <string name="name_tile_cover_helper">Tile Cover Helper</string>
     <string name="description_tile_cover_helper">타일 커버 헬퍼 사용</string>
