@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,12 +18,14 @@ package com.naver.maps.map.demo.kotlin.basic
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import com.naver.maps.map.MapView
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
-import kotlinx.android.synthetic.main.activity_map_view.*
 
 class MapViewActivity : AppCompatActivity(), OnMapReadyCallback {
+    private var mapView: MapView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -34,51 +36,52 @@ class MapViewActivity : AppCompatActivity(), OnMapReadyCallback {
             it.setDisplayShowHomeEnabled(true)
         }
 
-        map_view.onCreate(savedInstanceState)
-        map_view.getMapAsync(this)
+        mapView = findViewById(R.id.map_view)
+        mapView?.onCreate(savedInstanceState)
+        mapView?.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onStart() {
         super.onStart()
-        map_view.onStart()
+        mapView?.onStart()
     }
 
     override fun onResume() {
         super.onResume()
-        map_view.onResume()
+        mapView?.onResume()
     }
 
     override fun onPause() {
         super.onPause()
-        map_view.onPause()
+        mapView?.onPause()
     }
 
     override fun onStop() {
         super.onStop()
-        map_view.onStop()
+        mapView?.onStop()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        map_view.onSaveInstanceState(outState)
+        mapView?.onSaveInstanceState(outState)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        map_view.onDestroy()
+        mapView?.onDestroy()
     }
 
     override fun onLowMemory() {
         super.onLowMemory()
-        map_view.onLowMemory()
+        mapView?.onLowMemory()
     }
 
     override fun onMapReady(naverMap: NaverMap) {

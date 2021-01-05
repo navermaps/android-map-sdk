@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,11 @@
 package com.naver.maps.map.demo.kotlin.camera
 
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.widget.TextView
+import android.widget.Toast
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.CameraAnimation
 import com.naver.maps.map.CameraUpdate
@@ -26,13 +29,9 @@ import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.overlay.Marker
-import kotlinx.android.synthetic.main.activity_camera_event.*
-import org.jetbrains.anko.toast
 
 class CameraEventActivity : AppCompatActivity(), OnMapReadyCallback {
-    private var moving = false
-    private var cameraChangeCount = 0
-    private var cameraIdleCount = 0
+    private var fab: FloatingActionButton? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,19 +44,19 @@ class CameraEventActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance().also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance().also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
         Marker().apply {
@@ -70,48 +69,69 @@ class CameraEventActivity : AppCompatActivity(), OnMapReadyCallback {
             map = naverMap
         }
 
-        fab.setOnClickListener {
+        var moving = false
+        var cameraChangeCount = 0
+        var cameraIdleCount = 0
+
+        fun setIdle(message: Int) {
+            moving = false
+            fab?.setImageResource(R.drawable.ic_play_arrow_black_24dp)
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        }
+
+        fab = findViewById(R.id.fab)
+        fab?.setOnClickListener {
             if (moving) {
                 naverMap.cancelTransitions()
             } else {
                 naverMap.moveCamera(CameraUpdate.scrollTo(COORD_1)
-                        .animate(CameraAnimation.Fly, 3000)
-                        .cancelCallback {
-                            setIdle(R.string.camera_update_cancelled)
-                        }
-                        .finishCallback {
-                            naverMap.moveCamera(CameraUpdate.scrollTo(COORD_2)
-                                    .animate(CameraAnimation.Fly, 3000)
-                                    .cancelCallback {
-                                        setIdle(R.string.camera_update_cancelled)
-                                    }
-                                    .finishCallback {
-                                        setIdle(R.string.camera_update_finished)
-                                    })
-                        })
+                    .animate(CameraAnimation.Fly, 3000)
+                    .cancelCallback {
+                        setIdle(R.string.camera_update_cancelled)
+                    }
+                    .finishCallback {
+                        naverMap.moveCamera(CameraUpdate.scrollTo(COORD_2)
+                            .animate(CameraAnimation.Fly, 3000)
+                            .cancelCallback {
+                                setIdle(R.string.camera_update_cancelled)
+                            }
+                            .finishCallback {
+                                setIdle(R.string.camera_update_finished)
+                            })
+                    })
 
                 moving = true
-                fab.setImageResource(R.drawable.ic_stop_black_24dp)
+                fab?.setImageResource(R.drawable.ic_stop_black_24dp)
             }
         }
 
+        val cameraChange = findViewById<TextView>(R.id.camera_change)
         naverMap.addOnCameraChangeListener { _, _ ->
             val position = naverMap.cameraPosition
-            camera_change.text = getString(R.string.format_camera_event, ++cameraChangeCount,
-                    position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing)
+            cameraChange.text = getString(
+                R.string.format_camera_event,
+                ++cameraChangeCount,
+                position.target.latitude,
+                position.target.longitude,
+                position.zoom,
+                position.tilt,
+                position.bearing
+            )
         }
 
+        val cameraIdle = findViewById<TextView>(R.id.camera_idle)
         naverMap.addOnCameraIdleListener {
             val position = naverMap.cameraPosition
-            camera_idle.text = getString(R.string.format_camera_event, ++cameraIdleCount,
-                    position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing)
+            cameraIdle.text = getString(
+                R.string.format_camera_event,
+                ++cameraIdleCount,
+                position.target.latitude,
+                position.target.longitude,
+                position.zoom,
+                position.tilt,
+                position.bearing
+            )
         }
-    }
-
-    private fun setIdle(message: Int) {
-        moving = false
-        fab.setImageResource(R.drawable.ic_play_arrow_black_24dp)
-        toast(message)
     }
 
     companion object {

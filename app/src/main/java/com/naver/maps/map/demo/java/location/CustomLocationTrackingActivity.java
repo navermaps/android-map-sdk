@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -56,8 +56,8 @@ public class CustomLocationTrackingActivity extends AppCompatActivity implements
     private boolean trackingEnabled;
     private boolean locationEnabled;
     private boolean waiting;
-    private NaverMap map;
     private FloatingActionButton fab;
+    private NaverMap map;
 
     private final LocationCallback locationCallback = new LocationCallback() {
         @Override

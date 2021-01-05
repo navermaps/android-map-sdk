@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@ package com.naver.maps.map.demo.kotlin.camera
 
 import android.graphics.PointF
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.naver.maps.geometry.LatLng
@@ -26,11 +27,8 @@ import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.overlay.Marker
-import kotlinx.android.synthetic.main.activity_pivot.*
 
 class PivotActivity : AppCompatActivity(), OnMapReadyCallback {
-    private var positionFlag = false
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,19 +40,19 @@ class PivotActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance().also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance().also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
         Marker().apply {
@@ -67,11 +65,12 @@ class PivotActivity : AppCompatActivity(), OnMapReadyCallback {
             map = naverMap
         }
 
-        fab.setOnClickListener {
-            val coord = if (positionFlag) COORD_2 else COORD_1
-            val pivot = if (positionFlag) PIVOT_2 else PIVOT_1
+        var flag = false
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
+            val coord = if (flag) COORD_2 else COORD_1
+            val pivot = if (flag) PIVOT_2 else PIVOT_1
             naverMap.moveCamera(CameraUpdate.scrollTo(coord).pivot(pivot))
-            positionFlag = !positionFlag
+            flag = !flag
         }
     }
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -104,8 +104,8 @@ public class CustomControlLayoutActivity extends AppCompatActivity implements On
                 constraintSet.clear(R.id.scale_bar, ConstraintSet.START);
             } else {
                 uiSettings.setLogoGravity(Gravity.START | Gravity.TOP);
-                constraintSet.connect(R.id.scale_bar, ConstraintSet.START, ConstraintSet.PARENT_ID,
-                    ConstraintSet.START);
+                constraintSet.connect(
+                    R.id.scale_bar, ConstraintSet.START, ConstraintSet.PARENT_ID, ConstraintSet.START);
                 constraintSet.setMargin(R.id.scale_bar, ConstraintSet.START, scaleBarMargin);
                 constraintSet.clear(R.id.scale_bar, ConstraintSet.END);
             }

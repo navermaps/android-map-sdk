@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -106,9 +106,9 @@ public class MapTypesAndLayerGroupsActivity extends AppCompatActivity implements
             }
         });
 
-        View layerGroupButton = findViewById(R.id.layer_groups);
+        View layerGroups = findViewById(R.id.layer_groups);
 
-        PopupMenu menu = new PopupMenu(this, layerGroupButton);
+        PopupMenu menu = new PopupMenu(this, layerGroups);
         menu.inflate(R.menu.layer_groups);
         int size = menu.getMenu().size();
         for (int i = 0; i < size; ++i) {
@@ -122,6 +122,6 @@ public class MapTypesAndLayerGroupsActivity extends AppCompatActivity implements
             return true;
         });
 
-        layerGroupButton.setOnClickListener(v -> menu.show());
+        layerGroups.setOnClickListener(v -> menu.show());
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,19 +39,19 @@ class ArrowheadPathOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance().also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance().also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
         ArrowheadPathOverlay().apply {
@@ -66,8 +66,9 @@ class ArrowheadPathOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
 
     companion object {
         private val COORDS = listOf(
-                LatLng(37.568003, 126.9772503),
-                LatLng(37.5701573, 126.9772503),
-                LatLng(37.5701573, 126.9793745))
+            LatLng(37.568003, 126.9772503),
+            LatLng(37.5701573, 126.9772503),
+            LatLng(37.5701573, 126.9793745),
+        )
     }
 }

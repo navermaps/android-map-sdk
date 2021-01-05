@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,8 +41,8 @@ class MapViewOptionsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val options = NaverMapOptions()
-                .enabledLayerGroups(NaverMap.LAYER_GROUP_TRAFFIC, NaverMap.LAYER_GROUP_TRANSIT)
-                .camera(CameraPosition(LatLng(37.5116620, 127.0594274), 15.0))
+            .enabledLayerGroups(NaverMap.LAYER_GROUP_TRAFFIC, NaverMap.LAYER_GROUP_TRANSIT)
+            .camera(CameraPosition(LatLng(37.5116620, 127.0594274), 15.0))
 
         mapView = MapView(this, options).also {
             findViewById<ViewGroup>(R.id.container).addView(it)
@@ -53,12 +53,12 @@ class MapViewOptionsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onStart() {
         super.onStart()

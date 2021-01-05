@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,10 @@
 package com.naver.maps.map.demo.kotlin.overlay
 
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.widget.TextView
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.CameraAnimation
 import com.naver.maps.map.CameraPosition
@@ -29,7 +31,6 @@ import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.overlay.Marker
 import com.naver.maps.map.util.MarkerIcons
-import kotlinx.android.synthetic.main.activity_overlay_min_max_zoom.*
 
 class OverlayMinMaxZoomActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,21 +44,19 @@ class OverlayMinMaxZoomActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: run {
-                    MapFragment.newInstance(NaverMapOptions().camera(DEFAULT_CAMERA_POSITION)).also {
-                        supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                    }
-                }
+            ?: MapFragment.newInstance(NaverMapOptions().camera(DEFAULT_CAMERA_POSITION)).also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
         Marker().apply {
@@ -104,11 +103,12 @@ class OverlayMinMaxZoomActivity : AppCompatActivity(), OnMapReadyCallback {
             map = naverMap
         }
 
+        val zoom = findViewById<TextView>(R.id.zoom)
         naverMap.addOnCameraChangeListener { _, _ ->
             zoom.text = getString(R.string.format_zoom, naverMap.cameraPosition.zoom)
         }
 
-        fab.setOnClickListener {
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
             naverMap.moveCamera(CameraUpdate.toCameraPosition(DEFAULT_CAMERA_POSITION).animate(CameraAnimation.Easing))
         }
     }

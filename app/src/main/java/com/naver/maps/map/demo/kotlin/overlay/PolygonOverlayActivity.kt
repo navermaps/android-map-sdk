@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,19 +39,19 @@ class PolygonOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance().also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance().also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
         val color = ResourcesCompat.getColor(resources, R.color.primary, theme)
@@ -74,21 +74,26 @@ class PolygonOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
 
     companion object {
         private val COORDS_1 = listOf(
-                LatLng(37.5734571, 126.975335),
-                LatLng(37.5738912, 126.9825649),
-                LatLng(37.5678124, 126.9812127),
-                LatLng(37.5694007, 126.9739434))
+            LatLng(37.5734571, 126.975335),
+            LatLng(37.5738912, 126.9825649),
+            LatLng(37.5678124, 126.9812127),
+            LatLng(37.5694007, 126.9739434),
+        )
 
         private val COORDS_2 = listOf(
-                LatLng(37.5640984, 126.9712268),
-                LatLng(37.5651279, 126.9767904),
-                LatLng(37.5625365, 126.9832241),
-                LatLng(37.5585305, 126.9809297),
-                LatLng(37.5590777, 126.974617))
+            LatLng(37.5640984, 126.9712268),
+            LatLng(37.5651279, 126.9767904),
+            LatLng(37.5625365, 126.9832241),
+            LatLng(37.5585305, 126.9809297),
+            LatLng(37.5590777, 126.974617),
+        )
 
-        private val HOLES = listOf(listOf(
+        private val HOLES = listOf(
+            listOf(
                 LatLng(37.5612243, 126.9768938),
                 LatLng(37.5627692, 126.9795502),
-                LatLng(37.5628377, 126.976066)))
+                LatLng(37.5628377, 126.976066),
+            ),
+        )
     }
 }

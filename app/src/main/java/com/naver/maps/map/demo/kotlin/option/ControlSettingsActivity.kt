@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.widget.Checkable
+import android.widget.CheckedTextView
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.CameraPosition
 import com.naver.maps.map.MapFragment
@@ -26,7 +27,6 @@ import com.naver.maps.map.NaverMap
 import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
-import kotlinx.android.synthetic.main.activity_control_settings.*
 
 class ControlSettingsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,64 +40,63 @@ class ControlSettingsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: run {
-                    val options = NaverMapOptions()
-                            .camera(CameraPosition(LatLng(37.5116620, 127.0594274), 16.0, 0.0, 90.0))
-                            .indoorEnabled(true)
-                            .locationButtonEnabled(true)
-                    MapFragment.newInstance(options).also {
-                        supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                    }
-                }
+            ?: MapFragment.newInstance(
+                NaverMapOptions()
+                    .camera(CameraPosition(LatLng(37.5116620, 127.0594274), 16.0, 0.0, 90.0))
+                    .indoorEnabled(true)
+                    .locationButtonEnabled(true)
+            ).also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
-        toggle_compass.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_compass).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isCompassEnabled = checked
         }
 
-        toggle_scale_bar.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_scale_bar).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isScaleBarEnabled = checked
         }
 
-        toggle_zoom_control.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_zoom_control).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isZoomControlEnabled = checked
         }
 
-        toggle_indoor_level_picker.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_indoor_level_picker).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isIndoorLevelPickerEnabled = checked
         }
 
-        toggle_location_button.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_location_button).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isLocationButtonEnabled = checked
         }
 
-        toggle_logo_click.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_logo_click).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isLogoClickEnabled = checked

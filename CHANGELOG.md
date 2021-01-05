@@ -1,3 +1,13 @@
+# 3.10.2
+
+Release Date: 2021-01-05
+
+### 버그 수정
+
+- `symbolPerspectiveRatio`가 반대로 동작하는 오류 수정
+- 투 핑거 제스처시 카메라가 움직이지 않아도 `OnCameraChangeListener#onCameraChange()`가 호출되는 오류 수정
+- `MapFragment`가 소멸될 때 검은 화면이 나타나는 현상 수정
+
 # 3.10.1
 
 Release Date: 2020-11-06

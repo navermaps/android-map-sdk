@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,23 +27,22 @@ import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.util.FusedLocationSource
-import com.naver.maps.map.util.FusedLocationSource.ActivationHook
 
 class LocationActivationHookActivity : AppCompatActivity(), OnMapReadyCallback {
     class LocationConfirmDialogFragment : DialogFragment() {
         override fun onCreateDialog(savedInstanceState: Bundle?): AlertDialog =
-                AlertDialog.Builder(requireActivity())
-                        .setTitle(R.string.location_activation_confirm)
-                        .setPositiveButton(R.string.yes) { _, _ ->
-                            (activity as? LocationActivationHookActivity)?.continueLocationTracking()
-                        }
-                        .setNegativeButton(R.string.no) { _, _ ->
-                            (activity as? LocationActivationHookActivity)?.cancelLocationTracking()
-                        }
-                        .setOnCancelListener {
-                            (activity as? LocationActivationHookActivity)?.cancelLocationTracking()
-                        }
-                        .create()
+            AlertDialog.Builder(requireActivity())
+                .setTitle(R.string.location_activation_confirm)
+                .setPositiveButton(R.string.yes) { _, _ ->
+                    (activity as? LocationActivationHookActivity)?.continueLocationTracking()
+                }
+                .setNegativeButton(R.string.no) { _, _ ->
+                    (activity as? LocationActivationHookActivity)?.cancelLocationTracking()
+                }
+                .setOnCancelListener {
+                    (activity as? LocationActivationHookActivity)?.cancelLocationTracking()
+                }
+                .create()
     }
 
     private lateinit var locationSource: FusedLocationSource
@@ -61,14 +60,14 @@ class LocationActivationHookActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance(NaverMapOptions().locationButtonEnabled(true)).also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance(NaverMapOptions().locationButtonEnabled(true)).also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
 
         locationSource = FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE).apply {
-            activationHook = ActivationHook { continueCallback: Runnable ->
-                locationActivationCallback = continueCallback
+            activationHook = FusedLocationSource.ActivationHook {
+                locationActivationCallback = it
                 LocationConfirmDialogFragment().show(supportFragmentManager, null)
             }
         }
@@ -87,12 +86,12 @@ class LocationActivationHookActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         if (locationSource.onRequestPermissionsResult(requestCode, permissions, grantResults)) {

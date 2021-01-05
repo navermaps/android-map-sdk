@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,11 +18,11 @@ package com.naver.maps.map.demo.kotlin.event
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.widget.Toast
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
-import org.jetbrains.anko.toast
 
 class SymbolClickEventActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,29 +36,36 @@ class SymbolClickEventActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance().also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance().also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
-        naverMap.setOnSymbolClickListener { symbol ->
-            toast(getString(
-                    R.string.format_symbol_click, symbol.caption, symbol.position.latitude, symbol.position.longitude))
+        naverMap.setOnSymbolClickListener {
+            Toast.makeText(
+                this,
+                getString(R.string.format_symbol_click, it.caption, it.position.latitude, it.position.longitude),
+                Toast.LENGTH_SHORT
+            ).show()
             true
         }
 
         naverMap.setOnMapClickListener { _, coord ->
-            toast(getString(R.string.format_map_click, coord.latitude, coord.longitude))
+            Toast.makeText(
+                this,
+                getString(R.string.format_map_click, coord.latitude, coord.longitude),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 }

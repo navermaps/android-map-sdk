@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,10 @@
 package com.naver.maps.map.demo.kotlin.option
 
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.widget.TextView
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.CameraAnimation
 import com.naver.maps.map.CameraPosition
@@ -28,11 +30,8 @@ import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.overlay.Marker
-import kotlinx.android.synthetic.main.activity_content_padding.*
 
 class ContentPaddingActivity : AppCompatActivity(), OnMapReadyCallback {
-    private var positionFlag: Boolean = false
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -44,28 +43,27 @@ class ContentPaddingActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: run {
-                    val options = NaverMapOptions()
-                            .camera(CameraPosition(COORD_1, NaverMap.DEFAULT_CAMERA_POSITION.zoom))
-                            .contentPadding(
-                                    resources.getDimensionPixelSize(R.dimen.map_padding_left),
-                                    resources.getDimensionPixelSize(R.dimen.map_padding_top),
-                                    resources.getDimensionPixelSize(R.dimen.map_padding_right),
-                                    resources.getDimensionPixelSize(R.dimen.map_padding_bottom))
-                    MapFragment.newInstance(options).also {
-                        supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                    }
-                }
+            ?: MapFragment.newInstance(
+                NaverMapOptions()
+                    .camera(CameraPosition(COORD_1, NaverMap.DEFAULT_CAMERA_POSITION.zoom))
+                    .contentPadding(
+                        resources.getDimensionPixelSize(R.dimen.map_padding_left),
+                        resources.getDimensionPixelSize(R.dimen.map_padding_top),
+                        resources.getDimensionPixelSize(R.dimen.map_padding_right),
+                        resources.getDimensionPixelSize(R.dimen.map_padding_bottom))
+            ).also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
         Marker().apply {
@@ -78,20 +76,33 @@ class ContentPaddingActivity : AppCompatActivity(), OnMapReadyCallback {
             map = naverMap
         }
 
-        fab.setOnClickListener {
-            val coord = if (positionFlag) COORD_1 else COORD_2
+        var flag = false
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
+            val coord = if (flag) COORD_1 else COORD_2
             naverMap.moveCamera(CameraUpdate.scrollTo(coord).animate(CameraAnimation.Fly, 3000))
-            positionFlag = !positionFlag
+            flag = !flag
         }
 
+        val contentBounds = findViewById<TextView>(R.id.content_bounds)
+        val coveringBounds = findViewById<TextView>(R.id.covering_bounds)
         naverMap.addOnCameraChangeListener { _, _ ->
             val content = naverMap.contentBounds
-            content_bounds.text = getString(R.string.format_bounds,
-                    content.southLatitude, content.westLongitude, content.northLatitude, content.eastLongitude)
+            contentBounds.text = getString(
+                R.string.format_bounds,
+                content.southLatitude,
+                content.westLongitude,
+                content.northLatitude,
+                content.eastLongitude
+            )
 
             val covering = naverMap.coveringBounds
-            covering_bounds.text = getString(R.string.format_bounds,
-                    covering.southLatitude, covering.westLongitude, covering.northLatitude, covering.eastLongitude)
+            coveringBounds.text = getString(
+                R.string.format_bounds,
+                covering.southLatitude,
+                covering.westLongitude,
+                covering.northLatitude,
+                covering.eastLongitude
+            )
         }
     }
 

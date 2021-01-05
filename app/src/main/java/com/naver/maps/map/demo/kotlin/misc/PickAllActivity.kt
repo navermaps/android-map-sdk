@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,6 @@ import com.naver.maps.map.Pickable
 import com.naver.maps.map.Symbol
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.overlay.Marker
-import kotlinx.android.synthetic.main.activity_pick_all.*
 
 class PickAllActivity : AppCompatActivity(), OnMapReadyCallback {
     private class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -58,7 +57,7 @@ class PickAllActivity : AppCompatActivity(), OnMapReadyCallback {
         override fun areContentsTheSame(oldItem: Pickable, newItem: Pickable) = oldItem == newItem
     }) {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-                ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_pickable, parent, false))
+            ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_pickable, parent, false))
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             holder.setItem(getItem(position))
@@ -76,19 +75,19 @@ class PickAllActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance(NaverMapOptions().enabledLayerGroups(NaverMap.LAYER_GROUP_TRANSIT)).also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance(NaverMapOptions().enabledLayerGroups(NaverMap.LAYER_GROUP_TRANSIT)).also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
         Marker().apply {
@@ -118,7 +117,9 @@ class PickAllActivity : AppCompatActivity(), OnMapReadyCallback {
         val radius = resources.getDimensionPixelSize(R.dimen.pick_radius)
         val adapter = Adapter()
 
-        recycler_view.adapter = adapter
+        findViewById<RecyclerView>(R.id.recycler_view).adapter = adapter
+
+        val circle = findViewById<View>(R.id.circle)
 
         naverMap.setOnMapClickListener { point, _ ->
             circle.x = point.x - radius

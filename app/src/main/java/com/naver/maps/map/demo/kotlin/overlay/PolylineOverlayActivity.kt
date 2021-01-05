@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,19 +39,19 @@ class PolylineOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance().also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance().also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
         val width = resources.getDimensionPixelSize(R.dimen.overlay_line_width)
@@ -75,13 +75,15 @@ class PolylineOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
 
     companion object {
         private val COORDS_1 = listOf(
-                LatLng(37.57152, 126.97714),
-                LatLng(37.56607, 126.98268),
-                LatLng(37.56445, 126.97707),
-                LatLng(37.55855, 126.97822))
+            LatLng(37.57152, 126.97714),
+            LatLng(37.56607, 126.98268),
+            LatLng(37.56445, 126.97707),
+            LatLng(37.55855, 126.97822),
+        )
 
         private val COORDS_2 = listOf(
-                LatLng(37.57152, 126.97714),
-                LatLng(37.5744287, 126.982625))
+            LatLng(37.57152, 126.97714),
+            LatLng(37.5744287, 126.982625),
+        )
     }
 }

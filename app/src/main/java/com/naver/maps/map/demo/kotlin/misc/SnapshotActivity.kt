@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,14 +16,16 @@
 package com.naver.maps.map.demo.kotlin.misc
 
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
+import android.widget.ImageView
+import android.widget.ProgressBar
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
-import kotlinx.android.synthetic.main.activity_snapshot.*
 
 class SnapshotActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,27 +39,30 @@ class SnapshotActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance().also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance().also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
-        fab.setOnClickListener {
+        val progress = findViewById<ProgressBar>(R.id.progress)
+        val snapshot = findViewById<ImageView>(R.id.snapshot)
+
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
             progress.visibility = View.VISIBLE
 
-            naverMap.takeSnapshot { bitmap ->
+            naverMap.takeSnapshot {
                 progress.visibility = View.GONE
-                snapshot.setImageBitmap(bitmap)
+                snapshot.setImageBitmap(it)
             }
         }
     }

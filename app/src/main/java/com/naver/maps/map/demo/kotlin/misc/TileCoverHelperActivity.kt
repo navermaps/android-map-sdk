@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,19 +43,19 @@ class TileCoverHelperActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance().also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance().also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
         TileCoverHelper().apply {
@@ -66,23 +66,22 @@ class TileCoverHelperActivity : AppCompatActivity(), OnMapReadyCallback {
 
                         coords = bounds.toPolygon().toList()
                         color = Color.argb(
-                                63,
-                                (Math.random() * 255 + 0.5).toInt(),
-                                (Math.random() * 255 + 0.5).toInt(),
-                                (Math.random() * 255 + 0.5).toInt()
+                            63,
+                            (Math.random() * 255 + 0.5).toInt(),
+                            (Math.random() * 255 + 0.5).toInt(),
+                            (Math.random() * 255 + 0.5).toInt()
                         )
                         map = naverMap
                     })
                 }
 
                 removedTileIds.forEach { tileId ->
-                    overlays.get(tileId)?.let { overlay ->
-                        overlay.map = null
+                    overlays.get(tileId)?.let {
+                        it.map = null
                         overlays.remove(tileId)
                     }
                 }
             }
-
             map = naverMap
         }
     }

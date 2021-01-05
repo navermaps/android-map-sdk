@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@ package com.naver.maps.map.demo.kotlin.location
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.widget.CheckedTextView
 import com.naver.maps.map.LocationTrackingMode
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
@@ -25,7 +26,6 @@ import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.util.FusedLocationSource
-import kotlinx.android.synthetic.main.activity_location_tracking.*
 
 class LocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var locationSource: FusedLocationSource
@@ -42,21 +42,21 @@ class LocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance(NaverMapOptions().locationButtonEnabled(true)).also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance(NaverMapOptions().locationButtonEnabled(true)).also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
 
         locationSource = FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         if (locationSource.onRequestPermissionsResult(requestCode, permissions, grantResults)) {
@@ -73,25 +73,30 @@ class LocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
 
         naverMap.locationSource = locationSource
 
-        location_tracking_mode_none.setOnClickListener {
+        val none = findViewById<CheckedTextView>(R.id.location_tracking_mode_none)
+        val noFollow = findViewById<CheckedTextView>(R.id.location_tracking_mode_no_follow)
+        val follow = findViewById<CheckedTextView>(R.id.location_tracking_mode_follow)
+        val face = findViewById<CheckedTextView>(R.id.location_tracking_mode_face)
+
+        none.setOnClickListener {
             naverMap.locationTrackingMode = LocationTrackingMode.None
         }
-        location_tracking_mode_no_follow.setOnClickListener {
+        noFollow.setOnClickListener {
             naverMap.locationTrackingMode = LocationTrackingMode.NoFollow
         }
-        location_tracking_mode_follow.setOnClickListener {
+        follow.setOnClickListener {
             naverMap.locationTrackingMode = LocationTrackingMode.Follow
         }
-        location_tracking_mode_face.setOnClickListener {
+        face.setOnClickListener {
             naverMap.locationTrackingMode = LocationTrackingMode.Face
         }
 
         naverMap.addOnOptionChangeListener {
             val mode = naverMap.locationTrackingMode
-            location_tracking_mode_none.isChecked = mode == LocationTrackingMode.None
-            location_tracking_mode_no_follow.isChecked = mode == LocationTrackingMode.NoFollow
-            location_tracking_mode_follow.isChecked = mode == LocationTrackingMode.Follow
-            location_tracking_mode_face.isChecked = mode == LocationTrackingMode.Face
+            none.isChecked = mode == LocationTrackingMode.None
+            noFollow.isChecked = mode == LocationTrackingMode.NoFollow
+            follow.isChecked = mode == LocationTrackingMode.Follow
+            face.isChecked = mode == LocationTrackingMode.Face
 
             locationSource.isCompassEnabled = mode == LocationTrackingMode.Follow || mode == LocationTrackingMode.Face
         }

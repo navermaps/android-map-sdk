@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,24 +38,23 @@ class IndoorMapActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: run {
-                    val options = NaverMapOptions()
-                            .camera(CameraPosition(LatLng(37.5116620, 127.0594274), 16.0))
-                            .indoorEnabled(true)
-                    MapFragment.newInstance(options).also {
-                        supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                    }
-                }
+            ?: MapFragment.newInstance(
+                NaverMapOptions()
+                    .camera(CameraPosition(LatLng(37.5116620, 127.0594274), 16.0))
+                    .indoorEnabled(true)
+            ).also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
     }

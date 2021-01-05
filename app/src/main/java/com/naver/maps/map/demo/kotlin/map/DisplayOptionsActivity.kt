@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,13 +19,13 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.widget.SeekBar
+import android.widget.TextView
 import com.naver.maps.map.CameraPosition
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
-import kotlinx.android.synthetic.main.activity_display_options.*
 
 class DisplayOptionsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,31 +39,32 @@ class DisplayOptionsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: run {
-                    val options = NaverMapOptions()
-                            .camera(CameraPosition(NaverMap.DEFAULT_CAMERA_POSITION.target, 16.0, 40.0, 0.0))
-                            .enabledLayerGroups(NaverMap.LAYER_GROUP_BUILDING)
-                    MapFragment.newInstance(options).also {
-                        supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                    }
-                }
+            ?: MapFragment.newInstance(
+                NaverMapOptions()
+                    .camera(CameraPosition(NaverMap.DEFAULT_CAMERA_POSITION.target, 16.0, 40.0, 0.0))
+                    .enabledLayerGroups(NaverMap.LAYER_GROUP_BUILDING)
+            ).also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
-        seek_bar_map_lightness.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        val mapLightnessSeekBar = findViewById<SeekBar>(R.id.seek_bar_map_lightness)
+        val mapLightnessValue = findViewById<TextView>(R.id.value_map_lightness)
+        mapLightnessSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 val value = (progress - 100) / 100f
                 naverMap.lightness = value
-                value_map_lightness.text = getString(R.string.format_display_option_value, value)
+                mapLightnessValue.text = getString(R.string.format_display_option_value, value)
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar) {
@@ -73,11 +74,13 @@ class DisplayOptionsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         })
 
-        seek_bar_building_height.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        val buildingHeightSeekBar = findViewById<SeekBar>(R.id.seek_bar_building_height)
+        val buildingHeightValue = findViewById<TextView>(R.id.value_building_height)
+        buildingHeightSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 val value = progress / 100f
                 naverMap.buildingHeight = value
-                value_building_height.text = getString(R.string.format_display_option_value, value)
+                buildingHeightValue.text = getString(R.string.format_display_option_value, value)
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar) {
@@ -87,11 +90,13 @@ class DisplayOptionsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         })
 
-        seek_bar_symbol_scale.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        val symbolScaleSeekBar = findViewById<SeekBar>(R.id.seek_bar_symbol_scale)
+        val symbolScaleValue = findViewById<TextView>(R.id.value_symbol_scale)
+        symbolScaleSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 val value = progress / 100f
                 naverMap.symbolScale = value
-                value_symbol_scale.text = getString(R.string.format_display_option_value, value)
+                symbolScaleValue.text = getString(R.string.format_display_option_value, value)
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar) {
@@ -101,11 +106,13 @@ class DisplayOptionsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         })
 
-        seek_bar_symbol_perspective_ratio.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        val symbolPerspectiveSeekBar = findViewById<SeekBar>(R.id.seek_bar_symbol_perspective_ratio)
+        val symbolPerspectiveValue = findViewById<TextView>(R.id.value_symbol_perspective_ratio)
+        symbolPerspectiveSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 val value = progress / 100f
                 naverMap.symbolPerspectiveRatio = value
-                value_symbol_perspective_ratio.text = getString(R.string.format_display_option_value, value)
+                symbolPerspectiveValue.text = getString(R.string.format_display_option_value, value)
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar) {

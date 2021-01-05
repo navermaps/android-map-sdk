@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,11 +19,11 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.widget.Checkable
+import android.widget.CheckedTextView
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
-import kotlinx.android.synthetic.main.activity_gesture_settings.*
 
 class GestureSettingsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,51 +37,51 @@ class GestureSettingsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: MapFragment.newInstance().also {
-                    supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                }
+            ?: MapFragment.newInstance().also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
-        toggle_scroll.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_scroll).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isScrollGesturesEnabled = checked
         }
 
-        toggle_zoom.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_zoom).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isZoomGesturesEnabled = checked
         }
 
-        toggle_tilt.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_tilt).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isTiltGesturesEnabled = checked
         }
 
-        toggle_rotate.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_rotate).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isRotateGesturesEnabled = checked
         }
 
-        toggle_stop.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_stop).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.uiSettings.isStopGesturesEnabled = checked

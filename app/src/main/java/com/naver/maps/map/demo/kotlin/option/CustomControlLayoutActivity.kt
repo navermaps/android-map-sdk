@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,9 @@
 package com.naver.maps.map.demo.kotlin.option
 
 import android.os.Bundle
+import android.support.constraint.ConstraintLayout
 import android.support.constraint.ConstraintSet
+import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.view.Gravity
 import android.view.MenuItem
@@ -27,7 +29,10 @@ import com.naver.maps.map.NaverMap
 import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
-import kotlinx.android.synthetic.main.activity_custom_control_layout.*
+import com.naver.maps.map.widget.CompassView
+import com.naver.maps.map.widget.IndoorLevelPickerView
+import com.naver.maps.map.widget.ScaleBarView
+import com.naver.maps.map.widget.ZoomControlView
 
 class CustomControlLayoutActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,42 +46,48 @@ class CustomControlLayoutActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: run {
-                    val logoMargin = resources.getDimensionPixelSize(R.dimen.logo_margin)
-                    val options = NaverMapOptions()
-                            .camera(CameraPosition(LatLng(37.5116620, 127.0594274), 16.0, 0.0, 90.0))
-                            .indoorEnabled(true)
-                            .compassEnabled(false)
-                            .scaleBarEnabled(false)
-                            .zoomControlEnabled(false)
-                            .indoorLevelPickerEnabled(false)
-                            .logoMargin(logoMargin, logoMargin, logoMargin, logoMargin)
-                    MapFragment.newInstance(options).also {
-                        supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                    }
-                }
+            ?: MapFragment.newInstance(
+                NaverMapOptions()
+                    .camera(CameraPosition(LatLng(37.5116620, 127.0594274), 16.0, 0.0, 90.0))
+                    .indoorEnabled(true)
+                    .compassEnabled(false)
+                    .scaleBarEnabled(false)
+                    .zoomControlEnabled(false)
+                    .indoorLevelPickerEnabled(false)
+                    .logoMargin(
+                        resources.getDimensionPixelSize(R.dimen.logo_margin),
+                        resources.getDimensionPixelSize(R.dimen.logo_margin),
+                        resources.getDimensionPixelSize(R.dimen.logo_margin),
+                        resources.getDimensionPixelSize(R.dimen.logo_margin)
+                    )
+            ).also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
-        compass.map = naverMap
-        zoom.map = naverMap
-        indoor_level_picker.map = naverMap
+        findViewById<CompassView>(R.id.compass).map = naverMap
+        findViewById<ZoomControlView>(R.id.zoom).map = naverMap
+        findViewById<IndoorLevelPickerView>(R.id.indoor_level_picker).map = naverMap
 
-        scale_bar.map = naverMap
+        val scaleBar = findViewById<ScaleBarView>(R.id.scale_bar).apply {
+            map = naverMap
+        }
 
+        val container = findViewById<ConstraintLayout>(R.id.container)
         val scaleBarMargin = resources.getDimensionPixelSize(R.dimen.fab_margin)
 
-        fab.setOnClickListener {
-            val right = !scale_bar.isRightToLeftEnabled
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
+            val right = !scaleBar.isRightToLeftEnabled
 
             ConstraintSet().apply {
                 clone(container)
@@ -97,7 +108,7 @@ class CustomControlLayoutActivity : AppCompatActivity(), OnMapReadyCallback {
                 applyTo(container)
             }
 
-            scale_bar.isRightToLeftEnabled = right
+            scaleBar.isRightToLeftEnabled = right
         }
     }
 }

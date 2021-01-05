@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -151,8 +151,7 @@ public class PickAllActivity extends AppCompatActivity implements OnMapReadyCall
 
         Adapter adapter = new Adapter();
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setAdapter(adapter);
+        this.<RecyclerView>findViewById(R.id.recycler_view).setAdapter(adapter);
 
         View circle = findViewById(R.id.circle);
 

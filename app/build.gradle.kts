@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    kotlin("android.extensions")
 }
 
 android {
@@ -16,8 +15,8 @@ android {
         applicationId = "com.naver.maps.map.demo"
         minSdkVersion(15)
         targetSdkVersion(30)
-        versionCode = 3100100
-        versionName = "3.10.1"
+        versionCode = 3100200
+        versionName = "3.10.2"
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -37,13 +36,12 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk7:1.4.10"))
-    implementation("org.jetbrains.anko:anko-commons:0.10.8")
+    implementation(kotlin("stdlib-jdk7:1.4.20"))
     implementation("com.android.support:support-v4:28.0.0")
     implementation("com.android.support:appcompat-v7:28.0.0")
     implementation("com.android.support:design:28.0.0")
     implementation("com.android.support.constraint:constraint-layout:1.1.3")
     implementation("com.google.android:flexbox:1.0.0")
     implementation("com.google.android.gms:play-services-location:16.0.0")
-    implementation("com.naver.maps:map-sdk:3.10.1")
+    implementation("com.naver.maps:map-sdk:3.10.2")
 }

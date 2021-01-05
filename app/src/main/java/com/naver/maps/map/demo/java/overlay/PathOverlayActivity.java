@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -231,10 +231,10 @@ public class PathOverlayActivity extends AppCompatActivity implements OnMapReady
         progressSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                progress -= 100;
-                progressValue.setText(getString(R.string.format_progress, progress));
+                int value = progress - 100;
+                progressValue.setText(getString(R.string.format_progress, value));
                 if (fromUser) {
-                    pathOverlay.setProgress(progress / 100.0);
+                    pathOverlay.setProgress(value / 100.0);
                 }
             }
 

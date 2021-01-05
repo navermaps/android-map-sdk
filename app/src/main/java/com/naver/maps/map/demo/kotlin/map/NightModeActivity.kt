@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2020 NAVER Corp.
+ * Copyright 2018-2021 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.widget.Checkable
+import android.widget.CheckedTextView
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
@@ -27,11 +28,8 @@ import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.overlay.Marker
 import com.naver.maps.map.util.MarkerIcons
-import kotlinx.android.synthetic.main.activity_night_mode.*
 
 class NightModeActivity : AppCompatActivity(), OnMapReadyCallback {
-    private var nightModeEnabled = true
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -43,35 +41,36 @@ class NightModeActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-                ?: run {
-                    val options = NaverMapOptions()
-                            .nightModeEnabled(true)
-                            .backgroundResource(NaverMap.DEFAULT_BACKGROUND_DRWABLE_DARK)
-                            .mapType(NaverMap.MapType.Navi)
-                            .minZoom(4.0)
-                    MapFragment.newInstance(options).also {
-                        supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
-                    }
-                }
+            ?: MapFragment.newInstance(
+                NaverMapOptions()
+                    .nightModeEnabled(true)
+                    .backgroundResource(NaverMap.DEFAULT_BACKGROUND_DRWABLE_DARK)
+                    .mapType(NaverMap.MapType.Navi)
+                    .minZoom(4.0)
+            ).also {
+                supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
+            }
         mapFragment.getMapAsync(this)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
-            if (item.itemId == android.R.id.home) {
-                finish()
-                true
-            } else {
-                super.onOptionsItemSelected(item)
-            }
+        if (item.itemId == android.R.id.home) {
+            finish()
+            true
+        } else {
+            super.onOptionsItemSelected(item)
+        }
 
     override fun onMapReady(naverMap: NaverMap) {
-        val markers = MARKER_COORDS.map { coord ->
+        val markers = MARKER_COORDS.map {
             Marker().apply {
-                position = coord
+                position = it
                 icon = MarkerIcons.GRAY
                 map = naverMap
             }
         }
+
+        var nightModeEnabled = true
 
         naverMap.addOnOptionChangeListener {
             if (nightModeEnabled == naverMap.isNightModeEnabled) {
@@ -94,13 +93,13 @@ class NightModeActivity : AppCompatActivity(), OnMapReadyCallback {
 
             val icon = if (nightModeEnabled) MarkerIcons.GRAY else Marker.DEFAULT_ICON
 
-            markers.forEach { marker ->
-                marker.icon = icon
+            markers.forEach {
+                it.icon = icon
             }
         }
 
-        toggle_night_mode.setOnClickListener { v ->
-            val checkable = v as Checkable
+        findViewById<CheckedTextView>(R.id.toggle_night_mode).setOnClickListener {
+            val checkable = it as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             naverMap.isNightModeEnabled = checked
@@ -109,8 +108,9 @@ class NightModeActivity : AppCompatActivity(), OnMapReadyCallback {
 
     companion object {
         private val MARKER_COORDS = arrayOf(
-                LatLng(37.5666102, 126.9783881),
-                LatLng(37.57000, 126.97618),
-                LatLng(37.56138, 126.97970))
+            LatLng(37.5666102, 126.9783881),
+            LatLng(37.57000, 126.97618),
+            LatLng(37.56138, 126.97970),
+        )
     }
 }
