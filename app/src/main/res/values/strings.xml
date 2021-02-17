@@ -96,7 +96,8 @@
     <string name="hide_collided_symbols">겹치는 심벌 숨김</string>
     <string name="hide_collided_markers">겹치는 마커 숨김</string>
     <string name="hide_collided_captions">겹치는 캡션 숨김</string>
-    <string name="force_show">녹색 마커는 겹쳐도 아이콘 표시</string>
+    <string name="force_show_icon">녹색 마커는 겹쳐도 아이콘 표시</string>
+    <string name="force_show_caption">녹색 마커는 겹쳐도 캡션 표시</string>
     <string name="label_caption_aligns">캡션 방향:</string>
     <string name="bottom">아래</string>
     <string name="edges">모서리</string>

@@ -71,12 +71,14 @@ class OverlayCollisionActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         var forceShowIcon = false
+        var forceShowCaption = false
 
         fun setImportant(marker: Marker, important: Boolean) {
             marker.icon = if (important) MarkerIcons.GREEN else MarkerIcons.GRAY
             marker.zIndex = if (important) 1 else 0
             marker.tag = important
             marker.isForceShowIcon = important && forceShowIcon
+            marker.isForceShowIcon = important && forceShowCaption
         }
 
         val markers = mutableListOf<Marker>()
@@ -98,8 +100,8 @@ class OverlayCollisionActivity : AppCompatActivity(), OnMapReadyCallback {
             })
         }
 
-        findViewById<CheckedTextView>(R.id.hide_collided_symbols).setOnClickListener {
-            val checkable = it as Checkable
+        findViewById<CheckedTextView>(R.id.hide_collided_symbols).setOnClickListener { v ->
+            val checkable = v as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             path.isHideCollidedSymbols = checked
@@ -108,8 +110,8 @@ class OverlayCollisionActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         }
 
-        findViewById<CheckedTextView>(R.id.hide_collided_markers).setOnClickListener {
-            val checkable = it as Checkable
+        findViewById<CheckedTextView>(R.id.hide_collided_markers).setOnClickListener { v ->
+            val checkable = v as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             path.isHideCollidedMarkers = checked
@@ -118,8 +120,8 @@ class OverlayCollisionActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         }
 
-        findViewById<CheckedTextView>(R.id.hide_collided_captions).setOnClickListener {
-            val checkable = it as Checkable
+        findViewById<CheckedTextView>(R.id.hide_collided_captions).setOnClickListener { v ->
+            val checkable = v as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             path.isHideCollidedCaptions = checked
@@ -128,14 +130,25 @@ class OverlayCollisionActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         }
 
-        findViewById<CheckedTextView>(R.id.force_show).setOnClickListener {
-            val checkable = it as Checkable
+        findViewById<CheckedTextView>(R.id.force_show_icon).setOnClickListener { v ->
+            val checkable = v as Checkable
             val checked = !checkable.isChecked
             checkable.isChecked = checked
             forceShowIcon = checked
             markers.forEach {
                 val important = it.tag as Boolean
                 it.isForceShowIcon = important && forceShowIcon
+            }
+        }
+
+        findViewById<CheckedTextView>(R.id.force_show_caption).setOnClickListener { v ->
+            val checkable = v as Checkable
+            val checked = !checkable.isChecked
+            checkable.isChecked = checked
+            forceShowCaption = checked
+            markers.forEach {
+                val important = it.tag as Boolean
+                it.isForceShowCaption = important && forceShowCaption
             }
         }
 

@@ -1,3 +1,22 @@
+# 3.11.0
+
+Release Date: 2021-02-17
+
+### 새로운 기능
+
+- 마커 캡션이 `isHideCollidedCaptions`이 `true`인 다른 마커와 겹치더라도 항상 노출되도록 하는 옵션 추가
+  - `Marker#isForceShowCaption`
+- 지도의 컨텍스트를 반환하는 속성 추가
+  - `NaverMap#context`
+
+### 개선
+
+- 심벌 겹침 처리 로직 개선
+
+### 버그 수정
+
+- 뷰의 크기가 `0`으로 측정되면 `OverlayImage.fromView()`에서 크래시가 발생하는 오류 수정
+
 # 3.10.2
 
 Release Date: 2021-01-05

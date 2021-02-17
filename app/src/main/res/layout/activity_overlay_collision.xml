@@ -53,7 +53,7 @@
             android:text="@string/hide_collided_captions" />
 
         <CheckedTextView
-            android:id="@+id/force_show"
+            android:id="@+id/force_show_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -63,7 +63,20 @@
             android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
             android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
             android:gravity="center_vertical"
-            android:text="@string/force_show" />
+            android:text="@string/force_show_icon" />
+
+        <CheckedTextView
+            android:id="@+id/force_show_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:checked="false"
+            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/force_show_caption" />
 
     </com.google.android.flexbox.FlexboxLayout>
 

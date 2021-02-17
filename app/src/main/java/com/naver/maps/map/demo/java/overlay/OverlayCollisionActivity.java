@@ -128,6 +128,7 @@ public class OverlayCollisionActivity extends AppCompatActivity implements OnMap
     private static final LatLngBounds BOUNDS = LatLngBounds.from(PATH_COORDS).buffer(200);
 
     private boolean forceShowIcon;
+    private boolean forceShowCaption;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -218,7 +219,7 @@ public class OverlayCollisionActivity extends AppCompatActivity implements OnMap
             }
         });
 
-        findViewById(R.id.force_show).setOnClickListener(v -> {
+        findViewById(R.id.force_show_icon).setOnClickListener(v -> {
             Checkable checkable = (Checkable)v;
             boolean checked = !checkable.isChecked();
             checkable.setChecked(checked);
@@ -226,6 +227,17 @@ public class OverlayCollisionActivity extends AppCompatActivity implements OnMap
             for (Marker marker : markers) {
                 boolean important = (boolean)marker.getTag();
                 marker.setForceShowIcon(important && forceShowIcon);
+            }
+        });
+
+        findViewById(R.id.force_show_caption).setOnClickListener(v -> {
+            Checkable checkable = (Checkable)v;
+            boolean checked = !checkable.isChecked();
+            checkable.setChecked(checked);
+            forceShowCaption = checked;
+            for (Marker marker : markers) {
+                boolean important = (boolean)marker.getTag();
+                marker.setForceShowCaption(important && forceShowCaption);
             }
         });
 
@@ -261,5 +273,6 @@ public class OverlayCollisionActivity extends AppCompatActivity implements OnMap
         marker.setZIndex(important ? 1 : 0);
         marker.setTag(important);
         marker.setForceShowIcon(important && forceShowIcon);
+        marker.setForceShowCaption(important && forceShowCaption);
     }
 }
