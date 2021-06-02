@@ -15,13 +15,14 @@
  */
 package com.naver.maps.map.demo.kotlin.misc
 
+import android.graphics.Color
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
+import android.support.v4.widget.CircularProgressDrawable
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import android.view.View
+import android.widget.CheckedTextView
 import android.widget.ImageView
-import android.widget.ProgressBar
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
@@ -54,14 +55,24 @@ class SnapshotActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
     override fun onMapReady(naverMap: NaverMap) {
-        val progress = findViewById<ProgressBar>(R.id.progress)
+        val showControls = findViewById<CheckedTextView>(R.id.toggle_show_controls)
+
+        showControls.setOnClickListener {
+            showControls.isChecked = !showControls.isChecked
+        }
+
         val snapshot = findViewById<ImageView>(R.id.snapshot)
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
-            progress.visibility = View.VISIBLE
+        val fab = findViewById<FloatingActionButton>(R.id.fab)
+        fab.setOnClickListener {
+            fab.setImageDrawable(CircularProgressDrawable(this).apply {
+                setStyle(CircularProgressDrawable.LARGE)
+                setColorSchemeColors(Color.WHITE)
+                start()
+            })
 
-            naverMap.takeSnapshot {
-                progress.visibility = View.GONE
+            naverMap.takeSnapshot(showControls.isChecked) {
+                fab.setImageResource(R.drawable.ic_photo_camera_black_24dp)
                 snapshot.setImageBitmap(it)
             }
         }

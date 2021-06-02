@@ -303,6 +303,7 @@
 
     <string name="name_snapshot">Snapshot</string>
     <string name="description_snapshot">지도 화면에 대한 스냅숏 촬영</string>
+    <string name="show_controls">지도 컨트롤 포함</string>
     <string name="snapshot">스냅숏</string>
     <string name="content_description_take_snapshot">스냅숏 촬영</string>
 

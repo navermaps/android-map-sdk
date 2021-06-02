@@ -15,15 +15,17 @@
  */
 package com.naver.maps.map.demo.java.misc;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.widget.CircularProgressDrawable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.CheckedTextView;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
@@ -62,14 +64,21 @@ public class SnapshotActivity extends AppCompatActivity implements OnMapReadyCal
 
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
-        ProgressBar progress = findViewById(R.id.progress);
+        CheckedTextView showControls = findViewById(R.id.toggle_show_controls);
+        showControls.setOnClickListener(v -> showControls.setChecked(!showControls.isChecked()));
+
         ImageView snapshot = findViewById(R.id.snapshot);
 
-        findViewById(R.id.fab).setOnClickListener(v -> {
-            progress.setVisibility(View.VISIBLE);
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(v -> {
+            CircularProgressDrawable progressDrawable = new CircularProgressDrawable(this);
+            progressDrawable.setStyle(CircularProgressDrawable.LARGE);
+            progressDrawable.setColorSchemeColors(Color.WHITE);
+            progressDrawable.start();
+            fab.setImageDrawable(progressDrawable);
 
-            naverMap.takeSnapshot(bitmap -> {
-                progress.setVisibility(View.GONE);
+            naverMap.takeSnapshot(showControls.isChecked(), bitmap -> {
+                fab.setImageResource(R.drawable.ic_photo_camera_black_24dp);
                 snapshot.setImageBitmap(bitmap);
             });
         });
