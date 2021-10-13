@@ -28,17 +28,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
 import com.naver.maps.map.overlay.ArrowheadPathOverlay;
 
 public class ArrowheadPathOverlayActivity extends AppCompatActivity implements OnMapReadyCallback {
-    private static final List<LatLng> COORDS = Arrays.asList(
+    private static final List<LatLng> COORDS_1 = Arrays.asList(
+        new LatLng(37.568003, 126.9782503),
+        new LatLng(37.5701573, 126.9782503),
+        new LatLng(37.5701573, 126.9803745));
+
+    private static final List<LatLng> COORDS_2 = Arrays.asList(
         new LatLng(37.568003, 126.9772503),
         new LatLng(37.5701573, 126.9772503),
-        new LatLng(37.5701573, 126.9793745));
+        new LatLng(37.5701573, 126.9751261));
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,7 +61,8 @@ public class ArrowheadPathOverlayActivity extends AppCompatActivity implements O
 
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment == null) {
-            mapFragment = MapFragment.newInstance();
+            mapFragment = MapFragment.newInstance(
+                new NaverMapOptions().camera(new CameraPosition(new LatLng(37.5701573, 126.9777503), 14, 50, 0)));
             getSupportFragmentManager().beginTransaction().add(R.id.map_fragment, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);
@@ -72,12 +80,31 @@ public class ArrowheadPathOverlayActivity extends AppCompatActivity implements O
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
         ArrowheadPathOverlay arrowheadPathOverlay = new ArrowheadPathOverlay();
-        arrowheadPathOverlay.setCoords(COORDS);
+        arrowheadPathOverlay.setCoords(COORDS_1);
         arrowheadPathOverlay.setWidth(getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_width));
         arrowheadPathOverlay.setColor(Color.WHITE);
         arrowheadPathOverlay.setOutlineWidth(
-            getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width));
+                getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width));
         arrowheadPathOverlay.setOutlineColor(ResourcesCompat.getColor(getResources(), R.color.primary, getTheme()));
         arrowheadPathOverlay.setMap(naverMap);
+
+        ArrowheadPathOverlay shadowOverlay = new ArrowheadPathOverlay();
+        shadowOverlay.setCoords(COORDS_2);
+        shadowOverlay.setWidth(getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_width));
+        shadowOverlay.setColor(0x80000000);
+        shadowOverlay.setOutlineWidth(
+                getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width));
+        shadowOverlay.setOutlineColor(Color.BLACK);
+        shadowOverlay.setMap(naverMap);
+
+        ArrowheadPathOverlay elevationOverlay = new ArrowheadPathOverlay();
+        elevationOverlay.setCoords(COORDS_2);
+        elevationOverlay.setWidth(getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_width));
+        elevationOverlay.setColor(Color.WHITE);
+        elevationOverlay.setOutlineWidth(
+                getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width));
+        elevationOverlay.setOutlineColor(ResourcesCompat.getColor(getResources(), R.color.primary, getTheme()));
+        elevationOverlay.setElevation(getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_elevation));
+        elevationOverlay.setMap(naverMap);
     }
 }

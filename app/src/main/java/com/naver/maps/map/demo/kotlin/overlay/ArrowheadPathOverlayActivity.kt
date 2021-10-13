@@ -21,8 +21,10 @@ import android.support.v4.content.res.ResourcesCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.naver.maps.geometry.LatLng
+import com.naver.maps.map.CameraPosition
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
+import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.overlay.ArrowheadPathOverlay
@@ -39,7 +41,11 @@ class ArrowheadPathOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-            ?: MapFragment.newInstance().also {
+            ?: MapFragment.newInstance(
+                NaverMapOptions().camera(
+                    CameraPosition(LatLng(37.5701573, 126.9777503), 14.0, 50.0, 0.0)
+                )
+            ).also {
                 supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
             }
         mapFragment.getMapAsync(this)
@@ -55,20 +61,45 @@ class ArrowheadPathOverlayActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(naverMap: NaverMap) {
         ArrowheadPathOverlay().apply {
-            coords = COORDS
+            coords = COORDS_1
             width = resources.getDimensionPixelSize(R.dimen.arrowhead_path_overlay_width)
             color = Color.WHITE
             outlineWidth = resources.getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width)
             outlineColor = ResourcesCompat.getColor(resources, R.color.primary, theme)
             map = naverMap
         }
+
+        ArrowheadPathOverlay().apply {
+            coords = COORDS_2
+            width = resources.getDimensionPixelSize(R.dimen.arrowhead_path_overlay_width)
+            color = 0x80000000.toInt()
+            outlineWidth = resources.getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width)
+            outlineColor = Color.BLACK
+            map = naverMap
+        }
+
+        ArrowheadPathOverlay().apply {
+            coords = COORDS_2
+            width = resources.getDimensionPixelSize(R.dimen.arrowhead_path_overlay_width)
+            color = Color.WHITE
+            outlineWidth = resources.getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width)
+            outlineColor = ResourcesCompat.getColor(resources, R.color.primary, theme)
+            elevation = resources.getDimensionPixelSize(R.dimen.arrowhead_path_overlay_elevation)
+            map = naverMap
+        }
     }
 
     companion object {
-        private val COORDS = listOf(
+        private val COORDS_1 = listOf(
+            LatLng(37.568003, 126.9782503),
+            LatLng(37.5701573, 126.9782503),
+            LatLng(37.5701573, 126.9803745)
+        )
+
+        private val COORDS_2 = listOf(
             LatLng(37.568003, 126.9772503),
             LatLng(37.5701573, 126.9772503),
-            LatLng(37.5701573, 126.9793745),
+            LatLng(37.5701573, 126.9751261)
         )
     }
 }

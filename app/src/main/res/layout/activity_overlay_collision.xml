@@ -4,153 +4,165 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.flexbox.FlexboxLayout
+    <HorizontalScrollView
         android:id="@+id/options"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:flexWrap="wrap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <CheckedTextView
-            android:id="@+id/hide_collided_symbols"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/hide_collided_symbols" />
+            android:orientation="horizontal">
 
-        <CheckedTextView
-            android:id="@+id/hide_collided_markers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/hide_collided_markers" />
+            <CheckedTextView
+                android:id="@+id/hide_collided_symbols"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/hide_collided_symbols" />
 
-        <CheckedTextView
-            android:id="@+id/hide_collided_captions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/hide_collided_captions" />
+            <CheckedTextView
+                android:id="@+id/hide_collided_markers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/hide_collided_markers" />
 
-        <CheckedTextView
-            android:id="@+id/force_show_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/force_show_icon" />
+            <CheckedTextView
+                android:id="@+id/hide_collided_captions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/hide_collided_captions" />
 
-        <CheckedTextView
-            android:id="@+id/force_show_caption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/force_show_caption" />
+            <CheckedTextView
+                android:id="@+id/force_show_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/force_show_icon" />
 
-    </com.google.android.flexbox.FlexboxLayout>
+            <CheckedTextView
+                android:id="@+id/force_show_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/force_show_caption" />
 
-    <com.google.android.flexbox.FlexboxLayout
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
         android:id="@+id/caption_aligns"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:flexWrap="wrap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/options">
 
-        <TextView
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:text="@string/label_caption_aligns"/>
-
-        <CheckedTextView
-            android:id="@+id/bottom"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="true"
-            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
-            android:gravity="center_vertical"
-            android:text="@string/bottom" />
+            android:orientation="horizontal">
 
-        <CheckedTextView
-            android:id="@+id/edges"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
-            android:gravity="center_vertical"
-            android:text="@string/edges" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/label_caption_aligns" />
 
-        <CheckedTextView
-            android:id="@+id/apexes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
-            android:gravity="center_vertical"
-            android:text="@string/apexes" />
+            <CheckedTextView
+                android:id="@+id/bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="center_vertical"
+                android:text="@string/bottom" />
 
-        <CheckedTextView
-            android:id="@+id/outsides"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
-            android:gravity="center_vertical"
-            android:text="@string/outsides" />
+            <CheckedTextView
+                android:id="@+id/edges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="center_vertical"
+                android:text="@string/edges" />
 
-    </com.google.android.flexbox.FlexboxLayout>
+            <CheckedTextView
+                android:id="@+id/apexes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="center_vertical"
+                android:text="@string/apexes" />
+
+            <CheckedTextView
+                android:id="@+id/outsides"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="center_vertical"
+                android:text="@string/outsides" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
     <FrameLayout
         android:id="@+id/map_fragment"

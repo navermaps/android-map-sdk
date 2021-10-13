@@ -105,7 +105,7 @@ class OverlayMinMaxZoomActivity : AppCompatActivity(), OnMapReadyCallback {
 
         val zoom = findViewById<TextView>(R.id.zoom)
         naverMap.addOnCameraChangeListener { _, _ ->
-            zoom.text = getString(R.string.format_zoom, naverMap.cameraPosition.zoom)
+            zoom.text = getString(R.string.format_double, naverMap.cameraPosition.zoom)
         }
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {

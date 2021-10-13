@@ -28,6 +28,7 @@
 
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:label="@string/app_name"
             android:launchMode="singleTask">
             <intent-filter>
@@ -361,6 +362,16 @@
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_min_max_zoom"
             android:label="@string/name_min_max_zoom" />
+        <activity
+            android:name=".java.option.MaxTiltActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_max_tilt"
+            android:label="@string/name_max_tilt" />
+        <activity
+            android:name=".kotlin.option.MaxTiltActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_max_tilt"
+            android:label="@string/name_max_tilt" />
         <activity
             android:name=".java.option.ExtentActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"

@@ -8,7 +8,7 @@
         android:layout_height="match_parent" />
 
     <TextView
-        android:id="@+id/zoom"
+        android:id="@+id/value"
         android:layout_width="64sp"
         android:layout_height="36sp"
         android:layout_gravity="end"

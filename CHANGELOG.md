@@ -1,3 +1,24 @@
+# 3.13.0
+
+Release Date: 2021-10-13
+
+### 새로운 기능
+
+- 지도의 최대 기울기 각도를 제한하는 옵션 추가
+  - `NaverMap#maxTilt`, `NaverMapOptions#maxTilt()`
+- 화살표 오버레이를 지도 배경에서 띄워 표현하도록 하는 옵션 추가
+  - `ArrowheadPathOverlay#elevation`
+
+### 개선
+
+- 도로명 심벌 표현 개선
+- 화살표 오버레이의 꺾임 부분 표현 개선
+
+### 버그 수정
+
+- 콘텐츠 패딩 지정시 `CameraUpdate#scrollBy()`에 오차가 발생하는 오류 수정
+- `onLowMemory()` 호출시 낮은 빈도로 크래시가 발생하는 오류 수정
+
 # 3.12.0
 
 Release Date: 2021-06-02

@@ -12,6 +12,7 @@
     <dimen name="path_overlay_outline_width">2dp</dimen>
     <dimen name="arrowhead_path_overlay_width">10dp</dimen>
     <dimen name="arrowhead_path_overlay_outline_width">2dp</dimen>
+    <dimen name="arrowhead_path_overlay_elevation">5dp</dimen>
     <dimen name="fit_bounds_padding">24dp</dimen>
     <dimen name="map_padding_left">40dp</dimen>
     <dimen name="map_padding_top">20dp</dimen>

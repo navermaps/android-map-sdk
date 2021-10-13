@@ -80,7 +80,8 @@
 
     <string name="name_overlay_min_max_zoom">Overlay Min/Max Zoom</string>
     <string name="description_overlay_min_max_zoom">오버레이의 최소/최대 줌레벨 제한</string>
-    <string name="format_zoom">%.2f</string>
+    <string name="content_description_reset">초기화</string>
+    <string name="format_double">%.2f</string>
     <string name="caption_marker_1">[15, 17]</string>
     <string name="caption_marker_2">(15, 17]</string>
     <string name="caption_marker_3">[15, 17)</string>
@@ -200,7 +201,9 @@
 
     <string name="name_min_max_zoom">Min/Max Zoom</string>
     <string name="description_min_max_zoom">최소/최대 줌레벨 제한</string>
-    <string name="content_description_reset">초기화</string>
+
+    <string name="name_max_tilt">Max Tilt</string>
+    <string name="description_max_tilt">최대 기울기 제한</string>
 
     <string name="name_extent">Map Extent</string>
     <string name="description_extent">지도 영역 제한</string>

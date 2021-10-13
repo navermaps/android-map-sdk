@@ -112,7 +112,7 @@ public class OverlayMinMaxZoomActivity extends AppCompatActivity implements OnMa
 
         TextView zoom = findViewById(R.id.zoom);
         naverMap.addOnCameraChangeListener((reason, animated) ->
-            zoom.setText(getString(R.string.format_zoom, naverMap.getCameraPosition().zoom)));
+            zoom.setText(getString(R.string.format_double, naverMap.getCameraPosition().zoom)));
 
         findViewById(R.id.fab).setOnClickListener(v -> naverMap.moveCamera(
             CameraUpdate.toCameraPosition(DEFAULT_CAMERA_POSITION).animate(CameraAnimation.Easing)));

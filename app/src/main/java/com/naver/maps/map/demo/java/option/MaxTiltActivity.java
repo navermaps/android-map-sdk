@@ -29,7 +29,7 @@ import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
 
-public class MinMaxZoomActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MaxTiltActivity extends AppCompatActivity implements OnMapReadyCallback {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +44,7 @@ public class MinMaxZoomActivity extends AppCompatActivity implements OnMapReadyC
 
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment == null) {
-            mapFragment = MapFragment.newInstance(new NaverMapOptions().minZoom(10).maxZoom(16));
+            mapFragment = MapFragment.newInstance(new NaverMapOptions().maxTilt(30));
             getSupportFragmentManager().beginTransaction().add(R.id.map_fragment, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);
@@ -63,6 +63,6 @@ public class MinMaxZoomActivity extends AppCompatActivity implements OnMapReadyC
     public void onMapReady(@NonNull NaverMap naverMap) {
         TextView value = findViewById(R.id.value);
         naverMap.addOnCameraChangeListener((reason, animated) ->
-            value.setText(getString(R.string.format_double, naverMap.getCameraPosition().zoom)));
+            value.setText(getString(R.string.format_double, naverMap.getCameraPosition().tilt)));
     }
 }

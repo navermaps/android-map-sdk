@@ -4,94 +4,100 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.flexbox.FlexboxLayout
+    <HorizontalScrollView
         android:id="@+id/options"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:flexWrap="wrap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <CheckedTextView
-            android:id="@+id/toggle_compass"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="true"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/compass" />
+            android:orientation="horizontal">
 
-        <CheckedTextView
-            android:id="@+id/toggle_scale_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="true"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/scale_bar" />
+            <CheckedTextView
+                android:id="@+id/toggle_compass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/compass" />
 
-        <CheckedTextView
-            android:id="@+id/toggle_zoom_control"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="true"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/zoom_control" />
+            <CheckedTextView
+                android:id="@+id/toggle_scale_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/scale_bar" />
 
-        <CheckedTextView
-            android:id="@+id/toggle_indoor_level_picker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="true"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/indoor_level_picker" />
+            <CheckedTextView
+                android:id="@+id/toggle_zoom_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/zoom_control" />
 
-        <CheckedTextView
-            android:id="@+id/toggle_location_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="true"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/location_button" />
+            <CheckedTextView
+                android:id="@+id/toggle_indoor_level_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/indoor_level_picker" />
 
-        <CheckedTextView
-            android:id="@+id/toggle_logo_click"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="true"
-            android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
-            android:gravity="center_vertical"
-            android:text="@string/logo_click" />
+            <CheckedTextView
+                android:id="@+id/toggle_location_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/location_button" />
 
-    </com.google.android.flexbox.FlexboxLayout>
+            <CheckedTextView
+                android:id="@+id/toggle_logo_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/logo_click" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
     <FrameLayout
         android:id="@+id/map_fragment"

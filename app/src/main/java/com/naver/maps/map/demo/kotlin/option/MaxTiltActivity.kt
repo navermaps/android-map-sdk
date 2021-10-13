@@ -25,7 +25,7 @@ import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
 
-class MinMaxZoomActivity : AppCompatActivity(), OnMapReadyCallback {
+class MaxTiltActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -37,7 +37,7 @@ class MinMaxZoomActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-            ?: MapFragment.newInstance(NaverMapOptions().minZoom(10.0).maxZoom(16.0)).also {
+            ?: MapFragment.newInstance(NaverMapOptions().maxTilt(30.0)).also {
                 supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
             }
         mapFragment.getMapAsync(this)
@@ -54,7 +54,7 @@ class MinMaxZoomActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(naverMap: NaverMap) {
         val value = findViewById<TextView>(R.id.value)
         naverMap.addOnCameraChangeListener { _, _ ->
-            value.text = getString(R.string.format_double, naverMap.cameraPosition.zoom)
+            value.text = getString(R.string.format_double, naverMap.cameraPosition.tilt)
         }
     }
 }

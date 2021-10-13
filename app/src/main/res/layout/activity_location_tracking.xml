@@ -4,68 +4,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.flexbox.FlexboxLayout
+    <HorizontalScrollView
         android:id="@+id/options"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:flexWrap="wrap"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <CheckedTextView
-            android:id="@+id/location_tracking_mode_none"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="true"
-            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
-            android:gravity="center_vertical"
-            android:text="@string/location_tracking_mode_none" />
+            android:orientation="horizontal">
 
-        <CheckedTextView
-            android:id="@+id/location_tracking_mode_no_follow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
-            android:gravity="center_vertical"
-            android:text="@string/location_tracking_mode_no_follow" />
+            <CheckedTextView
+                android:id="@+id/location_tracking_mode_none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="center_vertical"
+                android:text="@string/location_tracking_mode_none" />
 
-        <CheckedTextView
-            android:id="@+id/location_tracking_mode_follow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
-            android:gravity="center_vertical"
-            android:text="@string/location_tracking_mode_follow" />
+            <CheckedTextView
+                android:id="@+id/location_tracking_mode_no_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="center_vertical"
+                android:text="@string/location_tracking_mode_no_follow" />
 
-        <CheckedTextView
-            android:id="@+id/location_tracking_mode_face"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:checked="false"
-            android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-            android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
-            android:gravity="center_vertical"
-            android:text="@string/location_tracking_mode_face" />
+            <CheckedTextView
+                android:id="@+id/location_tracking_mode_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="center_vertical"
+                android:text="@string/location_tracking_mode_follow" />
 
-    </com.google.android.flexbox.FlexboxLayout>
+            <CheckedTextView
+                android:id="@+id/location_tracking_mode_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:drawableStart="?android:attr/listChoiceIndicatorSingle"
+                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="center_vertical"
+                android:text="@string/location_tracking_mode_face" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
     <FrameLayout
         android:id="@+id/map_fragment"
