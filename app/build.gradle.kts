@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion(31)
+    compileSdk = 31
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -13,10 +13,10 @@ android {
 
     defaultConfig {
         applicationId = "com.naver.maps.map.demo"
-        minSdkVersion(15)
-        targetSdkVersion(31)
-        versionCode = 3130000
-        versionName = "3.13.0"
+        minSdk = 15
+        targetSdk = 31
+        versionCode = 3140000
+        versionName = "3.14.0"
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -38,5 +38,5 @@ dependencies {
     implementation("com.android.support:design:28.0.0")
     implementation("com.android.support.constraint:constraint-layout:1.1.3")
     implementation("com.google.android.gms:play-services-location:16.0.0")
-    implementation("com.naver.maps:map-sdk:3.13.0")
+    implementation("com.naver.maps:map-sdk:3.14.0")
 }

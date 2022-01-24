@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2021 NAVER Corp.
+ * Copyright 2018-2022 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -154,7 +154,7 @@ class MainActivity : AppCompatActivity() {
 
             private fun getDemos(context: Context, language: String) =
                 try {
-                    val packageName = "${context.packageName}.${language.toLowerCase(Locale.ROOT)}"
+                    val packageName = "${context.packageName}.${language.lowercase()}"
                     context.packageManager
                         .getPackageInfo(context.packageName, PackageManager.GET_ACTIVITIES)
                         .activities

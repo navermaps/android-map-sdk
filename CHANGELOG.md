@@ -1,3 +1,22 @@
+# 3.14.0
+
+Release Date: 2021-01-24
+
+### 새로운 기능
+
+- 지도 최초 로딩에 대한 이벤트 리스너 추가
+  - `NaverMap.OnLoadListener`
+  - `NaverMap#addOnLoadListener()`, `NaverMap#removeOnLoadListener()`
+
+### 개선
+
+- 로딩 속도 및 데이터 사용량 개선
+
+### 버그 수정
+
+- `MultipartPathOverlay`에 잘못된 좌표가 지정되면 크래시가 발생하는 오류 수정
+- `MapView`를 윈도우에서 제거한 후 다시 추가하면 일부 오버레이가 나타나지 않는 오류 수정
+
 # 3.13.0
 
 Release Date: 2021-10-13
