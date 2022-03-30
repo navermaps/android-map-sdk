@@ -1,3 +1,13 @@
+# 3.14.1
+
+Release Date: 2021-03-29
+
+### 버그 수정
+
+- `NaverMapOptions.useTextureView(true)` 지정시 낮은 빈도로 크래시가 발생하는 오류 수정
+- 특정 상황에서 `PathOverlay`의 끝 부분이 잘못 렌더링되는 오류 수정
+- 지도 배경 이미지를 변경해도 기존 이미지가 노출되는 오류 수정
+
 # 3.14.0
 
 Release Date: 2021-01-24

@@ -61,6 +61,7 @@ public class NightModeActivity extends AppCompatActivity implements OnMapReadyCa
         if (mapFragment == null) {
             mapFragment = MapFragment.newInstance(new NaverMapOptions()
                 .nightModeEnabled(true)
+                .backgroundColor(NaverMap.DEFAULT_BACKGROUND_COLOR_DARK)
                 .backgroundResource(NaverMap.DEFAULT_BACKGROUND_DRWABLE_DARK)
                 .mapType(NaverMap.MapType.Navi)
                 .minZoom(4));

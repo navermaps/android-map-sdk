@@ -44,6 +44,7 @@ class NightModeActivity : AppCompatActivity(), OnMapReadyCallback {
             ?: MapFragment.newInstance(
                 NaverMapOptions()
                     .nightModeEnabled(true)
+                    .backgroundColor(NaverMap.DEFAULT_BACKGROUND_COLOR_DARK)
                     .backgroundResource(NaverMap.DEFAULT_BACKGROUND_DRWABLE_DARK)
                     .mapType(NaverMap.MapType.Navi)
                     .minZoom(4.0)
