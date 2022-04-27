@@ -1,3 +1,20 @@
+# 3.15.0
+
+Release Date: 2021-04-27
+
+### 새로운 기능
+
+- 4x MSAA를 활성화하는 기능 추가
+  - `NaverMapOptions#msaaEnabled()`
+
+### 개선
+
+- 초기 로딩 속도 향상
+
+### 버그 수정
+
+- 지도 서피스가 생성되기 전에 `onLowMemory()`가 호출되면 크래시가 발생하는 오류 수정
+
 # 3.14.1
 
 Release Date: 2021-03-29
