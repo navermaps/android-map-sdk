@@ -22,6 +22,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.Checkable;
+import android.widget.CheckedTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -113,6 +115,13 @@ public class CameraEventActivity extends AppCompatActivity implements OnMapReady
             CameraPosition position = naverMap.getCameraPosition();
             cameraIdle.setText(getString(R.string.format_camera_event, ++cameraIdleCount,
                 position.target.latitude, position.target.longitude, position.zoom, position.tilt, position.bearing));
+        });
+
+        findViewById(R.id.toggle_camera_idle_pending).setOnClickListener(v -> {
+            Checkable checkable = (Checkable)v;
+            boolean checked = !checkable.isChecked();
+            checkable.setChecked(checked);
+            naverMap.setCameraIdlePending(checked);
         });
     }
 

@@ -61,15 +61,30 @@
         app:layout_constraintStart_toEndOf="@+id/barrier_label"
         app:layout_constraintTop_toBottomOf="@+id/camera_change" />
 
+    <CheckedTextView
+        android:id="@+id/toggle_camera_idle_pending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:checked="false"
+        android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
+        android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:text="@string/camera_idle_pending"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_idle" />
+
     <FrameLayout
         android:id="@+id/map_fragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label_camera_idle" />
+        app:layout_constraintTop_toBottomOf="@+id/toggle_camera_idle_pending" />
 
     <ImageView
         android:layout_width="wrap_content"

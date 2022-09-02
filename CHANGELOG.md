@@ -1,3 +1,17 @@
+# 3.16.0
+
+Release Date: 2021-09-02
+
+### 새로운 기능
+
+- `NaverMap.setContentPadding()`에 카메라 좌표를 유지하도록 하는 선택적 파라메터 추가
+- 카메라 이동 종료 이벤트를 지연시키는 기능 추가
+  - `NaverMap#isCameraIdlePending`
+
+### 버그 수정
+
+- 특정 상황에서 원 핑거 줌 제스처 입력시 더블 탭으로 인식되는 문제 수정
+
 # 3.15.0
 
 Release Date: 2021-04-27

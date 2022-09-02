@@ -127,7 +127,8 @@
     <string name="name_camera_event">Camera Event</string>
     <string name="description_camera_event">카메라 이벤트 사용</string>
     <string name="label_camera_change">이동:</string>
-    <string name="label_camera_idle">대기:</string>
+    <string name="label_camera_idle">종료:</string>
+    <string name="camera_idle_pending">카메라 이동 종료 이벤트 지연</string>
     <string name="content_description_center_marker">중심 마커</string>
     <string name="content_description_center_crosshair">중심점</string>
     <string name="content_description_move_camera">카메라 이동</string>

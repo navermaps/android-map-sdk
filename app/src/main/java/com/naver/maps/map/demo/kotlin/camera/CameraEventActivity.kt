@@ -19,14 +19,13 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.view.View
+import android.widget.Checkable
+import android.widget.CheckedTextView
 import android.widget.TextView
 import android.widget.Toast
 import com.naver.maps.geometry.LatLng
-import com.naver.maps.map.CameraAnimation
-import com.naver.maps.map.CameraUpdate
-import com.naver.maps.map.MapFragment
-import com.naver.maps.map.NaverMap
-import com.naver.maps.map.OnMapReadyCallback
+import com.naver.maps.map.*
 import com.naver.maps.map.demo.R
 import com.naver.maps.map.overlay.Marker
 
@@ -131,6 +130,13 @@ class CameraEventActivity : AppCompatActivity(), OnMapReadyCallback {
                 position.tilt,
                 position.bearing
             )
+        }
+
+        findViewById<CheckedTextView>(R.id.toggle_camera_idle_pending).setOnClickListener {
+            val checkable = it as Checkable
+            val checked = !checkable.isChecked
+            checkable.isChecked = checked
+            naverMap.isCameraIdlePending = checked
         }
     }
 
