@@ -15,6 +15,7 @@
  */
 package com.naver.maps.map.demo
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.ComponentName
 import android.content.Context
@@ -38,7 +39,6 @@ import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import com.naver.maps.map.NaverMapSdk
-import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     class OpenSourceNoticeFragment : DialogFragment() {
@@ -126,6 +126,7 @@ class MainActivity : AppCompatActivity() {
         override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
             inflater.inflate(R.layout.fragment_list, container, false)
 
+        @SuppressLint("DiscouragedApi")
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             val packageName = requireContext().packageName
             val result = mutableListOf<Any>()
