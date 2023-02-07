@@ -16,8 +16,8 @@ android {
         applicationId = namespace
         minSdk = 15
         targetSdk = 33
-        versionCode = 3160100
-        versionName = "3.16.1"
+        versionCode = 3160200
+        versionName = "3.16.2"
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -39,5 +39,5 @@ dependencies {
     implementation("com.android.support:design:28.0.0")
     implementation("com.android.support.constraint:constraint-layout:1.1.3")
     implementation("com.google.android.gms:play-services-location:16.0.0")
-    implementation("com.naver.maps:map-sdk:3.16.1")
+    implementation("com.naver.maps:map-sdk:3.16.2")
 }
