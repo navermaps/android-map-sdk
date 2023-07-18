@@ -1,6 +1,26 @@
+# 3.17.0
+
+Release Date: 2023-07-18
+
+### 새로운 기능
+
+- 지도를 강제 새로고침하는 메서드 추가
+  - `NaverMap#forceRefresh()`
+
+### 개선
+
+- AndroidX 적용
+- play-services-location 21.0.1로 버전업
+- 네트워크 요청에 Brotli 압축 지원
+- `FusedLocationSource.isCompassEnabled` 지정시 화면의 회전 방향을 반영하도록 개선
+
+### 버그 수정
+
+- `InfoWindow`를 지도에서 제거한 후 다시 지도에 추가할 때 간혹 노출되지 않는 문제 수정
+
 # 3.16.2
 
-Release Date: 2022-02-07
+Release Date: 2023-02-07
 
 ### 버그 수정
 
@@ -8,7 +28,7 @@ Release Date: 2022-02-07
 
 # 3.16.1
 
-Release Date: 2021-12-19
+Release Date: 2022-12-19
 
 ### 개선
 
@@ -22,7 +42,7 @@ Release Date: 2021-12-19
 
 # 3.16.0
 
-Release Date: 2021-09-02
+Release Date: 2022-09-02
 
 ### 새로운 기능
 
@@ -36,7 +56,7 @@ Release Date: 2021-09-02
 
 # 3.15.0
 
-Release Date: 2021-04-27
+Release Date: 2022-04-27
 
 ### 새로운 기능
 
@@ -53,7 +73,7 @@ Release Date: 2021-04-27
 
 # 3.14.1
 
-Release Date: 2021-03-29
+Release Date: 2022-03-29
 
 ### 버그 수정
 
@@ -63,7 +83,7 @@ Release Date: 2021-03-29
 
 # 3.14.0
 
-Release Date: 2021-01-24
+Release Date: 2022-01-24
 
 ### 새로운 기능
 

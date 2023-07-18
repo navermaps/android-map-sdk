@@ -8,17 +8,21 @@ android {
     compileSdk = 33
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
     }
 
     defaultConfig {
         applicationId = namespace
         minSdk = 15
         targetSdk = 33
-        versionCode = 3160200
-        versionName = "3.16.2"
-        vectorDrawables.useSupportLibrary = true
+        versionCode = 3170000
+        versionName = "3.17.0"
+        multiDexEnabled = true
     }
 
     buildTypes {
@@ -32,12 +36,23 @@ android {
     }
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
 dependencies {
-    implementation(kotlin("stdlib-jdk7:1.7.20"))
-    implementation("com.android.support:support-v4:28.0.0")
-    implementation("com.android.support:appcompat-v7:28.0.0")
-    implementation("com.android.support:design:28.0.0")
-    implementation("com.android.support.constraint:constraint-layout:1.1.3")
-    implementation("com.google.android.gms:play-services-location:16.0.0")
-    implementation("com.naver.maps:map-sdk:3.16.2")
+    implementation(kotlin("stdlib:1.8.20"))
+
+    implementation("androidx.appcompat:appcompat:1.6.0")
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+    implementation("com.google.android.material:material:1.8.0")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+
+    implementation("com.naver.maps:map-sdk:3.17.0")
 }

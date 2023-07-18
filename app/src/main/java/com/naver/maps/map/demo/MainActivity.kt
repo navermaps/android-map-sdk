@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2022 NAVER Corp.
+ * Copyright 2018-2023 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,14 +22,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.support.design.widget.TabLayout
-import android.support.v4.app.DialogFragment
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
-import android.support.v4.view.ViewPager
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
@@ -38,6 +30,14 @@ import android.view.ViewGroup
 import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayoutMediator
 import com.naver.maps.map.NaverMapSdk
 
 class MainActivity : AppCompatActivity() {
@@ -156,6 +156,7 @@ class MainActivity : AppCompatActivity() {
             private fun getDemos(context: Context, language: String) =
                 try {
                     val packageName = "${context.packageName}.${language.lowercase()}"
+                    @Suppress("DEPRECATION")
                     context.packageManager
                         .getPackageInfo(context.packageName, PackageManager.GET_ACTIVITIES)
                         .activities
@@ -176,12 +177,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    class PagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
-        override fun getCount() = LANGUAGES.size
+    class PagerAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
+        override fun getItemCount() = LANGUAGES.size
 
-        override fun getPageTitle(position: Int) = LANGUAGES[position]
-
-        override fun getItem(position: Int) = ListFragment.newInstance(LANGUAGES[position])
+        override fun createFragment(position: Int) = ListFragment.newInstance(LANGUAGES[position])
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -189,11 +188,14 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        val viewPager = findViewById<ViewPager>(R.id.view_pager).apply {
-            adapter = PagerAdapter(supportFragmentManager)
-        }
-
-        findViewById<TabLayout>(R.id.tab_layout).setupWithViewPager(viewPager)
+        TabLayoutMediator(
+            findViewById(R.id.tab_layout),
+            findViewById<ViewPager2>(R.id.view_pager).also {
+                it.adapter = PagerAdapter(this)
+            }
+        ) { tab, position ->
+            tab.text = LANGUAGES[position]
+        }.attach()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

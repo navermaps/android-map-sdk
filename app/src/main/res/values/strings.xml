@@ -18,16 +18,10 @@
     <string name="description_map_fragment">MapFragment를 사용한 지도 디스플레이</string>
 
     <string name="name_map_fragment_in_layout">Map Fragment in Layout</string>
-    <string name="description_map_fragment_in_layout">레이아웃에서 &lt;fragment&gt;로 MapFragment를 사용한 지도 디스플레이</string>
+    <string name="description_map_fragment_in_layout">레이아웃에서 &lt;FragmentContainerView&gt;로 MapFragment를 사용한 지도 디스플레이</string>
 
     <string name="name_map_view">Map View</string>
     <string name="description_map_view">MapView를 사용한 지도 디스플레이</string>
-
-    <string name="name_retained_map_fragment">Retained Map Fragment</string>
-    <string name="description_retained_map_fragment">MapFragment에 setRetainInstance(true)를 적용한 지도 디스플레이</string>
-
-    <string name="name_retained_map_fragment_in_layout">Retained Map Fragment in Layout</string>
-    <string name="description_retained_map_fragment_in_layout">&lt;fragment&gt; + setRetainInstance(true)를 적용한 지도 디스플레이</string>
 
     <!-- overlay demo -->
     <string name="category_overlay">Overlay</string>

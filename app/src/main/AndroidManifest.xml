@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -7,6 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:name="androidx.multidex.MultiDexApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -65,22 +67,6 @@
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_map_view"
             android:label="@string/name_map_view" />
-        <activity
-            android:name=".java.basic.RetainedMapFragmentActivity"
-            android:description="@string/description_retained_map_fragment"
-            android:label="@string/name_retained_map_fragment" />
-        <activity
-            android:name=".kotlin.basic.RetainedMapFragmentActivity"
-            android:description="@string/description_retained_map_fragment"
-            android:label="@string/name_retained_map_fragment" />
-        <activity
-            android:name=".java.basic.RetainedMapFragmentInLayoutActivity"
-            android:description="@string/description_retained_map_fragment_in_layout"
-            android:label="@string/name_retained_map_fragment_in_layout" />
-        <activity
-            android:name=".kotlin.basic.RetainedMapFragmentInLayoutActivity"
-            android:description="@string/description_retained_map_fragment_in_layout"
-            android:label="@string/name_retained_map_fragment_in_layout" />
 
         <!-- overlay -->
         <activity

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2022 NAVER Corp.
+ * Copyright 2018-2023 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,21 +16,22 @@
 package com.naver.maps.map.demo.kotlin.location
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
-import android.support.v4.content.PermissionChecker
-import android.support.v4.widget.CircularProgressDrawable
-import android.support.v7.app.AppCompatActivity
+import android.os.Looper
 import android.view.MenuItem
-import com.google.android.gms.common.api.GoogleApiClient
+import androidx.annotation.RequiresPermission
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.content.PermissionChecker
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.Priority
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.CameraUpdate
 import com.naver.maps.map.MapFragment
@@ -40,8 +41,8 @@ import com.naver.maps.map.demo.R
 
 class CustomLocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
     private val locationCallback = object : LocationCallback() {
-        override fun onLocationResult(locationResult: LocationResult?) {
-            val lastLocation = locationResult?.lastLocation ?: return
+        override fun onLocationResult(locationResult: LocationResult) {
+            val lastLocation = locationResult.lastLocation ?: return
             val coord = LatLng(lastLocation)
             val locationOverlay = map.locationOverlay
             locationOverlay.position = coord
@@ -92,7 +93,7 @@ class CustomLocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         if (requestCode == PERMISSION_REQUEST_CODE) {
             if (grantResults.all { it == PermissionChecker.PERMISSION_GRANTED }) {
-                enableLocation()
+                tryEnableLocation()
             } else {
                 fab?.setImageResource(R.drawable.ic_my_location_black_24dp)
             }
@@ -105,7 +106,7 @@ class CustomLocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onStart() {
         super.onStart()
         if (trackingEnabled) {
-            enableLocation()
+            tryEnableLocation()
         }
     }
 
@@ -141,29 +142,16 @@ class CustomLocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
         }
     }
 
+    @RequiresPermission(anyOf = [Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION])
     private fun enableLocation() {
-        GoogleApiClient.Builder(this)
-            .addConnectionCallbacks(object : GoogleApiClient.ConnectionCallbacks {
-                @SuppressLint("MissingPermission")
-                override fun onConnected(bundle: Bundle?) {
-                    val locationRequest = LocationRequest().apply {
-                        priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-                        interval = LOCATION_REQUEST_INTERVAL.toLong()
-                        fastestInterval = LOCATION_REQUEST_INTERVAL.toLong()
-                    }
-
-                    LocationServices.getFusedLocationProviderClient(this@CustomLocationTrackingActivity)
-                        .requestLocationUpdates(locationRequest, locationCallback, null)
-                    locationEnabled = true
-                    waiting = true
-                }
-
-                override fun onConnectionSuspended(i: Int) {
-                }
-            })
-            .addApi(LocationServices.API)
-            .build()
-            .connect()
+        locationEnabled = true
+        waiting = true
+        LocationServices.getFusedLocationProviderClient(this)
+            .requestLocationUpdates(
+                LocationRequest.Builder(Priority.PRIORITY_HIGH_ACCURACY, LOCATION_REQUEST_INTERVAL.toLong()).build(),
+                locationCallback,
+                Looper.getMainLooper()
+            )
     }
 
     private fun disableLocation() {

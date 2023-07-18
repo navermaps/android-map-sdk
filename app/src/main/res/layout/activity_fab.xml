@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <FrameLayout
         android:id="@+id/map_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,6 +14,6 @@
         android:layout_margin="@dimen/fab_margin"
         android:contentDescription="@string/content_description_run"
         android:tint="@color/white"
-        app:srcCompat="@drawable/ic_play_arrow_black_24dp" />
+        android:src="@drawable/ic_play_arrow_black_24dp" />
 
 </merge>

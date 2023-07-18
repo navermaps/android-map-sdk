@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2022 NAVER Corp.
+ * Copyright 2018-2023 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,8 +18,8 @@ package com.naver.maps.map.demo.kotlin.location
 import android.graphics.PointF
 import android.location.Location
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.LocationSource
 import com.naver.maps.map.LocationTrackingMode

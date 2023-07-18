@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2022 NAVER Corp.
+ * Copyright 2018-2023 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,12 +17,12 @@ package com.naver.maps.map.demo.kotlin.misc
 
 import android.graphics.Color
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.v4.widget.CircularProgressDrawable
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.widget.CheckedTextView
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
