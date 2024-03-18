@@ -210,6 +210,28 @@
             android:description="@string/description_overlay_collision"
             android:label="@string/name_overlay_collision" />
 
+        <!-- clustering -->
+        <activity
+            android:name=".java.clustering.ClusteringActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_clustering"
+            android:label="@string/name_clustering" />
+        <activity
+            android:name=".kotlin.clustering.ClusteringActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_clustering"
+            android:label="@string/name_clustering" />
+        <activity
+            android:name=".java.clustering.ComplexClusteringActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_complex_clustering"
+            android:label="@string/name_complex_clustering" />
+        <activity
+            android:name=".kotlin.clustering.ComplexClusteringActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_complex_clustering"
+            android:label="@string/name_complex_clustering" />
+
         <!-- camera -->
         <activity
             android:name=".java.camera.CameraMoveActivity"

@@ -99,6 +99,16 @@
     <string name="apexes">꼭지점</string>
     <string name="outsides">바깥쪽</string>
 
+    <!-- clustering demo -->
+    <string name="category_clustering">Clustering</string>
+
+    <string name="name_clustering">Simple Clustering</string>
+    <string name="description_clustering">간단한 마커 클러스터링</string>
+
+    <string name="name_complex_clustering">Complex Clustering</string>
+    <string name="description_complex_clustering">다양한 전략을 활용한 복잡한 클러스터링</string>
+    <string name="seoul_toilet_data_copyright">데이터 © 서울특별시 (CC BY)\n서울 열린데이터 광장 - 서울시 공중화장실 위치정보</string>
+
     <!-- camera demo -->
     <string name="category_camera">Camera</string>
 
@@ -141,6 +151,7 @@
         <item>Navi</item>
         <item>Satellite</item>
         <item>Hybrid</item>
+        <item>NaviHybrid</item>
         <item>Terrain</item>
         <item>None</item>
     </string-array>

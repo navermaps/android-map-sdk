@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.naver.maps.map.demo"
-    compileSdk = 33
+    compileSdk = 34
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -18,10 +18,10 @@ android {
 
     defaultConfig {
         applicationId = namespace
-        minSdk = 15
-        targetSdk = 33
-        versionCode = 3170000
-        versionName = "3.17.0"
+        minSdk = 21
+        targetSdk = 34
+        versionCode = 3180000
+        versionName = "3.18.0"
         multiDexEnabled = true
     }
 
@@ -45,7 +45,7 @@ java {
 dependencies {
     implementation(kotlin("stdlib:1.8.20"))
 
-    implementation("androidx.appcompat:appcompat:1.6.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.multidex:multidex:2.0.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.viewpager2:viewpager2:1.0.0")
@@ -54,5 +54,5 @@ dependencies {
     implementation("com.google.android.material:material:1.8.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
 
-    implementation("com.naver.maps:map-sdk:3.17.0")
+    implementation("com.naver.maps:map-sdk:3.18.0")
 }

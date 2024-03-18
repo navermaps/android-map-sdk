@@ -1,3 +1,23 @@
+# 3.18.0
+
+Release Date: 2024-03-18
+
+### 새로운 기능
+
+- 마커 클러스터링 기능 추가
+  - `Clusterer`
+- 내비게이션용 위성 지도 유형 추가
+  - `NaverMap.MapType#NaviHybrid`
+
+### 개선
+
+- 최소 SDK 레벨 21(버전 5.0)로 변경
+
+### 버그 수정
+
+- `setStopGesturesEnabled(false)` 지정시 잘못된 시점에 `OnCameraIdleListener#onCameraIdle()`이 호출되는 문제 수정
+- `NaverMap.forceRefresh()`가 제공되지 않는 문제 수정
+
 # 3.17.0
 
 Release Date: 2023-07-18

@@ -22,11 +22,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="true"
                 android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center_vertical"
                 android:text="@string/scroll" />
 
@@ -35,11 +33,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="true"
                 android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center_vertical"
                 android:text="@string/zoom" />
 
@@ -48,11 +44,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="true"
                 android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center_vertical"
                 android:text="@string/tilt" />
 
@@ -61,11 +55,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="true"
                 android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center_vertical"
                 android:text="@string/rotate" />
 
@@ -74,11 +66,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="true"
                 android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center_vertical"
                 android:text="@string/stop" />
 

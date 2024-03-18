@@ -22,11 +22,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="true"
                 android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
                 android:gravity="center_vertical"
                 android:text="@string/location_tracking_mode_none" />
 
@@ -35,11 +33,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
                 android:gravity="center_vertical"
                 android:text="@string/location_tracking_mode_no_follow" />
 
@@ -48,11 +44,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
                 android:gravity="center_vertical"
                 android:text="@string/location_tracking_mode_follow" />
 
@@ -61,11 +55,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
                 android:gravity="center_vertical"
                 android:text="@string/location_tracking_mode_face" />
 

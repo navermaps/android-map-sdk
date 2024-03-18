@@ -22,11 +22,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center_vertical"
                 android:text="@string/hide_collided_symbols" />
 
@@ -35,11 +33,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center_vertical"
                 android:text="@string/hide_collided_markers" />
 
@@ -48,11 +44,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center_vertical"
                 android:text="@string/hide_collided_captions" />
 
@@ -61,11 +55,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center_vertical"
                 android:text="@string/force_show_icon" />
 
@@ -74,11 +66,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorMultiple"
-                android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
                 android:gravity="center_vertical"
                 android:text="@string/force_show_caption" />
 
@@ -103,7 +93,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:gravity="center_vertical"
                 android:text="@string/label_caption_aligns" />
@@ -113,11 +102,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="true"
                 android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
                 android:gravity="center_vertical"
                 android:text="@string/bottom" />
 
@@ -126,11 +113,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
                 android:gravity="center_vertical"
                 android:text="@string/edges" />
 
@@ -139,11 +124,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
                 android:gravity="center_vertical"
                 android:text="@string/apexes" />
 
@@ -152,11 +135,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:drawableStart="?android:attr/listChoiceIndicatorSingle"
-                android:drawableLeft="?android:attr/listChoiceIndicatorSingle"
                 android:gravity="center_vertical"
                 android:text="@string/outsides" />
 
