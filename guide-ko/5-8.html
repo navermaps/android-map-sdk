@@ -1,0 +1,1453 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>마커 클러스터링 · 네이버 지도 안드로이드 SDK</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codegroup/code.group.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="5-7.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Home
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="0.html">
+            
+                <a href="0.html">
+            
+                    
+                    소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">마이그레이션 가이드</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="migration.html">
+            
+                <a href="migration.html">
+            
+                    
+                    2.x → 3.x 마이그레이션 가이드
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">개발 가이드</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    지도와 좌표
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="2-1.html">
+            
+                <a href="2-1.html">
+            
+                    
+                    지도 객체
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="2-2.html">
+            
+                <a href="2-2.html">
+            
+                    
+                    좌표 객체
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="2-3.html">
+            
+                <a href="2-3.html">
+            
+                    
+                    지도 옵션
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    카메라
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="3-1.html">
+            
+                <a href="3-1.html">
+            
+                    
+                    카메라와 투영
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="3-2.html">
+            
+                <a href="3-2.html">
+            
+                    
+                    카메라 이동
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    상호작용
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="4-1.html">
+            
+                <a href="4-1.html">
+            
+                    
+                    사용자 인터페이스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="4-2.html">
+            
+                <a href="4-2.html">
+            
+                    
+                    위치
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    오버레이
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="5-1.html">
+            
+                <a href="5-1.html">
+            
+                    
+                    오버레이 공통
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="5-2.html">
+            
+                <a href="5-2.html">
+            
+                    
+                    마커
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="5-3.html">
+            
+                <a href="5-3.html">
+            
+                    
+                    정보 창
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.4" data-path="5-4.html">
+            
+                <a href="5-4.html">
+            
+                    
+                    셰이프
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.5" data-path="5-5.html">
+            
+                <a href="5-5.html">
+            
+                    
+                    위치 오버레이
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.6" data-path="5-6.html">
+            
+                <a href="5-6.html">
+            
+                    
+                    지상 오버레이
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.7" data-path="5-7.html">
+            
+                <a href="5-7.html">
+            
+                    
+                    경로선과 화살표
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5.8" data-path="5-8.html">
+            
+                <a href="5-8.html">
+            
+                    
+                    마커 클러스터링
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">레퍼런스</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <a target="_blank" href="ref://../reference/">
+            
+                    
+                    API 레퍼런스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <a target="_blank" href="https://github.com/navermaps/android-map-sdk">
+            
+                    
+                    데모 프로젝트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <a target="_blank" href="https://github.com/navermaps/android-map-sdk/blob/master/CHANGELOG.md">
+            
+                    
+                    변경사항
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">관련 사이트</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <a target="_blank" href="ref://../guide-en/">
+            
+                    
+                    English(영어)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <a target="_blank" href="https://navermaps.github.io/ios-map-sdk">
+            
+                    
+                    iOS SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" >
+            
+                <a target="_blank" href="https://www.ncloud.com">
+            
+                    
+                    네이버 클라우드 플랫폼
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" >
+            
+                <a target="_blank" href="https://www.ncloud.com/support/question/service">
+            
+                    
+                    문의하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >마커 클러스터링</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xB9C8;&#xCEE4;-&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;">&#xB9C8;&#xCEE4; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;</h1>
+<p>&#xD55C; &#xD654;&#xBA74;&#xC5D0; &#xB300;&#xB7C9;&#xC758; &#xB9C8;&#xCEE4;&#xAC00; &#xB178;&#xCD9C;&#xB418;&#xBA74; &#xC131;&#xB2A5;&#xC774; &#xC800;&#xD558;&#xB420; &#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; &#xC5EC;&#xB7EC; &#xB9C8;&#xCEE4;&#xAC00; &#xACB9;&#xCCD0; &#xB098;&#xD0C0;&#xB098;&#xBBC0;&#xB85C; &#xC2DC;&#xC778;&#xC131;&#xC774; &#xB5A8;&#xC5B4;&#xC9D1;&#xB2C8;&#xB2E4;. &#xB9C8;&#xCEE4;&#xC758; <a href="5-2.html#%EA%B2%B9%EC%B9%A8">&#xACB9;&#xCE68; &#xCC98;&#xB9AC;</a> &#xAE30;&#xB2A5;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC2DC;&#xC778;&#xC131;&#xC744; &#xC77C;&#xBD80; &#xD5A5;&#xC0C1;&#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xC73C;&#xB098; &#xACB9;&#xCE68; &#xCC98;&#xB9AC;&#xB85C; &#xC778;&#xD574; &#xAC00;&#xB824;&#xC9C4; &#xB9C8;&#xCEE4;&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xC54C; &#xC218; &#xC5C6;&#xC73C;&#xBA70;, &#xC131;&#xB2A5;&#xB3C4; &#xC5EC;&#xC804;&#xD788; &#xC800;&#xD558;&#xB429;&#xB2C8;&#xB2E4;. &#xB9C8;&#xCEE4; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; &#xAE30;&#xB2A5;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC90C; &#xB808;&#xBCA8;&#xC5D0; &#xB530;&#xB77C; &#xADFC;&#xC811;&#xD55C; &#xB9C8;&#xCEE4;&#xB97C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD574; &#xC131;&#xB2A5;&#xACFC; &#xC2DC;&#xC778;&#xC131;&#xC744; &#xBAA8;&#xB450; &#xD5A5;&#xC0C1;&#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xAE30;&#xBCF8;&#xC801;&#xC778;-&#xC0AC;&#xC6A9;&#xBC95;">&#xAE30;&#xBCF8;&#xC801;&#xC778; &#xC0AC;&#xC6A9;&#xBC95;</h2>
+<h3 id="&#xD0A4;-&#xC815;&#xC758;">&#xD0A4; &#xC815;&#xC758;</h3>
+<p>&#xB9C8;&#xCEE4; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; &#xAE30;&#xB2A5;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xB824;&#xBA74; &#xBA3C;&#xC800; &#xB370;&#xC774;&#xD130;&#xC758; &#xD0A4;&#xB97C; &#xC758;&#xBBF8;&#xD558;&#xB294; <a href="ref://../reference/com/naver/maps/map/clustering/ClusteringKey.html" target="_blank"><code>ClusteringKey</code></a> &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xAD6C;&#xD604;&#xD55C; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. <code>ClusteringKey</code> &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB294; &#xB370;&#xC774;&#xD130;&#xC758; &#xC88C;&#xD45C;&#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; &#xB450; &#xB370;&#xC774;&#xD130;&#xAC00; &#xB3D9;&#xC77C;&#xD55C;&#xC9C0;&#xB97C; &#xC815;&#xC758;&#xD569;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xC774; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xAD6C;&#xD604;&#xD558;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xB294; <code>equals()</code> &#xBC0F; <code>hashCode()</code>&#xB3C4; &#xAD6C;&#xD604;&#xD558;&#xB294; &#xAC83;&#xC774; &#xAD8C;&#xC7A5;&#xB429;&#xB2C8;&#xB2E4;. </p>
+<p>&#xB2E4;&#xC74C;&#xC740; <code>ClusteringKey</code>&#xB97C; &#xAD6C;&#xD604;&#xD558;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="30c762e227a25c0d6834ff8823e3fa0f" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-8de9c734a02a226ffa69dc958126dbef" class="gbcg-selector gbcg-active" data-tab="0-8de9c734a02a226ffa69dc958126dbef" data-tab-category="undefined">Java</a>
+    <a id="select-1-b7789976a9ad50008c4b8ea502010cc1" class="gbcg-selector" data-tab="1-b7789976a9ad50008c4b8ea502010cc1" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-8de9c734a02a226ffa69dc958126dbef" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ItemKey</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ClusteringKey</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> id;
+    <span class="hljs-meta">@NonNull</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> LatLng position;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ItemKey</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, @NonNull LatLng position)</span> </span>{
+        <span class="hljs-keyword">this</span>.id = id;
+        <span class="hljs-keyword">this</span>.position = position;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getId</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> id;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-meta">@NonNull</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> LatLng <span class="hljs-title">getPosition</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> position;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object o)</span> </span>{
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span> == o)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">if</span> (o == <span class="hljs-keyword">null</span> || getClass() != o.getClass())
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+
+        ItemKey itemKey = (ItemKey)o;
+
+        <span class="hljs-keyword">return</span> id == itemKey.id;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">hashCode</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> id;
+    }
+}
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-8de9c734a02a226ffa69dc958126dbef" id="java">Java</h3>
+        <div id="0-8de9c734a02a226ffa69dc958126dbef" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ItemKey</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ClusteringKey</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> id;
+    <span class="hljs-meta">@NonNull</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> LatLng position;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ItemKey</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, @NonNull LatLng position)</span> </span>{
+        <span class="hljs-keyword">this</span>.id = id;
+        <span class="hljs-keyword">this</span>.position = position;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getId</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> id;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-meta">@NonNull</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> LatLng <span class="hljs-title">getPosition</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> position;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object o)</span> </span>{
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span> == o)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">if</span> (o == <span class="hljs-keyword">null</span> || getClass() != o.getClass())
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+
+        ItemKey itemKey = (ItemKey)o;
+
+        <span class="hljs-keyword">return</span> id == itemKey.id;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">hashCode</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> id;
+    }
+}
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-b7789976a9ad50008c4b8ea502010cc1" id="kotlin">Kotlin</h3>
+        <div id="1-b7789976a9ad50008c4b8ea502010cc1" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ItemKey</span></span>(<span class="hljs-variable"><span class="hljs-keyword">val</span> id</span>: <span class="hljs-keyword">Int</span>, <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> position</span>: LatLng) : ClusteringKey {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getPosition</span><span class="hljs-params">()</span> = position</span>
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">equals</span><span class="hljs-params">(other: <span class="hljs-type">Any?</span>)</span>: <span class="hljs-keyword">Boolean</span> {</span>
+        <span class="hljs-keyword">if</span> (this === other) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+        <span class="hljs-keyword">if</span> (other == <span class="hljs-literal">null</span> || javaClass != other.javaClass) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+        <span class="hljs-variable"><span class="hljs-keyword">val</span> itemKey</span> = other <span class="hljs-keyword">as</span> ItemKey
+        <span class="hljs-keyword">return</span> id == itemKey.id
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">hashCode</span><span class="hljs-params">()</span> = id</span>
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB7EC;-&#xC0DD;&#xC131;">&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB7EC; &#xC0DD;&#xC131;</h3>
+<p>&#xC2E4;&#xC81C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; &#xB3D9;&#xC791;&#xC740; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.html" target="_blank"><code>Clusterer</code></a> &#xAC1D;&#xCCB4;&#xAC00; &#xC218;&#xD589;&#xD569;&#xB2C8;&#xB2E4;. <code>Clusterer</code> &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB294; &#xC9C1;&#xC811; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC5C6;&#xACE0; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.Builder.html" target="_blank"><code>Clusterer.Builder</code></a>&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. <code>Clusterer.Builder</code>&#xB294; &#xB370;&#xC774;&#xD130;&#xC758; &#xD0A4;&#xB97C; &#xC758;&#xBBF8;&#xD558;&#xB294; &#xD0C0;&#xC785; &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB97C; &#xC694;&#xAD6C;&#xD558;&#xBBC0;&#xB85C; &#xC55E;&#xC11C; &#xC815;&#xC758;&#xD55C; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xC774;&#xD6C4; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.Builder.html#build%28%29" target="_blank"><code>build()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xBA74; <code>Clusterer</code> &#xAC1D;&#xCCB4;&#xAC00; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9D1;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; <code>Clusterer</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="63bf152f1f54458e6f392cd7ba73550c" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-0865ed4fa2836f0adb5ba7900ce9402d" class="gbcg-selector gbcg-active" data-tab="0-0865ed4fa2836f0adb5ba7900ce9402d" data-tab-category="undefined">Java</a>
+    <a id="select-1-16fed16cb072a683b7ee4d110180af46" class="gbcg-selector" data-tab="1-16fed16cb072a683b7ee4d110180af46" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-0865ed4fa2836f0adb5ba7900ce9402d" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">Clusterer&lt;ItemKey&gt; clusterer = <span class="hljs-keyword">new</span> Clusterer.Builder&lt;ItemKey&gt;().build();
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-0865ed4fa2836f0adb5ba7900ce9402d" id="java">Java</h3>
+        <div id="0-0865ed4fa2836f0adb5ba7900ce9402d" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">Clusterer&lt;ItemKey&gt; clusterer = <span class="hljs-keyword">new</span> Clusterer.Builder&lt;ItemKey&gt;().build();
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-16fed16cb072a683b7ee4d110180af46" id="kotlin">Kotlin</h3>
+        <div id="1-16fed16cb072a683b7ee4d110180af46" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> clusterer</span>: Clusterer<span class="hljs-type">&lt;ItemKey&gt;</span> = Clusterer.Builder<span class="hljs-type">&lt;ItemKey&gt;</span>().build()
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="&#xB370;&#xC774;&#xD130;-&#xCD94;&#xAC00;">&#xB370;&#xC774;&#xD130; &#xCD94;&#xAC00;</h3>
+<p>&#xB9C8;&#xCEE4; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xB824;&#xBA74; &#xC0DD;&#xC131;&#xD55C; <code>Clusterer</code> &#xAC1D;&#xCCB4;&#xC758; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.html#add%28T%2Cjava.lang.Object%29" target="_blank"><code>add()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xB370;&#xC774;&#xD130;&#xC5D0;&#xB294; &#xD0A4;&#xC640; &#xBCC4;&#xB3C4;&#xB85C; &#xD0DC;&#xADF8;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBA70;, &#xD544;&#xC694;&#xCE58; &#xC54A;&#xC744; &#xACBD;&#xC6B0; <code>null</code>&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB7EC;&#xC5D0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="f55e43384b8cc25f23614650405978cd" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-c5531d3aa7f75d0ecc294cb3c4381539" class="gbcg-selector gbcg-active" data-tab="0-c5531d3aa7f75d0ecc294cb3c4381539" data-tab-category="undefined">Java</a>
+    <a id="select-1-cef06582bd31c5f1967b4c2c92f5b698" class="gbcg-selector" data-tab="1-cef06582bd31c5f1967b4c2c92f5b698" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-c5531d3aa7f75d0ecc294cb3c4381539" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">1</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.372</span>, <span class="hljs-number">127.113</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">2</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.366</span>, <span class="hljs-number">127.106</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">3</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.365</span>, <span class="hljs-number">127.157</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">4</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.361</span>, <span class="hljs-number">127.105</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">5</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.368</span>, <span class="hljs-number">127.110</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">6</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.360</span>, <span class="hljs-number">127.106</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">7</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.363</span>, <span class="hljs-number">127.111</span>)), <span class="hljs-keyword">null</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-c5531d3aa7f75d0ecc294cb3c4381539" id="java">Java</h3>
+        <div id="0-c5531d3aa7f75d0ecc294cb3c4381539" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">1</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.372</span>, <span class="hljs-number">127.113</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">2</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.366</span>, <span class="hljs-number">127.106</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">3</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.365</span>, <span class="hljs-number">127.157</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">4</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.361</span>, <span class="hljs-number">127.105</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">5</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.368</span>, <span class="hljs-number">127.110</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">6</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.360</span>, <span class="hljs-number">127.106</span>)), <span class="hljs-keyword">null</span>);
+clusterer.add(<span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">7</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.363</span>, <span class="hljs-number">127.111</span>)), <span class="hljs-keyword">null</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-cef06582bd31c5f1967b4c2c92f5b698" id="kotlin">Kotlin</h3>
+        <div id="1-cef06582bd31c5f1967b4c2c92f5b698" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">clusterer.add(ItemKey(<span class="hljs-number">1</span>, LatLng(<span class="hljs-number">37.372</span>, <span class="hljs-number">127.113</span>)), <span class="hljs-literal">null</span>)
+clusterer.add(ItemKey(<span class="hljs-number">2</span>, LatLng(<span class="hljs-number">37.366</span>, <span class="hljs-number">127.106</span>)), <span class="hljs-literal">null</span>)
+clusterer.add(ItemKey(<span class="hljs-number">3</span>, LatLng(<span class="hljs-number">37.365</span>, <span class="hljs-number">127.157</span>)), <span class="hljs-literal">null</span>)
+clusterer.add(ItemKey(<span class="hljs-number">4</span>, LatLng(<span class="hljs-number">37.361</span>, <span class="hljs-number">127.105</span>)), <span class="hljs-literal">null</span>)
+clusterer.add(ItemKey(<span class="hljs-number">5</span>, LatLng(<span class="hljs-number">37.368</span>, <span class="hljs-number">127.110</span>)), <span class="hljs-literal">null</span>)
+clusterer.add(ItemKey(<span class="hljs-number">6</span>, LatLng(<span class="hljs-number">37.360</span>, <span class="hljs-number">127.106</span>)), <span class="hljs-literal">null</span>)
+clusterer.add(ItemKey(<span class="hljs-number">7</span>, LatLng(<span class="hljs-number">37.363</span>, <span class="hljs-number">127.111</span>)), <span class="hljs-literal">null</span>)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p>&#xB370;&#xC774;&#xD130;&#xB97C; &#xCD94;&#xAC00;&#xD560; &#xB54C;&#xB294; <code>add()</code> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC5EC;&#xB7EC; &#xBC88; &#xD638;&#xCD9C;&#xD558;&#xAE30;&#xBCF4;&#xB2E4; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.html#addAll%28java.util.Map%29" target="_blank"><code>addAll()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD55C; &#xBC88;&#xB9CC; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xC131;&#xB2A5;&#xC774; &#xD5A5;&#xC0C1;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; <code>addAll()</code>&#xB85C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="775f09a61596114669298caef43b0e7d" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-5a2ffe274922af605fd1934894c5cabe" class="gbcg-selector gbcg-active" data-tab="0-5a2ffe274922af605fd1934894c5cabe" data-tab-category="undefined">Java</a>
+    <a id="select-1-2ba4a098fddd6a0dabe0420d8e8e5ce2" class="gbcg-selector" data-tab="1-2ba4a098fddd6a0dabe0420d8e8e5ce2" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-5a2ffe274922af605fd1934894c5cabe" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">Map&lt;ItemKey, Object&gt; keyTagMap = Map.of(
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">1</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.372</span>, <span class="hljs-number">127.113</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">2</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.366</span>, <span class="hljs-number">127.106</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">3</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.365</span>, <span class="hljs-number">127.157</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">4</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.361</span>, <span class="hljs-number">127.105</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">5</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.368</span>, <span class="hljs-number">127.110</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">6</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.360</span>, <span class="hljs-number">127.106</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">7</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.363</span>, <span class="hljs-number">127.111</span>)), <span class="hljs-keyword">null</span>
+);
+clusterer.addAll(keyTagMap);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-5a2ffe274922af605fd1934894c5cabe" id="java">Java</h3>
+        <div id="0-5a2ffe274922af605fd1934894c5cabe" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">Map&lt;ItemKey, Object&gt; keyTagMap = Map.of(
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">1</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.372</span>, <span class="hljs-number">127.113</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">2</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.366</span>, <span class="hljs-number">127.106</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">3</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.365</span>, <span class="hljs-number">127.157</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">4</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.361</span>, <span class="hljs-number">127.105</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">5</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.368</span>, <span class="hljs-number">127.110</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">6</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.360</span>, <span class="hljs-number">127.106</span>)), <span class="hljs-keyword">null</span>,
+    <span class="hljs-keyword">new</span> ItemKey(<span class="hljs-number">7</span>, <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.363</span>, <span class="hljs-number">127.111</span>)), <span class="hljs-keyword">null</span>
+);
+clusterer.addAll(keyTagMap);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-2ba4a098fddd6a0dabe0420d8e8e5ce2" id="kotlin">Kotlin</h3>
+        <div id="1-2ba4a098fddd6a0dabe0420d8e8e5ce2" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> keyTagMap</span> = mapOf(
+    ItemKey(<span class="hljs-number">1</span>, LatLng(<span class="hljs-number">37.372</span>, <span class="hljs-number">127.113</span>)) to <span class="hljs-literal">null</span>,
+    ItemKey(<span class="hljs-number">2</span>, LatLng(<span class="hljs-number">37.366</span>, <span class="hljs-number">127.106</span>)) to <span class="hljs-literal">null</span>,
+    ItemKey(<span class="hljs-number">3</span>, LatLng(<span class="hljs-number">37.365</span>, <span class="hljs-number">127.157</span>)) to <span class="hljs-literal">null</span>,
+    ItemKey(<span class="hljs-number">4</span>, LatLng(<span class="hljs-number">37.361</span>, <span class="hljs-number">127.105</span>)) to <span class="hljs-literal">null</span>,
+    ItemKey(<span class="hljs-number">5</span>, LatLng(<span class="hljs-number">37.368</span>, <span class="hljs-number">127.110</span>)) to <span class="hljs-literal">null</span>,
+    ItemKey(<span class="hljs-number">6</span>, LatLng(<span class="hljs-number">37.360</span>, <span class="hljs-number">127.106</span>)) to <span class="hljs-literal">null</span>,
+    ItemKey(<span class="hljs-number">7</span>, LatLng(<span class="hljs-number">37.363</span>, <span class="hljs-number">127.111</span>)) to <span class="hljs-literal">null</span>
+)
+clusterer.addAll(keyTagMap)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="&#xC9C0;&#xB3C4;-&#xAC1D;&#xCCB4;-&#xC9C0;&#xC815;">&#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4; &#xC9C0;&#xC815;</h3>
+<p><code>Clusterer</code> &#xAC1D;&#xCCB4;&#xC758; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.html#setMap%28com.naver.maps.map.NaverMap%29" target="_blank"><code>map</code></a> &#xC18D;&#xC131;&#xC5D0; &#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC90C; &#xB808;&#xBCA8;&#xC5D0; &#xB530;&#xB77C; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB41C; &#xB9C8;&#xCEE4;&#xAC00; &#xB098;&#xD0C0;&#xB098;&#xBA70;, &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB41C; &#xB9C8;&#xCEE4;&#xB97C; &#xD074;&#xB9AD;&#xD558;&#xBA74; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xAC00; &#xD3BC;&#xCCD0;&#xC9C0;&#xB294; &#xCD5C;&#xC18C; &#xC90C; &#xB808;&#xBCA8;&#xB85C; &#xD655;&#xB300;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB7EC;&#xC5D0; &#xC9C0;&#xB3C4; &#xAC1D;&#xCCB4;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="ff9327d3c23f5daaec7955fb0a213991" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-777ed1cfe163e9ae6b61fbf494164e76" class="gbcg-selector gbcg-active" data-tab="0-777ed1cfe163e9ae6b61fbf494164e76" data-tab-category="undefined">Java</a>
+    <a id="select-1-193c62687c45bb6723fda5a2b383b914" class="gbcg-selector" data-tab="1-193c62687c45bb6723fda5a2b383b914" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-777ed1cfe163e9ae6b61fbf494164e76" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">clusterer.setMap(naverMap);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-777ed1cfe163e9ae6b61fbf494164e76" id="java">Java</h3>
+        <div id="0-777ed1cfe163e9ae6b61fbf494164e76" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">clusterer.setMap(naverMap);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-193c62687c45bb6723fda5a2b383b914" id="kotlin">Kotlin</h3>
+        <div id="1-193c62687c45bb6723fda5a2b383b914" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">clusterer.map = naverMap
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p><img src="../assets/5-8-simple-clustering-1.png" alt="&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; 1"> <img src="../assets/5-8-simple-clustering-2.png" alt="&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; 2">
+<img src="../assets/5-8-simple-clustering-3.png" alt="&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; 3"> <img src="../assets/5-8-simple-clustering-4.png" alt="&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; 4"></p>
+<h2 id="&#xC635;&#xC158;-&#xC0AC;&#xC6A9;">&#xC635;&#xC158; &#xC0AC;&#xC6A9;</h2>
+<p><code>Clusterer.Builder</code>&#xC758; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD560; &#xAC70;&#xB9AC;, &#xCD5C;&#xC18C;/&#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;, &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158; &#xC5EC;&#xBD80;, &#xD074;&#xB7EC;&#xC2A4;&#xD130;/&#xB2E8;&#xB9D0; &#xB9C8;&#xCEE4; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5; &#xB4F1; &#xB2E4;&#xC591;&#xD55C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; &#xC635;&#xC158;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h3 id="&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;-&#xAC70;&#xB9AC;">&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; &#xAC70;&#xB9AC;</h3>
+<p><a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.Builder.html#screenDistance%28double%29" target="_blank"><code>screenDistance()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD560; &#xAE30;&#xC900; &#xAC70;&#xB9AC;&#xB97C; DP &#xB2E8;&#xC704;&#xB85C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xC5D0; &#xCD94;&#xAC00;&#xB41C; &#xB450; &#xB370;&#xC774;&#xD130;&#xC758; &#xD654;&#xBA74;&#xC0C1; &#xAC70;&#xB9AC;&#xAC00; &#xAE30;&#xC900; &#xAC70;&#xB9AC;&#xBCF4;&#xB2E4; &#xAC00;&#xAE5D;&#xB2E4;&#xBA74; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB418;&#xC5B4; &#xD558;&#xB098;&#xC758; &#xB9C8;&#xCEE4;&#xB85C; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB7EC;&#xC758; &#xAE30;&#xC900; &#xAC70;&#xB9AC;&#xB97C; 20DP&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="facd141874fcf9c7cdf9dc7068e3eab1" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-32a8dd8ae80feec540d6b0fd97e3ec2b" class="gbcg-selector gbcg-active" data-tab="0-32a8dd8ae80feec540d6b0fd97e3ec2b" data-tab-category="undefined">Java</a>
+    <a id="select-1-cedc00b22a7b23d85009621e3f60b18b" class="gbcg-selector" data-tab="1-cedc00b22a7b23d85009621e3f60b18b" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-32a8dd8ae80feec540d6b0fd97e3ec2b" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">builder.screenDistance(<span class="hljs-number">20</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-32a8dd8ae80feec540d6b0fd97e3ec2b" id="java">Java</h3>
+        <div id="0-32a8dd8ae80feec540d6b0fd97e3ec2b" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">builder.screenDistance(<span class="hljs-number">20</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-cedc00b22a7b23d85009621e3f60b18b" id="kotlin">Kotlin</h3>
+        <div id="1-cedc00b22a7b23d85009621e3f60b18b" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">builder.screenDistance(<span class="hljs-number">20.0</span>)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p><img src="../assets/5-8-screen-distance-1.png" alt="&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; &#xAC70;&#xB9AC; 1"> <img src="../assets/5-8-screen-distance-2.png" alt="&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; &#xAC70;&#xB9AC; 2"></p>
+<h3 id="&#xCD5C;&#xC18C;-&#xBC0F;-&#xCD5C;&#xB300;-&#xC90C;-&#xB808;&#xBCA8;">&#xCD5C;&#xC18C; &#xBC0F; &#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;</h3>
+<p><a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.Builder.html#minZoom%28double%29" target="_blank"><code>minZoom()</code></a> &#xBC0F; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.Builder.html#maxZoom%28double%29" target="_blank"><code>maxZoom()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD560; &#xCD5C;&#xC18C; &#xBC0F; &#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;&#xC744; &#xC81C;&#xD55C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC90C; &#xB808;&#xBCA8;&#xC774; &#xCD5C;&#xC18C; &#xC90C; &#xB808;&#xBCA8;&#xBCF4;&#xB2E4; &#xB0AE;&#xAC70;&#xB098; &#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;&#xBCF4;&#xB2E4; &#xB192;&#xB2E4;&#xBA74; &#xB450; &#xB370;&#xC774;&#xD130;&#xAC00; &#xD654;&#xBA74;&#xC0C1; &#xAE30;&#xC900; &#xAC70;&#xB9AC;&#xBCF4;&#xB2E4; &#xAC00;&#xAE5D;&#xB354;&#xB77C;&#xB3C4; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4;, &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD560; &#xCD5C;&#xC18C; &#xC90C; &#xB808;&#xBCA8;&#xC774; 4&#xC774;&#xACE0; &#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;&#xC774; 16&#xC774;&#xB77C;&#xBA74;, &#xCE74;&#xBA54;&#xB77C;&#xC758; &#xC90C; &#xB808;&#xBCA8;&#xC744; 3 &#xC774;&#xD558;&#xB85C; &#xCD95;&#xC18C;&#xD558;&#xB354;&#xB77C;&#xB3C4; 4&#xB808;&#xBCA8;&#xC758; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xAC00; &#xB354; &#xC774;&#xC0C1; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB418;&#xC9C0; &#xC54A;&#xACE0; &#xADF8;&#xB300;&#xB85C; &#xC720;&#xC9C0;&#xB418;&#xBA70;, 17 &#xC774;&#xC0C1;&#xC73C;&#xB85C; &#xD655;&#xB300;&#xD558;&#xBA74; &#xBAA8;&#xB4E0; &#xB370;&#xC774;&#xD130;&#xAC00; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB418;&#xC9C0; &#xC54A;&#xACE0; &#xB0B1;&#xAC1C;&#xB85C; &#xB098;&#xD0C0;&#xB0A9;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB7EC;&#xC758; &#xCD5C;&#xC18C; &#xB808;&#xBCA8;&#xC744; 4, &#xCD5C;&#xB300; &#xB808;&#xBCA8;&#xC744; 16&#xC73C;&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="4a1ce3e3a5a4f34c205640cbf5625f65" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-85fe3419126bd26989bcd69f46cadeda" class="gbcg-selector gbcg-active" data-tab="0-85fe3419126bd26989bcd69f46cadeda" data-tab-category="undefined">Java</a>
+    <a id="select-1-e076494b63bd4c45ad5769b859df3688" class="gbcg-selector" data-tab="1-e076494b63bd4c45ad5769b859df3688" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-85fe3419126bd26989bcd69f46cadeda" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">builder.minZoom(<span class="hljs-number">4</span>).maxZoom(<span class="hljs-number">16</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-85fe3419126bd26989bcd69f46cadeda" id="java">Java</h3>
+        <div id="0-85fe3419126bd26989bcd69f46cadeda" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">builder.minZoom(<span class="hljs-number">4</span>).maxZoom(<span class="hljs-number">16</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-e076494b63bd4c45ad5769b859df3688" id="kotlin">Kotlin</h3>
+        <div id="1-e076494b63bd4c45ad5769b859df3688" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">builder.minZoom(<span class="hljs-number">4.0</span>).maxZoom(<span class="hljs-number">16.0</span>)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="&#xD655;&#xB300;&#xCD95;&#xC18C;-&#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;">&#xD655;&#xB300;/&#xCD95;&#xC18C; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;</h3>
+<p><a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.Builder.html#animate%28boolean%29" target="_blank"><code>animate()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xCE74;&#xBA54;&#xB77C; &#xD655;&#xB300;/&#xCD95;&#xC18C;&#xC2DC; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xAC00; &#xD3BC;&#xCCD0;&#xC9C0;&#xB294;/&#xD569;&#xCCD0;&#xC9C0;&#xB294; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC744; &#xC801;&#xC6A9;&#xD560;&#xC9C0; &#xC5EC;&#xBD80;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC744; &#xC801;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="b518c5504eb4316df2c085cc603ad7cd" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-dc61798494059a99f0100cd5900762a8" class="gbcg-selector gbcg-active" data-tab="0-dc61798494059a99f0100cd5900762a8" data-tab-category="undefined">Java</a>
+    <a id="select-1-0f32df376b2bfacc7707075f4bc4bbf8" class="gbcg-selector" data-tab="1-0f32df376b2bfacc7707075f4bc4bbf8" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-dc61798494059a99f0100cd5900762a8" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">builder.animate(<span class="hljs-keyword">false</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-dc61798494059a99f0100cd5900762a8" id="java">Java</h3>
+        <div id="0-dc61798494059a99f0100cd5900762a8" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">builder.animate(<span class="hljs-keyword">false</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-0f32df376b2bfacc7707075f4bc4bbf8" id="kotlin">Kotlin</h3>
+        <div id="1-0f32df376b2bfacc7707075f4bc4bbf8" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">builder.animate(<span class="hljs-literal">false</span>)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="&#xB9C8;&#xCEE4;-&#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5;">&#xB9C8;&#xCEE4; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5;</h3>
+<p><a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.Builder.html#clusterMarkerUpdater%28com.naver.maps.map.clustering.ClusterMarkerUpdater%29" target="_blank"><code>clusterMarkerUpdater()</code></a> &#xBC0F; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.Builder.html#leafMarkerUpdater%28com.naver.maps.map.clustering.LeafMarkerUpdater%29" target="_blank"><code>leafMarkerUpdater()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xC640; &#xB2E8;&#xB9D0;(leaf) &#xB9C8;&#xCEE4;&#xB97C; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB9C8;&#xCEE4;&#xB97C; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5;&#xD558;&#xB824;&#xBA74; <code>clusterMarkerUpdater()</code> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; <a href="ref://../reference/com/naver/maps/map/clustering/ClusterMarkerUpdater.html" target="_blank"><code>ClusterMarkerUpdater</code></a> &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB9C8;&#xCEE4;&#xAC00; &#xC9C0;&#xB3C4;&#xC5D0; &#xB098;&#xD0C0;&#xB0A0; &#xB54C;&#xB9C8;&#xB2E4; <a href="ref://../reference/com/naver/maps/map/clustering/ClusterMarkerUpdater.html#updateClusterMarker%28com.naver.maps.map.clustering.ClusterMarkerInfo%2Ccom.naver.maps.map.overlay.Marker%29" target="_blank"><code>updateClusterMarker()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xBA70;, &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB85C; <a href="ref://../reference/com/naver/maps/map/clustering/ClusterMarkerInfo.html" target="_blank"><code>ClusterMarkerInfo</code></a>&#xC640; &#xC774;&#xB97C; &#xD45C;&#xD604;&#xD560; &#xB9C8;&#xCEE4; &#xAC1D;&#xCCB4;&#xAC00; &#xC804;&#xB2EC;&#xB429;&#xB2C8;&#xB2E4;. <code>ClusterMarkerInfo</code>&#xC5D0;&#xB294; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xC758; &#xD06C;&#xAE30;, &#xB178;&#xCD9C;&#xB418;&#xB294; &#xCD5C;&#xC18C;/&#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;, &#xD0DC;&#xADF8; &#xB4F1; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB9C8;&#xCEE4;&#xC758; &#xC815;&#xBCF4;&#xAC00; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xD544;&#xC694;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xB9C8;&#xCEE4; &#xAC1D;&#xCCB4;&#xC758; &#xC18D;&#xC131;&#xC5D0; &#xBC18;&#xC601;&#xD558;&#xBA74; &#xC9C0;&#xB3C4; &#xD654;&#xBA74;&#xC5D0;&#xB3C4; &#xBC18;&#xC601;&#xB429;&#xB2C8;&#xB2E4;. &#xAE30;&#xBCF8;&#xAC12;&#xC778; <a href="ref://../reference/com/naver/maps/map/clustering/DefaultClusterMarkerUpdater.html" target="_blank"><code>DefaultClusterMarkerUpdater</code></a>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xC758; &#xD06C;&#xAE30;&#xB97C; &#xCEA1;&#xC158;&#xC73C;&#xB85C; &#xB178;&#xCD9C;&#xD558;&#xACE0; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xD074;&#xB9AD; &#xC2DC; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xAC00; &#xD3BC;&#xCCD0;&#xC9C0;&#xB294; &#xCD5C;&#xC18C; &#xC90C; &#xB808;&#xBCA8;&#xB85C; &#xD655;&#xB300;&#xD558;&#xB294; &#xAE30;&#xB2A5; &#xB4F1;&#xC744; &#xC774;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xC774;&#xB97C; &#xC0C1;&#xC18D;&#xBC1B;&#xC544; &#xD544;&#xC694;&#xD55C; &#xBD80;&#xBD84;&#xB9CC; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E8;&#xB9D0; &#xB9C8;&#xCEE4;&#xB97C; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5;&#xD558;&#xB824;&#xBA74; <code>leafMarkerUpdater()</code> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; <a href="ref://../reference/com/naver/maps/map/clustering/LeafMarkerUpdater.html" target="_blank"><code>LeafMarkerUpdater</code></a> &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xB2E8;&#xB9D0; &#xB9C8;&#xCEE4;&#xAC00; &#xC9C0;&#xB3C4;&#xC5D0; &#xB098;&#xD0C0;&#xB0A0; &#xB54C;&#xB9C8;&#xB2E4; <a href="ref://../reference/com/naver/maps/map/clustering/LeafMarkerUpdater.html#updateLeafMarker%28com.naver.maps.map.clustering.LeafMarkerInfo%2Ccom.naver.maps.map.overlay.Marker%29" target="_blank"><code>updateLeafMarker()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xBA70;, &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB85C; <a href="ref://../reference/com/naver/maps/map/clustering/LeafMarkerInfo.html" target="_blank"><code>LeafMarkerInfo</code></a>&#xC640; &#xC774;&#xB97C; &#xD45C;&#xD604;&#xD560; &#xB9C8;&#xCEE4; &#xAC1D;&#xCCB4;&#xAC00; &#xC804;&#xB2EC;&#xB429;&#xB2C8;&#xB2E4;. <code>LeafMarkerInfo</code>&#xC5D0;&#xB294; &#xB370;&#xC774;&#xD130;&#xAC00; &#xB178;&#xCD9C;&#xB418;&#xB294; &#xCD5C;&#xC18C;/&#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;, &#xD0DC;&#xADF8; &#xB4F1; &#xB2E8;&#xB9D0; &#xB9C8;&#xCEE4;&#xC758; &#xC815;&#xBCF4;&#xAC00; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xD544;&#xC694;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xB9C8;&#xCEE4; &#xAC1D;&#xCCB4;&#xC758; &#xC18D;&#xC131;&#xC5D0; &#xBC18;&#xC601;&#xD558;&#xBA74; &#xC9C0;&#xB3C4; &#xD654;&#xBA74;&#xC5D0;&#xB3C4; &#xBC18;&#xC601;&#xB429;&#xB2C8;&#xB2E4;. &#xAE30;&#xBCF8;&#xAC12;&#xC778; <a href="ref://../reference/com/naver/maps/map/clustering/DefaultLeafMarkerUpdater.html" target="_blank"><code>DefaultLeafMarkerUpdater</code></a>&#xB97C; &#xC0C1;&#xC18D;&#xBC1B;&#xC544; &#xD544;&#xC694;&#xD55C; &#xBD80;&#xBD84;&#xB9CC; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD55C;&#xD3B8; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB7EC;&#xB294; &#xD654;&#xBA74;&#xC5D0; &#xB098;&#xD0C0;&#xB098;&#xC57C; &#xD558;&#xB294; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xBC0F; &#xB2E8;&#xB9D0; &#xB370;&#xC774;&#xD130;&#xB9CC;&#xC744; &#xB9C8;&#xCEE4;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xC9C0;&#xB3C4;&#xC5D0; &#xCD94;&#xAC00;/&#xC81C;&#xAC70;&#xD558;&#xBA70;, &#xC81C;&#xAC70;&#xB41C; &#xB9C8;&#xCEE4; &#xAC1D;&#xCCB4;&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xC7AC;&#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;. &#xB54C;&#xBB38;&#xC5D0; <code>updateClusterMarker()</code>, <code>updateLeafMarker()</code> &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xB9C8;&#xCEE4; &#xAC1D;&#xCCB4;&#xC5D0;&#xB294; &#xC774;&#xC804; &#xB370;&#xC774;&#xD130;&#xC758; &#xC18D;&#xC131;&#xC774; &#xC5EC;&#xC804;&#xD788; &#xBC18;&#xC601;&#xB418;&#xC5B4; &#xC788;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xB9C8;&#xCEE4;&#xB97C; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; &#xACBD;&#xC6B0; &#xD544;&#xC694;&#xD55C; &#xC18D;&#xC131;&#xC744; &#xBE60;&#xC9D0;&#xC5C6;&#xC774; &#xB36E;&#xC5B4;&#xC50C;&#xC6CC;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xC758; &#xD06C;&#xAE30; &#xBC0F; &#xB370;&#xC774;&#xD130;&#xC758; ID&#xC5D0; &#xB530;&#xB77C; &#xB9C8;&#xCEE4; &#xC544;&#xC774;&#xCF58;&#xC744; &#xBCC0;&#xACBD;&#xD558;&#xACE0;, &#xB2E8;&#xB9D0; &#xB9C8;&#xCEE4;&#xB97C; &#xD074;&#xB9AD;&#xD588;&#xC744; &#xB54C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB7EC;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xD558;&#xB3C4;&#xB85D; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="d157d4593d614f02ef8412f2aad772a7" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-5483cb257df94333aa1cde0216c0a225" class="gbcg-selector gbcg-active" data-tab="0-5483cb257df94333aa1cde0216c0a225" data-tab-category="undefined">Java</a>
+    <a id="select-1-d471216a7392b6f3c4653c6976681e3c" class="gbcg-selector" data-tab="1-d471216a7392b6f3c4653c6976681e3c" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-5483cb257df94333aa1cde0216c0a225" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">OverlayImage[] icons = { MarkerIcons.BLUE, MarkerIcons.GREEN, MarkerIcons.RED, MarkerIcons.YELLOW };
+builder.clusterMarkerUpdater(<span class="hljs-keyword">new</span> DefaultClusterMarkerUpdater() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">updateClusterMarker</span><span class="hljs-params">(@NonNull ClusterMarkerInfo info, @NonNull Marker marker)</span> </span>{
+        <span class="hljs-keyword">super</span>.updateClusterMarker(info, marker);
+        <span class="hljs-keyword">if</span> (info.getSize() &lt; <span class="hljs-number">3</span>) {
+            marker.setIcon(MarkerIcons.CLUSTER_LOW_DENSITY);
+        } <span class="hljs-keyword">else</span> {
+            marker.setIcon(MarkerIcons.CLUSTER_MEDIUM_DENSITY);
+        }
+    }
+}).leafMarkerUpdater(<span class="hljs-keyword">new</span> DefaultLeafMarkerUpdater() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">updateLeafMarker</span><span class="hljs-params">(@NonNull LeafMarkerInfo info, @NonNull Marker marker)</span> </span>{
+        <span class="hljs-keyword">super</span>.updateLeafMarker(info, marker);
+        ItemKey key = (ItemKey)info.getKey();
+        marker.setIcon(icons[key.id % icons.length]);
+        marker.setOnClickListener(o -&gt; {
+            clusterer.remove(key);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        });
+    }
+})
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-5483cb257df94333aa1cde0216c0a225" id="java">Java</h3>
+        <div id="0-5483cb257df94333aa1cde0216c0a225" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">OverlayImage[] icons = { MarkerIcons.BLUE, MarkerIcons.GREEN, MarkerIcons.RED, MarkerIcons.YELLOW };
+builder.clusterMarkerUpdater(<span class="hljs-keyword">new</span> DefaultClusterMarkerUpdater() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">updateClusterMarker</span><span class="hljs-params">(@NonNull ClusterMarkerInfo info, @NonNull Marker marker)</span> </span>{
+        <span class="hljs-keyword">super</span>.updateClusterMarker(info, marker);
+        <span class="hljs-keyword">if</span> (info.getSize() &lt; <span class="hljs-number">3</span>) {
+            marker.setIcon(MarkerIcons.CLUSTER_LOW_DENSITY);
+        } <span class="hljs-keyword">else</span> {
+            marker.setIcon(MarkerIcons.CLUSTER_MEDIUM_DENSITY);
+        }
+    }
+}).leafMarkerUpdater(<span class="hljs-keyword">new</span> DefaultLeafMarkerUpdater() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">updateLeafMarker</span><span class="hljs-params">(@NonNull LeafMarkerInfo info, @NonNull Marker marker)</span> </span>{
+        <span class="hljs-keyword">super</span>.updateLeafMarker(info, marker);
+        ItemKey key = (ItemKey)info.getKey();
+        marker.setIcon(icons[key.id % icons.length]);
+        marker.setOnClickListener(o -&gt; {
+            clusterer.remove(key);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        });
+    }
+})
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-d471216a7392b6f3c4653c6976681e3c" id="kotlin">Kotlin</h3>
+        <div id="1-d471216a7392b6f3c4653c6976681e3c" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> icons</span> = arrayOf(MarkerIcons.BLUE, MarkerIcons.GREEN, MarkerIcons.RED, MarkerIcons.YELLOW)
+builder.clusterMarkerUpdater(<span class="hljs-keyword">object</span> : DefaultClusterMarkerUpdater() {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">updateClusterMarker</span><span class="hljs-params">(info: <span class="hljs-type">ClusterMarkerInfo, marker: Marker</span>)</span> {</span>
+        super.updateClusterMarker(info, marker)
+        marker.icon = <span class="hljs-keyword">if</span> (info.size <span class="hljs-type">&lt; 3) {
+            MarkerIcons.CLUSTER_LOW_DENSITY
+        } else {
+            MarkerIcons.CLUSTER_MEDIUM_DENSITY
+        }
+    }
+}).leafMarkerUpdater(object : DefaultLeafMarkerUpdater() {
+    override fun updateLeafMarker(info: LeafMarkerInfo, marker: Marker) {
+        super.updateLeafMarker(info, marker)
+        val key = info.key as ItemKey
+        marker.icon = icons[key.id % icons.size]
+        marker.onClickListener = Overlay.OnClickListener {
+            clusterer.remove(key)
+            true
+        }
+    }
+})
+</span></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<p><img src="../assets/5-8-marker-customizing-1.png" alt="&#xB9C8;&#xCEE4; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5; 1"> <img src="../assets/5-8-marker-customizing-2.png" alt="&#xB9C8;&#xCEE4; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5; 2"></p>
+<h2 id="&#xBCF5;&#xC7A1;&#xD55C;-&#xC804;&#xB7B5;-&#xC0AC;&#xC6A9;">&#xBCF5;&#xC7A1;&#xD55C; &#xC804;&#xB7B5; &#xC0AC;&#xC6A9;</h2>
+<p><code>Clusterer.Builder</code> &#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.ComplexBuilder.html" target="_blank"><code>Clusterer.ComplexBuilder</code></a>&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xD654;&#xBA74;&#xC0C1; &#xAC70;&#xB9AC;&#xAC00; &#xC544;&#xB2CC; &#xB2E4;&#xB978; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD558;&#xB294; &#xB4F1; &#xBCF5;&#xC7A1;&#xD55C; &#xC804;&#xB7B5;&#xACFC; &#xAE30;&#xB2A5;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h3 id="&#xB178;&#xB4DC;">&#xB178;&#xB4DC;</h3>
+<p>&#xB124;&#xC774;&#xBC84; &#xC9C0;&#xB3C4; SDK&#xC758; &#xB9C8;&#xCEE4; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; &#xAE30;&#xB2A5;&#xC740; <a href="https://en.wikipedia.org/wiki/Hierarchical_clustering" target="_blank">hierarchical agglomerative clustering</a> &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC5D0; &#xAE30;&#xBC18;&#xD569;&#xB2C8;&#xB2E4;. &#xC989;, &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB7EC;&#xC758; &#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8;&#xBD80;&#xD130; &#xC778;&#xC811; &#xB370;&#xC774;&#xD130;&#xB97C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD558;&#xC5EC;, &#xCD5C;&#xC18C; &#xC90C; &#xB808;&#xBCA8;&#xAE4C;&#xC9C0; &#xBC14;&#xD140;-&#xC5C5; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xD2B8;&#xB9AC;&#xB97C; &#xAD6C;&#xC131;&#xD558;&#xBA70; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD569;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xD2B8;&#xB9AC;&#xC5D0;&#xC11C; &#xC790;&#xC2DD;&#xC774; &#xC788;&#xB294; &#xB178;&#xB4DC;&#xB294; &#xD074;&#xB7EC;&#xC2A4;&#xD130;, &#xB2E8;&#xB9D0; &#xB178;&#xB4DC;&#xB294; &#xB370;&#xC774;&#xD130;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xAC01; &#xB178;&#xB4DC;&#xB294; <a href="ref://../reference/com/naver/maps/map/clustering/Node.html" target="_blank"><code>Node</code></a> &#xD074;&#xB798;&#xC2A4;&#xB85C; &#xD45C;&#xD604;&#xB418;&#xBA70;, &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xC640; &#xB2E8;&#xB9D0; &#xB178;&#xB4DC;&#xB294; &#xAC01;&#xAC01; <code>Node</code>&#xC758; &#xD558;&#xC704; &#xD074;&#xB798;&#xC2A4;&#xC778; <a href="ref://../reference/com/naver/maps/map/clustering/Cluster.html" target="_blank"><code>Cluster</code></a>&#xC640; <a href="ref://../reference/com/naver/maps/map/clustering/Leaf.html" target="_blank"><code>Leaf</code></a>&#xB85C; &#xD45C;&#xD604;&#xB429;&#xB2C8;&#xB2E4;. </p>
+<p>&#xB178;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xACF5;&#xD1B5;&#xC801;&#xC73C;&#xB85C; &#xC88C;&#xD45C;, &#xD0DC;&#xADF8;, &#xC790;&#xC2DD; &#xB178;&#xB4DC;&#xC758; &#xAC1C;&#xC218;, &#xB178;&#xCD9C;&#xB418;&#xC5B4;&#xC57C; &#xD558;&#xB294; &#xCD5C;&#xC18C;/&#xCD5C;&#xB300; &#xC90C; &#xB808;&#xBCA8; &#xC18D;&#xC131;&#xC744; &#xAC00;&#xC838;&#xC62C; &#xC218; &#xC788;&#xC73C;&#xBA70;, &#xC774;&#xC5D0; &#xB354;&#xD574; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB178;&#xB4DC;&#xB294; &#xC790;&#xC2DD; &#xB178;&#xB4DC;&#xC758; &#xBAA9;&#xB85D;&#xC5D0;, &#xB2E8;&#xB9D0; &#xB178;&#xB4DC;&#xB294; &#xB370;&#xC774;&#xD130;&#xC758; &#xD0A4;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h3 id="&#xAE30;&#xC900;-&#xAC70;&#xB9AC;-&#xC804;&#xB7B5;-&#xBC0F;-&#xAC70;&#xB9AC;-&#xCE21;&#xC815;-&#xC804;&#xB7B5;">&#xAE30;&#xC900; &#xAC70;&#xB9AC; &#xC804;&#xB7B5; &#xBC0F; &#xAC70;&#xB9AC; &#xCE21;&#xC815; &#xC804;&#xB7B5;</h3>
+<p><a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.ComplexBuilder.html#thresholdStrategy%28com.naver.maps.map.clustering.ThresholdStrategy%29" target="_blank"><code>thresholdStrategy()</code></a> &#xBC0F; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.ComplexBuilder.html#distanceStrategy%28com.naver.maps.map.clustering.DistanceStrategy%29" target="_blank"><code>distanceStrategy()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD2B9;&#xC815; &#xC90C; &#xB808;&#xBCA8;&#xC5D0;&#xC11C; &#xB450; &#xB178;&#xB4DC;&#xB97C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD560;&#xC9C0;&#xC5D0; &#xB300;&#xD55C; &#xC804;&#xB7B5;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><code>thresholdStrategy</code>&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; <a href="ref://../reference/com/naver/maps/map/clustering/ThresholdStrategy.html" target="_blank"><code>ThresholdStrategy</code></a>&#xB294; &#xD2B9;&#xC815; &#xC90C; &#xB808;&#xBCA8;&#xC5D0;&#xC11C; &#xB450; &#xB178;&#xB4DC;&#xB97C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD560; &#xAE30;&#xC900; &#xAC70;&#xB9AC;&#xB97C; &#xAD6C;&#xD558;&#xB294; &#xC804;&#xB7B5;&#xC5D0; &#xB300;&#xD55C; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC774;&#xBA70;, <code>distanceStrategy</code>&#xB85C; &#xC9C0;&#xC815;&#xD558;&#xB294; <a href="ref://../reference/com/naver/maps/map/clustering/DistanceStrategy.html" target="_blank"><code>DistanceStrategy</code></a>&#xB294; &#xD2B9;&#xC815; &#xC90C; &#xB808;&#xBCA8;&#xC5D0;&#xC11C; &#xB450; &#xB178;&#xB4DC;&#xAC04;&#xC758; &#xAC70;&#xB9AC;&#xB97C; &#xCE21;&#xC815;&#xD558;&#xB294; &#xC804;&#xB7B5;&#xC5D0; &#xB300;&#xD55C; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC989;, &#xB450; &#xB178;&#xB4DC; <code>node1</code>&#xACFC; <code>node2</code>&#xAC00; &#xC788;&#xC744; &#xB54C;, <code>zoom</code> &#xC90C; &#xB808;&#xBCA8;&#xC5D0;&#xC11C; <code>DistanceStrategy.getDistance(node1, node2, zoom)</code>&#xAC00; <code>ThresholdStrategy.getThreshold(zoom)</code>&#xBCF4;&#xB2E4; &#xC791;&#xAC70;&#xB098; &#xAC19;&#xB2E4;&#xBA74; <code>node1</code>&#xACFC; <code>node2</code>&#xB294; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB429;&#xB2C8;&#xB2E4;. &#xC774;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74; &#xC90C; &#xB808;&#xBCA8;&#xC5D0; &#xB530;&#xB77C; &#xAC70;&#xB9AC; &#xAE30;&#xC900;&#xC744; &#xB2EC;&#xB9AC;&#xD558;&#xAC70;&#xB098; &#xD654;&#xBA74;&#xC0C1; &#xAC70;&#xB9AC;&#xC640; &#xBB34;&#xAD00;&#xD558;&#xAC8C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1; &#xC804;&#xB7B5;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; 9&#xB808;&#xBCA8; &#xC774;&#xD558;&#xC5D0;&#xC11C;&#xB294; &#xBB34;&#xC870;&#xAC74; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;, 10~13&#xB808;&#xBCA8;&#xC5D0;&#xC11C;&#xB294; &#xD0DC;&#xADF8;&#xAC00; &#xB3D9;&#xC77C;&#xD560; &#xB54C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;, 14&#xB808;&#xBCA8; &#xC774;&#xC0C1;&#xC5D0;&#xC11C;&#xB294; &#xD654;&#xBA74;&#xC0C1; &#xAC70;&#xB9AC;&#xAC00; 70 &#xBBF8;&#xB9CC;&#xC77C; &#xB54C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD558;&#xB3C4;&#xB85D; &#xC804;&#xB7B5;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;. </p>
+<p><div id="1d13391c27d7aadc976b64fe8c4210bc" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-12dab22db0575a9296c64200f3cc46b9" class="gbcg-selector gbcg-active" data-tab="0-12dab22db0575a9296c64200f3cc46b9" data-tab-category="undefined">Java</a>
+    <a id="select-1-feb30b6726a190ff8b0b03268da8889e" class="gbcg-selector" data-tab="1-feb30b6726a190ff8b0b03268da8889e" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-12dab22db0575a9296c64200f3cc46b9" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">complexBuilder.thresholdStrategy(zoom -&gt; {
+    <span class="hljs-keyword">if</span> (zoom &lt;= <span class="hljs-number">11</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">70</span>;
+    }
+}).distanceStrategy(<span class="hljs-keyword">new</span> DistanceStrategy() {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> DistanceStrategy defaultDistanceStrategy = <span class="hljs-keyword">new</span> DefaultDistanceStrategy();
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getDistance</span><span class="hljs-params">(<span class="hljs-keyword">int</span> zoom, @NonNull Node node1, @NonNull Node node2)</span> </span>{
+        <span class="hljs-keyword">if</span> (zoom &lt;= <span class="hljs-number">9</span>) {
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (zoom &lt;= <span class="hljs-number">13</span>) {
+            <span class="hljs-keyword">if</span> (Objects.equals(node1.getTag(), node2.getTag())) {
+                <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> defaultDistanceStrategy.getDistance(zoom, node1, node2);
+        }
+});
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-12dab22db0575a9296c64200f3cc46b9" id="java">Java</h3>
+        <div id="0-12dab22db0575a9296c64200f3cc46b9" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">complexBuilder.thresholdStrategy(zoom -&gt; {
+    <span class="hljs-keyword">if</span> (zoom &lt;= <span class="hljs-number">11</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">70</span>;
+    }
+}).distanceStrategy(<span class="hljs-keyword">new</span> DistanceStrategy() {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> DistanceStrategy defaultDistanceStrategy = <span class="hljs-keyword">new</span> DefaultDistanceStrategy();
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getDistance</span><span class="hljs-params">(<span class="hljs-keyword">int</span> zoom, @NonNull Node node1, @NonNull Node node2)</span> </span>{
+        <span class="hljs-keyword">if</span> (zoom &lt;= <span class="hljs-number">9</span>) {
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (zoom &lt;= <span class="hljs-number">13</span>) {
+            <span class="hljs-keyword">if</span> (Objects.equals(node1.getTag(), node2.getTag())) {
+                <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> defaultDistanceStrategy.getDistance(zoom, node1, node2);
+        }
+});
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-feb30b6726a190ff8b0b03268da8889e" id="kotlin">Kotlin</h3>
+        <div id="1-feb30b6726a190ff8b0b03268da8889e" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">complexBuilder.thresholdStrategy { zoom -&gt;
+    <span class="hljs-keyword">if</span> (zoom <span class="hljs-type">&lt;= 11) {
+        0.0
+    } else {
+        70.0
+    }
+}
+.distanceStrategy(object : DistanceStrategy {
+    private val defaultDistanceStrategy = DefaultDistanceStrategy()
+
+    override fun getDistance(zoom: Int, node1: Node, node2: Node): Double {
+        return when {
+            zoom &lt;= 9 -&gt;</span> <span class="hljs-number">-1.0</span>
+            zoom <span class="hljs-type">&lt;= 13 -&gt;</span>
+                <span class="hljs-keyword">if</span> (node1.tag == node2.tag) {
+                    <span class="hljs-number">-1.0</span>
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-number">1.0</span>
+                }
+            <span class="hljs-keyword">else</span> -&gt; defaultDistanceStrategy.getDistance(zoom, node1, node2)
+        }
+    }
+})
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="&#xCD5C;&#xB300;-&#xD654;&#xBA74;-&#xAC70;&#xB9AC;-&#xC81C;&#xD55C;">&#xCD5C;&#xB300; &#xD654;&#xBA74; &#xAC70;&#xB9AC; &#xC81C;&#xD55C;</h3>
+<p>&#xBAA8;&#xB4E0; &#xB178;&#xB4DC;&#xC5D0; &#xB300;&#xD574; &#xBAA8;&#xB4E0; &#xC778;&#xC811; &#xB178;&#xB4DC;&#xB97C; &#xB300;&#xC0C1;&#xC73C;&#xB85C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xC744; &#xC2DC;&#xB3C4;&#xD558;&#xBA74; &#xC2DC;&#xAC04;&#xBCF5;&#xC7A1;&#xB3C4;&#xAC00; &#xAE30;&#xD558;&#xAE09;&#xC218;&#xC801;&#xC73C;&#xB85C; &#xC99D;&#xAC00;&#xD558;&#xC5EC; &#xC131;&#xB2A5;&#xC5D0; &#xD070; &#xC545;&#xC601;&#xD5A5;&#xC744; &#xBBF8;&#xCE69;&#xB2C8;&#xB2E4;. &#xB54C;&#xBB38;&#xC5D0; &#xD654;&#xBA74;&#xC0C1; &#xAC70;&#xB9AC;&#xB97C; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xC0BC;&#xC544; &#xD6C4;&#xBCF4; &#xB178;&#xB4DC;&#xC5D0; &#xB300;&#xD55C; &#xD0D0;&#xC0C9; &#xACF5;&#xAC04;&#xC744; &#xC81C;&#xD55C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.ComplexBuilder.html#maxScreenDistance%28double%29" target="_blank"><code>maxScreenDistance()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xD560; &#xCD5C;&#xB300; &#xD654;&#xBA74; &#xAC70;&#xB9AC;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC989;, &#xB450; &#xB178;&#xB4DC; <code>node1</code>&#xACFC; <code>node2</code>&#xAC00; &#xC788;&#xC744; &#xB54C;, <code>zoom</code> &#xC90C; &#xB808;&#xBCA8;&#xC5D0;&#xC11C; &#xB450; &#xB178;&#xB4DC;&#xC758; &#xD654;&#xBA74;&#xC0C1; &#xAC70;&#xB9AC;&#xAC00; &#xC774; &#xAC12;&#xBCF4;&#xB2E4; &#xD06C;&#xB2E4;&#xBA74;, <code>DistanceStrategy.getDistance(node1, node2, zoom)</code>&#xAC00; <code>ThresholdStrategy.getThreshold(zoom)</code>&#xBCF4;&#xB2E4; &#xC791;&#xAC70;&#xB098; &#xAC19;&#xB354;&#xB77C;&#xB3C4; <code>node1</code>&#xACFC; <code>node2</code>&#xB294; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB530;&#xB77C;&#xC11C; <code>ThresholdStrategy</code>&#xC640; <code>DistanceStrategy</code>&#xB97C; &#xC9C0;&#xC815;&#xD588;&#xB2E4;&#xBA74; &#xC804;&#xB7B5;&#xC744; &#xACE0;&#xB824;&#xD574; &#xCD5C;&#xC801;&#xC758; &#xAC70;&#xB9AC;&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xAC12;&#xC744; &#xB108;&#xBB34; &#xC791;&#xAC8C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB418;&#xC5B4;&#xC57C; &#xD558;&#xB294; &#xB178;&#xB4DC;&#xAC00; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB418;&#xC9C0; &#xC54A;&#xC744; &#xC218; &#xC788;&#xACE0;, &#xB108;&#xBB34; &#xD06C;&#xAC8C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xC131;&#xB2A5;&#xC774; &#xC800;&#xD558;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xCD5C;&#xB300; &#xD654;&#xBA74; &#xAC70;&#xB9AC; &#xC81C;&#xD55C;&#xC744; 100DP&#xB85C; &#xBCC0;&#xACBD;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="6179adc557e27d67ca187a584135bda1" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-0a79465611048079a9754eda341e8b19" class="gbcg-selector gbcg-active" data-tab="0-0a79465611048079a9754eda341e8b19" data-tab-category="undefined">Java</a>
+    <a id="select-1-bfb85368e40355f96dc957bff4fe76b5" class="gbcg-selector" data-tab="1-bfb85368e40355f96dc957bff4fe76b5" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-0a79465611048079a9754eda341e8b19" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">complexBuilder.maxScreenDistance(<span class="hljs-number">100</span>);
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-0a79465611048079a9754eda341e8b19" id="java">Java</h3>
+        <div id="0-0a79465611048079a9754eda341e8b19" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">complexBuilder.maxScreenDistance(<span class="hljs-number">100</span>);
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-bfb85368e40355f96dc957bff4fe76b5" id="kotlin">Kotlin</h3>
+        <div id="1-bfb85368e40355f96dc957bff4fe76b5" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">complexBuilder.maxScreenDistance(<span class="hljs-number">100.0</span>)
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="&#xD0DC;&#xADF8;-&#xBCD1;&#xD569;-&#xC804;&#xB7B5;">&#xD0DC;&#xADF8; &#xBCD1;&#xD569; &#xC804;&#xB7B5;</h3>
+<p>&#xB2E8;&#xB9D0; &#xB178;&#xB4DC;&#xC5D0;&#xB294; <code>Clusterer.add()</code>&#xB85C; &#xC9C0;&#xC815;&#xD55C; &#xD0A4;&#xC640; &#xD0DC;&#xADF8;&#xAC00; &#xC720;&#xC9C0;&#xB429;&#xB2C8;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB178;&#xB4DC;&#xB294; &#xC5EC;&#xB7EC; &#xB178;&#xB4DC;&#xAC00; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB418;&#xC5B4; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xAC83;&#xC774;&#xBBC0;&#xB85C; &#xD0A4;&#xB97C; &#xAC00;&#xC9C8; &#xC218; &#xC5C6;&#xC73C;&#xBA70;, &#xD0DC;&#xADF8; &#xC5ED;&#xC2DC; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB300;&#xC2E0; <a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.ComplexBuilder.html#tagMergeStrategy%28com.naver.maps.map.clustering.TagMergeStrategy%29" target="_blank"><code>tagMergeStrategy()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xC790;&#xC2DD; &#xB178;&#xB4DC;&#xB4E4;&#xC758; &#xD0DC;&#xADF8;&#xB97C; &#xBCD1;&#xD569;&#xD574; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB178;&#xB4DC;&#xC758; &#xD0DC;&#xADF8;&#xB85C; &#xC0BC;&#xB294; &#xC804;&#xB7B5;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC5EC;&#xB7EC; &#xB178;&#xB4DC;&#xAC00; &#xD558;&#xB098;&#xC758; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB85C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB420; &#xB54C;&#xB9C8;&#xB2E4; <a href="ref://../reference/com/naver/maps/map/clustering/TagMergeStrategy.html#mergeTag%28com.naver.maps.map.clustering.Cluster%29" target="_blank"><code>mergeTag()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xBA70;, &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB85C; &#xC804;&#xB2EC;&#xB418;&#xB294; <code>Cluster</code>&#xC758; <a href="ref://../reference/com/naver/maps/map/clustering/Cluster.html#getChildren%28%29" target="_blank"><code>children</code></a>&#xC744; &#xC774;&#xC6A9;&#xD574; &#xC790;&#xC2DD; &#xB178;&#xB4DC;&#xB97C; &#xC21C;&#xD68C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC790;&#xC2DD; &#xB178;&#xB4DC;&#xC758; &#xD0DC;&#xADF8;&#xB97C; &#xBCD1;&#xD569;&#xD574; &#xBC18;&#xD658;&#xD558;&#xBA74; &#xBC18;&#xD658;&#xD55C; &#xAC12;&#xC774; <code>Cluster</code>&#xC758; &#xD0DC;&#xADF8;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xB370;&#xC774;&#xD130;&#xC758; &#xD0DC;&#xADF8;&#xAC00; &#xC815;&#xC218;&#xC77C; &#xB54C;, &#xC790;&#xC2DD; &#xB178;&#xB4DC;&#xC758; &#xC815;&#xC218;&#xB97C; &#xBAA8;&#xB450; &#xB354;&#xD574; &#xBD80;&#xBAA8; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xC758; &#xD0DC;&#xADF8;&#xB85C; &#xC0BC;&#xB294; &#xC804;&#xB7B5;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="f457516e9c0f1092cb90cccd6d40c2dc" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-97fd6ed6e0924fa790ff57d720885f47" class="gbcg-selector gbcg-active" data-tab="0-97fd6ed6e0924fa790ff57d720885f47" data-tab-category="undefined">Java</a>
+    <a id="select-1-f69d9e0615764ce3e4169b0cd8817056" class="gbcg-selector" data-tab="1-f69d9e0615764ce3e4169b0cd8817056" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-97fd6ed6e0924fa790ff57d720885f47" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">complexBuilder.tagMergeStrategy(cluster -&gt; {
+    <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (Node node : cluster.getChildren()) {
+        <span class="hljs-keyword">if</span> (node.getTag() != <span class="hljs-keyword">null</span>) {
+            sum += (<span class="hljs-keyword">int</span>)node.getTag();
+        }
+    }
+    <span class="hljs-keyword">return</span> sum;
+});
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-97fd6ed6e0924fa790ff57d720885f47" id="java">Java</h3>
+        <div id="0-97fd6ed6e0924fa790ff57d720885f47" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">complexBuilder.tagMergeStrategy(cluster -&gt; {
+    <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (Node node : cluster.getChildren()) {
+        <span class="hljs-keyword">if</span> (node.getTag() != <span class="hljs-keyword">null</span>) {
+            sum += (<span class="hljs-keyword">int</span>)node.getTag();
+        }
+    }
+    <span class="hljs-keyword">return</span> sum;
+});
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-f69d9e0615764ce3e4169b0cd8817056" id="kotlin">Kotlin</h3>
+        <div id="1-f69d9e0615764ce3e4169b0cd8817056" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">complexBuilder.tagMergeStrategy { cluster -&gt;
+    cluster.children.sumOf { it.tag <span class="hljs-keyword">as</span> <span class="hljs-keyword">Int</span> }
+}
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="&#xC88C;&#xD45C;-&#xC804;&#xB7B5;">&#xC88C;&#xD45C; &#xC804;&#xB7B5;</h3>
+<p>&#xB2E8;&#xB9D0; &#xB178;&#xB4DC;&#xC758; &#xC88C;&#xD45C;&#xB294; <code>Clusterer.add()</code>&#xB85C; &#xC9C0;&#xC815;&#xD55C; &#xD0A4;&#xC758; &#xC88C;&#xD45C;&#xC785;&#xB2C8;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB178;&#xB4DC;&#xB294; &#xC5EC;&#xB7EC; &#xB178;&#xB4DC;&#xAC00; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB418;&#xC5B4; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xAC83;&#xC774;&#xBBC0;&#xB85C; &#xC88C;&#xD45C;&#xB97C; &#xACC4;&#xC0B0;&#xD574;&#xC11C; &#xC9C0;&#xC815;&#xD574;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.ComplexBuilder.html#positioningStrategy%28com.naver.maps.map.clustering.PositioningStrategy%29" target="_blank"><code>positioningStrategy()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB178;&#xB4DC;&#xC758; &#xC88C;&#xD45C;&#xB97C; &#xC815;&#xD558;&#xB294; &#xC804;&#xB7B5;&#xC744; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC5EC;&#xB7EC; &#xB178;&#xB4DC;&#xAC00; &#xD558;&#xB098;&#xC758; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB85C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xB420; &#xB54C;&#xB9C8;&#xB2E4; <a href="ref://../reference/com/naver/maps/map/clustering/PositioningStrategy.html#getPosition%28com.naver.maps.map.clustering.Cluster%29" target="_blank"><code>getPosition()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xBA70;, &#xD30C;&#xB77C;&#xBBF8;&#xD130;&#xB85C; &#xC804;&#xB2EC;&#xB418;&#xB294; <code>Cluster</code>&#xC758; <a href="ref://../reference/com/naver/maps/map/clustering/Cluster.html#getChildren%28%29" target="_blank"><code>children</code></a>&#xC744; &#xC774;&#xC6A9;&#xD574; &#xC790;&#xC2DD; &#xB178;&#xB4DC;&#xB97C; &#xC21C;&#xD68C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC88C;&#xD45C; &#xB4F1; &#xC790;&#xC2DD; &#xB178;&#xB4DC;&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xC774;&#xC6A9;&#xD574; <code>WebMercatorCoord</code> &#xC88C;&#xD45C;&#xB97C; &#xBC18;&#xD658;&#xD558;&#xBA74; &#xBC18;&#xD658;&#xD55C; &#xAC12;&#xC774; <code>Cluster</code>&#xC758; &#xC88C;&#xD45C;&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xBB34;&#xC870;&#xAC74; &#xCCAB; &#xBC88;&#xC9F8; &#xC790;&#xC2DD; &#xB178;&#xB4DC;&#xC758; &#xC88C;&#xD45C;&#xB97C; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB178;&#xB4DC;&#xC758; &#xC88C;&#xD45C;&#xB85C; &#xC0BC;&#xB294; &#xC804;&#xB7B5;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="f270c5410599728d97e340c8374d9f9b" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-740680dd503104355d5fe076b28cd934" class="gbcg-selector gbcg-active" data-tab="0-740680dd503104355d5fe076b28cd934" data-tab-category="undefined">Java</a>
+    <a id="select-1-5c9801d41b44b1a4ff59165b79c8cf2f" class="gbcg-selector" data-tab="1-5c9801d41b44b1a4ff59165b79c8cf2f" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-740680dd503104355d5fe076b28cd934" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">complexBuilder.positioningStrategy(cluster -&gt; cluster.getChildren().get(<span class="hljs-number">0</span>).getCoord())
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-740680dd503104355d5fe076b28cd934" id="java">Java</h3>
+        <div id="0-740680dd503104355d5fe076b28cd934" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">complexBuilder.positioningStrategy(cluster -&gt; cluster.getChildren().get(<span class="hljs-number">0</span>).getCoord())
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-5c9801d41b44b1a4ff59165b79c8cf2f" id="kotlin">Kotlin</h3>
+        <div id="1-5c9801d41b44b1a4ff59165b79c8cf2f" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">complexBuilder.positioningStrategy { clusterer -&gt; clusterer.children.first().coord }
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="&#xB9C8;&#xCEE4;-&#xAD00;&#xB9AC;">&#xB9C8;&#xCEE4; &#xAD00;&#xB9AC;</h3>
+<p>&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB7EC;&#xB294; &#xD654;&#xBA74;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xB294; &#xB178;&#xB4DC;&#xB9CC;&#xC744; &#xB9C8;&#xCEE4;&#xB85C; &#xBCC0;&#xD658;&#xD574; &#xB178;&#xCD9C;&#xD569;&#xB2C8;&#xB2E4;. &#xB54C;&#xBB38;&#xC5D0; &#xD654;&#xBA74;&#xC5D0; &#xB3D9;&#xC2DC;&#xC5D0; &#xB098;&#xD0C0;&#xB098;&#xB294; &#xB9C8;&#xCEE4;&#xC758; &#xAC1C;&#xC218;&#xB97C; &#xD6A8;&#xACFC;&#xC801;&#xC73C;&#xB85C; &#xC81C;&#xD55C;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBA70; &#xC7AC;&#xC0AC;&#xC6A9;&#xC5D0;&#xB3C4; &#xC720;&#xB9AC;&#xD569;&#xB2C8;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xB9C8;&#xCEE4;&#xC758; &#xC18D;&#xC131; &#xC911; &#xBCC0;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xAC83;&#xC774; &#xC788;&#xB354;&#xB77C;&#xB3C4; &#xB9E4;&#xBC88; &#xB36E;&#xC5B4;&#xC50C;&#xC6CC;&#xC918;&#xC57C; &#xD558;&#xB294; &#xBE44;&#xD6A8;&#xC728;&#xC774; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><a href="ref://../reference/com/naver/maps/map/clustering/Clusterer.ComplexBuilder.html#markerManager%28com.naver.maps.map.clustering.MarkerManager%29" target="_blank"><code>markerManager()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD574; &#xB9C8;&#xCEE4;&#xB97C; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xAC1D;&#xCCB4;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xBA74; &#xB9C8;&#xCEE4;&#xB97C; &#xC9C1;&#xC811; &#xAD00;&#xB9AC;&#xD558;&#xC5EC; &#xBE44;&#xD6A8;&#xC728;&#xC744; &#xCD5C;&#xC18C;&#xD654;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB9C8;&#xCEE4; &#xAC1D;&#xCCB4;&#xAC00; &#xD544;&#xC694;&#xD574;&#xC9C0;&#xBA74; <a href="ref://../reference/com/naver/maps/map/clustering/MarkerManager.html#retainMarker%28com.naver.maps.map.clustering.MarkerInfo%29" target="_blank"><code>retainMarker()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xAC00;, &#xBD88;&#xD544;&#xC694;&#xD574;&#xC9C0;&#xBA74; <a href="ref://../reference/com/naver/maps/map/clustering/MarkerManager.html#releaseMarker%28com.naver.maps.map.clustering.MarkerInfo%2Ccom.naver.maps.map.overlay.Marker%29" target="_blank"><code>releaseMarker()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xBBC0;&#xB85C; <code>ClusterMarkerUpdater</code>&#xC640; <code>LeafMarkerUpdater</code>&#xC5D0;&#xC11C; &#xAD00;&#xB9AC;&#xD558;&#xC9C0; &#xC54A;&#xB294; &#xC18D;&#xC131;&#xC740; &#xC5EC;&#xAE30;&#xC11C; &#xACF5;&#xD1B5; &#xAD00;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB610;&#xD55C; &#xAE30;&#xBCF8; <code>MarkerManager</code> &#xAD6C;&#xD604;&#xCCB4;&#xC778; <a href="ref://../reference/com/naver/maps/map/clustering/DefaultMarkerManager.html" target="_blank"><code>DefaultMarkerManager</code></a>&#xB97C; &#xC0C1;&#xC18D;&#xD558;&#xC5EC; <a href="ref://../reference/com/naver/maps/map/clustering/DefaultMarkerManager.html#createMarker%28%29" target="_blank"><code>createMarker()</code></a> &#xBA54;&#xC11C;&#xB4DC;&#xB9CC; &#xC624;&#xBC84;&#xB77C;&#xC774;&#xB4DC;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB807;&#xAC8C; &#xD558;&#xBA74; &#xD6A8;&#xC728;&#xC801;&#xC778; &#xB9C8;&#xCEE4; &#xD480; &#xBC0F; &#xAC1D;&#xCCB4; &#xC7AC;&#xC0AC;&#xC6A9; &#xAE30;&#xB2A5;&#xC744; &#xADF8;&#xB300;&#xB85C; &#xD65C;&#xC6A9;&#xD558;&#xBA74;&#xC11C; &#xACF5;&#xD1B5; &#xC18D;&#xC131;&#xB9CC;&#xC744; &#xAC04;&#xD3B8;&#xD558;&#xAC8C; &#xAD00;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB2E4;&#xC74C;&#xC740; <code>DefaultMarkerManager</code>&#xB97C; &#xC0C1;&#xC18D;&#xD558;&#xC5EC; &#xC0C8;&#xB85C; &#xC0DD;&#xC131;&#xB418;&#xB294; &#xB9C8;&#xCEE4;&#xC758; &#xC11C;&#xBE0C;&#xCEA1;&#xC158; &#xAD00;&#xB828; &#xC18D;&#xC131;&#xB9CC;&#xC744; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xC608;&#xC81C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p><div id="f2ada4cb400accd107ce71d139bfea9c" class="gbcg gbcg-codegroup">
+  <div class="gbcg-tab-selectors">
+    <a id="select-0-b33361e2ed0191b114aef83657d482a2" class="gbcg-selector gbcg-active" data-tab="0-b33361e2ed0191b114aef83657d482a2" data-tab-category="undefined">Java</a>
+    <a id="select-1-aebe7cf179df34f1cefee3c3ecefdb20" class="gbcg-selector" data-tab="1-aebe7cf179df34f1cefee3c3ecefdb20" data-tab-category="undefined">Kotlin</a>
+  </div>
+  <div class="gbcg-tab-contents">
+    <div id="gbcg-tab-container">
+      <div id="0-b33361e2ed0191b114aef83657d482a2" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">complexBuilder.markerManager(<span class="hljs-keyword">new</span> DefaultMarkerManager() {
+    <span class="hljs-meta">@NonNull</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Marker <span class="hljs-title">createMarker</span><span class="hljs-params">()</span> </span>{
+        Marker marker = <span class="hljs-keyword">super</span>.createMarker();
+        marker.setSubCaptionTextSize(<span class="hljs-number">10f</span>);
+        marker.setSubCaptionColor(Color.WHITE);
+        marker.setSubCaptionHaloColor(Color.TRANSPARENT);
+        <span class="hljs-keyword">return</span> marker;
+    }
+});
+</code></pre>
+      </div>
+    </div>
+    <div class="gbcg-tab-item-cntr">
+      <div>
+        <h3 class="gbcg-tabname 0-b33361e2ed0191b114aef83657d482a2" id="java">Java</h3>
+        <div id="0-b33361e2ed0191b114aef83657d482a2" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">complexBuilder.markerManager(<span class="hljs-keyword">new</span> DefaultMarkerManager() {
+    <span class="hljs-meta">@NonNull</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Marker <span class="hljs-title">createMarker</span><span class="hljs-params">()</span> </span>{
+        Marker marker = <span class="hljs-keyword">super</span>.createMarker();
+        marker.setSubCaptionTextSize(<span class="hljs-number">10f</span>);
+        marker.setSubCaptionColor(Color.WHITE);
+        marker.setSubCaptionHaloColor(Color.TRANSPARENT);
+        <span class="hljs-keyword">return</span> marker;
+    }
+});
+</code></pre>
+        </div>
+      </div>
+      <div>
+        <h3 class="gbcg-tabname 1-aebe7cf179df34f1cefee3c3ecefdb20" id="kotlin">Kotlin</h3>
+        <div id="1-aebe7cf179df34f1cefee3c3ecefdb20" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">complexBuilder.markerManager(<span class="hljs-keyword">object</span> : DefaultMarkerManager() {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">createMarker</span><span class="hljs-params">()</span> = super.<span class="hljs-title">createMarker</span><span class="hljs-params">()</span>.apply {</span>
+        subCaptionTextSize = <span class="hljs-number">10</span>f
+        subCaptionColor = Color.WHITE
+        subCaptionHaloColor = Color.TRANSPARENT
+    }
+})
+</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="5-7.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 경로선과 화살표">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"마커 클러스터링","level":"3.5.8","depth":2,"next":{"title":"API 레퍼런스","level":"4.1","depth":1,"url":"ref://../reference/","ref":"ref://../reference/","articles":[]},"previous":{"title":"경로선과 화살표","level":"3.5.7","depth":2,"path":"5-7.md","ref":"5-7.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"네이버 지도 안드로이드 SDK","gitbook":"*"},"file":{"path":"5-8.md","mtime":"2024-03-18T05:23:02.130Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-18T05:23:03.943Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-otherlink/js/otherlink.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-codegroup/code.group.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
