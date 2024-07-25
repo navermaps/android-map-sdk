@@ -1,3 +1,22 @@
+# 3.19.0
+
+Release Date: 2024-07-25
+
+### 새로운 기능
+
+- 콘텐츠 패딩 변경 시 원인을 전달할 수 있도록 `reason` 파라메터 추가
+  - `NaverMap#setContentPadding(int, int, int, int, int)`
+  - `NaverMap#setContentPadding(int, int, int, int, boolean, int)`
+- 콘텐츠 패딩 변경으로 인해 카메라가 움직였음을 의미하는 `CameraUpdate.REASON_CONTENT_PADDING` 추가
+
+### 개선
+
+- `reason` 파라메터를 지정하지 않고 콘텐츠 패딩 변경 시 원인을 `CameraUpdate.REASON_DEVELOPER`에서 `CameraUpdate.REASON_CONTENT_PADDING`으로 변경
+
+### 버그 수정
+
+- `MultipartPathOverlay`에 `colorParts`를 지정하지 않으면 크래시가 발생하는 문제 수정
+
 # 3.18.0
 
 Release Date: 2024-03-18
