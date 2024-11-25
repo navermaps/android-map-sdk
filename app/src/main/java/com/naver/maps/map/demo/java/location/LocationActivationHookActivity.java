@@ -18,6 +18,7 @@ package com.naver.maps.map.demo.java.location;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -54,13 +55,16 @@ public class LocationActivationHookActivity extends AppCompatActivity implements
                         ((LocationActivationHookActivity)activity).cancelLocationTracking();
                     }
                 })
-                .setOnCancelListener(dialog -> {
-                    Activity activity = getActivity();
-                    if (activity != null) {
-                        ((LocationActivationHookActivity)activity).cancelLocationTracking();
-                    }
-                })
                 .create();
+        }
+
+        @Override
+        public void onCancel(@NonNull DialogInterface dialog) {
+            super.onCancel(dialog);
+            Activity activity = getActivity();
+            if (activity != null) {
+                ((LocationActivationHookActivity)activity).cancelLocationTracking();
+            }
         }
     }
 

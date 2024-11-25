@@ -20,8 +20,8 @@ android {
         applicationId = namespace
         minSdk = 21
         targetSdk = 34
-        versionCode = 3190100
-        versionName = "3.19.1"
+        versionCode = 3200000
+        versionName = "3.20.0"
         multiDexEnabled = true
     }
 
@@ -43,9 +43,9 @@ java {
 }
 
 dependencies {
-    implementation(kotlin("stdlib:2.0.0"))
+    implementation(kotlin("stdlib:2.0.21"))
 
-    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.multidex:multidex:2.0.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.viewpager2:viewpager2:1.0.0")
@@ -54,5 +54,5 @@ dependencies {
     implementation("com.google.android.material:material:1.8.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
 
-    implementation("com.naver.maps:map-sdk:3.19.1")
+    implementation("com.naver.maps:map-sdk:3.20.0")
 }

@@ -21,13 +21,13 @@ import android.view.MenuItem;
 import android.widget.CheckedTextView;
 import android.widget.ImageView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
@@ -35,6 +35,10 @@ import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
 
 public class SnapshotActivity extends AppCompatActivity implements OnMapReadyCallback {
+    private NaverMap map;
+    private CheckedTextView showControls;
+    private FloatingActionButton fab;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,12 +70,13 @@ public class SnapshotActivity extends AppCompatActivity implements OnMapReadyCal
 
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
-        CheckedTextView showControls = findViewById(R.id.toggle_show_controls);
+        map = naverMap;
+
+        showControls = findViewById(R.id.toggle_show_controls);
+        fab = findViewById(R.id.fab);
+
         showControls.setOnClickListener(v -> showControls.setChecked(!showControls.isChecked()));
 
-        ImageView snapshot = findViewById(R.id.snapshot);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(v -> {
             CircularProgressDrawable progressDrawable = new CircularProgressDrawable(this);
             progressDrawable.setStyle(CircularProgressDrawable.LARGE);
@@ -79,10 +84,27 @@ public class SnapshotActivity extends AppCompatActivity implements OnMapReadyCal
             progressDrawable.start();
             fab.setImageDrawable(progressDrawable);
 
-            naverMap.takeSnapshot(showControls.isChecked(), bitmap -> {
-                fab.setImageResource(R.drawable.ic_photo_camera_black_24dp);
-                snapshot.setImageBitmap(bitmap);
-            });
+            if (naverMap.isFullyRendered() && naverMap.isRenderingStable()) {
+                takeSnapshot();
+            } else {
+                naverMap.addOnMapRenderedListener(new NaverMap.OnMapRenderedListener() {
+                    @Override
+                    public void onMapRendered(boolean fully, boolean stable) {
+                        if (fully && stable) {
+                            takeSnapshot();
+                            naverMap.removeOnMapRenderedListener(this);
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+    private void takeSnapshot() {
+        ImageView snapshot = findViewById(R.id.snapshot);
+        map.takeSnapshot(showControls.isChecked(), bitmap -> {
+            fab.setImageResource(R.drawable.ic_photo_camera_black_24dp);
+            snapshot.setImageBitmap(bitmap);
         });
     }
 }

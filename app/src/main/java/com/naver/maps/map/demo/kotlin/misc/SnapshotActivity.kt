@@ -62,8 +62,15 @@ class SnapshotActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val snapshot = findViewById<ImageView>(R.id.snapshot)
-
         val fab = findViewById<FloatingActionButton>(R.id.fab)
+
+        fun takeSnapshot() {
+            naverMap.takeSnapshot(showControls.isChecked) {
+                fab.setImageResource(R.drawable.ic_photo_camera_black_24dp)
+                snapshot.setImageBitmap(it)
+            }
+        }
+
         fab.setOnClickListener {
             fab.setImageDrawable(CircularProgressDrawable(this).apply {
                 setStyle(CircularProgressDrawable.LARGE)
@@ -71,9 +78,17 @@ class SnapshotActivity : AppCompatActivity(), OnMapReadyCallback {
                 start()
             })
 
-            naverMap.takeSnapshot(showControls.isChecked) {
-                fab.setImageResource(R.drawable.ic_photo_camera_black_24dp)
-                snapshot.setImageBitmap(it)
+            if (naverMap.isFullyRendered && naverMap.isRenderingStable) {
+                takeSnapshot()
+            } else {
+                naverMap.addOnMapRenderedListener(object : NaverMap.OnMapRenderedListener {
+                    override fun onMapRendered(fully: Boolean, stable: Boolean) {
+                        if (fully && stable) {
+                            takeSnapshot()
+                            naverMap.removeOnMapRenderedListener(this)
+                        }
+                    }
+                })
             }
         }
     }

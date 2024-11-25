@@ -16,6 +16,7 @@
 package com.naver.maps.map.demo.kotlin.location
 
 import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -39,10 +40,12 @@ class LocationActivationHookActivity : AppCompatActivity(), OnMapReadyCallback {
                 .setNegativeButton(R.string.no) { _, _ ->
                     (activity as? LocationActivationHookActivity)?.cancelLocationTracking()
                 }
-                .setOnCancelListener {
-                    (activity as? LocationActivationHookActivity)?.cancelLocationTracking()
-                }
                 .create()
+
+        override fun onCancel(dialog: DialogInterface) {
+            super.onCancel(dialog)
+            (activity as? LocationActivationHookActivity)?.cancelLocationTracking()
+        }
     }
 
     private lateinit var locationSource: FusedLocationSource

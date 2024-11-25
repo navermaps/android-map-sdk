@@ -1,3 +1,18 @@
+# 3.20.0
+
+Release Date: 2024-11-25
+
+### 새로운 기능
+
+- 지도 렌더링에 대한 상태 및 이벤트 리스너 추가
+  - `NaverMap.OnMapRenderedListener`
+  - `NaverMap#addOnMapRenderedListener()`, `NaverMap#removeOnMapRenderedListener()`
+  - `NaverMap#isFullyRendered`, `NaverMap#isRenderingStable`
+- 지도 최초 로딩에 대한 상태 추가
+  - `NaverMap#isLoaded`
+- 폴리곤 오버레이의 테두리를 점선으로 지정하는 속성 추가
+  - `PolygonOverlay#setOutlinePattern(int...)`
+
 # 3.19.1
 
 Release Date: 2024-08-08
