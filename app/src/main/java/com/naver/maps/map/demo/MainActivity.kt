@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2024 NAVER Corp.
+ * Copyright 2018-2025 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,11 +45,13 @@ class MainActivity : AppCompatActivity() {
         override fun onCreateDialog(savedInstanceState: Bundle?): AlertDialog =
             AlertDialog.Builder(requireActivity())
                 .setTitle(R.string.sdk_info_title)
-                .setMessage(getString(
-                    R.string.sdk_info_body_format,
-                    com.naver.maps.map.BuildConfig.VERSION_NAME,
-                    requireContext().readTextAsset("navermap-sdk/LICENSE")
-                ))
+                .setMessage(
+                    getString(
+                        R.string.sdk_info_body_format,
+                        com.naver.maps.map.BuildConfig.VERSION_NAME,
+                        requireContext().readTextAsset("navermap-sdk/LICENSE")
+                    )
+                )
                 .setView(ScrollView(requireContext()).apply {
                     val padding = (resources.displayMetrics.density * 12).toInt()
                     setPadding(padding, padding, padding, 0)
@@ -65,11 +67,13 @@ class MainActivity : AppCompatActivity() {
         override fun onCreateDialog(savedInstanceState: Bundle?): AlertDialog =
             AlertDialog.Builder(requireActivity())
                 .setTitle(R.string.sdk_info_title)
-                .setMessage(getString(
-                    R.string.sdk_info_body_format,
-                    com.naver.maps.map.BuildConfig.VERSION_NAME,
-                    requireContext().readTextAsset("navermap-sdk/LICENSE")
-                ))
+                .setMessage(
+                    getString(
+                        R.string.sdk_info_body_format,
+                        com.naver.maps.map.BuildConfig.VERSION_NAME,
+                        requireContext().readTextAsset("navermap-sdk/LICENSE")
+                    )
+                )
                 .setPositiveButton(R.string.ok, null)
                 .create()
     }

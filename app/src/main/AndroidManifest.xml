@@ -17,14 +17,8 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <meta-data
-            android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="@string/naver_map_sdk_client_id" />
-
-        <!-- 공공기관용 클라이언트일 경우 주석 해제
-        <meta-data
-            android:name="com.naver.maps.map.CLIENT_TYPE"
-            android:value="gov" />
-        -->
+            android:name="com.naver.maps.map.NCP_KEY_ID"
+            android:value="@string/naver_map_sdk_ncp_key_id" />
 
         <activity
             android:name=".MainActivity"
@@ -355,6 +349,16 @@
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_locale"
             android:label="@string/name_locale" />
+        <activity
+            android:name=".java.map.CustomStyleActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_custom_style"
+            android:label="@string/name_custom_style" />
+        <activity
+            android:name=".kotlin.map.CustomStyleActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:description="@string/description_custom_style"
+            android:label="@string/name_custom_style" />
 
         <!-- options -->
         <activity

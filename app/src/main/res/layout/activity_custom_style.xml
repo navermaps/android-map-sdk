@@ -5,24 +5,25 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/label_locale"
+        android:id="@+id/label_custom_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="@string/label_locale"
+        android:text="@string/label_custom_style"
         app:layout_constraintBottom_toTopOf="@+id/map_fragment"
-        app:layout_constraintEnd_toStartOf="@+id/locale"
+        app:layout_constraintEnd_toStartOf="@+id/custom_style"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/locale"
+        android:id="@+id/custom_style"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toTopOf="@+id/map_fragment"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/label_locale"
+        app:layout_constraintStart_toEndOf="@+id/label_custom_style"
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
@@ -32,6 +33,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/locale" />
+        app:layout_constraintTop_toBottomOf="@+id/custom_style" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

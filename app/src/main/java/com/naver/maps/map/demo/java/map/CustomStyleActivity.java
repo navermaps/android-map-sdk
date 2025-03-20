@@ -13,38 +13,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.naver.maps.map.demo.java.camera;
+package com.naver.maps.map.demo.java.map;
 
-import android.graphics.PointF;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.naver.maps.geometry.LatLng;
-import com.naver.maps.map.CameraUpdate;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
-import com.naver.maps.map.overlay.Marker;
 
-public class PivotActivity extends AppCompatActivity implements OnMapReadyCallback {
-    private static final LatLng COORD_1 = new LatLng(35.1798159, 129.0750222);
-    private static final LatLng COORD_2 = new LatLng(37.5666102, 126.9783881);
-    private static final PointF PIVOT_1 = new PointF(0.2f, 0.2f);
-    private static final PointF PIVOT_2 = new PointF(0.8f, 0.8f);
-
-    private boolean positionFlag;
+public class CustomStyleActivity extends AppCompatActivity implements OnMapReadyCallback {
+    private static final String[] CUSTOM_STYLE_IDS = {
+        null,
+        "de2bd5ac-5c2c-490a-874a-11f620bc59ac",
+        "072a2b46-4cf7-4a60-8a32-c25399b97e4e"
+    };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_pivot);
+        setContentView(R.layout.activity_custom_style);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -54,7 +54,7 @@ public class PivotActivity extends AppCompatActivity implements OnMapReadyCallba
 
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment == null) {
-            mapFragment = MapFragment.newInstance();
+            mapFragment = MapFragment.newInstance(new NaverMapOptions().customStyleId(CUSTOM_STYLE_IDS[1]));
             getSupportFragmentManager().beginTransaction().add(R.id.map_fragment, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);
@@ -71,19 +71,22 @@ public class PivotActivity extends AppCompatActivity implements OnMapReadyCallba
 
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
-        Marker marker1 = new Marker();
-        marker1.setPosition(COORD_1);
-        marker1.setMap(naverMap);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.custom_styles,
+            android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        Marker marker2 = new Marker();
-        marker2.setPosition(COORD_2);
-        marker2.setMap(naverMap);
+        Spinner spinner = findViewById(R.id.custom_style);
+        spinner.setAdapter(adapter);
+        spinner.setSelection(1);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                naverMap.setCustomStyleId(CUSTOM_STYLE_IDS[position]);
+            }
 
-        findViewById(R.id.fab).setOnClickListener(v -> {
-            LatLng coord = positionFlag ? COORD_2 : COORD_1;
-            PointF pivot = positionFlag ? PIVOT_2 : PIVOT_1;
-            naverMap.moveCamera(CameraUpdate.scrollTo(coord).pivot(pivot));
-            positionFlag = !positionFlag;
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         });
     }
 }

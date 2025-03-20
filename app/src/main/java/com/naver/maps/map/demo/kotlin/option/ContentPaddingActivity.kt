@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2024 NAVER Corp.
+ * Copyright 2018-2025 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,7 +50,8 @@ class ContentPaddingActivity : AppCompatActivity(), OnMapReadyCallback {
                         resources.getDimensionPixelSize(R.dimen.map_padding_left),
                         resources.getDimensionPixelSize(R.dimen.map_padding_top),
                         resources.getDimensionPixelSize(R.dimen.map_padding_right),
-                        resources.getDimensionPixelSize(R.dimen.map_padding_bottom))
+                        resources.getDimensionPixelSize(R.dimen.map_padding_bottom)
+                    )
             ).also {
                 supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
             }

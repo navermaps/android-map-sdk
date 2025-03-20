@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2024 NAVER Corp.
+ * Copyright 2018-2025 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -123,11 +123,13 @@ class CustomLocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
                 disableLocation()
                 fab?.setImageResource(R.drawable.ic_my_location_black_24dp)
             } else {
-                fab?.setImageDrawable(CircularProgressDrawable(this).apply {
-                    setStyle(CircularProgressDrawable.LARGE)
-                    setColorSchemeColors(Color.WHITE)
-                    start()
-                })
+                fab?.setImageDrawable(
+                    CircularProgressDrawable(this).apply {
+                        setStyle(CircularProgressDrawable.LARGE)
+                        setColorSchemeColors(Color.WHITE)
+                        start()
+                    }
+                )
                 tryEnableLocation()
             }
             trackingEnabled = !trackingEnabled

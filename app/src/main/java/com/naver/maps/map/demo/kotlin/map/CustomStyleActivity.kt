@@ -13,27 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.naver.maps.map.demo.kotlin.camera
+package com.naver.maps.map.demo.kotlin.map
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.naver.maps.geometry.LatLng
-import com.naver.maps.geometry.LatLngBounds
-import com.naver.maps.map.CameraAnimation
-import com.naver.maps.map.CameraUpdate
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
+import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
-import com.naver.maps.map.overlay.Marker
 
-class FitBoundsActivity : AppCompatActivity(), OnMapReadyCallback {
+class CustomStyleActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_fab)
+        setContentView(R.layout.activity_custom_style)
 
         supportActionBar?.let {
             it.setDisplayHomeAsUpEnabled(true)
@@ -41,7 +40,7 @@ class FitBoundsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
-            ?: MapFragment.newInstance().also {
+            ?: MapFragment.newInstance(NaverMapOptions().customStyleId(CUSTOM_STYLE_IDS[1])).also {
                 supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
             }
         mapFragment.getMapAsync(this)
@@ -56,37 +55,31 @@ class FitBoundsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
 
     override fun onMapReady(naverMap: NaverMap) {
-        Marker().apply {
-            position = BOUNDS_1.northEast
-            map = naverMap
+        val spinner = findViewById<Spinner>(R.id.custom_style)
+
+        spinner.adapter = ArrayAdapter.createFromResource(
+            this, R.array.custom_styles, android.R.layout.simple_spinner_item
+        ).apply {
+            setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         }
 
-        Marker().apply {
-            position = BOUNDS_1.southWest
-            map = naverMap
-        }
+        spinner.setSelection(1)
 
-        Marker().apply {
-            position = BOUNDS_2.northEast
-            map = naverMap
-        }
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+                naverMap.customStyleId = CUSTOM_STYLE_IDS[position]
+            }
 
-        Marker().apply {
-            position = BOUNDS_2.southWest
-            map = naverMap
-        }
-
-        val padding = resources.getDimensionPixelSize(R.dimen.fit_bounds_padding)
-        var flag = false
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
-            val bounds = if (flag) BOUNDS_2 else BOUNDS_1
-            naverMap.moveCamera(CameraUpdate.fitBounds(bounds, padding).animate(CameraAnimation.Fly, 5000))
-            flag = !flag
+            override fun onNothingSelected(parent: AdapterView<*>) {
+            }
         }
     }
 
     companion object {
-        private val BOUNDS_1 = LatLngBounds(LatLng(37.4282975, 126.7644840), LatLng(37.7014553, 127.1837949))
-        private val BOUNDS_2 = LatLngBounds(LatLng(34.8357234, 128.7614072), LatLng(35.3890374, 129.3055979))
+        private val CUSTOM_STYLE_IDS = arrayOf(
+            null,
+            "de2bd5ac-5c2c-490a-874a-11f620bc59ac",
+            "072a2b46-4cf7-4a60-8a32-c25399b97e4e"
+        )
     }
 }

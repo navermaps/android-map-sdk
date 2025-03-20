@@ -202,6 +202,15 @@
         <item>중국어(zh-CN)</item>
     </string-array>
 
+    <string name="name_custom_style">Custom Style</string>
+    <string name="description_custom_style">커스텀 스타일 지정</string>
+    <string name="label_custom_style">커스텀 스타일:</string>
+    <string-array name="custom_styles">
+        <item>적용 안 함</item>
+        <item>커스텀 라이트</item>
+        <item>커스텀 다크</item>
+    </string-array>
+
     <!-- option demo -->
     <string name="category_option">Map Options</string>
 

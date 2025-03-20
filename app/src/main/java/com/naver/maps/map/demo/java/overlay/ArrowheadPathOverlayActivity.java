@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2024 NAVER Corp.
+ * Copyright 2018-2025 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -85,7 +85,7 @@ public class ArrowheadPathOverlayActivity extends AppCompatActivity implements O
         arrowheadPathOverlay.setWidth(getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_width));
         arrowheadPathOverlay.setColor(Color.WHITE);
         arrowheadPathOverlay.setOutlineWidth(
-                getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width));
+            getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width));
         arrowheadPathOverlay.setOutlineColor(ResourcesCompat.getColor(getResources(), R.color.primary, getTheme()));
         arrowheadPathOverlay.setMap(naverMap);
 
@@ -94,7 +94,7 @@ public class ArrowheadPathOverlayActivity extends AppCompatActivity implements O
         shadowOverlay.setWidth(getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_width));
         shadowOverlay.setColor(0x80000000);
         shadowOverlay.setOutlineWidth(
-                getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width));
+            getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width));
         shadowOverlay.setOutlineColor(Color.BLACK);
         shadowOverlay.setMap(naverMap);
 
@@ -103,7 +103,7 @@ public class ArrowheadPathOverlayActivity extends AppCompatActivity implements O
         elevationOverlay.setWidth(getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_width));
         elevationOverlay.setColor(Color.WHITE);
         elevationOverlay.setOutlineWidth(
-                getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width));
+            getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_outline_width));
         elevationOverlay.setOutlineColor(ResourcesCompat.getColor(getResources(), R.color.primary, getTheme()));
         elevationOverlay.setElevation(getResources().getDimensionPixelSize(R.dimen.arrowhead_path_overlay_elevation));
         elevationOverlay.setMap(naverMap);

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2024 NAVER Corp.
+ * Copyright 2018-2025 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -86,11 +86,13 @@ class NightModeActivity : AppCompatActivity(), OnMapReadyCallback {
                 NaverMap.DEFAULT_BACKGROUND_COLOR_LIGHT
             }
 
-            naverMap.setBackgroundResource(if (nightModeEnabled) {
-                NaverMap.DEFAULT_BACKGROUND_DRWABLE_DARK
-            } else {
-                NaverMap.DEFAULT_BACKGROUND_DRWABLE_LIGHT
-            })
+            naverMap.setBackgroundResource(
+                if (nightModeEnabled) {
+                    NaverMap.DEFAULT_BACKGROUND_DRWABLE_DARK
+                } else {
+                    NaverMap.DEFAULT_BACKGROUND_DRWABLE_LIGHT
+                }
+            )
 
             val icon = if (nightModeEnabled) MarkerIcons.GRAY else Marker.DEFAULT_ICON
 

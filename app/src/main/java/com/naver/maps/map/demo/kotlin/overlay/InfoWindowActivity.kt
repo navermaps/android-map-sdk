@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2024 NAVER Corp.
+ * Copyright 2018-2025 NAVER Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,8 +35,11 @@ class InfoWindowActivity : AppCompatActivity(), OnMapReadyCallback {
             return if (marker != null) {
                 context.getString(R.string.format_info_window_on_marker, marker.tag)
             } else {
-                context.getString(R.string.format_info_window_on_map,
-                    infoWindow.position.latitude, infoWindow.position.longitude)
+                context.getString(
+                    R.string.format_info_window_on_map,
+                    infoWindow.position.latitude,
+                    infoWindow.position.longitude
+                )
             }
         }
     }
