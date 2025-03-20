@@ -558,15 +558,15 @@
 </ul>
 <p>Make a call to <code>NaverMap.moveCamera()</code> with the created object as a parameter, and the camera moves.</p>
 <p>The following code example creates a <code>CameraUpdate</code> object that changes the target point to <code>(37.5666102, 126.9783881)</code>, and calls the <code>NaverMap.moveCamera()</code> method to move the camera.</p>
-<p><div id="8f049b337cfb04fd1499555e907b48e5" class="gbcg gbcg-codegroup">
+<p><div id="c16590d4c245766ad3c7fe77819f1b8e" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-603a097c7f02c99fc14b4c79f273a580" class="gbcg-selector gbcg-active" data-tab="0-603a097c7f02c99fc14b4c79f273a580" data-tab-category="undefined">Java</a>
+    <a id="select-0-30a0654bd1605d19d728c34267dba45e" class="gbcg-selector gbcg-active" data-tab="0-30a0654bd1605d19d728c34267dba45e" data-tab-category="undefined">Java</a>
     <a id="select-1-8dcd46d0b0f0ada78a3fb44c8800704e" class="gbcg-selector" data-tab="1-8dcd46d0b0f0ada78a3fb44c8800704e" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-603a097c7f02c99fc14b4c79f273a580" class="gbcg-tab-item gbcb-Java">
-        <pre><code class="lang-Java">CameraUpdate cameraUpdate =
+      <div id="0-30a0654bd1605d19d728c34267dba45e" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = 
     CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>));
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
@@ -574,9 +574,9 @@ naverMap.moveCamera(cameraUpdate);
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-603a097c7f02c99fc14b4c79f273a580" id="java">Java</h3>
-        <div id="0-603a097c7f02c99fc14b4c79f273a580" class="gbcg-tab-item gbcb-Java">
-          <pre><code class="lang-Java">CameraUpdate cameraUpdate =
+        <h3 class="gbcg-tabname 0-30a0654bd1605d19d728c34267dba45e" id="java">Java</h3>
+        <div id="0-30a0654bd1605d19d728c34267dba45e" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = 
     CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>));
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
@@ -604,37 +604,38 @@ naverMap.moveCamera(cameraUpdate)
 <li><a href="ref://../reference/com/naver/maps/map/CameraAnimation.html#Fly" target="_blank"><code>Fly</code></a>: Naturally gets smaller and then larger. It is appropriate for moving a long distance.</li>
 </ul>
 <p>The following code example adds the <code>Easing</code> animation to the camera movement.</p>
-<p><div id="21ef911dbff1a2789b26d220d03a9fe7" class="gbcg gbcg-codegroup">
+<p><div id="aee3c218394a721d1019d7f9f346b757" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-ca1a4766061d3fd015ffe1ec65a035ac" class="gbcg-selector gbcg-active" data-tab="0-ca1a4766061d3fd015ffe1ec65a035ac" data-tab-category="undefined">Java</a>
-    <a id="select-1-2f263199e78fb5d867fb3557a5180a0d" class="gbcg-selector" data-tab="1-2f263199e78fb5d867fb3557a5180a0d" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-484b007ee5df970e9d60a7f0c3dfb091" class="gbcg-selector gbcg-active" data-tab="0-484b007ee5df970e9d60a7f0c3dfb091" data-tab-category="undefined">Java</a>
+    <a id="select-1-53d8c72b1d2fe834032b740e2c6b77fd" class="gbcg-selector" data-tab="1-53d8c72b1d2fe834032b740e2c6b77fd" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-ca1a4766061d3fd015ffe1ec65a035ac" class="gbcg-tab-item gbcb-Java">
-        <pre><code class="lang-Java">CameraUpdate cameraUpdate =
-    CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Easing);
+      <div id="0-484b007ee5df970e9d60a7f0c3dfb091" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate
+    .scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing);
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
       </div>
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-ca1a4766061d3fd015ffe1ec65a035ac" id="java">Java</h3>
-        <div id="0-ca1a4766061d3fd015ffe1ec65a035ac" class="gbcg-tab-item gbcb-Java">
-          <pre><code class="lang-Java">CameraUpdate cameraUpdate =
-    CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Easing);
+        <h3 class="gbcg-tabname 0-484b007ee5df970e9d60a7f0c3dfb091" id="java">Java</h3>
+        <div id="0-484b007ee5df970e9d60a7f0c3dfb091" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate
+    .scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing);
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-2f263199e78fb5d867fb3557a5180a0d" id="kotlin">Kotlin</h3>
-        <div id="1-2f263199e78fb5d867fb3557a5180a0d" class="gbcg-tab-item gbcb-Kotlin">
-          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Easing)
+        <h3 class="gbcg-tabname 1-53d8c72b1d2fe834032b740e2c6b77fd" id="kotlin">Kotlin</h3>
+        <div id="1-53d8c72b1d2fe834032b740e2c6b77fd" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate
+    .scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing)
 naverMap.moveCamera(cameraUpdate)
 </code></pre>
         </div>
@@ -645,37 +646,38 @@ naverMap.moveCamera(cameraUpdate)
 <h3 id="duration">Duration</h3>
 <p>By specifying the <code>duration</code> parameter of the <code>animate()</code> method, you can change the duration of animations. Note that if the animation type is <code>None</code>, the duration is ignored. Also note that if the <code>duration</code> is <code>0</code>, the camera moves without animation although an animation type is specified.</p>
 <p>The following code example add the <code>Fly</code> animation to the camera movement and sets the duration to 1 sec.</p>
-<p><div id="d3c54868a084473194b095df2f77cf5b" class="gbcg gbcg-codegroup">
+<p><div id="b5bb8d030d59309e1fe6f6324c286a68" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-5601cb16f8d12b79d3feb28c21bd2c0c" class="gbcg-selector gbcg-active" data-tab="0-5601cb16f8d12b79d3feb28c21bd2c0c" data-tab-category="undefined">Java</a>
-    <a id="select-1-df5d5a5b4ccb7ef95618e85ea6b6ef98" class="gbcg-selector" data-tab="1-df5d5a5b4ccb7ef95618e85ea6b6ef98" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-2c1de35bcfcd8f84a72c234857522d06" class="gbcg-selector gbcg-active" data-tab="0-2c1de35bcfcd8f84a72c234857522d06" data-tab-category="undefined">Java</a>
+    <a id="select-1-54847456876b32650460d4c0309d28da" class="gbcg-selector" data-tab="1-54847456876b32650460d4c0309d28da" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-5601cb16f8d12b79d3feb28c21bd2c0c" class="gbcg-tab-item gbcb-Java">
-        <pre><code class="lang-Java">CameraUpdate cameraUpdate =
-    CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Fly, <span class="hljs-number">1000</span>);
+      <div id="0-2c1de35bcfcd8f84a72c234857522d06" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate
+    .scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Fly, <span class="hljs-number">1000</span>);
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
       </div>
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-5601cb16f8d12b79d3feb28c21bd2c0c" id="java">Java</h3>
-        <div id="0-5601cb16f8d12b79d3feb28c21bd2c0c" class="gbcg-tab-item gbcb-Java">
-          <pre><code class="lang-Java">CameraUpdate cameraUpdate =
-    CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Fly, <span class="hljs-number">1000</span>);
+        <h3 class="gbcg-tabname 0-2c1de35bcfcd8f84a72c234857522d06" id="java">Java</h3>
+        <div id="0-2c1de35bcfcd8f84a72c234857522d06" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate
+    .scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Fly, <span class="hljs-number">1000</span>);
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-df5d5a5b4ccb7ef95618e85ea6b6ef98" id="kotlin">Kotlin</h3>
-        <div id="1-df5d5a5b4ccb7ef95618e85ea6b6ef98" class="gbcg-tab-item gbcb-Kotlin">
-          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Fly, <span class="hljs-number">1000</span>)
+        <h3 class="gbcg-tabname 1-54847456876b32650460d4c0309d28da" id="kotlin">Kotlin</h3>
+        <div id="1-54847456876b32650460d4c0309d28da" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate
+    .scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Fly, <span class="hljs-number">1000</span>)
 naverMap.moveCamera(cameraUpdate)
 </code></pre>
         </div>
@@ -718,64 +720,66 @@ naverMap.moveCamera(cameraUpdate)
 <h3 id="cancel-animations">Cancel animations</h3>
 <p>The camera movement animation can be cancelled for a variety of reasons. When you call <code>NaverMap.moveCamera()</code> to start a new camera movement, the previous camera movement is automatically cancelled.</p>
 <p>The following code example starts a camera animation with the duration of 2 seconds and 1 second later, starts a new camera movement to cancel the previous camera animation.</p>
-<p><div id="702312fee86dcda0bb276ebe2a3348bd" class="gbcg gbcg-codegroup">
+<p><div id="c4cc5b1dfd06f00a6d5d09dd6d7459a4" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-dee83320e1607724a8537cb60bb7879c" class="gbcg-selector gbcg-active" data-tab="0-dee83320e1607724a8537cb60bb7879c" data-tab-category="undefined">Java</a>
-    <a id="select-1-1e5d0b6591a5247973842bc5cfd38440" class="gbcg-selector" data-tab="1-1e5d0b6591a5247973842bc5cfd38440" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-8ba59d5a36a22bd4df1f5c32dc35c7b3" class="gbcg-selector gbcg-active" data-tab="0-8ba59d5a36a22bd4df1f5c32dc35c7b3" data-tab-category="undefined">Java</a>
+    <a id="select-1-5ec1f5d6a0cfbd26ac1bcc2d565c1688" class="gbcg-selector" data-tab="1-5ec1f5d6a0cfbd26ac1bcc2d565c1688" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-dee83320e1607724a8537cb60bb7879c" class="gbcg-tab-item gbcb-Java">
+      <div id="0-8ba59d5a36a22bd4df1f5c32dc35c7b3" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java">LatLng coord1 = <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>);
 LatLng coord2 = <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57000</span>, <span class="hljs-number">126.97618</span>);
 
 <span class="hljs-comment">// Camera animation for 2 sec.</span>
-naverMap.moveCamera(CameraUpdate.scrollTo(coord1)
-    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
+naverMap.moveCamera(
+    CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
 
 <span class="hljs-comment">// 1 sec later, a new camera movement starts and the previous camera animation</span>
 <span class="hljs-comment">// is cancelled.</span>
 <span class="hljs-keyword">new</span> Handler().postDelayed(() -&gt; {
-    naverMap.moveCamera(CameraUpdate.scrollTo(coord2)
-        .animate(CameraAnimation.Easing))
+    naverMap.moveCamera(
+        CameraUpdate.scrollTo(coord2).animate(CameraAnimation.Easing))
 }, <span class="hljs-number">1000</span>);
 </code></pre>
       </div>
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-dee83320e1607724a8537cb60bb7879c" id="java">Java</h3>
-        <div id="0-dee83320e1607724a8537cb60bb7879c" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-8ba59d5a36a22bd4df1f5c32dc35c7b3" id="java">Java</h3>
+        <div id="0-8ba59d5a36a22bd4df1f5c32dc35c7b3" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java">LatLng coord1 = <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>);
 LatLng coord2 = <span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.57000</span>, <span class="hljs-number">126.97618</span>);
 
 <span class="hljs-comment">// Camera animation for 2 sec.</span>
-naverMap.moveCamera(CameraUpdate.scrollTo(coord1)
-    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
+naverMap.moveCamera(
+    CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
 
 <span class="hljs-comment">// 1 sec later, a new camera movement starts and the previous camera animation</span>
 <span class="hljs-comment">// is cancelled.</span>
 <span class="hljs-keyword">new</span> Handler().postDelayed(() -&gt; {
-    naverMap.moveCamera(CameraUpdate.scrollTo(coord2)
-        .animate(CameraAnimation.Easing))
+    naverMap.moveCamera(
+        CameraUpdate.scrollTo(coord2).animate(CameraAnimation.Easing))
 }, <span class="hljs-number">1000</span>);
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-1e5d0b6591a5247973842bc5cfd38440" id="kotlin">Kotlin</h3>
-        <div id="1-1e5d0b6591a5247973842bc5cfd38440" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-5ec1f5d6a0cfbd26ac1bcc2d565c1688" id="kotlin">Kotlin</h3>
+        <div id="1-5ec1f5d6a0cfbd26ac1bcc2d565c1688" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> coord1</span> = LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>)
 <span class="hljs-variable"><span class="hljs-keyword">val</span> coord2</span> = LatLng(<span class="hljs-number">37.57000</span>, <span class="hljs-number">126.97618</span>)
 <span class="hljs-comment">// Camera animation for 2 sec.</span>
-naverMap.moveCamera(CameraUpdate.scrollTo(coord1)
-        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>))
+naverMap.moveCamera(
+    CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+)
 
 <span class="hljs-comment">// 1 sec later, a new camera movement starts and the previous camera animation</span>
 <span class="hljs-comment">// is cancelled.</span>
 Handler().postDelayed({
-    naverMap.moveCamera(CameraUpdate.scrollTo(coord2)
-            .animate(CameraAnimation.Easing))
+    naverMap.moveCamera(
+        CameraUpdate.scrollTo(coord2).animate(CameraAnimation.Easing)
+    )
 }, <span class="hljs-number">1000</span>)
 </code></pre>
         </div>
@@ -785,17 +789,17 @@ Handler().postDelayed({
 </div></p>
 <p>You can also use <a href="ref://../reference/com/naver/maps/map/NaverMap.html#cancelTransitions%28%29" target="_blank"><code>NaverMap.cancelTransitions()</code></a> to explicitly cancel the camera animation. When this method is invoked, the current camera animation is cancelled and the camera stops at the current position. With the stop gesture enabled, if a user taps the map, the same result occurs.</p>
 <p>The following code example calls <code>cancelTransitions()</code> to cancel the camera animation.</p>
-<p><div id="4172bdf30f06d881b17e3195b017b73f" class="gbcg gbcg-codegroup">
+<p><div id="5ccc9a0be46f3188e26a63b658322b45" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-6823627c8c81283212b9b81cc3faf6a3" class="gbcg-selector gbcg-active" data-tab="0-6823627c8c81283212b9b81cc3faf6a3" data-tab-category="undefined">Java</a>
-    <a id="select-1-b5399b4e5a21dba1be48a2a6ba96707a" class="gbcg-selector" data-tab="1-b5399b4e5a21dba1be48a2a6ba96707a" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-0f4d013f47f251ba314cd897fd0754aa" class="gbcg-selector gbcg-active" data-tab="0-0f4d013f47f251ba314cd897fd0754aa" data-tab-category="undefined">Java</a>
+    <a id="select-1-776b9c79fd1b34d2048d4a26cc2a2a6f" class="gbcg-selector" data-tab="1-776b9c79fd1b34d2048d4a26cc2a2a6f" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-6823627c8c81283212b9b81cc3faf6a3" class="gbcg-tab-item gbcb-Java">
+      <div id="0-0f4d013f47f251ba314cd897fd0754aa" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java"><span class="hljs-comment">// Camera animation for 2 sec.</span>
-naverMap.moveCamera(CameraUpdate.scrollTo(coord1)
-    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
+naverMap.moveCamera(
+    CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
 
 <span class="hljs-comment">// 1 sec later, cancelTransitions() is called and the previous camera animation</span>
 <span class="hljs-comment">// is cancelled.</span>
@@ -807,11 +811,11 @@ naverMap.moveCamera(CameraUpdate.scrollTo(coord1)
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-6823627c8c81283212b9b81cc3faf6a3" id="java">Java</h3>
-        <div id="0-6823627c8c81283212b9b81cc3faf6a3" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-0f4d013f47f251ba314cd897fd0754aa" id="java">Java</h3>
+        <div id="0-0f4d013f47f251ba314cd897fd0754aa" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java"><span class="hljs-comment">// Camera animation for 2 sec.</span>
-naverMap.moveCamera(CameraUpdate.scrollTo(coord1)
-    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
+naverMap.moveCamera(
+    CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>));
 
 <span class="hljs-comment">// 1 sec later, cancelTransitions() is called and the previous camera animation</span>
 <span class="hljs-comment">// is cancelled.</span>
@@ -822,11 +826,12 @@ naverMap.moveCamera(CameraUpdate.scrollTo(coord1)
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-b5399b4e5a21dba1be48a2a6ba96707a" id="kotlin">Kotlin</h3>
-        <div id="1-b5399b4e5a21dba1be48a2a6ba96707a" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-776b9c79fd1b34d2048d4a26cc2a2a6f" id="kotlin">Kotlin</h3>
+        <div id="1-776b9c79fd1b34d2048d4a26cc2a2a6f" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-comment">// Camera animation for 2 sec.</span>
-naverMap.moveCamera(CameraUpdate.scrollTo(coord1)
-        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>))
+naverMap.moveCamera(
+    CameraUpdate.scrollTo(coord1).animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+)
 
 <span class="hljs-comment">// 1 sec later, cancelTransitions() is called and the previous camera animation</span>
 <span class="hljs-comment">// is cancelled.</span>
@@ -844,25 +849,25 @@ Handler().postDelayed({
 <h3 id="camera-movement-callback">Camera movement callback</h3>
 <p>Set a callback object with <a href="ref://../reference/com/naver/maps/map/CameraUpdate.html#finishCallback%28com.naver.maps.map.CameraUpdate.FinishCallback%29" target="_blank"><code>finishCallback()</code></a> and <a href="ref://../reference/com/naver/maps/map/CameraUpdate.html#cancelCallback%28com.naver.maps.map.CameraUpdate.CancelCallback%29" target="_blank"><code>cancelCallback()</code></a>, and you can get a callback when a camera movement for the <code>CameraUpdate</code> is finished or cancelled. If an animation set for camera movements is cancelled, a callback set in <code>cancelCallback()</code> is called; otherwise, the one set in <code>finishCallback()</code> is called. In other words, if no animation is set for camera movements, a camera movement is always considered to be successfully finished.</p>
 <p>The following code example sets a callback that displays toast messages when a camera movement is finished or cancelled.</p>
-<p><div id="ec93e85cd926b6836254ff10e9b4fc2c" class="gbcg gbcg-codegroup">
+<p><div id="a00aceea654e58995cae3d9702fb83d3" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-de3b8dd6c1c6450226d966a80c1dc3e8" class="gbcg-selector gbcg-active" data-tab="0-de3b8dd6c1c6450226d966a80c1dc3e8" data-tab-category="undefined">Java</a>
-    <a id="select-1-1af85f669049b141da409317db2037c4" class="gbcg-selector" data-tab="1-1af85f669049b141da409317db2037c4" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-34f7b64344b8d19c47f34bee4009e415" class="gbcg-selector gbcg-active" data-tab="0-34f7b64344b8d19c47f34bee4009e415" data-tab-category="undefined">Java</a>
+    <a id="select-1-d03d2bbbc05788616a5c88b2b38809eb" class="gbcg-selector" data-tab="1-d03d2bbbc05788616a5c88b2b38809eb" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-de3b8dd6c1c6450226d966a80c1dc3e8" class="gbcg-tab-item gbcb-Java">
-        <pre><code class="lang-Java">CameraUpdate cameraUpdate =
-    CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
-        .finishCallback(() -&gt; {
-            Toast.makeText(context, <span class="hljs-string">&quot;Camera movement finished&quot;</span>,
-             Toast.LENGTH_SHORT).show();
-        })
-        .cancelCallback(() -&gt; {
-            Toast.makeText(context, <span class="hljs-string">&quot;Camera movement cancelled&quot;</span>,
-             Toast.LENGTH_SHORT).show();
-        });
+      <div id="0-34f7b64344b8d19c47f34bee4009e415" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate
+    .scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+    .finishCallback(() -&gt; {
+        Toast.makeText(context, <span class="hljs-string">&quot;Camera movement finished&quot;</span>,
+            Toast.LENGTH_SHORT).show();
+    })
+    .cancelCallback(() -&gt; {
+        Toast.makeText(context, <span class="hljs-string">&quot;Camera movement cancelled&quot;</span>,
+            Toast.LENGTH_SHORT).show();
+    });
 
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
@@ -870,37 +875,44 @@ naverMap.moveCamera(cameraUpdate);
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-de3b8dd6c1c6450226d966a80c1dc3e8" id="java">Java</h3>
-        <div id="0-de3b8dd6c1c6450226d966a80c1dc3e8" class="gbcg-tab-item gbcb-Java">
-          <pre><code class="lang-Java">CameraUpdate cameraUpdate =
-    CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
-        .finishCallback(() -&gt; {
-            Toast.makeText(context, <span class="hljs-string">&quot;Camera movement finished&quot;</span>,
-             Toast.LENGTH_SHORT).show();
-        })
-        .cancelCallback(() -&gt; {
-            Toast.makeText(context, <span class="hljs-string">&quot;Camera movement cancelled&quot;</span>,
-             Toast.LENGTH_SHORT).show();
-        });
+        <h3 class="gbcg-tabname 0-34f7b64344b8d19c47f34bee4009e415" id="java">Java</h3>
+        <div id="0-34f7b64344b8d19c47f34bee4009e415" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate
+    .scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+    .finishCallback(() -&gt; {
+        Toast.makeText(context, <span class="hljs-string">&quot;Camera movement finished&quot;</span>,
+            Toast.LENGTH_SHORT).show();
+    })
+    .cancelCallback(() -&gt; {
+        Toast.makeText(context, <span class="hljs-string">&quot;Camera movement cancelled&quot;</span>,
+            Toast.LENGTH_SHORT).show();
+    });
 
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-1af85f669049b141da409317db2037c4" id="kotlin">Kotlin</h3>
-        <div id="1-1af85f669049b141da409317db2037c4" class="gbcg-tab-item gbcb-Kotlin">
-          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
-        .finishCallback {
-            Toast.makeText(context, <span class="hljs-string">&quot;Camera movement finished&quot;</span>,
-                    Toast.LENGTH_SHORT).show()
-        }
-        .cancelCallback {
-            Toast.makeText(context, <span class="hljs-string">&quot;Camera movement cancelled&quot;</span>,
-                    Toast.LENGTH_SHORT).show()
-        }
+        <h3 class="gbcg-tabname 1-d03d2bbbc05788616a5c88b2b38809eb" id="kotlin">Kotlin</h3>
+        <div id="1-d03d2bbbc05788616a5c88b2b38809eb" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate
+    .scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+    .finishCallback {
+        Toast.makeText(
+            context, 
+            <span class="hljs-string">&quot;Camera movement finished&quot;</span>,
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+    .cancelCallback {
+        Toast.makeText(
+            context, 
+            <span class="hljs-string">&quot;Camera movement cancelled&quot;</span>,
+            Toast.LENGTH_SHORT
+        ).show()
+    }
 
 naverMap.moveCamera(cameraUpdate)
 </code></pre>
@@ -920,23 +932,23 @@ naverMap.moveCamera(cameraUpdate)
 </ul>
 <p>The <code>animated</code> parameter indicates whether an animation is set for the camera movement that triggers an event.</p>
 <p>The following code example adds an event listener that logs reasons for camera changes and sets a reason to move the camera.</p>
-<p><div id="22c22da9abaafe78dcb819f5b0f523eb" class="gbcg gbcg-codegroup">
+<p><div id="e7254b43765434f25e4d6182ea179fdb" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-ada7a1e463f966a153612530c671cb51" class="gbcg-selector gbcg-active" data-tab="0-ada7a1e463f966a153612530c671cb51" data-tab-category="undefined">Java</a>
-    <a id="select-1-6b1ff884319c5f06b2b425d62838f3fb" class="gbcg-selector" data-tab="1-6b1ff884319c5f06b2b425d62838f3fb" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-8e5fc9ac077157aad22bab98c594be81" class="gbcg-selector gbcg-active" data-tab="0-8e5fc9ac077157aad22bab98c594be81" data-tab-category="undefined">Java</a>
+    <a id="select-1-3f41f63ec3f6dccc4297bc49d107c74a" class="gbcg-selector" data-tab="1-3f41f63ec3f6dccc4297bc49d107c74a" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-ada7a1e463f966a153612530c671cb51" class="gbcg-tab-item gbcb-Java">
+      <div id="0-8e5fc9ac077157aad22bab98c594be81" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java">naverMap.addOnCameraChangeListener((reason, animated) -&gt; {
     Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>,
         <span class="hljs-string">&quot;Camera change - reson: &quot;</span> + reason + <span class="hljs-string">&quot;, animated: &quot;</span> + animated);
 });
 
-CameraUpdate cameraUpdate =
-    CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
-        .reason(<span class="hljs-number">1000</span>);
+CameraUpdate cameraUpdate = CameraUpdate
+    .scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+    .reason(<span class="hljs-number">1000</span>);
 
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
@@ -944,32 +956,33 @@ naverMap.moveCamera(cameraUpdate);
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-ada7a1e463f966a153612530c671cb51" id="java">Java</h3>
-        <div id="0-ada7a1e463f966a153612530c671cb51" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-8e5fc9ac077157aad22bab98c594be81" id="java">Java</h3>
+        <div id="0-8e5fc9ac077157aad22bab98c594be81" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java">naverMap.addOnCameraChangeListener((reason, animated) -&gt; {
     Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>,
         <span class="hljs-string">&quot;Camera change - reson: &quot;</span> + reason + <span class="hljs-string">&quot;, animated: &quot;</span> + animated);
 });
 
-CameraUpdate cameraUpdate =
-    CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
-        .reason(<span class="hljs-number">1000</span>);
+CameraUpdate cameraUpdate = CameraUpdate
+    .scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+    .reason(<span class="hljs-number">1000</span>);
 
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-6b1ff884319c5f06b2b425d62838f3fb" id="kotlin">Kotlin</h3>
-        <div id="1-6b1ff884319c5f06b2b425d62838f3fb" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-3f41f63ec3f6dccc4297bc49d107c74a" id="kotlin">Kotlin</h3>
+        <div id="1-3f41f63ec3f6dccc4297bc49d107c74a" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin">naverMap.addOnCameraChangeListener { reason, animated -&gt;
     Log.i(<span class="hljs-string">&quot;NaverMap&quot;</span>, <span class="hljs-string">&quot;Camera change - reson: $reason, animated: $animated&quot;</span>)
 }
 
-<span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
-        .reason(<span class="hljs-number">1000</span>)
+<span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate
+    .scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .animate(CameraAnimation.Easing, <span class="hljs-number">2000</span>)
+    .reason(<span class="hljs-number">1000</span>)
 
 naverMap.moveCamera(cameraUpdate)
 </code></pre>
@@ -983,17 +996,17 @@ naverMap.moveCamera(cameraUpdate)
 <p>For example, if you set the pivot point to <code>(0.5, 0.8)</code> and move the camera, the camera is located at the coordinates of the <code>(0.5, 0.8)</code> point after the camera movement is done. If you zoom in the map with the same pivot point, the map zooms in based on <code>(0.5, 0.8)</code>, rather than the center of the map. Therefore, the pivot point can make the camera location after the camera movement different from the specified target location.</p>
 <p>Considering that the pivot sets a point where the camera should be located on the screen, it works the same as content padding. However, unlike content padding, the property of <code>NaverMap</code>, the pivot is the property of <code>CameraUpdate</code> and thus only applies to one camera change and does not permanently affect the map object.</p>
 <p>The following code example sets the pivot point to <code>(0.5, 0.8)</code> and moves the camera.</p>
-<p><div id="d06ecd0e94c0df71672e1751f82ab9b4" class="gbcg gbcg-codegroup">
+<p><div id="00af6ed276ad08da947f1063285e7c7b" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-213a5e0ff1917a1e50df625306ac85e7" class="gbcg-selector gbcg-active" data-tab="0-213a5e0ff1917a1e50df625306ac85e7" data-tab-category="undefined">Java</a>
-    <a id="select-1-e4f6dff8b012c9325ff30ff4d22caa61" class="gbcg-selector" data-tab="1-e4f6dff8b012c9325ff30ff4d22caa61" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-5bf293b4f0f436cf4fa6dc5fc3d84e01" class="gbcg-selector gbcg-active" data-tab="0-5bf293b4f0f436cf4fa6dc5fc3d84e01" data-tab-category="undefined">Java</a>
+    <a id="select-1-7748d733bb18b373deab1ec303af8604" class="gbcg-selector" data-tab="1-7748d733bb18b373deab1ec303af8604" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-213a5e0ff1917a1e50df625306ac85e7" class="gbcg-tab-item gbcb-Java">
-        <pre><code class="lang-Java">CameraUpdate cameraUpdate =
-    CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .pivot(<span class="hljs-keyword">new</span> PointF(<span class="hljs-number">0.5f</span>, <span class="hljs-number">0.8f</span>));
+      <div id="0-5bf293b4f0f436cf4fa6dc5fc3d84e01" class="gbcg-tab-item gbcb-Java">
+        <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate
+    .scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .pivot(<span class="hljs-keyword">new</span> PointF(<span class="hljs-number">0.5f</span>, <span class="hljs-number">0.8f</span>));
 
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
@@ -1001,21 +1014,22 @@ naverMap.moveCamera(cameraUpdate);
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-213a5e0ff1917a1e50df625306ac85e7" id="java">Java</h3>
-        <div id="0-213a5e0ff1917a1e50df625306ac85e7" class="gbcg-tab-item gbcb-Java">
-          <pre><code class="lang-Java">CameraUpdate cameraUpdate =
-    CameraUpdate.scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .pivot(<span class="hljs-keyword">new</span> PointF(<span class="hljs-number">0.5f</span>, <span class="hljs-number">0.8f</span>));
+        <h3 class="gbcg-tabname 0-5bf293b4f0f436cf4fa6dc5fc3d84e01" id="java">Java</h3>
+        <div id="0-5bf293b4f0f436cf4fa6dc5fc3d84e01" class="gbcg-tab-item gbcb-Java">
+          <pre><code class="lang-Java">CameraUpdate cameraUpdate = CameraUpdate
+    .scrollTo(<span class="hljs-keyword">new</span> LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .pivot(<span class="hljs-keyword">new</span> PointF(<span class="hljs-number">0.5f</span>, <span class="hljs-number">0.8f</span>));
 
 naverMap.moveCamera(cameraUpdate);
 </code></pre>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-e4f6dff8b012c9325ff30ff4d22caa61" id="kotlin">Kotlin</h3>
-        <div id="1-e4f6dff8b012c9325ff30ff4d22caa61" class="gbcg-tab-item gbcb-Kotlin">
-          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate.scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
-        .pivot(PointF(<span class="hljs-number">0.5</span>f, <span class="hljs-number">0.8</span>f))
+        <h3 class="gbcg-tabname 1-7748d733bb18b373deab1ec303af8604" id="kotlin">Kotlin</h3>
+        <div id="1-7748d733bb18b373deab1ec303af8604" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> cameraUpdate</span> = CameraUpdate
+    .scrollTo(LatLng(<span class="hljs-number">37.5666102</span>, <span class="hljs-number">126.9783881</span>))
+    .pivot(PointF(<span class="hljs-number">0.5</span>f, <span class="hljs-number">0.8</span>f))
 
 naverMap.moveCamera(cameraUpdate)
 </code></pre>
@@ -1137,7 +1151,7 @@ naverMap.maxZoom = <span class="hljs-number">18.0</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Camera Movement","level":"2.3.2","depth":2,"next":{"title":"Interaction","level":"2.4","depth":1,"ref":"","articles":[{"title":"User Interface","level":"2.4.1","depth":2,"path":"4-1.md","ref":"4-1.md","articles":[]},{"title":"Location","level":"2.4.2","depth":2,"path":"4-2.md","ref":"4-2.md","articles":[]}]},"previous":{"title":"Camera and Projection","level":"2.3.1","depth":2,"path":"3-1.md","ref":"3-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"3-2.md","mtime":"2024-11-25T05:51:44.786Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-25T05:51:52.645Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Camera Movement","level":"2.3.2","depth":2,"next":{"title":"Interaction","level":"2.4","depth":1,"ref":"","articles":[{"title":"User Interface","level":"2.4.1","depth":2,"path":"4-1.md","ref":"4-1.md","articles":[]},{"title":"Location","level":"2.4.2","depth":2,"path":"4-2.md","ref":"4-2.md","articles":[]}]},"previous":{"title":"Camera and Projection","level":"2.3.1","depth":2,"path":"3-1.md","ref":"3-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"3-2.md","mtime":"2025-03-20T06:32:12.387Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-03-20T06:32:18.787Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

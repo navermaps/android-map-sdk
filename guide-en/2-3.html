@@ -985,10 +985,10 @@ naverMap.setLayerGroupEnabled(NaverMap.LAYER_GROUP_TRANSIT, <span class="hljs-li
 <h3 id="navermapoptions">NaverMapOptions</h3>
 <p><code>NaverMapOptions</code> is a class that specifies initial options of a map. By calling various methods, you can specify initial options including the initial position of a camera and map type. All the methods of the <code>NaverMapOptions</code> class return the object itself, allowing method chaining. In addition, the <code>NaverMapOptions</code> class is <a href="https://developer.android.com/reference/android/os/Parcelable" target="_blank"><code>Parcelable</code></a>, so you can use the <a href="https://developer.android.com/reference/android/os/Bundle" target="_blank"><code>Bundle</code></a> class to save or import options.</p>
 <p>The following code example sets the initial camera position to Busan, and the map type to terrain.</p>
-<p><div id="0b86b785da8ac85f6f29313d1f2864e8" class="gbcg gbcg-codegroup">
+<p><div id="8d068792f71036c3b96af4053ec872ab" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-a44fde0f4f9db97046572ae0ddcc14f4" class="gbcg-selector gbcg-active" data-tab="0-a44fde0f4f9db97046572ae0ddcc14f4" data-tab-category="undefined">Java</a>
-    <a id="select-1-7cfdde20594c02b4ebda80961529596e" class="gbcg-selector" data-tab="1-7cfdde20594c02b4ebda80961529596e" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-d5f1b6b612b7162bc87992dfc22cf539" class="gbcg-selector" data-tab="1-d5f1b6b612b7162bc87992dfc22cf539" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -1010,11 +1010,11 @@ naverMap.setLayerGroupEnabled(NaverMap.LAYER_GROUP_TRANSIT, <span class="hljs-li
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-7cfdde20594c02b4ebda80961529596e" id="kotlin">Kotlin</h3>
-        <div id="1-7cfdde20594c02b4ebda80961529596e" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-d5f1b6b612b7162bc87992dfc22cf539" id="kotlin">Kotlin</h3>
+        <div id="1-d5f1b6b612b7162bc87992dfc22cf539" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> options</span> = NaverMapOptions()
-        .camera(CameraPosition(LatLng(<span class="hljs-number">35.1798159</span>, <span class="hljs-number">129.0750222</span>), <span class="hljs-number">8.0</span>))
-        .mapType(NaverMap.MapType.Terrain)
+    .camera(CameraPosition(LatLng(<span class="hljs-number">35.1798159</span>, <span class="hljs-number">129.0750222</span>), <span class="hljs-number">8.0</span>))
+    .mapType(NaverMap.MapType.Terrain)
 </code></pre>
         </div>
       </div>
@@ -1070,10 +1070,10 @@ naverMap.setLayerGroupEnabled(NaverMap.LAYER_GROUP_TRANSIT, <span class="hljs-li
 <p>When options including map types and display options are changed, an event occurs. If you add a <a href="ref://../reference/com/naver/maps/map/NaverMap.OnOptionChangeListener.html" target="_blank"><code>NaverMap.OnOptionChangeListener</code></a> by using the <a href="ref://../reference/com/naver/maps/map/NaverMap.html#addOnOptionChangeListener%28com.naver.maps.map.NaverMap.OnOptionChangeListener%29" target="_blank"><code>addOnOptionChangeListener()</code></a> method, you can receive an option change event. When an option of a map is changed, the <a href="ref://../reference/com/naver/maps/map/NaverMap.OnOptionChangeListener.html#onOptionChange%28%29" target="_blank"><code>onOptionChange()</code></a> callback method is called.</p>
 <p>This event is useful when you need to change user interfaces or other properties depending on your map options. For example, if the night mode of the map is enabled, it is natural for markers on the map to be darker. To do so, you can use the option change event.</p>
 <p>The following code example changes icons of markers depending on whether the night mode is enabled or not.</p>
-<p><div id="1a3417529599c9c7a7b60d11d4a398c7" class="gbcg gbcg-codegroup">
+<p><div id="c48031dba7b68e6b5e8340fc5ea818b5" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-ac57d7ddde33753f3c47ab00081b6528" class="gbcg-selector gbcg-active" data-tab="0-ac57d7ddde33753f3c47ab00081b6528" data-tab-category="undefined">Java</a>
-    <a id="select-1-9a5206a17b4dee48bd8e51e9a7a0b971" class="gbcg-selector" data-tab="1-9a5206a17b4dee48bd8e51e9a7a0b971" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-7dd43201ea50d999b60d958bea25ddb8" class="gbcg-selector" data-tab="1-7dd43201ea50d999b60d958bea25ddb8" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -1107,16 +1107,18 @@ naverMap.addOnOptionChangeListener(() -&gt; {
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-9a5206a17b4dee48bd8e51e9a7a0b971" id="kotlin">Kotlin</h3>
-        <div id="1-9a5206a17b4dee48bd8e51e9a7a0b971" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-7dd43201ea50d999b60d958bea25ddb8" id="kotlin">Kotlin</h3>
+        <div id="1-7dd43201ea50d999b60d958bea25ddb8" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> marker</span>: Marker = ...
 
 naverMap.addOnOptionChangeListener {
-    <span class="hljs-keyword">if</span> (naverMap.isNightModeEnabled) {
-        marker.icon = OverlayImage.fromResource(R.drawable.night_icon)
-    } <span class="hljs-keyword">else</span> {
-        marker.icon = OverlayImage.fromResource(R.drawable.day_icon)
-    }
+    marker.icon = OverlayImage.fromResource(
+        <span class="hljs-keyword">if</span> (naverMap.isNightModeEnabled) {
+            R.drawable.night_icon
+        } <span class="hljs-keyword">else</span> {
+            R.drawable.day_icon
+        }
+    )
 }
 </code></pre>
         </div>
@@ -1163,7 +1165,7 @@ naverMap.addOnOptionChangeListener {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Map Options","level":"2.2.3","depth":2,"next":{"title":"Camera","level":"2.3","depth":1,"ref":"","articles":[{"title":"Camera and Projection","level":"2.3.1","depth":2,"path":"3-1.md","ref":"3-1.md","articles":[]},{"title":"Camera Movement","level":"2.3.2","depth":2,"path":"3-2.md","ref":"3-2.md","articles":[]}]},"previous":{"title":"Coordinates Object","level":"2.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"2-3.md","mtime":"2024-11-25T05:51:44.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-25T05:51:52.645Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Map Options","level":"2.2.3","depth":2,"next":{"title":"Camera","level":"2.3","depth":1,"ref":"","articles":[{"title":"Camera and Projection","level":"2.3.1","depth":2,"path":"3-1.md","ref":"3-1.md","articles":[]},{"title":"Camera Movement","level":"2.3.2","depth":2,"path":"3-2.md","ref":"3-2.md","articles":[]}]},"previous":{"title":"Coordinates Object","level":"2.2.2","depth":2,"path":"2-2.md","ref":"2-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"2-3.md","mtime":"2025-03-20T06:32:12.387Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-03-20T06:32:18.787Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

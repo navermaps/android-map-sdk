@@ -554,10 +554,10 @@
 <h2 id="add-and-remove-polyline-overlays">Add and remove polyline overlays</h2>
 <p>A polyline overlay can be created just like a general Java object. Create an object, set a list of coordinates in the <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setCoords%28java.util.List%29" target="_blank"><code>coords</code></a> property and then set a map object in the <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setMap%28com.naver.maps.map.NaverMap%29" target="_blank"><code>map</code></a> property to add a polyline overlay. Note that you should specify the <code>coords</code> property before specifying the <code>map</code> property; otherwise an exception occurs.</p>
 <p>The following code example creates a polyline overlay object and adds it to the map.</p>
-<p><div id="e5bd052ccdc968f93265dd28c8678a04" class="gbcg gbcg-codegroup">
+<p><div id="98a15960fa80ca990441271df106db9c" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-ce91652c8961c8a5f355298f67d1eae1" class="gbcg-selector gbcg-active" data-tab="0-ce91652c8961c8a5f355298f67d1eae1" data-tab-category="undefined">Java</a>
-    <a id="select-1-b7539cef397d6267b5d13ed0fdd0ee8a" class="gbcg-selector" data-tab="1-b7539cef397d6267b5d13ed0fdd0ee8a" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-072351638bb76400e345e8ceaf39b511" class="gbcg-selector" data-tab="1-072351638bb76400e345e8ceaf39b511" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -589,14 +589,14 @@ polyline.setMap(naverMap);
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-b7539cef397d6267b5d13ed0fdd0ee8a" id="kotlin">Kotlin</h3>
-        <div id="1-b7539cef397d6267b5d13ed0fdd0ee8a" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-072351638bb76400e345e8ceaf39b511" id="kotlin">Kotlin</h3>
+        <div id="1-072351638bb76400e345e8ceaf39b511" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> polyline</span> = PolylineOverlay()
 polyline.coords = listOf(
-        LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
-        LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
-        LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
-        LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+    LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+    LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+    LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+    LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
 )
 polyline.map = naverMap
 </code></pre>
@@ -641,10 +641,10 @@ polyline.map = naverMap
 <h3 id="list-of-coordinates">List of coordinates</h3>
 <p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolylineOverlay.html#setCoords%28java.util.List%29" target="_blank"><code>coords</code></a> property specifies a list of coordinates. This property is required; if you add a polyline overlay with no list of coordinates to the map, an exception occurs. Also, if the list of coordinates is less than <code>2</code> in size or has <code>null</code>, an exception occurs.</p>
 <p>The following code example specifies a list of coordinates for a polyline overlay.</p>
-<p><div id="09b17f47c1a8942b8eb1b234660c631e" class="gbcg gbcg-codegroup">
+<p><div id="4a5efd827026459e367baea153f22486" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-be16bc20e6646f516f88f54a4bf96fae" class="gbcg-selector gbcg-active" data-tab="0-be16bc20e6646f516f88f54a4bf96fae" data-tab-category="undefined">Java</a>
-    <a id="select-1-9b2c8a29a5c09d86ac18d6edbbd5f312" class="gbcg-selector" data-tab="1-9b2c8a29a5c09d86ac18d6edbbd5f312" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-05e76aa34becc6c3add8b5a5e794ae9e" class="gbcg-selector" data-tab="1-05e76aa34becc6c3add8b5a5e794ae9e" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -672,13 +672,13 @@ polyline.map = naverMap
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-9b2c8a29a5c09d86ac18d6edbbd5f312" id="kotlin">Kotlin</h3>
-        <div id="1-9b2c8a29a5c09d86ac18d6edbbd5f312" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-05e76aa34becc6c3add8b5a5e794ae9e" id="kotlin">Kotlin</h3>
+        <div id="1-05e76aa34becc6c3add8b5a5e794ae9e" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin">polyline.coords = listOf(
-        LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
-        LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
-        LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
-        LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+    LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+    LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+    LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+    LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
 )
 </code></pre>
         </div>
@@ -688,10 +688,10 @@ polyline.map = naverMap
 </div></p>
 <p>Even if you change the coordinates object specified in the <code>coords</code> property or the one obtained with the property, the changes are not applied. To apply the changes, the changed coordinates object should be set in the <code>coords</code> property again.</p>
 <p>The following code example changes part of the list of coordinates of a polyline overlay.</p>
-<p><div id="d5eb43aefeb4ae9bd2db1bef1b87bd7e" class="gbcg gbcg-codegroup">
+<p><div id="68d1784b309e5a43e8db35c71eae6b7f" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-14a6c21f78a65811bee4c641202fdbee" class="gbcg-selector gbcg-active" data-tab="0-14a6c21f78a65811bee4c641202fdbee" data-tab-category="undefined">Java</a>
-    <a id="select-1-045224c3efa468ea4cd2f8e04e199b89" class="gbcg-selector" data-tab="1-045224c3efa468ea4cd2f8e04e199b89" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-3a0ce080ac8446777d3824f5ce9ae380" class="gbcg-selector" data-tab="1-3a0ce080ac8446777d3824f5ce9ae380" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -733,13 +733,13 @@ polyline.setCoords(coords);
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-045224c3efa468ea4cd2f8e04e199b89" id="kotlin">Kotlin</h3>
-        <div id="1-045224c3efa468ea4cd2f8e04e199b89" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-3a0ce080ac8446777d3824f5ce9ae380" id="kotlin">Kotlin</h3>
+        <div id="1-3a0ce080ac8446777d3824f5ce9ae380" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> coords</span> = mutableListOf(
-        LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
-        LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
-        LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
-        LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
+    LatLng(<span class="hljs-number">37.57152</span>, <span class="hljs-number">126.97714</span>),
+    LatLng(<span class="hljs-number">37.56607</span>, <span class="hljs-number">126.98268</span>),
+    LatLng(<span class="hljs-number">37.56445</span>, <span class="hljs-number">126.97707</span>),
+    LatLng(<span class="hljs-number">37.55855</span>, <span class="hljs-number">126.97822</span>)
 )
 polyline.coords = coords
 
@@ -938,10 +938,10 @@ polyline.coords = coords
 <h2 id="add-and-remove-polygon-overlays">Add and remove polygon overlays</h2>
 <p>A polygon overlay can be created just like a general Java object. Create an object, set a list of coordinates in the <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setCoords%28java.util.List%29" target="_blank"><code>coords</code></a> property and then set a map object in the <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setMap%28com.naver.maps.map.NaverMap%29" target="_blank"><code>map</code></a> property to add a polygon overlay. Note that you should specify the <code>coords</code> property before specifying the <code>map</code> property; otherwise an exception occurs.</p>
 <p>The following code example creates a polygon overlay object and adds it to the map.</p>
-<p><div id="b592322ea87bd6d5a2f1252ed6d50da8" class="gbcg gbcg-codegroup">
+<p><div id="8338a335a8eaa8890351cbdc194cbbd3" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-8db65c612c00aa2e5933ea9566ca78f9" class="gbcg-selector gbcg-active" data-tab="0-8db65c612c00aa2e5933ea9566ca78f9" data-tab-category="undefined">Java</a>
-    <a id="select-1-355c1a97ab168c7d70cac4435829921b" class="gbcg-selector" data-tab="1-355c1a97ab168c7d70cac4435829921b" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-6ed4408930fa3a6d229bb444c505be29" class="gbcg-selector" data-tab="1-6ed4408930fa3a6d229bb444c505be29" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -975,15 +975,15 @@ polygon.setMap(naverMap);
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-355c1a97ab168c7d70cac4435829921b" id="kotlin">Kotlin</h3>
-        <div id="1-355c1a97ab168c7d70cac4435829921b" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-6ed4408930fa3a6d229bb444c505be29" id="kotlin">Kotlin</h3>
+        <div id="1-6ed4408930fa3a6d229bb444c505be29" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> polygon</span> = PolygonOverlay()
 polygon.coords = listOf(
-        LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>),
-        LatLng(<span class="hljs-number">37.5651279</span>, <span class="hljs-number">126.9767904</span>),
-        LatLng(<span class="hljs-number">37.5625365</span>, <span class="hljs-number">126.9832241</span>),
-        LatLng(<span class="hljs-number">37.5585305</span>, <span class="hljs-number">126.9809297</span>),
-        LatLng(<span class="hljs-number">37.5590777</span>, <span class="hljs-number">126.974617</span>)
+    LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>),
+    LatLng(<span class="hljs-number">37.5651279</span>, <span class="hljs-number">126.9767904</span>),
+    LatLng(<span class="hljs-number">37.5625365</span>, <span class="hljs-number">126.9832241</span>),
+    LatLng(<span class="hljs-number">37.5585305</span>, <span class="hljs-number">126.9809297</span>),
+    LatLng(<span class="hljs-number">37.5590777</span>, <span class="hljs-number">126.974617</span>)
 )
 polygon.map = naverMap
 </code></pre>
@@ -1028,10 +1028,10 @@ polygon.map = naverMap
 <h3 id="list-of-coordinates">List of coordinates</h3>
 <p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setCoords%28java.util.List%29" target="_blank"><code>coords</code></a> property specifies a list of coordinates. This property is required. The list of coordinates to specify a polygon should be in clockwise order; otherwise the polygon is not properly drawn or cannot receive an event. If you add a polygon overlay with no list of coordinates to the map, an exception occurs. Also, if the list of coordinates is less than <code>3</code> in size or has <code>null</code>, an exception occurs.</p>
 <p>The following code example specifies a list of coordinates for a polygon overlay.</p>
-<p><div id="50caf25fcc3adf56c7dc1ab7c3eab115" class="gbcg gbcg-codegroup">
+<p><div id="a31661886313138fc557e66575e6c062" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-635d2f3bdd9fa70b7d5605c1a791cae8" class="gbcg-selector gbcg-active" data-tab="0-635d2f3bdd9fa70b7d5605c1a791cae8" data-tab-category="undefined">Java</a>
-    <a id="select-1-b0f2751a9c02d2cd64fa2f096ddb174f" class="gbcg-selector" data-tab="1-b0f2751a9c02d2cd64fa2f096ddb174f" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-b6d2972c6cc70175c008abfb8c605c5f" class="gbcg-selector" data-tab="1-b6d2972c6cc70175c008abfb8c605c5f" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -1061,14 +1061,14 @@ polygon.map = naverMap
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-b0f2751a9c02d2cd64fa2f096ddb174f" id="kotlin">Kotlin</h3>
-        <div id="1-b0f2751a9c02d2cd64fa2f096ddb174f" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-b6d2972c6cc70175c008abfb8c605c5f" id="kotlin">Kotlin</h3>
+        <div id="1-b6d2972c6cc70175c008abfb8c605c5f" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin">polygon.coords = listOf(
-        LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>),
-        LatLng(<span class="hljs-number">37.5651279</span>, <span class="hljs-number">126.9767904</span>),
-        LatLng(<span class="hljs-number">37.5625365</span>, <span class="hljs-number">126.9832241</span>),
-        LatLng(<span class="hljs-number">37.5585305</span>, <span class="hljs-number">126.9809297</span>),
-        LatLng(<span class="hljs-number">37.5590777</span>, <span class="hljs-number">126.974617</span>)
+    LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>),
+    LatLng(<span class="hljs-number">37.5651279</span>, <span class="hljs-number">126.9767904</span>),
+    LatLng(<span class="hljs-number">37.5625365</span>, <span class="hljs-number">126.9832241</span>),
+    LatLng(<span class="hljs-number">37.5585305</span>, <span class="hljs-number">126.9809297</span>),
+    LatLng(<span class="hljs-number">37.5590777</span>, <span class="hljs-number">126.974617</span>)
 )
 </code></pre>
         </div>
@@ -1078,10 +1078,10 @@ polygon.map = naverMap
 </div></p>
 <p>Even if you change the coordinates object specified in the <code>coords</code> property or the one obtained with the property, the changes are not applied. To apply the changes, the changed coordinates object should be set in the <code>coords</code> property again.</p>
 <p>The following code example changes part of the list of coordinates of a polygon overlay.</p>
-<p><div id="3d451efdd0731a21a3df11903ce3e5f2" class="gbcg gbcg-codegroup">
+<p><div id="23710f03679bb3b44889c980d117b9b9" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-7d1b490c5aa0afa0ec556a052fb98c81" class="gbcg-selector gbcg-active" data-tab="0-7d1b490c5aa0afa0ec556a052fb98c81" data-tab-category="undefined">Java</a>
-    <a id="select-1-442d1e672eed229478f11ae517726b82" class="gbcg-selector" data-tab="1-442d1e672eed229478f11ae517726b82" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-fd59d3542e606bdceb0f3914681931df" class="gbcg-selector" data-tab="1-fd59d3542e606bdceb0f3914681931df" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -1125,14 +1125,14 @@ polygon.setCoords(coords);
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-442d1e672eed229478f11ae517726b82" id="kotlin">Kotlin</h3>
-        <div id="1-442d1e672eed229478f11ae517726b82" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-fd59d3542e606bdceb0f3914681931df" id="kotlin">Kotlin</h3>
+        <div id="1-fd59d3542e606bdceb0f3914681931df" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> coords</span> = mutableListOf(
-        LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>),
-        LatLng(<span class="hljs-number">37.5651279</span>, <span class="hljs-number">126.9767904</span>),
-        LatLng(<span class="hljs-number">37.5625365</span>, <span class="hljs-number">126.9832241</span>),
-        LatLng(<span class="hljs-number">37.5585305</span>, <span class="hljs-number">126.9809297</span>),
-        LatLng(<span class="hljs-number">37.5590777</span>, <span class="hljs-number">126.974617</span>)
+    LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>),
+    LatLng(<span class="hljs-number">37.5651279</span>, <span class="hljs-number">126.9767904</span>),
+    LatLng(<span class="hljs-number">37.5625365</span>, <span class="hljs-number">126.9832241</span>),
+    LatLng(<span class="hljs-number">37.5585305</span>, <span class="hljs-number">126.9809297</span>),
+    LatLng(<span class="hljs-number">37.5590777</span>, <span class="hljs-number">126.974617</span>)
 )
 polygon.coords = coords
 
@@ -1149,10 +1149,10 @@ polygon.coords = coords
 <h3 id="holes">Holes</h3>
 <p>The <a href="ref://../reference/com/naver/maps/map/overlay/PolygonOverlay.html#setHoles%28java.util.List%29" target="_blank"><code>holes</code></a> property specifies a hole inside a polygon. A polygon can have multiple inner holes, which can neither be colored nor receive events. The list of coordinates to specify each hole should be in counterclockwise order; otherwise it is not properly drawn or the polygon cannot receive an event. Also, if the list of coordinates for each hole is less than <code>3</code> in size or has <code>null</code>, an exception occurs.</p>
 <p>The following code example specifies a hole in a polygon overlay.</p>
-<p><div id="cca27b28d7e0b51974fbcaa90be8c93c" class="gbcg gbcg-codegroup">
+<p><div id="3696d6e3c17f30bb4c6130a6e38ae72f" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-3a6bbb05cd25151f3fb5abbaac55e152" class="gbcg-selector gbcg-active" data-tab="0-3a6bbb05cd25151f3fb5abbaac55e152" data-tab-category="undefined">Java</a>
-    <a id="select-1-513383d5fec4c249ea82360e0f52f6ba" class="gbcg-selector" data-tab="1-513383d5fec4c249ea82360e0f52f6ba" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-5bf4cbf1279fbe0da82e1f8bd3747ad6" class="gbcg-selector" data-tab="1-5bf4cbf1279fbe0da82e1f8bd3747ad6" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -1178,13 +1178,15 @@ polygon.coords = coords
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-513383d5fec4c249ea82360e0f52f6ba" id="kotlin">Kotlin</h3>
-        <div id="1-513383d5fec4c249ea82360e0f52f6ba" class="gbcg-tab-item gbcb-Kotlin">
-          <pre><code class="lang-Kotlin">polygon.holes = listOf(listOf(
+        <h3 class="gbcg-tabname 1-5bf4cbf1279fbe0da82e1f8bd3747ad6" id="kotlin">Kotlin</h3>
+        <div id="1-5bf4cbf1279fbe0da82e1f8bd3747ad6" class="gbcg-tab-item gbcb-Kotlin">
+          <pre><code class="lang-Kotlin">polygon.holes = listOf(
+    listOf(
         LatLng(<span class="hljs-number">37.5612243</span>, <span class="hljs-number">126.9768938</span>),
         LatLng(<span class="hljs-number">37.5627692</span>, <span class="hljs-number">126.9795502</span>),
         LatLng(<span class="hljs-number">37.5628377</span>, <span class="hljs-number">126.976066</span>)
-))
+    )
+)
 </code></pre>
         </div>
       </div>
@@ -1582,7 +1584,7 @@ circle.map = naverMap
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Shapes","level":"2.5.4","depth":2,"next":{"title":"Location Overlay","level":"2.5.5","depth":2,"path":"5-5.md","ref":"5-5.md","articles":[]},"previous":{"title":"Info Window","level":"2.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"5-4.md","mtime":"2024-11-25T05:51:44.596Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-25T05:51:52.645Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Shapes","level":"2.5.4","depth":2,"next":{"title":"Location Overlay","level":"2.5.5","depth":2,"path":"5-5.md","ref":"5-5.md","articles":[]},"previous":{"title":"Info Window","level":"2.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"5-4.md","mtime":"2025-03-20T06:32:12.179Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-03-20T06:32:18.787Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

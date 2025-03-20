@@ -599,10 +599,10 @@
 </div></p>
 <p><code>FusedLocationSource</code> requires an activity or fragment to process permissions in runtime. You should pass an activity or fragment object to the constructor and specify a permission request code. And then, you should pass the result of <code>onRequestPermissionResult()</code> to <a href="ref://../reference/com/naver/maps/map/util/FusedLocationSource.html#onRequestPermissionsResult%28int%2Cjava.lang.String%5B%5D%2Cint%5B%5D%29" target="_blank"><code>onRequestPermissionsResult()</code></a> of <code>FusedLocationSource</code>.</p>
 <p>The following code example creates a <code>FusedLocationSource</code> in an activity and set it to <code>NaverMap</code>.</p>
-<p><div id="6cf1101531cc37e5ccb320c921b59c27" class="gbcg gbcg-codegroup">
+<p><div id="e0192c56c575077c2bba63334285115e" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-608d1181bb4dfa817fbc13ae56b51fe7" class="gbcg-selector gbcg-active" data-tab="0-608d1181bb4dfa817fbc13ae56b51fe7" data-tab-category="undefined">Java</a>
-    <a id="select-1-8835a93d49dad52b770b4950598dc894" class="gbcg-selector" data-tab="1-8835a93d49dad52b770b4950598dc894" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-9c540703d6ac0cfcba6fd297fd914724" class="gbcg-selector" data-tab="1-9c540703d6ac0cfcba6fd297fd914724" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -686,8 +686,8 @@
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-8835a93d49dad52b770b4950598dc894" id="kotlin">Kotlin</h3>
-        <div id="1-8835a93d49dad52b770b4950598dc894" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-9c540703d6ac0cfcba6fd297fd914724" id="kotlin">Kotlin</h3>
+        <div id="1-9c540703d6ac0cfcba6fd297fd914724" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LocationTrackingActivity</span> : <span class="hljs-type">AppCompatActivity</span></span>(), OnMapReadyCallback {
     <span class="hljs-keyword">private</span> lateinit <span class="hljs-variable"><span class="hljs-keyword">var</span> locationSource</span>: FusedLocationSource
     <span class="hljs-keyword">private</span> lateinit <span class="hljs-variable"><span class="hljs-keyword">var</span> naverMap</span>: NaverMap
@@ -695,15 +695,24 @@
     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle?</span>)</span> {</span>
         super.onCreate(savedInstanceState)
         <span class="hljs-comment">// ...</span>
-        locationSource =
-               FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE)
+        locationSource = FusedLocationSource(
+            this,
+            LOCATION_PERMISSION_REQUEST_CODE
+        )
     }
 
-    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onRequestPermissionsResult</span><span class="hljs-params">(requestCode: <span class="hljs-type">Int,
-                                            permissions: Array&lt;String&gt;,
-                                            grantResults: IntArray</span>)</span> {</span>
-        <span class="hljs-keyword">if</span> (locationSource.onRequestPermissionsResult(requestCode, permissions,
-                grantResults)) {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onRequestPermissionsResult</span><span class="hljs-params">(
+        requestCode: <span class="hljs-type">Int,
+        permissions: Array&lt;String&gt;,
+        grantResults: IntArray</span>
+    )</span> {</span>
+        <span class="hljs-keyword">if</span> (
+            locationSource.onRequestPermissionsResult(
+                requestCode,
+                permissions,
+                grantResults
+            )
+        ) {
             <span class="hljs-keyword">if</span> (!locationSource.isActivated) { <span class="hljs-comment">// Permission denied</span>
                 naverMap.locationTrackingMode = LocationTrackingMode.None
             }
@@ -781,10 +790,10 @@
 <h2 id="location-change-event">Location change event</h2>
 <p>Add <a href="ref://../reference/com/naver/maps/map/NaverMap.OnLocationChangeListener.html" target="_blank"><code>OnLocationChangeListener</code></a> with the <a href="ref://../reference/com/naver/maps/map/NaverMap.html#addOnLocationChangeListener%28com.naver.maps.map.NaverMap.OnLocationChangeListener%29" target="_blank"><code>addOnLocationChangeListener()</code></a> method to receive an event for location changes. If the location tracking mode is enabled and a user&#x2019;s location changes, the <a href="ref://../reference/com/naver/maps/map/NaverMap.OnLocationChangeListener.html#onLocationChange%28android.location.Location%29" target="_blank"><code>onLocationChange()</code></a> callback method is called with the user&#x2019;s location passed as a parameter.</p>
 <p>The following code example displays a user&#x2019;s location coordinates as a toast message when the location changes.</p>
-<p><div id="8cc478b758f7d7fbbd71f9e6fce298a6" class="gbcg gbcg-codegroup">
+<p><div id="342e039d0a7ce83a94ecce45303694cb" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-2578c5e7f7b17cf9ac3551ccae61c058" class="gbcg-selector gbcg-active" data-tab="0-2578c5e7f7b17cf9ac3551ccae61c058" data-tab-category="undefined">Java</a>
-    <a id="select-1-e947f738d61e839807b136825f8d8749" class="gbcg-selector" data-tab="1-e947f738d61e839807b136825f8d8749" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-d056bf484831edb6503bfe9717ace191" class="gbcg-selector" data-tab="1-d056bf484831edb6503bfe9717ace191" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -808,11 +817,14 @@
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-e947f738d61e839807b136825f8d8749" id="kotlin">Kotlin</h3>
-        <div id="1-e947f738d61e839807b136825f8d8749" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-d056bf484831edb6503bfe9717ace191" id="kotlin">Kotlin</h3>
+        <div id="1-d056bf484831edb6503bfe9717ace191" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin">naverMap.addOnLocationChangeListener { location -&gt;
-    Toast.makeText(this, <span class="hljs-string">&quot;${location.latitude}, ${location.longitude}&quot;</span>,
-             Toast.LENGTH_SHORT).show()
+    Toast.makeText(
+        this,
+        <span class="hljs-string">&quot;${location.latitude}, ${location.longitude}&quot;</span>,
+        Toast.LENGTH_SHORT
+    ).show()
 }
 </code></pre>
         </div>
@@ -827,14 +839,14 @@
 <p>Methods of <code>LocationSource</code> are called by the NAVER Maps SDK. The <a href="ref://../reference/com/naver/maps/map/LocationSource.html#activate%28com.naver.maps.map.LocationSource.OnLocationChangedListener%29" target="_blank"><code>activate()</code></a> method is called if the location tracking mode is enabled, and the <a href="ref://../reference/com/naver/maps/map/LocationSource.html#deactivate%28%29" target="_blank"><code>deactivate()</code></a> method is called if disabled. Therefore, the implementation of <code>LocationSource</code> should start tracking a user&#x2019;s location when the <code>activate()</code> is called, and stop tracking it when the <code>deactivate()</code> is called. In addition, while the location tracking is enabled, the <a href="ref://../reference/com/naver/maps/map/LocationSource.OnLocationChangedListener.html" target="_blank"><code>LocationSource.OnLocationChangedListener</code></a> object&#x2019;s <a href="ref://../reference/com/naver/maps/map/LocationSource.OnLocationChangedListener.html#onLocationChanged%28android.location.Location%29" target="_blank"><code>onLocationChanged()</code></a> passed to the <code>activate()</code> should be called whenever the user&#x2019;s location changes.</p>
 <p><code>LocationSource</code> is also responsible for handling location permissions. When the <code>activate()</code> method is called, <code>LocationSource</code> should check and request permissions.</p>
 <p>The following code example shows an implementation of <code>LocationSource</code> that receives GPS locations by using <a href="https://developer.android.com/reference/android/location/LocationManager" target="_blank"><code>LocationManager</code></a>.</p>
-<p><div id="cb56c09aff48934ac17cb8305405ac27" class="gbcg gbcg-codegroup">
+<p><div id="5bf6aa2739ebdb4872d8d9a25fddf556" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
-    <a id="select-0-68bd961e4043085337f74b657481b110" class="gbcg-selector gbcg-active" data-tab="0-68bd961e4043085337f74b657481b110" data-tab-category="undefined">Java</a>
-    <a id="select-1-3f8e8c3e98e410f4ff275741b89a9070" class="gbcg-selector" data-tab="1-3f8e8c3e98e410f4ff275741b89a9070" data-tab-category="undefined">Kotlin</a>
+    <a id="select-0-f7a34e2f1c7800328e5785334c5c8051" class="gbcg-selector gbcg-active" data-tab="0-f7a34e2f1c7800328e5785334c5c8051" data-tab-category="undefined">Java</a>
+    <a id="select-1-02bbb120283f1eb1011bcc4393cd1071" class="gbcg-selector" data-tab="1-02bbb120283f1eb1011bcc4393cd1071" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
-      <div id="0-68bd961e4043085337f74b657481b110" class="gbcg-tab-item gbcb-Java">
+      <div id="0-f7a34e2f1c7800328e5785334c5c8051" class="gbcg-tab-item gbcb-Java">
         <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GpsOnlyLocationSource</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">LocationSource</span>, <span class="hljs-title">LocationListener</span> </span>{
     <span class="hljs-meta">@NonNull</span>
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Context context;
@@ -858,10 +870,10 @@
 
         <span class="hljs-keyword">if</span> (PermissionChecker.checkSelfPermission(context,
             Manifest.permission.ACCESS_FINE_LOCATION)
-            != PackageManager.PERMISSION_GRANTED
+            != PermissionChecker.PERMISSION_GRANTED
             &amp;&amp; PermissionChecker.checkSelfPermission(context,
             Manifest.permission.ACCESS_COARSE_LOCATION)
-            != PackageManager.PERMISSION_GRANTED) {
+            != PermissionChecker.PERMISSION_GRANTED) {
             <span class="hljs-comment">// Permission request logic omitted.</span>
             <span class="hljs-keyword">return</span>;
         }
@@ -905,8 +917,8 @@
     </div>
     <div class="gbcg-tab-item-cntr">
       <div>
-        <h3 class="gbcg-tabname 0-68bd961e4043085337f74b657481b110" id="java">Java</h3>
-        <div id="0-68bd961e4043085337f74b657481b110" class="gbcg-tab-item gbcb-Java">
+        <h3 class="gbcg-tabname 0-f7a34e2f1c7800328e5785334c5c8051" id="java">Java</h3>
+        <div id="0-f7a34e2f1c7800328e5785334c5c8051" class="gbcg-tab-item gbcb-Java">
           <pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GpsOnlyLocationSource</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">LocationSource</span>, <span class="hljs-title">LocationListener</span> </span>{
     <span class="hljs-meta">@NonNull</span>
     <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Context context;
@@ -930,10 +942,10 @@
 
         <span class="hljs-keyword">if</span> (PermissionChecker.checkSelfPermission(context,
             Manifest.permission.ACCESS_FINE_LOCATION)
-            != PackageManager.PERMISSION_GRANTED
+            != PermissionChecker.PERMISSION_GRANTED
             &amp;&amp; PermissionChecker.checkSelfPermission(context,
             Manifest.permission.ACCESS_COARSE_LOCATION)
-            != PackageManager.PERMISSION_GRANTED) {
+            != PermissionChecker.PERMISSION_GRANTED) {
             <span class="hljs-comment">// Permission request logic omitted.</span>
             <span class="hljs-keyword">return</span>;
         }
@@ -976,12 +988,13 @@
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-3f8e8c3e98e410f4ff275741b89a9070" id="kotlin">Kotlin</h3>
-        <div id="1-3f8e8c3e98e410f4ff275741b89a9070" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-02bbb120283f1eb1011bcc4393cd1071" id="kotlin">Kotlin</h3>
+        <div id="1-02bbb120283f1eb1011bcc4393cd1071" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GpsOnlyLocationSource</span></span>(
-        <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> context</span>: Context) : LocationSource, LocationListener {
-    <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> locationManager</span> = context
-            .getSystemService(Context.LOCATION_SERVICE) <span class="hljs-keyword">as</span> LocationManager?
+    <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> context</span>: Context
+) : LocationSource, LocationListener {
+    <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> locationManager</span> = 
+        context.getSystemService(Context.LOCATION_SERVICE) <span class="hljs-keyword">as</span> LocationManager?
     <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">var</span> listener</span>: LocationSource.OnLocationChangedListener? = <span class="hljs-literal">null</span>
 
     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">activate</span><span class="hljs-params">(listener: <span class="hljs-type">LocationSource.OnLocationChangedListener</span>)</span> {</span>
@@ -989,19 +1002,27 @@
             <span class="hljs-keyword">return</span>
         }
 
-        <span class="hljs-keyword">if</span> (PermissionChecker.checkSelfPermission(context,
-                        Manifest.permission.ACCESS_FINE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED
-                &amp;&amp; PermissionChecker.checkSelfPermission(context,
-                        Manifest.permission.ACCESS_COARSE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED) {
+        <span class="hljs-keyword">if</span> (
+            PermissionChecker.checkSelfPermission(
+                context,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PermissionChecker.PERMISSION_GRANTED &amp;&amp;
+            PermissionChecker.checkSelfPermission(
+                context,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PermissionChecker.PERMISSION_GRANTED
+        ) {
             <span class="hljs-comment">// Permission request logic omitted.</span>
             <span class="hljs-keyword">return</span>
         }
 
         this.listener = listener
         locationManager.requestLocationUpdates(
-                LocationManager.GPS_PROVIDER, <span class="hljs-number">1000</span>, <span class="hljs-number">10</span>f, this)
+            LocationManager.GPS_PROVIDER,
+            <span class="hljs-number">1000</span>,
+            <span class="hljs-number">10</span>f,
+            this
+        )
     }
 
     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">deactivate</span><span class="hljs-params">()</span> {</span>
@@ -1017,8 +1038,11 @@
         listener?.onLocationChanged(location)
     }
 
-    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStatusChanged</span><span class="hljs-params">(provider: <span class="hljs-type">String, status: Int,
-                                 extras: Bundle</span>)</span> {</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStatusChanged</span><span class="hljs-params">(
+        provider: <span class="hljs-type">String,
+        status: Int,
+        extras: Bundle</span>
+    )</span> {</span>
     }
 
     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onProviderEnabled</span><span class="hljs-params">(provider: <span class="hljs-type">String</span>)</span> {</span>
@@ -1036,10 +1060,10 @@
 <h3 id="custom-location-tracking">Custom location tracking</h3>
 <p>You do not need to use the embedded location tracking feature when displaying a user&#x2019;s location on the map. You can customize the feature as you need, by specifying the <code>LocationOverlay</code>&#x2019;s <code>position</code> and <code>bearing</code> to move the camera after directly receiving location events in your app. </p>
 <p>The following code example receives GPS locations by using <code>LocationManager</code> in an activity and moves the <code>LocationOverlay</code> and the camera.</p>
-<p><div id="1cf7258703b40faba41cd8693106587d" class="gbcg gbcg-codegroup">
+<p><div id="9123b89f37528e349fe22d06fa7aa28b" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-a2d4a25236947c8305577c77725df426" class="gbcg-selector gbcg-active" data-tab="0-a2d4a25236947c8305577c77725df426" data-tab-category="undefined">Java</a>
-    <a id="select-1-f5c465b2f5b7cbee3fa1c3bdbffb3c10" class="gbcg-selector" data-tab="1-f5c465b2f5b7cbee3fa1c3bdbffb3c10" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-d075c4b41a45377e4592f731d3ce7d55" class="gbcg-selector" data-tab="1-d075c4b41a45377e4592f731d3ce7d55" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -1261,8 +1285,8 @@
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-f5c465b2f5b7cbee3fa1c3bdbffb3c10" id="kotlin">Kotlin</h3>
-        <div id="1-f5c465b2f5b7cbee3fa1c3bdbffb3c10" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-d075c4b41a45377e4592f731d3ce7d55" id="kotlin">Kotlin</h3>
+        <div id="1-d075c4b41a45377e4592f731d3ce7d55" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomLocationTrackingActivity</span> : <span class="hljs-type">AppCompatActivity</span></span>(), LocationListener {
     <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">var</span> map</span>: NaverMap? = <span class="hljs-literal">null</span>
     <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">var</span> locationManager</span>: LocationManager? = <span class="hljs-literal">null</span>
@@ -1274,9 +1298,9 @@
 
         <span class="hljs-variable"><span class="hljs-keyword">val</span> fm</span> = supportFragmentManager
         <span class="hljs-variable"><span class="hljs-keyword">val</span> mapFragment</span> = fm.findFragmentById(R.id.map) <span class="hljs-keyword">as</span> MapFragment?
-                ?: MapFragment.newInstance().also {
-                    fm.beginTransaction().add(R.id.map, it).commit()
-                }
+            ?: MapFragment.newInstance().also {
+                fm.beginTransaction().add(R.id.map, it).commit()
+            }
 
         mapFragment.getMapAsync { naverMap -&gt;
             map = naverMap
@@ -1285,14 +1309,19 @@
         locationManager = getSystemService(LOCATION_SERVICE) <span class="hljs-keyword">as</span> LocationManager?
     }
 
-    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onRequestPermissionsResult</span><span class="hljs-params">(requestCode: <span class="hljs-type">Int,
-                                            permissions: Array&lt;String&gt;,
-                                            grantResults: IntArray</span>)</span> {</span>
-
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onRequestPermissionsResult</span><span class="hljs-params">(
+        requestCode: <span class="hljs-type">Int,
+        permissions: Array&lt;String&gt;,
+        grantResults: IntArray</span>
+    )</span> {</span>
         <span class="hljs-keyword">if</span> (requestCode == PERMISSION_REQUEST_CODE) {
             <span class="hljs-keyword">if</span> (hasPermission()) {
                 locationManager?.requestLocationUpdates(
-                        LocationManager.GPS_PROVIDER, <span class="hljs-number">1000</span>, <span class="hljs-number">10</span>f, this)
+                    LocationManager.GPS_PROVIDER,
+                    <span class="hljs-number">1000</span>,
+                    <span class="hljs-number">10</span>f,
+                    this
+                )
             }
             <span class="hljs-keyword">return</span>
         }
@@ -1305,10 +1334,17 @@
 
         <span class="hljs-keyword">if</span> (hasPermission()) {
             locationManager?.requestLocationUpdates(
-                    LocationManager.GPS_PROVIDER, <span class="hljs-number">1000</span>, <span class="hljs-number">10</span>f, this)
+                LocationManager.GPS_PROVIDER,
+                <span class="hljs-number">1000</span>,
+                <span class="hljs-number">10</span>f,
+                this
+            )
         } <span class="hljs-keyword">else</span> {
             ActivityCompat.requestPermissions(
-                    this, PERMISSIONS, PERMISSION_REQUEST_CODE)
+                this,
+                PERMISSIONS,
+                PERMISSION_REQUEST_CODE
+            )
         }
     }
 
@@ -1322,20 +1358,22 @@
             <span class="hljs-keyword">return</span>
         }
 
-        map?.let {
+        map?.apply {
             <span class="hljs-variable"><span class="hljs-keyword">val</span> coord</span> = LatLng(location)
 
-            <span class="hljs-variable"><span class="hljs-keyword">val</span> locationOverlay</span> = it.locationOverlay
             locationOverlay.isVisible = <span class="hljs-literal">true</span>
             locationOverlay.position = coord
             locationOverlay.bearing = location.bearing
 
-            it.moveCamera(CameraUpdate.scrollTo(coord))
+            moveCamera(CameraUpdate.scrollTo(coord))
         }
     }
 
-    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStatusChanged</span><span class="hljs-params">(provider: <span class="hljs-type">String, status: Int,
-                                 extras: Bundle</span>)</span> {</span>
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onStatusChanged</span><span class="hljs-params">(
+        provider: <span class="hljs-type">String,
+        status: Int,
+        extras: Bundle</span>
+    )</span> {</span>
     }
 
     <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onProviderEnabled</span><span class="hljs-params">(provider: <span class="hljs-type">String</span>)</span> {</span>
@@ -1346,16 +1384,17 @@
 
     <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">hasPermission</span><span class="hljs-params">()</span>: <span class="hljs-keyword">Boolean</span> {</span>
         <span class="hljs-keyword">return</span> PermissionChecker.checkSelfPermission(this, PERMISSIONS[<span class="hljs-number">0</span>]) ==
-                PermissionChecker.PERMISSION_GRANTED &amp;&amp;
-                PermissionChecker.checkSelfPermission(this, PERMISSIONS[<span class="hljs-number">1</span>]) ==
-                PermissionChecker.PERMISSION_GRANTED
+            PermissionChecker.PERMISSION_GRANTED &amp;&amp;
+            PermissionChecker.checkSelfPermission(this, PERMISSIONS[<span class="hljs-number">1</span>]) ==
+            PermissionChecker.PERMISSION_GRANTED
     }
 
     <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span> {
         <span class="hljs-keyword">private</span> const <span class="hljs-variable"><span class="hljs-keyword">val</span> PERMISSION_REQUEST_CODE</span> = <span class="hljs-number">100</span>
         <span class="hljs-keyword">private</span> <span class="hljs-variable"><span class="hljs-keyword">val</span> PERMISSIONS</span> = arrayOf(
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_COARSE_LOCATION)
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION
+        )
     }
 }
 </code></pre>
@@ -1403,7 +1442,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Location","level":"2.4.2","depth":2,"next":{"title":"Overlay","level":"2.5","depth":1,"ref":"","articles":[{"title":"Overlays","level":"2.5.1","depth":2,"path":"5-1.md","ref":"5-1.md","articles":[]},{"title":"Marker","level":"2.5.2","depth":2,"path":"5-2.md","ref":"5-2.md","articles":[]},{"title":"Info Window","level":"2.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},{"title":"Shapes","level":"2.5.4","depth":2,"path":"5-4.md","ref":"5-4.md","articles":[]},{"title":"Location Overlay","level":"2.5.5","depth":2,"path":"5-5.md","ref":"5-5.md","articles":[]},{"title":"Ground Overlay","level":"2.5.6","depth":2,"path":"5-6.md","ref":"5-6.md","articles":[]},{"title":"Path and Arrow","level":"2.5.7","depth":2,"path":"5-7.md","ref":"5-7.md","articles":[]}]},"previous":{"title":"User Interface","level":"2.4.1","depth":2,"path":"4-1.md","ref":"4-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"4-2.md","mtime":"2024-11-25T05:51:44.786Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-25T05:51:52.645Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Location","level":"2.4.2","depth":2,"next":{"title":"Overlay","level":"2.5","depth":1,"ref":"","articles":[{"title":"Overlays","level":"2.5.1","depth":2,"path":"5-1.md","ref":"5-1.md","articles":[]},{"title":"Marker","level":"2.5.2","depth":2,"path":"5-2.md","ref":"5-2.md","articles":[]},{"title":"Info Window","level":"2.5.3","depth":2,"path":"5-3.md","ref":"5-3.md","articles":[]},{"title":"Shapes","level":"2.5.4","depth":2,"path":"5-4.md","ref":"5-4.md","articles":[]},{"title":"Location Overlay","level":"2.5.5","depth":2,"path":"5-5.md","ref":"5-5.md","articles":[]},{"title":"Ground Overlay","level":"2.5.6","depth":2,"path":"5-6.md","ref":"5-6.md","articles":[]},{"title":"Path and Arrow","level":"2.5.7","depth":2,"path":"5-7.md","ref":"5-7.md","articles":[]}]},"previous":{"title":"User Interface","level":"2.4.1","depth":2,"path":"4-1.md","ref":"4-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"4-2.md","mtime":"2025-03-20T06:32:12.386Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-03-20T06:32:18.787Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

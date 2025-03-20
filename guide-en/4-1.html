@@ -663,10 +663,10 @@ uiSettings.isLocationButtonEnabled = <span class="hljs-literal">true</span>
         <span class="hljs-attr">android:layout_gravity</span>=<span class="hljs-string">&quot;end|bottom&quot;</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">FrameLayout</span>&gt;</span>
 </code></pre>
-<p><div id="a64b00178e1c75726b35a2e534bd5048" class="gbcg gbcg-codegroup">
+<p><div id="baec10aab355a85ba57deedbc3e0d1be" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-527a1f3ed38cf68ae68c505c6238a9ac" class="gbcg-selector gbcg-active" data-tab="0-527a1f3ed38cf68ae68c505c6238a9ac" data-tab-category="undefined">Java</a>
-    <a id="select-1-4f356c3804cd5052ff5242f95f3736da" class="gbcg-selector" data-tab="1-4f356c3804cd5052ff5242f95f3736da" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-45c009e86d95506e9c9d2c5563658432" class="gbcg-selector" data-tab="1-45c009e86d95506e9c9d2c5563658432" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -704,14 +704,15 @@ mapFragment.getMapAsync(naverMap -&gt; {
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-4f356c3804cd5052ff5242f95f3736da" id="kotlin">Kotlin</h3>
-        <div id="1-4f356c3804cd5052ff5242f95f3736da" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-45c009e86d95506e9c9d2c5563658432" id="kotlin">Kotlin</h3>
+        <div id="1-45c009e86d95506e9c9d2c5563658432" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> fm</span> = supportFragmentManager
 <span class="hljs-variable"><span class="hljs-keyword">val</span> mapFragment</span> = fm.findFragmentById(R.id.map) <span class="hljs-keyword">as</span> MapFragment?
-        ?: MapFragment.newInstance(NaverMapOptions().zoomControlEnabled(<span class="hljs-literal">false</span>))
-                .also {
-                    fm.beginTransaction().add(R.id.map, it).commit()
-                }
+    ?: MapFragment.newInstance(
+        NaverMapOptions().zoomControlEnabled(<span class="hljs-literal">false</span>)
+    ).also {
+        fm.beginTransaction().add(R.id.map, it).commit()
+    }
 mapFragment.getMapAsync {
     <span class="hljs-variable"><span class="hljs-keyword">val</span> zoomControlView</span> = findViewById(R.id.zoom) <span class="hljs-keyword">as</span> ZoomControlView
     zoomControlView.map = naverMap
@@ -769,10 +770,10 @@ uiSettings.isRotateGesturesEnabled = <span class="hljs-literal">false</span>
 <h3 id="set-initial-values">Set initial values</h3>
 <p>You can use <code>NaverMapOptions</code> or XML attributes to set an initial value for each property before creating a map object.</p>
 <p>The following code example enables the current location button and disables the tilt gesture by using <code>NaverMapOptions</code>.</p>
-<p><div id="c0678f93aeacf0d8291ee4f261b9acf8" class="gbcg gbcg-codegroup">
+<p><div id="ad112758ef50417f0a96893332ed908e" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-016b56a5b96891366d27a59351f1607f" class="gbcg-selector gbcg-active" data-tab="0-016b56a5b96891366d27a59351f1607f" data-tab-category="undefined">Java</a>
-    <a id="select-1-09fe53acd44fb3ba1f600d11b120fd26" class="gbcg-selector" data-tab="1-09fe53acd44fb3ba1f600d11b120fd26" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-3c6e2a434351ba5a4ba3533c0653b480" class="gbcg-selector" data-tab="1-3c6e2a434351ba5a4ba3533c0653b480" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -794,11 +795,11 @@ uiSettings.isRotateGesturesEnabled = <span class="hljs-literal">false</span>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-09fe53acd44fb3ba1f600d11b120fd26" id="kotlin">Kotlin</h3>
-        <div id="1-09fe53acd44fb3ba1f600d11b120fd26" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-3c6e2a434351ba5a4ba3533c0653b480" id="kotlin">Kotlin</h3>
+        <div id="1-3c6e2a434351ba5a4ba3533c0653b480" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> options</span> = NaverMapOptions()
-        .locationButtonEnabled(<span class="hljs-literal">true</span>)
-        .tiltGesturesEnabled(<span class="hljs-literal">false</span>)
+    .locationButtonEnabled(<span class="hljs-literal">true</span>)
+    .tiltGesturesEnabled(<span class="hljs-literal">false</span>)
 </code></pre>
         </div>
       </div>
@@ -819,10 +820,10 @@ uiSettings.isRotateGesturesEnabled = <span class="hljs-literal">false</span>
 <h3 id="click-and-long-click">Click and long click</h3>
 <p>Add <a href="ref://../reference/com/naver/maps/map/NaverMap.OnMapClickListener.html" target="_blank"><code>OnMapClickListener</code></a> with the <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setOnMapClickListener%28com.naver.maps.map.NaverMap.OnMapClickListener%29" target="_blank"><code>setOnMapClickListener()</code></a> method to receive a click event for the map. When the map is clicked, the <a href="ref://../reference/com/naver/maps/map/NaverMap.OnMapClickListener.html#onMapClick%28android.graphics.PointF%2Ccom.naver.maps.geometry.LatLng%29" target="_blank"><code>onMapClick()</code></a> callback method is called, with the screen coordinates and the map coordinates of the clicked position passed as a parameter.</p>
 <p>The following code example displays the coordinates of the clicked position on the map as a toast message.</p>
-<p><div id="8334a1046e2fd9c982327f5df365be0b" class="gbcg gbcg-codegroup">
+<p><div id="8c6a009dddd69fefeaf1f7c03acf1339" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-c39355d2e2e07131ed2f3336eb6c0b0a" class="gbcg-selector gbcg-active" data-tab="0-c39355d2e2e07131ed2f3336eb6c0b0a" data-tab-category="undefined">Java</a>
-    <a id="select-1-1d997f1e9f3242b2906fef6b94662acc" class="gbcg-selector" data-tab="1-1d997f1e9f3242b2906fef6b94662acc" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-eaf42a66332be217c16c33514bab87c8" class="gbcg-selector" data-tab="1-eaf42a66332be217c16c33514bab87c8" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -844,11 +845,14 @@ uiSettings.isRotateGesturesEnabled = <span class="hljs-literal">false</span>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-1d997f1e9f3242b2906fef6b94662acc" id="kotlin">Kotlin</h3>
-        <div id="1-1d997f1e9f3242b2906fef6b94662acc" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-eaf42a66332be217c16c33514bab87c8" id="kotlin">Kotlin</h3>
+        <div id="1-eaf42a66332be217c16c33514bab87c8" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin">naverMap.setOnMapClickListener { point, coord -&gt;
-    Toast.makeText(this, <span class="hljs-string">&quot;${coord.latitude}, ${coord.longitude}&quot;</span>,
-            Toast.LENGTH_SHORT).show()
+    Toast.makeText(
+        this, 
+        <span class="hljs-string">&quot;${coord.latitude}, ${coord.longitude}&quot;</span>,
+        Toast.LENGTH_SHORT
+    ).show()
 }
 </code></pre>
         </div>
@@ -858,10 +862,10 @@ uiSettings.isRotateGesturesEnabled = <span class="hljs-literal">false</span>
 </div></p>
 <p>Add <a href="ref://../reference/com/naver/maps/map/NaverMap.OnMapLongClickListener.html" target="_blank"><code>OnMapLongClickListener</code></a> with the <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setOnMapLongClickListener%28com.naver.maps.map.NaverMap.OnMapLongClickListener%29" target="_blank"><code>setOnMapLongClickListener()</code></a> method to receive a long click event for the map. When the map is long-clicked, the <a href="ref://../reference/com/naver/maps/map/NaverMap.OnMapLongClickListener.html#onMapLongClick%28android.graphics.PointF%2Ccom.naver.maps.geometry.LatLng%29" target="_blank"><code>onMapLongClick()</code></a> callback method is called, with the screen coordinates and the map coordinates of the clicked position passed as a parameter.</p>
 <p>The following code example displays the coordinates of the long-clicked position on the map as a toast message.</p>
-<p><div id="f75c1534268c7a156eb7d54d5435584c" class="gbcg gbcg-codegroup">
+<p><div id="9b8602620427bef9c4dd637125fdfdde" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-8879f6e65e87e06af9f7a05bed484098" class="gbcg-selector gbcg-active" data-tab="0-8879f6e65e87e06af9f7a05bed484098" data-tab-category="undefined">Java</a>
-    <a id="select-1-ba8f5305e8d5d644056ccd3f258b0783" class="gbcg-selector" data-tab="1-ba8f5305e8d5d644056ccd3f258b0783" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-2bf8cde71d75f19b7ce4bd847c00c5fd" class="gbcg-selector" data-tab="1-2bf8cde71d75f19b7ce4bd847c00c5fd" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -883,11 +887,14 @@ uiSettings.isRotateGesturesEnabled = <span class="hljs-literal">false</span>
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-ba8f5305e8d5d644056ccd3f258b0783" id="kotlin">Kotlin</h3>
-        <div id="1-ba8f5305e8d5d644056ccd3f258b0783" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-2bf8cde71d75f19b7ce4bd847c00c5fd" id="kotlin">Kotlin</h3>
+        <div id="1-2bf8cde71d75f19b7ce4bd847c00c5fd" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin">naverMap.setOnMapLongClickListener { point, coord -&gt;
-    Toast.makeText(this, <span class="hljs-string">&quot;${coord.latitude}, ${coord.longitude}&quot;</span>,
-            Toast.LENGTH_SHORT).show()
+    Toast.makeText(
+        this,
+        <span class="hljs-string">&quot;${coord.latitude}, ${coord.longitude}&quot;</span>,
+        Toast.LENGTH_SHORT
+    ).show()
 }
 </code></pre>
         </div>
@@ -899,10 +906,10 @@ uiSettings.isRotateGesturesEnabled = <span class="hljs-literal">false</span>
 <p>The NAVER Maps SDK distinguishes between clicking symbols on the map and clicking the map itself. Add <a href="ref://../reference/com/naver/maps/map/NaverMap.OnSymbolClickListener.html" target="_blank"><code>OnSymbolClickListener</code></a> with the <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setOnSymbolClickListener%28com.naver.maps.map.NaverMap.OnSymbolClickListener%29" target="_blank"><code>setOnSymbolClickListener()</code></a> method to receive a click event for the map&#x2019;s symbols. When a symbol is clicked, the <a href="ref://../reference/com/naver/maps/map/NaverMap.OnSymbolClickListener.html#onSymbolClick%28com.naver.maps.map.Symbol%29" target="_blank"><code>onSymbolClick()</code></a> callback method is called with the clicked symbol object passed as a parameter. You can get the location and caption text of the clicked symbol from the symbol object.</p>
 <p>A symbol click event can be propagated to the map. To propagate the event to the map, you should make <code>OnSymbolClickListener</code>&#x2019;s <code>onSymbolClick()</code> return <code>false</code>. After the <code>onSymbolClick()</code> returns <code>false</code>, the <code>OnClickListener.onClick()</code> of the map is called. On the contrary, if the <code>onSymbolClick()</code> returns <code>true</code>, it is considered that the symbol consumes the event and thus the <code>OnClickListener.onClick()</code> of the map is not called.</p>
 <p>The following code example displays a toast message saying &#x201C;Seoul Metropolitan Government is clicked&#x201D; when you click the symbol with the caption text &quot;Seoul Metropolitan Government,&quot; and a toast message saying &#x201C;Map is clicked&#x201D; when you click other symbols or the map.</p>
-<p><div id="050df5089420a4efa98e6bbecd1a9342" class="gbcg gbcg-codegroup">
+<p><div id="7c5804d1ceed4b7817220a921507f29d" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-9a88289c64a13df3987c9326302e914f" class="gbcg-selector gbcg-active" data-tab="0-9a88289c64a13df3987c9326302e914f" data-tab-category="undefined">Java</a>
-    <a id="select-1-e6a5f8c77bcdc93095365cc994551617" class="gbcg-selector" data-tab="1-e6a5f8c77bcdc93095365cc994551617" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-53fb5f6cc2ea788f2803d1e27314969c" class="gbcg-selector" data-tab="1-53fb5f6cc2ea788f2803d1e27314969c" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -946,16 +953,19 @@ naverMap.setOnSymbolClickListener(symbol -&gt; {
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-e6a5f8c77bcdc93095365cc994551617" id="kotlin">Kotlin</h3>
-        <div id="1-e6a5f8c77bcdc93095365cc994551617" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-53fb5f6cc2ea788f2803d1e27314969c" id="kotlin">Kotlin</h3>
+        <div id="1-53fb5f6cc2ea788f2803d1e27314969c" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin">naverMap.setOnMapClickListener {
     Toast.makeText(this, <span class="hljs-string">&quot;Map is clicked&quot;</span>, Toast.LENGTH_SHORT).show()
 }
 
 naverMap.setOnSymbolClickListener { symbol -&gt;
     <span class="hljs-keyword">if</span> (symbol.caption == <span class="hljs-string">&quot;Seoul Metropolitan Government&quot;</span>) {
-        Toast.makeText(this, <span class="hljs-string">&quot;Seoul Metropolitan Government is clicked&quot;</span>,
-                Toast.LENGTH_SHORT).show()
+        Toast.makeText(
+            this, 
+            <span class="hljs-string">&quot;Seoul Metropolitan Government is clicked&quot;</span>,
+            Toast.LENGTH_SHORT
+        ).show()
         <span class="hljs-comment">// Consumes the event, and the OnMapClick event does not occur.</span>
         <span class="hljs-literal">true</span>
     } <span class="hljs-keyword">else</span> {
@@ -1020,7 +1030,7 @@ naverMap.setOnSymbolClickListener { symbol -&gt;
 <p>Double tap and two-finger tap zoom in or out the map as long as the zoom gestures are not disabled. Add an event listener to the map to receive an event for these gestures, and consume the event if you do not want the map to zoom in or out according to them.</p>
 <p>Add <a href="ref://../reference/com/naver/maps/map/NaverMap.OnMapDoubleTapListener.html" target="_blank"><code>OnMapDoubleTapListener</code></a> with the <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setOnMapDoubleTapListener%28com.naver.maps.map.NaverMap.OnMapDoubleTapListener%29" target="_blank"><code>setOnMapDoubleTapListener()</code></a> method to receive a double tap event. When the map is double-tapped, the <a href="ref://../reference/com/naver/maps/map/NaverMap.OnMapDoubleTapListener.html#onMapDoubleTap%28android.graphics.PointF%2Ccom.naver.maps.geometry.LatLng%29" target="_blank"><code>onMapDoubleTap()</code></a> callback method is called with the screen coordinates and the map coordinates of the double-tapped position passed as a parameter. If you make the <code>onMapDoubleTap()</code> return <code>true</code>, the event is consumed and the screen is not zoomed in.</p>
 <p>The following code example displays the coordinates of the double-tapped position on the map as a toast message and consumes the event so that the screen is not zoomed in.</p>
-<p><div id="ff13d134eff3424d2a54691c09bbaf5a" class="gbcg gbcg-codegroup">
+<p><div id="e0f3f88dcbd9f1a40395d257ad492c91" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-9a0fcbeda009fc3c5ca6072aeca6cfa7" class="gbcg-selector gbcg-active" data-tab="0-9a0fcbeda009fc3c5ca6072aeca6cfa7" data-tab-category="undefined">Java</a>
     <a id="select-1-78d8157f3fb0187a12102532ac600e6e" class="gbcg-selector" data-tab="1-78d8157f3fb0187a12102532ac600e6e" data-tab-category="undefined">Code</a>
@@ -1050,10 +1060,10 @@ naverMap.setOnSymbolClickListener { symbol -&gt;
 </div></p>
 <p>Add <a href="ref://../reference/com/naver/maps/map/NaverMap.OnMapTwoFingerTapListener.html" target="_blank"><code>OnMapTwoFingerTapListener</code></a> with the <a href="ref://../reference/com/naver/maps/map/NaverMap.html#setOnMapTwoFingerTapListener%28com.naver.maps.map.NaverMap.OnMapTwoFingerTapListener%29" target="_blank"><code>setOnMapTwoFingerTapListener</code></a> method to receive a two-finger tap event. When the map is tapped with two fingers, the <a href="ref://../reference/com/naver/maps/map/NaverMap.OnMapTwoFingerTapListener.html#onMapTwoFingerTap%28android.graphics.PointF%2Ccom.naver.maps.geometry.LatLng%29" target="_blank"><code>`onMapTwoFingerTap()</code></a> callback method is called with the screen coordinates and the map coordinates of the two&#x2013;finger-tapped position passed as a parameter. If you make the <code>onMapTwoFingerTap()</code> return <code>true</code>, the event is consumed and the screen is not zoomed out.</p>
 <p>The following code example displays the coordinates of the two&#x2013;finger-tapped position on the map as a toast message and consumes the event so that the screen is not zoomed out.</p>
-<p><div id="a20868f39fac731465871a9cafe751df" class="gbcg gbcg-codegroup">
+<p><div id="cdbd4c9086d89061c30ac73a2f97574c" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-25907bda8e6fd2a9c30cbaef488621c6" class="gbcg-selector gbcg-active" data-tab="0-25907bda8e6fd2a9c30cbaef488621c6" data-tab-category="undefined">Java</a>
-    <a id="select-1-9c1617eea1eb0e463ddced5db255316c" class="gbcg-selector" data-tab="1-9c1617eea1eb0e463ddced5db255316c" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-340d5f04f4166a511f1000df3d0ee269" class="gbcg-selector" data-tab="1-340d5f04f4166a511f1000df3d0ee269" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -1079,11 +1089,14 @@ naverMap.setOnSymbolClickListener { symbol -&gt;
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-9c1617eea1eb0e463ddced5db255316c" id="kotlin">Kotlin</h3>
-        <div id="1-9c1617eea1eb0e463ddced5db255316c" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-340d5f04f4166a511f1000df3d0ee269" id="kotlin">Kotlin</h3>
+        <div id="1-340d5f04f4166a511f1000df3d0ee269" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin">naverMap.setOnMapTwoFingerTapListener { point, coord -&gt;
-    Toast.makeText(this, <span class="hljs-string">&quot;${coord.latitude}, ${coord.longitude}&quot;</span>,
-            Toast.LENGTH_SHORT).show()
+    Toast.makeText(
+        this,
+        <span class="hljs-string">&quot;${coord.latitude}, ${coord.longitude}&quot;</span>,
+        Toast.LENGTH_SHORT
+    ).show()
     <span class="hljs-literal">true</span>
 }
 </code></pre>
@@ -1131,7 +1144,7 @@ naverMap.setOnSymbolClickListener { symbol -&gt;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"User Interface","level":"2.4.1","depth":2,"next":{"title":"Location","level":"2.4.2","depth":2,"path":"4-2.md","ref":"4-2.md","articles":[]},"previous":{"title":"Interaction","level":"2.4","depth":1,"ref":"","articles":[{"title":"User Interface","level":"2.4.1","depth":2,"path":"4-1.md","ref":"4-1.md","articles":[]},{"title":"Location","level":"2.4.2","depth":2,"path":"4-2.md","ref":"4-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"4-1.md","mtime":"2024-11-25T05:51:44.595Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-25T05:51:52.645Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"User Interface","level":"2.4.1","depth":2,"next":{"title":"Location","level":"2.4.2","depth":2,"path":"4-2.md","ref":"4-2.md","articles":[]},"previous":{"title":"Interaction","level":"2.4","depth":1,"ref":"","articles":[{"title":"User Interface","level":"2.4.1","depth":2,"path":"4-1.md","ref":"4-1.md","articles":[]},{"title":"Location","level":"2.4.2","depth":2,"path":"4-2.md","ref":"4-2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"4-1.md","mtime":"2025-03-20T06:32:12.179Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-03-20T06:32:18.787Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

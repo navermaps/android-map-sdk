@@ -716,10 +716,10 @@ LatLngBounds bounds = <span class="hljs-keyword">new</span> LatLngBounds(southWe
 <h3 id="builder">Builder</h3>
 <p>Using <a href="ref://../reference/com/naver/maps/geometry/LatLngBounds.Builder.html" target="_blank"><code>LatLngBounds.Builder</code></a>, you can create an MBR including a series of coordinates. Create a builder object, call the <a href="ref://../reference/com/naver/maps/geometry/LatLngBounds.Builder.html#include%28com.naver.maps.geometry.LatLng%29" target="_blank"><code>include()</code></a> method to specify coordinates to include in the area, and then call the <a href="ref://../reference/com/naver/maps/geometry/LatLngBounds.Builder.html#build%28%29" target="_blank"><code>build()</code></a> method, and a <code>LatLngBounds</code> object for the area including all the coordinates specified with the <code>include()</code> method is created.</p>
 <p>The following code example creates a <code>LatLngBounds</code> object using the <code>LatLngBounds.Builder</code>.</p>
-<p><div id="8998f16ec0d7de2377d47d4d3c720b36" class="gbcg gbcg-codegroup">
+<p><div id="67ae0291da3a81c1454be2621697c8ee" class="gbcg gbcg-codegroup">
   <div class="gbcg-tab-selectors">
     <a id="select-0-cb6de30470a4f0486b27f6c5683d6881" class="gbcg-selector gbcg-active" data-tab="0-cb6de30470a4f0486b27f6c5683d6881" data-tab-category="undefined">Java</a>
-    <a id="select-1-2db251720b426a8880be03a23726ec48" class="gbcg-selector" data-tab="1-2db251720b426a8880be03a23726ec48" data-tab-category="undefined">Kotlin</a>
+    <a id="select-1-3813b382401b8726a03fae6ee75ae9f2" class="gbcg-selector" data-tab="1-3813b382401b8726a03fae6ee75ae9f2" data-tab-category="undefined">Kotlin</a>
   </div>
   <div class="gbcg-tab-contents">
     <div id="gbcg-tab-container">
@@ -749,15 +749,15 @@ LatLngBounds bounds = <span class="hljs-keyword">new</span> LatLngBounds(southWe
         </div>
       </div>
       <div>
-        <h3 class="gbcg-tabname 1-2db251720b426a8880be03a23726ec48" id="kotlin">Kotlin</h3>
-        <div id="1-2db251720b426a8880be03a23726ec48" class="gbcg-tab-item gbcb-Kotlin">
+        <h3 class="gbcg-tabname 1-3813b382401b8726a03fae6ee75ae9f2" id="kotlin">Kotlin</h3>
+        <div id="1-3813b382401b8726a03fae6ee75ae9f2" class="gbcg-tab-item gbcb-Kotlin">
           <pre><code class="lang-Kotlin"><span class="hljs-variable"><span class="hljs-keyword">val</span> bounds</span> = LatLngBounds.Builder()
-        .include(LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>))
-        .include(LatLng(<span class="hljs-number">37.5651279</span>, <span class="hljs-number">126.9767904</span>))
-        .include(LatLng(<span class="hljs-number">37.5625365</span>, <span class="hljs-number">126.9832241</span>))
-        .include(LatLng(<span class="hljs-number">37.5585305</span>, <span class="hljs-number">126.9809297</span>))
-        .include(LatLng(<span class="hljs-number">37.5590777</span>, <span class="hljs-number">126.974617</span>))
-        .build()
+    .include(LatLng(<span class="hljs-number">37.5640984</span>, <span class="hljs-number">126.9712268</span>))
+    .include(LatLng(<span class="hljs-number">37.5651279</span>, <span class="hljs-number">126.9767904</span>))
+    .include(LatLng(<span class="hljs-number">37.5625365</span>, <span class="hljs-number">126.9832241</span>))
+    .include(LatLng(<span class="hljs-number">37.5585305</span>, <span class="hljs-number">126.9809297</span>))
+    .include(LatLng(<span class="hljs-number">37.5590777</span>, <span class="hljs-number">126.974617</span>))
+    .build()
 </code></pre>
         </div>
       </div>
@@ -807,7 +807,7 @@ LatLngBounds bounds = <span class="hljs-keyword">new</span> LatLngBounds(southWe
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Coordinates Object","level":"2.2.2","depth":2,"next":{"title":"Map Options","level":"2.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]},"previous":{"title":"Map Object","level":"2.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"2-2.md","mtime":"2024-11-25T05:51:44.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-25T05:51:52.645Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Coordinates Object","level":"2.2.2","depth":2,"next":{"title":"Map Options","level":"2.2.3","depth":2,"path":"2-3.md","ref":"2-3.md","articles":[]},"previous":{"title":"Map Object","level":"2.2.1","depth":2,"path":"2-1.md","ref":"2-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["otherlink","codegroup"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"otherlink":{},"codegroup":{"defaultTabName":"Code","rememberTabs":"false","tabNameSeperator":"::"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"home.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NAVER Map Android SDK","gitbook":"*"},"file":{"path":"2-2.md","mtime":"2025-03-20T06:32:12.387Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-03-20T06:32:18.787Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
