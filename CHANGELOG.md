@@ -1,3 +1,17 @@
+# 3.22.0
+
+Release Date: 2025-06-20
+
+### 새로운 기능
+
+- 위치 오버레이 아이콘의 투명도를 지정하는 기능 제공
+  - `LocationOverlay#iconAlpha`
+  - `LocationOverlay#subIconAlpha`
+
+### 버그 수정
+
+- `CameraAnimation` 적용 시 최종 카메라 상태의 정밀도가 떨어지는 현상 수정
+
 # 3.21.0
 
 Release Date: 2025-03-20
