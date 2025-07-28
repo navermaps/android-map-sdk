@@ -25,6 +25,7 @@ import android.widget.PopupMenu
 import android.widget.Spinner
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.forEach
 import com.naver.maps.map.CameraPosition
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
@@ -83,9 +84,8 @@ class MapTypesAndLayerGroupsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         val menu = PopupMenu(this, layerGroups).apply {
             inflate(R.menu.layer_groups)
-            repeat(menu.size()) { i ->
-                val item = menu.getItem(i)
-                item.isChecked = naverMap.isLayerGroupEnabled(menuIdToLayerGroup(item.itemId))
+            menu.forEach {
+                it.isChecked = naverMap.isLayerGroupEnabled(menuIdToLayerGroup(it.itemId))
             }
             setOnMenuItemClickListener {
                 val checked = !it.isChecked
