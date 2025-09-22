@@ -18,18 +18,18 @@ package com.naver.maps.map.demo.kotlin.misc
 import android.graphics.Color
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import androidx.collection.LongSparseArray
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.TileId
 import com.naver.maps.map.demo.R
+import com.naver.maps.map.demo.ToolbarActivity
 import com.naver.maps.map.overlay.Overlay
 import com.naver.maps.map.overlay.PolygonOverlay
 import com.naver.maps.map.util.TileCoverHelper
 
-class TileCoverHelperActivity : AppCompatActivity(), OnMapReadyCallback {
+class TileCoverHelperActivity : ToolbarActivity(), OnMapReadyCallback {
     private val overlays: LongSparseArray<Overlay> =
         LongSparseArray()
 
@@ -38,25 +38,12 @@ class TileCoverHelperActivity : AppCompatActivity(), OnMapReadyCallback {
 
         setContentView(R.layout.activity_map_fragment)
 
-        supportActionBar?.let {
-            it.setDisplayHomeAsUpEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
-
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
             ?: MapFragment.newInstance().also {
                 supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
             }
         mapFragment.getMapAsync(this)
     }
-
-    override fun onOptionsItemSelected(item: MenuItem) =
-        if (item.itemId == android.R.id.home) {
-            finish()
-            true
-        } else {
-            super.onOptionsItemSelected(item)
-        }
 
     override fun onMapReady(naverMap: NaverMap) {
         TileCoverHelper().apply {

@@ -16,7 +16,7 @@
 package com.naver.maps.map.demo.java.map;
 
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.util.Pair;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,21 +24,23 @@ import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
+import com.naver.maps.map.demo.ToolbarActivity;
 
-public class CustomStyleActivity extends AppCompatActivity implements OnMapReadyCallback {
-    private static final String[] CUSTOM_STYLE_IDS = {
-        null,
-        "de2bd5ac-5c2c-490a-874a-11f620bc59ac",
-        "072a2b46-4cf7-4a60-8a32-c25399b97e4e"
-    };
+import java.util.Arrays;
+import java.util.List;
+
+public class CustomStyleActivity extends ToolbarActivity implements OnMapReadyCallback {
+    private static final List<Pair<String, Boolean>> CUSTOM_STYLE_IDS = Arrays.asList(
+            new Pair<>(null, false),
+            new Pair<>("de2bd5ac-5c2c-490a-874a-11f620bc59ac", false),
+            new Pair<>("072a2b46-4cf7-4a60-8a32-c25399b97e4e", true)
+    );
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,27 +48,16 @@ public class CustomStyleActivity extends AppCompatActivity implements OnMapReady
 
         setContentView(R.layout.activity_custom_style);
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);
-        }
-
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment == null) {
-            mapFragment = MapFragment.newInstance(new NaverMapOptions().customStyleId(CUSTOM_STYLE_IDS[1]));
+            Pair<String, Boolean> customStyle = CUSTOM_STYLE_IDS.get(1);
+            mapFragment = MapFragment.newInstance(new NaverMapOptions()
+                    .customStyleId(customStyle.first)
+                    .nightModeEnabled(customStyle.second)
+            );
             getSupportFragmentManager().beginTransaction().add(R.id.map_fragment, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -81,7 +72,9 @@ public class CustomStyleActivity extends AppCompatActivity implements OnMapReady
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                naverMap.setCustomStyleId(CUSTOM_STYLE_IDS[position]);
+                Pair<String, Boolean> customStyle = CUSTOM_STYLE_IDS.get(position);
+                naverMap.setCustomStyleId(customStyle.first);
+                naverMap.setNightModeEnabled(customStyle.second);
             }
 
             @Override

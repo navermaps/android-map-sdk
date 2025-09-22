@@ -22,7 +22,6 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -34,9 +33,10 @@ import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.Pickable
 import com.naver.maps.map.Symbol
 import com.naver.maps.map.demo.R
+import com.naver.maps.map.demo.ToolbarActivity
 import com.naver.maps.map.overlay.Marker
 
-class PickAllActivity : AppCompatActivity(), OnMapReadyCallback {
+class PickAllActivity : ToolbarActivity(), OnMapReadyCallback {
     private class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val text: TextView = itemView as TextView
 
@@ -69,25 +69,12 @@ class PickAllActivity : AppCompatActivity(), OnMapReadyCallback {
 
         setContentView(R.layout.activity_pick_all)
 
-        supportActionBar?.let {
-            it.setDisplayHomeAsUpEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
-
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
             ?: MapFragment.newInstance(NaverMapOptions().enabledLayerGroups(NaverMap.LAYER_GROUP_TRANSIT)).also {
                 supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
             }
         mapFragment.getMapAsync(this)
     }
-
-    override fun onOptionsItemSelected(item: MenuItem) =
-        if (item.itemId == android.R.id.home) {
-            finish()
-            true
-        } else {
-            super.onOptionsItemSelected(item)
-        }
 
     override fun onMapReady(naverMap: NaverMap) {
         Marker().apply {

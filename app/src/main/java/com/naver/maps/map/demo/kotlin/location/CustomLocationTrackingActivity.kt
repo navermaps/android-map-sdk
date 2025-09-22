@@ -21,7 +21,6 @@ import android.os.Bundle
 import android.os.Looper
 import android.view.MenuItem
 import androidx.annotation.RequiresPermission
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.PermissionChecker
@@ -38,8 +37,9 @@ import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
+import com.naver.maps.map.demo.ToolbarActivity
 
-class CustomLocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
+class CustomLocationTrackingActivity : ToolbarActivity(), OnMapReadyCallback {
     private val locationCallback = object : LocationCallback() {
         override fun onLocationResult(locationResult: LocationResult) {
             val lastLocation = locationResult.lastLocation ?: return
@@ -67,11 +67,6 @@ class CustomLocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
 
         setContentView(R.layout.activity_fab)
 
-        supportActionBar?.let {
-            it.setDisplayHomeAsUpEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
-
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
             ?: MapFragment.newInstance().also {
                 supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
@@ -81,14 +76,6 @@ class CustomLocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
         fab = findViewById(R.id.fab)
         fab?.setImageResource(R.drawable.ic_my_location_black_24dp)
     }
-
-    override fun onOptionsItemSelected(item: MenuItem) =
-        if (item.itemId == android.R.id.home) {
-            finish()
-            true
-        } else {
-            super.onOptionsItemSelected(item)
-        }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         if (requestCode == PERMISSION_REQUEST_CODE) {

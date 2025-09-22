@@ -18,7 +18,6 @@ package com.naver.maps.map.demo.kotlin.option
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.CameraPosition
 import com.naver.maps.map.MapView
@@ -26,19 +25,15 @@ import com.naver.maps.map.NaverMap
 import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
+import com.naver.maps.map.demo.ToolbarActivity
 
-class MapViewOptionsActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapViewOptionsActivity : ToolbarActivity(), OnMapReadyCallback {
     private var mapView: MapView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_map_view_options)
-
-        supportActionBar?.let {
-            it.setDisplayHomeAsUpEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
 
         val options = NaverMapOptions()
             .enabledLayerGroups(NaverMap.LAYER_GROUP_TRAFFIC, NaverMap.LAYER_GROUP_TRANSIT)
@@ -51,14 +46,6 @@ class MapViewOptionsActivity : AppCompatActivity(), OnMapReadyCallback {
             it.getMapAsync(this)
         }
     }
-
-    override fun onOptionsItemSelected(item: MenuItem) =
-        if (item.itemId == android.R.id.home) {
-            finish()
-            true
-        } else {
-            super.onOptionsItemSelected(item)
-        }
 
     override fun onStart() {
         super.onStart()

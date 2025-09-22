@@ -20,22 +20,17 @@ import android.view.MenuItem
 import android.widget.Checkable
 import android.widget.CheckedTextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
+import com.naver.maps.map.demo.ToolbarActivity
 
-class ZoomGesturesEventActivity : AppCompatActivity(), OnMapReadyCallback {
+class ZoomGesturesEventActivity : ToolbarActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_zoom_gestures_event)
-
-        supportActionBar?.let {
-            it.setDisplayHomeAsUpEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
             ?: MapFragment.newInstance().also {
@@ -43,14 +38,6 @@ class ZoomGesturesEventActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         mapFragment.getMapAsync(this)
     }
-
-    override fun onOptionsItemSelected(item: MenuItem) =
-        if (item.itemId == android.R.id.home) {
-            finish()
-            true
-        } else {
-            super.onOptionsItemSelected(item)
-        }
 
     override fun onMapReady(naverMap: NaverMap) {
         var consumeDoubleTap = false

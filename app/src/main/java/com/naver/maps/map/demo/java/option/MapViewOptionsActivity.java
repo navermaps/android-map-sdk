@@ -21,8 +21,6 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.CameraPosition;
@@ -31,8 +29,9 @@ import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
+import com.naver.maps.map.demo.ToolbarActivity;
 
-public class MapViewOptionsActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MapViewOptionsActivity extends ToolbarActivity implements OnMapReadyCallback {
     private MapView mapView;
 
     @Override
@@ -40,12 +39,6 @@ public class MapViewOptionsActivity extends AppCompatActivity implements OnMapRe
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_map_view_options);
-
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);
-        }
 
         NaverMapOptions options = new NaverMapOptions()
             .enabledLayerGroups(NaverMap.LAYER_GROUP_TRAFFIC, NaverMap.LAYER_GROUP_TRANSIT)
@@ -57,15 +50,6 @@ public class MapViewOptionsActivity extends AppCompatActivity implements OnMapRe
 
         ViewGroup container = findViewById(R.id.container);
         container.addView(mapView);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

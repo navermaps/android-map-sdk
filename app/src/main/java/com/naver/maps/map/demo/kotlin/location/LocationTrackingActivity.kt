@@ -18,16 +18,16 @@ package com.naver.maps.map.demo.kotlin.location
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.CheckedTextView
-import androidx.appcompat.app.AppCompatActivity
 import com.naver.maps.map.LocationTrackingMode
 import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
+import com.naver.maps.map.demo.ToolbarActivity
 import com.naver.maps.map.util.FusedLocationSource
 
-class LocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
+class LocationTrackingActivity : ToolbarActivity(), OnMapReadyCallback {
     private lateinit var locationSource: FusedLocationSource
     private lateinit var map: NaverMap
 
@@ -35,11 +35,6 @@ class LocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_location_tracking)
-
-        supportActionBar?.let {
-            it.setDisplayHomeAsUpEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
             ?: MapFragment.newInstance(NaverMapOptions().locationButtonEnabled(true)).also {
@@ -49,14 +44,6 @@ class LocationTrackingActivity : AppCompatActivity(), OnMapReadyCallback {
 
         locationSource = FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE)
     }
-
-    override fun onOptionsItemSelected(item: MenuItem) =
-        if (item.itemId == android.R.id.home) {
-            finish()
-            true
-        } else {
-            super.onOptionsItemSelected(item)
-        }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         if (locationSource.onRequestPermissionsResult(requestCode, permissions, grantResults)) {

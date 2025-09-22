@@ -30,7 +30,6 @@ import android.view.ViewGroup
 import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -40,7 +39,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.naver.maps.map.NaverMapSdk
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ToolbarActivity() {
     class OpenSourceNoticeFragment : DialogFragment() {
         override fun onCreateDialog(savedInstanceState: Bundle?): AlertDialog =
             AlertDialog.Builder(requireActivity())
@@ -132,12 +131,12 @@ class MainActivity : AppCompatActivity() {
 
         @SuppressLint("DiscouragedApi")
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-            val packageName = requireContext().packageName
+            val packageName = view.context.packageName
             val result = mutableListOf<Any>()
 
             var currentCategory = ""
 
-            getDemos(requireContext(), arguments?.getString(ARGUMENT_LANGUAGE) ?: LANGUAGES[0]).forEach {
+            getDemos(view.context, arguments?.getString(ARGUMENT_LANGUAGE) ?: LANGUAGES[0])?.forEach {
                 if (it.category != currentCategory) {
                     currentCategory = it.category
                     result.add(getString(resources.getIdentifier("category_" + it.category, "string", packageName)))
@@ -164,9 +163,10 @@ class MainActivity : AppCompatActivity() {
                     context.packageManager
                         .getPackageInfo(context.packageName, PackageManager.GET_ACTIVITIES)
                         .activities
-                        .filterNot {
+                        ?.filterNot {
                             !it.name.startsWith(packageName) || it.name == MainActivity::class.java.name
-                        }.map {
+                        }
+                        ?.map {
                             val subPackage = it.name.substring(packageName.length + 1)
                             Demo(
                                 it.name,
@@ -175,7 +175,7 @@ class MainActivity : AppCompatActivity() {
                                 context.getString(it.descriptionRes)
                             )
                         }
-                } catch (e: PackageManager.NameNotFoundException) {
+                } catch (_: PackageManager.NameNotFoundException) {
                     emptyList()
                 }
         }

@@ -28,8 +28,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
@@ -42,9 +40,10 @@ import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.Pickable;
 import com.naver.maps.map.Symbol;
 import com.naver.maps.map.demo.R;
+import com.naver.maps.map.demo.ToolbarActivity;
 import com.naver.maps.map.overlay.Marker;
 
-public class PickAllActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class PickAllActivity extends ToolbarActivity implements OnMapReadyCallback {
     private static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView text;
 
@@ -102,12 +101,6 @@ public class PickAllActivity extends AppCompatActivity implements OnMapReadyCall
 
         setContentView(R.layout.activity_pick_all);
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);
-        }
-
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment == null) {
             mapFragment = MapFragment.newInstance(new NaverMapOptions()
@@ -115,15 +108,6 @@ public class PickAllActivity extends AppCompatActivity implements OnMapReadyCall
             getSupportFragmentManager().beginTransaction().add(R.id.map_fragment, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

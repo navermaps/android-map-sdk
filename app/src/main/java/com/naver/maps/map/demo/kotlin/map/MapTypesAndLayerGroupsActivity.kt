@@ -24,7 +24,6 @@ import android.widget.Button
 import android.widget.PopupMenu
 import android.widget.Spinner
 import androidx.annotation.IdRes
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.forEach
 import com.naver.maps.map.CameraPosition
 import com.naver.maps.map.MapFragment
@@ -32,17 +31,13 @@ import com.naver.maps.map.NaverMap
 import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
+import com.naver.maps.map.demo.ToolbarActivity
 
-class MapTypesAndLayerGroupsActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapTypesAndLayerGroupsActivity : ToolbarActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_map_types_and_layer_groups)
-
-        supportActionBar?.let {
-            it.setDisplayHomeAsUpEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
             ?: MapFragment.newInstance(
@@ -53,14 +48,6 @@ class MapTypesAndLayerGroupsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         mapFragment.getMapAsync(this)
     }
-
-    override fun onOptionsItemSelected(item: MenuItem) =
-        if (item.itemId == android.R.id.home) {
-            finish()
-            true
-        } else {
-            super.onOptionsItemSelected(item)
-        }
 
     override fun onMapReady(naverMap: NaverMap) {
         val spinner = findViewById<Spinner>(R.id.map_type)

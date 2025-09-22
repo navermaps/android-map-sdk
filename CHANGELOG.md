@@ -1,3 +1,24 @@
+# 3.23.0
+
+Release Date: 2025-09-22
+
+### 새로운 기능
+
+- 지도 데이터의 출처를 가져오는 기능 제공
+  - `NaverMap.OnAttributionChangeListener`
+  - `NaverMap#addOnAttributionChangeListener()`, `NaverMap#removeOnAttributionChangeListener()`
+  - `NaverMap#attributions`
+
+### 개선
+
+- 지도 데이터에 대한 출처 표기 추가
+- 축척 바의 위치를 우측으로 조정
+- 범례, 법적 공지, 오픈소스 라이선스 액티비티에서 Edge to Edge 대응
+
+### 버그 수정
+
+- 일부 심벌이 어긋난 위치에 렌더링되는 현상 수정
+
 # 3.22.1
 
 Release Date: 2025-07-28

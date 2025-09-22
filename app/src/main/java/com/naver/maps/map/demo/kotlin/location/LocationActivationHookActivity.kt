@@ -19,7 +19,6 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.naver.maps.map.LocationTrackingMode
 import com.naver.maps.map.MapFragment
@@ -27,9 +26,10 @@ import com.naver.maps.map.NaverMap
 import com.naver.maps.map.NaverMapOptions
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
+import com.naver.maps.map.demo.ToolbarActivity
 import com.naver.maps.map.util.FusedLocationSource
 
-class LocationActivationHookActivity : AppCompatActivity(), OnMapReadyCallback {
+class LocationActivationHookActivity : ToolbarActivity(), OnMapReadyCallback {
     class LocationConfirmDialogFragment : DialogFragment() {
         override fun onCreateDialog(savedInstanceState: Bundle?): AlertDialog =
             AlertDialog.Builder(requireActivity())
@@ -57,11 +57,6 @@ class LocationActivationHookActivity : AppCompatActivity(), OnMapReadyCallback {
 
         setContentView(R.layout.activity_map_fragment)
 
-        supportActionBar?.let {
-            it.setDisplayHomeAsUpEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
-
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
             ?: MapFragment.newInstance(NaverMapOptions().locationButtonEnabled(true)).also {
                 supportFragmentManager.beginTransaction().add(R.id.map_fragment, it).commit()
@@ -87,14 +82,6 @@ class LocationActivationHookActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun cancelLocationTracking() {
         map.locationTrackingMode = LocationTrackingMode.None
     }
-
-    override fun onOptionsItemSelected(item: MenuItem) =
-        if (item.itemId == android.R.id.home) {
-            finish()
-            true
-        } else {
-            super.onOptionsItemSelected(item)
-        }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         if (locationSource.onRequestPermissionsResult(requestCode, permissions, grantResults)) {

@@ -22,8 +22,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.LocationSource;
@@ -32,8 +30,9 @@ import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
+import com.naver.maps.map.demo.ToolbarActivity;
 
-public class CustomLocationSourceActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class CustomLocationSourceActivity extends ToolbarActivity implements OnMapReadyCallback {
     private static class CustomLocationSource implements LocationSource, NaverMap.OnMapClickListener {
         private OnLocationChangedListener listener;
 
@@ -66,12 +65,6 @@ public class CustomLocationSourceActivity extends AppCompatActivity implements O
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_map_fragment);
-
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);
-        }
 
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment == null) {

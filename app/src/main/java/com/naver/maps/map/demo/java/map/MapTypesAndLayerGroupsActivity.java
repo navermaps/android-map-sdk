@@ -26,8 +26,6 @@ import android.widget.Spinner;
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.MapFragment;
@@ -35,8 +33,9 @@ import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
+import com.naver.maps.map.demo.ToolbarActivity;
 
-public class MapTypesAndLayerGroupsActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MapTypesAndLayerGroupsActivity extends ToolbarActivity implements OnMapReadyCallback {
     @NonNull
     private static String menuIdToLayerGroup(@IdRes int id) {
         if (id == R.id.building) {
@@ -62,12 +61,6 @@ public class MapTypesAndLayerGroupsActivity extends AppCompatActivity implements
 
         setContentView(R.layout.activity_map_types_and_layer_groups);
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);
-        }
-
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment == null) {
             mapFragment = MapFragment.newInstance(new NaverMapOptions()
@@ -75,15 +68,6 @@ public class MapTypesAndLayerGroupsActivity extends AppCompatActivity implements
             getSupportFragmentManager().beginTransaction().add(R.id.map_fragment, mapFragment).commit();
         }
         mapFragment.getMapAsync(this);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

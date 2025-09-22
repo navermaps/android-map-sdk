@@ -32,8 +32,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresPermission;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.PermissionChecker;
@@ -45,9 +43,10 @@ import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
+import com.naver.maps.map.demo.ToolbarActivity;
 import com.naver.maps.map.overlay.LocationOverlay;
 
-public class CustomLocationTrackingActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class CustomLocationTrackingActivity extends ToolbarActivity implements OnMapReadyCallback {
     private static final int LOCATION_REQUEST_INTERVAL = 1000;
     private static final int PERMISSION_REQUEST_CODE = 100;
     private static final String[] PERMISSIONS = {
@@ -90,12 +89,6 @@ public class CustomLocationTrackingActivity extends AppCompatActivity implements
 
         setContentView(R.layout.activity_fab);
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);
-        }
-
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment == null) {
             mapFragment = MapFragment.newInstance();
@@ -105,15 +98,6 @@ public class CustomLocationTrackingActivity extends AppCompatActivity implements
 
         fab = findViewById(R.id.fab);
         fab.setImageResource(R.drawable.ic_my_location_black_24dp);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

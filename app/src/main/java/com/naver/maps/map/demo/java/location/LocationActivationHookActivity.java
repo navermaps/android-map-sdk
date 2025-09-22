@@ -24,8 +24,6 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
 import com.naver.maps.map.LocationTrackingMode;
@@ -34,9 +32,10 @@ import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.demo.R;
+import com.naver.maps.map.demo.ToolbarActivity;
 import com.naver.maps.map.util.FusedLocationSource;
 
-public class LocationActivationHookActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class LocationActivationHookActivity extends ToolbarActivity implements OnMapReadyCallback {
     public static class LocationConfirmDialogFragment extends DialogFragment {
         @NonNull
         @Override
@@ -81,12 +80,6 @@ public class LocationActivationHookActivity extends AppCompatActivity implements
 
         setContentView(R.layout.activity_map_fragment);
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);
-        }
-
         MapFragment mapFragment = (MapFragment)getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         if (mapFragment == null) {
             mapFragment = MapFragment.newInstance(new NaverMapOptions().locationButtonEnabled(true));
@@ -111,15 +104,6 @@ public class LocationActivationHookActivity extends AppCompatActivity implements
 
     private void cancelLocationTracking() {
         map.setLocationTrackingMode(LocationTrackingMode.None);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

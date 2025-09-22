@@ -19,7 +19,6 @@ import android.graphics.PointF
 import android.location.Location
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.LocationSource
 import com.naver.maps.map.LocationTrackingMode
@@ -27,8 +26,9 @@ import com.naver.maps.map.MapFragment
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
+import com.naver.maps.map.demo.ToolbarActivity
 
-class CustomLocationSourceActivity : AppCompatActivity(), OnMapReadyCallback {
+class CustomLocationSourceActivity : ToolbarActivity(), OnMapReadyCallback {
     private class CustomLocationSource : LocationSource, NaverMap.OnMapClickListener {
         private var listener: LocationSource.OnLocationChangedListener? = null
 
@@ -53,11 +53,6 @@ class CustomLocationSourceActivity : AppCompatActivity(), OnMapReadyCallback {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_map_fragment)
-
-        supportActionBar?.let {
-            it.setDisplayHomeAsUpEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
 
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as MapFragment?
             ?: MapFragment.newInstance().also {

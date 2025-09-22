@@ -17,13 +17,13 @@ package com.naver.maps.map.demo.kotlin.basic
 
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import com.naver.maps.map.MapView
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
 import com.naver.maps.map.demo.R
+import com.naver.maps.map.demo.ToolbarActivity
 
-class MapViewActivity : AppCompatActivity(), OnMapReadyCallback {
+class MapViewActivity : ToolbarActivity(), OnMapReadyCallback {
     private var mapView: MapView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,23 +31,10 @@ class MapViewActivity : AppCompatActivity(), OnMapReadyCallback {
 
         setContentView(R.layout.activity_map_view)
 
-        supportActionBar?.let {
-            it.setDisplayHomeAsUpEnabled(true)
-            it.setDisplayShowHomeEnabled(true)
-        }
-
         mapView = findViewById(R.id.map_view)
         mapView?.onCreate(savedInstanceState)
         mapView?.getMapAsync(this)
     }
-
-    override fun onOptionsItemSelected(item: MenuItem) =
-        if (item.itemId == android.R.id.home) {
-            finish()
-            true
-        } else {
-            super.onOptionsItemSelected(item)
-        }
 
     override fun onStart() {
         super.onStart()
