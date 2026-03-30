@@ -1,3 +1,11 @@
+# 3.23.2
+
+Release Date: 2026-03-30
+
+### 버그 수정
+
+- `UiSettings#setLogoClickEnabled(false)` 지정 시 로고 클릭이 비활성화되지 않는 문제 수정
+
 # 3.23.1
 
 Release Date: 2026-01-26
