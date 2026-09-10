@@ -320,16 +320,6 @@
             android:description="@string/description_indoor_map"
             android:label="@string/name_indoor_map" />
         <activity
-            android:name=".java.map.LiteModeActivity"
-            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:description="@string/description_lite_mode"
-            android:label="@string/name_lite_mode" />
-        <activity
-            android:name=".kotlin.map.LiteModeActivity"
-            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:description="@string/description_lite_mode"
-            android:label="@string/name_lite_mode" />
-        <activity
             android:name=".java.map.NightModeActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
             android:description="@string/description_night_mode"

@@ -1,3 +1,22 @@
+# 3.24.0
+
+Release Date: 2026-09-09
+
+### 개선
+
+- 성능 및 안정성 개선
+
+### Deprecated
+
+- 라이트 모드 지원 종료 예정
+  - `NaverMap#isLiteModeEnabled()`, `NaverMap#setLiteModeEnabled()`
+  - `NaverMapOptions#liteModeEnabled()`, `NaverMapOptions#isLiteModeEnabled()`
+
+### 버그 수정
+
+- `NaverMapOptions#useTextureView(true)` 사용 시 카메라 등을 쓰고 돌아오면 앱이 종료되거나 지도가 검게 남는 문제 수정
+- `NaverMap#setMaxTilt()`, `NaverMap#setMinZoom()`, `NaverMap#setMaxZoom()` 호출 시 카메라 애니메이션이 중단되거나 화면이 갱신되지 않는 문제 수정
+
 # 3.23.3
 
 Release Date: 2026-07-13

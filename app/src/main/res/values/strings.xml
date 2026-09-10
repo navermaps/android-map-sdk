@@ -178,15 +178,6 @@
     <string name="name_indoor_map">Indoor Map</string>
     <string name="description_indoor_map">실내지도 사용</string>
 
-    <string name="name_lite_mode">Lite Mode</string>
-    <string name="description_lite_mode">라이트 모드 사용</string>
-    <string-array name="map_types_without_navi">
-        <item>Basic</item>
-        <item>Satellite</item>
-        <item>Hybrid</item>
-        <item>Terrain</item>
-    </string-array>
-
     <string name="name_night_mode">Night Mode</string>
     <string name="description_night_mode">내비게이션 야간 모드 사용</string>
     <string name="night_mode">야간 모드</string>
