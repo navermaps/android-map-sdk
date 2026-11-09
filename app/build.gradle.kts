@@ -20,8 +20,8 @@ android {
         applicationId = namespace
         minSdk = 21
         targetSdk = 36
-        versionCode = 3240000
-        versionName = "3.24.0"
+        versionCode = 3240100
+        versionName = "3.24.1"
         multiDexEnabled = true
     }
 
@@ -54,5 +54,5 @@ dependencies {
     implementation("com.google.android.material:material:1.8.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
 
-    implementation("com.naver.maps:map-sdk:3.24.0")
+    implementation("com.naver.maps:map-sdk:3.24.1")
 }
